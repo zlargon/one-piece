@@ -27,7 +27,7 @@ var isWord = function isWord(str) {
 
 
 // Character.create
-var create = function create() {
+var createCharacter = function createCharacter() {
     var isValidProperty = function isValidProperty(obj) {
         return typeof obj === "object"  &&
                 isNatural(obj.LV)       &&
@@ -173,26 +173,27 @@ var fetchFromJapan = function fetchFromJapan(number, response) {
         var min   = $('#left table').eq(3).find("tr").eq(1).find("td");
         var max   = $('#left table').eq(3).find("tr").eq(2).find("td");
 
-        var character = create().setNo(number)
-                                .setName($("#entry h1").text())
-                                .setType(info1.eq(0).text())
-                                .addClass(info1.eq(1).text())
-                                .addClass(info1.eq(2).text())
-                                .setStar(str2num(info1.eq(3).text()))
-                                .setCost(str2num(info1.eq(4).text()))
-                                .setCombo(str2num(info2.eq(1).text()))
-                                .setMin({
-                                    LV:  str2num(min.eq(1).text()),
-                                    HP:  str2num(min.eq(2).text()),
-                                    ATK: str2num(min.eq(3).text()),
-                                    RCV: str2num(min.eq(4).text())
-                                })
-                                .setMax({
-                                    LV:  str2num(max.eq(1).text()),
-                                    HP:  str2num(max.eq(2).text()),
-                                    ATK: str2num(max.eq(3).text()),
-                                    RCV: str2num(max.eq(4).text())
-                                });
+        var character = createCharacter()
+                        .setNo(number)
+                        .setName($("#entry h1").text())
+                        .setType(info1.eq(0).text())
+                        .addClass(info1.eq(1).text())
+                        .addClass(info1.eq(2).text())
+                        .setStar(str2num(info1.eq(3).text()))
+                        .setCost(str2num(info1.eq(4).text()))
+                        .setCombo(str2num(info2.eq(1).text()))
+                        .setMin({
+                            LV:  str2num(min.eq(1).text()),
+                            HP:  str2num(min.eq(2).text()),
+                            ATK: str2num(min.eq(3).text()),
+                            RCV: str2num(min.eq(4).text())
+                        })
+                        .setMax({
+                            LV:  str2num(max.eq(1).text()),
+                            HP:  str2num(max.eq(2).text()),
+                            ATK: str2num(max.eq(3).text()),
+                            RCV: str2num(max.eq(4).text())
+                        });
 
         cb(number, null, character);
     })
@@ -226,25 +227,26 @@ var fetchFromTaiwan = function fetchFromTaiwan(number, response) {
         var min  = $('#left table').eq(2).find("tr").eq(1).find("td");
         var max  = $('#left table').eq(2).find("tr").eq(2).find("td");
 
-        var character = create().setNo(number)
-                                .setName($("#entry h1").text())
-                                .setType(info.eq(0).text())
-                                .addClass(info.eq(1).text())
-                                .setStar(str2num(info.eq(2).text()))
-                                .setCost(str2num(info.eq(3).text()))
-                                .setCombo(str2num(info.eq(4).text()))
-                                .setMin({
-                                    LV:  str2num(min.eq(1).text()),
-                                    HP:  str2num(min.eq(2).text()),
-                                    ATK: str2num(min.eq(3).text()),
-                                    RCV: str2num(min.eq(4).text())
-                                })
-                                .setMax({
-                                    LV:  str2num(max.eq(1).text()),
-                                    HP:  str2num(max.eq(2).text()),
-                                    ATK: str2num(max.eq(3).text()),
-                                    RCV: str2num(max.eq(4).text())
-                                });
+        var character = createCharacter()
+                            .setNo(number)
+                            .setName($("#entry h1").text())
+                            .setType(info.eq(0).text())
+                            .addClass(info.eq(1).text())
+                            .setStar(str2num(info.eq(2).text()))
+                            .setCost(str2num(info.eq(3).text()))
+                            .setCombo(str2num(info.eq(4).text()))
+                            .setMin({
+                                LV:  str2num(min.eq(1).text()),
+                                HP:  str2num(min.eq(2).text()),
+                                ATK: str2num(min.eq(3).text()),
+                                RCV: str2num(min.eq(4).text())
+                            })
+                            .setMax({
+                                LV:  str2num(max.eq(1).text()),
+                                HP:  str2num(max.eq(2).text()),
+                                ATK: str2num(max.eq(3).text()),
+                                RCV: str2num(max.eq(4).text())
+                            });
 
         cb(number, null, character);
     })
@@ -256,6 +258,6 @@ var fetchFromTaiwan = function fetchFromTaiwan(number, response) {
 
 // export
 module.exports = {
-    create: create,
+    create: createCharacter,
     fetch: fetchFromJapan
 };
