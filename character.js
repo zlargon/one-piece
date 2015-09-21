@@ -82,13 +82,34 @@ var createCharacter = function createCharacter() {
                 throw new Error("type '" + type + "' is invalid");
             }
 
-            instance.type = type;
+            // translate into chinese
+            switch (type) {
+                case "力属性": type = "力"; break;
+                case "技属性": type = "技"; break;
+                case "速属性": type = "速"; break;
+                case "心属性": type = "心"; break;
+                case "知属性": type = "知"; break;
+            }
+
+            instance.type = type
             return instance;
         }),
 
         addClass: attr(function addClass(classes) {
             if (!isWord(classes)) {
                 throw new Error("classes '" + classes + "' is invalid");
+            }
+
+            // translate into chinese
+            switch (classes) {
+                case "格闘": classes = "格鬥"; break;
+                case "斬撃": classes = "斬擊"; break;
+                case "打突": classes = "打擊"; break;
+                case "射撃": classes = "射擊"; break;
+                case "自由": classes = "自由"; break;
+                case "博識": classes = "博識"; break;
+                case "強化用": classes = "強化用"; break;
+                case "進化用": classes = "進化用"; break;
             }
 
             // ignore classes "-"
