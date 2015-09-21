@@ -41,7 +41,7 @@ var createCharacter = function createCharacter() {
 
     Object.defineProperties(instance, {
         no:      attr(0),
-        name:    attr(null),
+        name:    attr({ jp: null, tw: null }),
         type:    attr(null),
         classes: attr([]),
         star:    attr(0),
@@ -59,12 +59,21 @@ var createCharacter = function createCharacter() {
             return instance;
         }),
 
-        setName: attr(function setNo(name) {
+        setNameJp: attr(function setNameJp(name) {
             if (!isWord(name)) {
                 throw new Error("name '" + name + "' is invalid");
             }
 
-            instance.name = name;
+            instance.name.jp = name;
+            return instance;
+        }),
+
+        setNameTw: attr(function setNameTw(name) {
+            if (!isWord(name)) {
+                throw new Error("name '" + name + "' is invalid");
+            }
+
+            instance.name.tw = name;
             return instance;
         }),
 
@@ -175,7 +184,7 @@ var fetchFromJapan = function fetchFromJapan(number, response) {
 
         var character = createCharacter()
                         .setNo(number)
-                        .setName($("#entry h1").text())
+                        .setNameJp($("#entry h1").text())
                         .setType(info1.eq(0).text())
                         .addClass(info1.eq(1).text())
                         .addClass(info1.eq(2).text())
@@ -229,7 +238,7 @@ var fetchFromTaiwan = function fetchFromTaiwan(number, response) {
 
         var character = createCharacter()
                             .setNo(number)
-                            .setName($("#entry h1").text())
+                            .setNameTw($("#entry h1").text())
                             .setType(info.eq(0).text())
                             .addClass(info.eq(1).text())
                             .setStar(str2num(info.eq(2).text()))
