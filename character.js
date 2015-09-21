@@ -286,8 +286,65 @@ var fetchFromTaiwan = function fetchFromTaiwan(number, response) {
     });
 };
 
+/*
+ * Character.fetch
+ *
+ * @number    { from: 1, to: 100 }
+ * @response  function (number, error, characterList) {}
+ */
+var fetchCharacter = function fetchCharacter(number, response) {
+    var cb = typeof response === "function" ? response : function() {};
+    if (typeof number !== "object"  ||
+        !isNatural(number.from)     ||
+        !isNatural(number.to)       ||
+        number.to > 724             ||  // TODO: define 724
+        number.from > number.to) {
+
+        cb(number, new Error("number from " + number.from + " to " + number.to + " is invalid"));
+        return;
+    }
+
+    var list = [];
+    var getCharacter = function getCharacter(num) {
+        // 1. Japan
+        console.log("fetching character no." + num + " from Japan");
+        fetchFromJapan(num, function (num, error, character) {
+            if (error !== null) {
+                console.log("fetching character no." + num + " from Japan FAILED");
+                character = createCharacter().setNo(num);
+            }
+
+            // add to list
+            list[num] = character;
+
+            // 2. Taiwan
+            console.log("fetching character no." + num + " from Taiwan");
+            fetchFromTaiwan(num, function (num, error, character) {
+                if (error !== null) {
+                    console.log("fetching character no." + num + " from Taiwan FAILED");
+                    character = createCharacter().setNo(num);
+                }
+
+                // update chinese name
+                list[num].name.tw = character.name.tw;
+
+                // 3. all done, or to get the next one
+                if (num === number.to) {
+                    console.log("Finish fetching no." + number.from + " ~ " + number.to);
+                    cb(number, null, list);
+                } else {
+                    getCharacter(num + 1);  // get next one
+                }
+            });
+        });
+    }
+
+    // start fetching
+    getCharacter(number.from);
+}
+
 // export
 module.exports = {
     create: createCharacter,
-    fetch: fetchFromJapan
+    fetch: fetchCharacter
 };
