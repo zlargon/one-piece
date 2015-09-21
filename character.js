@@ -1,7 +1,7 @@
 var fetch   = require("node-fetch");
 var cheerio = require("cheerio");
 
-// subfunction: attr
+// subfunction
 var attr = function attr(value) {
     var isMember = typeof value !== "function";
 
@@ -13,14 +13,29 @@ var attr = function attr(value) {
     }
 };
 
-// subfunction: str2num
 var str2num = function str2num(str) {
     return parseInt(str.split(",").join(""));
+};
+
+var isNatural = function isNatural(num) {
+    return typeof num === "number" && num > 0 && num % 1 === 0;
+};
+
+var isWord = function isWord(str) {
+    return typeof str === "string" && str.length > 0;
 };
 
 
 // Character.create
 var create = function create() {
+    var isValidProperty = function isValidProperty(obj) {
+        return typeof obj === "object"  &&
+                isNatural(obj.LV)       &&
+                isNatural(obj.HP)       &&
+                isNatural(obj.ATK)      &&
+                isNatural(obj.RCV);
+    };
+
     var Character = function Character() {};
     var instance = new Character();
 
@@ -36,21 +51,38 @@ var create = function create() {
         max:     attr({ LV: 0, HP: 0, ATK: 0, RCV: 0 }),
 
         setNo: attr(function setNo(no) {
+            if (!isNatural(no)) {
+                throw new Error("no '" + no + "' is invalid");
+            }
+
             instance.no = no;
             return instance;
         }),
 
         setName: attr(function setNo(name) {
+            if (!isWord(name)) {
+                throw new Error("name '" + name + "' is invalid");
+            }
+
             instance.name = name;
             return instance;
         }),
 
         setType: attr(function setType(type) {
+            if (!isWord(type)) {
+                throw new Error("type '" + type + "' is invalid");
+            }
+
             instance.type = type;
             return instance;
         }),
 
         addClass: attr(function addClass(classes) {
+            if (!isWord(classes)) {
+                throw new Error("classes '" + classes + "' is invalid");
+            }
+
+            // ignore classes "-"
             if (classes !== "-") {
                 instance.classes.push(classes);
             }
@@ -58,21 +90,37 @@ var create = function create() {
         }),
 
         setStar: attr(function setStar(star) {
+            if (!isNatural(star)) {
+                throw new Error("star '" + star + "' is invalid");
+            }
+
             instance.star = star;
             return instance;
         }),
 
         setCost: attr(function setCost(cost) {
+            if (!isNatural(cost)) {
+                throw new Error("cost '" + cost + "' is invalid");
+            }
+
             instance.cost = cost;
             return instance;
         }),
 
         setCombo: attr(function setCombo(combo) {
+            if (!isNatural(combo)) {
+                throw new Error("combo '" + combo + "' is invalid");
+            }
+
             instance.combo = combo;
             return instance;
         }),
 
         setMin: attr(function setMin(obj) {
+            if (!isValidProperty(obj)) {
+                throw new Error("property '" + property + "' is invalid");
+            }
+
             instance.min = {
                 LV:  obj.LV,
                 HP:  obj.HP,
@@ -83,6 +131,10 @@ var create = function create() {
         }),
 
         setMax: attr(function setMax(obj) {
+            if (!isValidProperty(obj)) {
+                throw new Error("property '" + property + "' is invalid");
+            }
+
             instance.max = {
                 LV:  obj.LV,
                 HP:  obj.HP,
@@ -98,6 +150,12 @@ var create = function create() {
 
 // fetch character data from Japan official website (http://onepiece-treasurecruise.com)
 var fetchFromJapan = function fetchFromJapan(number, response) {
+
+    var cb = typeof response === "function" ? response : function() {};
+    if (!isNatural(number)) {
+        cb(number, new Error("number '" + number + "' is invalid"));
+        return;
+    }
 
     fetch("http://onepiece-treasurecruise.com/c-" + number, {
         method: "GET",
@@ -136,16 +194,22 @@ var fetchFromJapan = function fetchFromJapan(number, response) {
                                     RCV: str2num(max.eq(4).text())
                                 });
 
-        response(number, null, character);
+        cb(number, null, character);
     })
 
     .catch(function(error) {
-        response(number, error);
+        cb(number, error);
     });
 };
 
 // fetch character data from Taiwan official website (http://line-optc.com/tw)
 var fetchFromTaiwan = function fetchFromTaiwan(number, response) {
+
+    var cb = typeof response === "function" ? response : function() {};
+    if (!isNatural(number)) {
+        cb(number, new Error("number '" + number + "' is invalid"));
+        return;
+    }
 
     fetch("http://line-optc.com/tw/c-" + number, {
         method: "GET",
@@ -182,11 +246,11 @@ var fetchFromTaiwan = function fetchFromTaiwan(number, response) {
                                     RCV: str2num(max.eq(4).text())
                                 });
 
-        response(number, null, character);
+        cb(number, null, character);
     })
 
     .catch(function(error) {
-        response(number, error);
+        cb(number, error);
     });
 };
 
