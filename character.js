@@ -1,18 +1,7 @@
 var fetch   = require("node-fetch");
 var cheerio = require("cheerio");
 
-// subfunction
-var attr = function attr(value) {
-    var isMember = typeof value !== "function";
-
-    return {
-        value: value,
-        writable: isMember,
-        enumerable: isMember,
-        configurable: false
-    }
-};
-
+// sub-function
 var str2num = function str2num(str) {
     return parseInt(str.split(",").join(""));
 };
@@ -28,12 +17,29 @@ var isWord = function isWord(str) {
 
 // Character.create
 var createCharacter = function createCharacter() {
-    var isValidProperty = function isValidProperty(obj) {
+
+    var attr = function attr(value) {
+        var isMember = typeof value !== "function";
+        return {
+            value: value,
+            writable: isMember,
+            enumerable: isMember,
+            configurable: false
+        }
+    };
+
+    var isValidAttr = function isValidAttr(obj) {
         return typeof obj === "object"  &&
                 isNatural(obj.LV)       &&
                 isNatural(obj.HP)       &&
                 isNatural(obj.ATK)      &&
                 isNatural(obj.RCV);
+    };
+
+    var isValidNameContent = function isValidNameContent(obj) {
+        return typeof obj === "object"  &&
+                isWord(obj.name)        &&
+                isWord(obj.content);
     };
 
     var Character = function Character() {};
@@ -49,6 +55,14 @@ var createCharacter = function createCharacter() {
         combo:   attr(0),
         min:     attr({ LV: 0, HP: 0, ATK: 0, RCV: 0 }),
         max:     attr({ LV: 0, HP: 0, ATK: 0, RCV: 0 }),
+        skill:   attr({
+            jp: { name: null, content: null },
+            tw: { name: null, content: null }
+        }),
+        captain: attr({
+            jp: { name: null, content: null },
+            tw: { name: null, content: null }
+        }),
 
         setNo: attr(function setNo(no) {
             if (!isNatural(no)) {
@@ -147,8 +161,8 @@ var createCharacter = function createCharacter() {
         }),
 
         setMin: attr(function setMin(obj) {
-            if (!isValidProperty(obj)) {
-                throw new Error("property '" + property + "' is invalid");
+            if (!isValidAttr(obj)) {
+                throw new Error("attribute " + obj + " is invalid");
             }
 
             instance.min = {
@@ -161,8 +175,8 @@ var createCharacter = function createCharacter() {
         }),
 
         setMax: attr(function setMax(obj) {
-            if (!isValidProperty(obj)) {
-                throw new Error("property '" + property + "' is invalid");
+            if (!isValidAttr(obj)) {
+                throw new Error("attribute " + obj + " is invalid");
             }
 
             instance.max = {
@@ -171,6 +185,54 @@ var createCharacter = function createCharacter() {
                 ATK: obj.ATK,
                 RCV: obj.RCV
             };
+            return instance;
+        }),
+
+        setSkillJp: attr(function setSkillJp(obj) {
+            if (!isValidNameContent(obj)) {
+                throw new Error("name or content " + obj + " is invalid");
+            }
+
+            if (obj.name    === "なし") obj.name    = null;
+            if (obj.content === "なし") obj.content = null;
+
+            instance.skill.jp = obj;
+            return instance;
+        }),
+
+        setSkillTw: attr(function setSkillTw(obj) {
+            if (!isValidNameContent(obj)) {
+                throw new Error("name or content " + obj + " is invalid");
+            }
+
+            if (obj.name    === "無") obj.name    = null;
+            if (obj.content === "無") obj.content = null;
+
+            instance.skill.tw = obj;
+            return instance;
+        }),
+
+        setCaptainJp: attr(function setCaptainJp(obj) {
+            if (!isValidNameContent(obj)) {
+                throw new Error("name or content " + obj + " is invalid");
+            }
+
+            if (obj.name    === "なし") obj.name    = null;
+            if (obj.content === "なし") obj.content = null;
+
+            instance.captain.jp = obj;
+            return instance;
+        }),
+
+        setCaptainTw: attr(function setCaptainTw(obj) {
+            if (!isValidNameContent(obj)) {
+                throw new Error("name or content " + obj + " is invalid");
+            }
+
+            if (obj.name    === "無") obj.name    = null;
+            if (obj.content === "無") obj.content = null;
+
+            instance.captain.tw = obj;
             return instance;
         })
     });
@@ -198,10 +260,12 @@ var fetchFromJapan = function fetchFromJapan(number, response) {
 
     .then(function(html) {
         var $ = cheerio.load(html);
-        var info1 = $('#left table').eq(1).find("td");
-        var info2 = $('#left table').eq(2).find("td");
-        var min   = $('#left table').eq(3).find("tr").eq(1).find("td");
-        var max   = $('#left table').eq(3).find("tr").eq(2).find("td");
+        var info1   = $('#left table').eq(1).find("td");
+        var info2   = $('#left table').eq(2).find("td");
+        var min     = $('#left table').eq(3).find("tr").eq(1).find("td");
+        var max     = $('#left table').eq(3).find("tr").eq(2).find("td");
+        var skill   = $('#left table').eq(4).find("td");
+        var captain = $('#left table').eq(5).find("td");
 
         var character = createCharacter()
                         .setNo(number)
@@ -223,6 +287,14 @@ var fetchFromJapan = function fetchFromJapan(number, response) {
                             HP:  str2num(max.eq(2).text()),
                             ATK: str2num(max.eq(3).text()),
                             RCV: str2num(max.eq(4).text())
+                        })
+                        .setSkillJp({
+                            name:    skill.eq(1).text(),
+                            content: skill.eq(3).text()
+                        })
+                        .setCaptainJp({
+                            name:    captain.eq(1).text(),
+                            content: captain.eq(3).text()
                         });
 
         cb(number, null, character);
@@ -253,9 +325,11 @@ var fetchFromTaiwan = function fetchFromTaiwan(number, response) {
 
     .then(function(html) {
         var $ = cheerio.load(html);
-        var info = $('#left table').eq(1).find("td");
-        var min  = $('#left table').eq(2).find("tr").eq(1).find("td");
-        var max  = $('#left table').eq(2).find("tr").eq(2).find("td");
+        var info    = $('#left table').eq(1).find("td");
+        var min     = $('#left table').eq(2).find("tr").eq(1).find("td");
+        var max     = $('#left table').eq(2).find("tr").eq(2).find("td");
+        var skill   = $('#left table').eq(3).find("td");
+        var captain = $('#left table').eq(4).find("td");
 
         var character = createCharacter()
                             .setNo(number)
@@ -276,6 +350,14 @@ var fetchFromTaiwan = function fetchFromTaiwan(number, response) {
                                 HP:  str2num(max.eq(2).text()),
                                 ATK: str2num(max.eq(3).text()),
                                 RCV: str2num(max.eq(4).text())
+                            })
+                            .setSkillTw({
+                                name:    skill.eq(1).text(),
+                                content: skill.eq(3).text()
+                            })
+                            .setCaptainTw({
+                                name:    captain.eq(1).text(),
+                                content: captain.eq(3).text()
                             });
 
         cb(number, null, character);
@@ -325,8 +407,10 @@ var fetchCharacter = function fetchCharacter(number, response) {
                     character = createCharacter().setNo(num);
                 }
 
-                // update chinese name
-                list[num].name.tw = character.name.tw;
+                // update chinese name, skill, captain
+                list[num].name.tw    = character.name.tw;
+                list[num].skill.tw   = character.skill.tw;
+                list[num].captain.tw = character.captain.tw;
 
                 // 3. all done, or to get the next one
                 if (num === number.to) {
@@ -341,7 +425,7 @@ var fetchCharacter = function fetchCharacter(number, response) {
 
     // start fetching
     getCharacter(number.from);
-}
+};
 
 // export
 module.exports = {
