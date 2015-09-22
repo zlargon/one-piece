@@ -11,7 +11,8 @@ var updateData = function updateData() {
 
         // work is done. write the character list back to the file
         if (no > config.maxCharacterNumber.jp) {
-            fs.writeFile(config.path.characterData, JSON.stringify(characterList, null, 2), function (err) {
+            var content = "module.exports = " + JSON.stringify(characterList, null, 2) + ";\n";
+            fs.writeFile(config.path.characterData, content, function (err) {
                 if (err !== null) throw err;
                 console.log("Character no." + updateList.join(", ") + " has been updated");
             });
@@ -65,7 +66,8 @@ fs.stat(config.path.characterData, function(err, stat) {
         }
 
         // write into the file
-        fs.writeFile(config.path.characterData, JSON.stringify(list, null, 2), function (err) {
+        var content = "module.exports = " + JSON.stringify(list, null, 2) + ";\n";
+        fs.writeFile(config.path.characterData, content, function (err) {
             // write file error
             if (err !== null) {
                 console.error(err);

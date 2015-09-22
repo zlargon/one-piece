@@ -6,6 +6,6 @@ module.exports = {
         tw: 267
     },
     path: {
-        characterData: path.resolve(__dirname, "data/character_data.json")
+        characterData: path.resolve(__dirname, "data/character_data.js")
     }
 };
