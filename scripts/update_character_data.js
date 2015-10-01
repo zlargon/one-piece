@@ -14,20 +14,10 @@ function updateCharacter(number) {
         }
     };
 
-    fs.stat(file, function(err, stat) {
-        // 1. file is exist, update the data
-        if (err === null) {
-            nextStep();
-            return;
-        }
-
-        // 2. file is exist, but read file error
-        if (err.code !== "ENOENT") {
-            console.error(err);
-            return;
-        }
-
-        // 3. file is not exist. fetch all the character data, and write into the file
+    try {
+        fs.statSync(file);
+        nextStep();
+    } catch (e) {
         character.fetch(number, function(no, err, character) {
             if (err !== null) {
                 console.log(err);
@@ -41,7 +31,7 @@ function updateCharacter(number) {
                 nextStep();
             });
         });
-    });
+    }
 }
 
 // start from character no.1
