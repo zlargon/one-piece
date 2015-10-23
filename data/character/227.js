@@ -2,7 +2,7 @@ module.exports = {
   "no": 227,
   "name": {
     "jp": "鷹の目のミホーク",
-    "tw": null
+    "tw": "鷹眼密佛格"
   },
   "type": "技",
   "classes": [
@@ -29,8 +29,8 @@ module.exports = {
       "content": "敵全体のHPを30%減らす"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "黑刀・斬船術",
+      "content": "將所有敵人的HP減少30％"
     }
   },
   "captain": {
@@ -39,8 +39,8 @@ module.exports = {
       "content": "斬撃タイプキャラの攻撃を2.5倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "黑刀一斬",
+      "content": "將斬擊型角色的攻擊力提升2.5倍"
     }
   }
 };

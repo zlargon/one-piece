@@ -2,7 +2,7 @@ module.exports = {
   "no": 256,
   "name": {
     "jp": "イゾウ",
-    "tw": null
+    "tw": "以藏"
   },
   "type": "技",
   "classes": [
@@ -30,8 +30,8 @@ module.exports = {
       "content": "[力]、[速]スロットを[技]スロットに変換する"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "華麗的雙短槍",
+      "content": "將[力][速]技能格變換為[技]<col=1>"
     }
   },
   "captain": {
@@ -40,8 +40,8 @@ module.exports = {
       "content": "技属性キャラの攻撃と回復を2倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "堅毅的女形",
+      "content": "將技能屬性角色的攻擊力及回復力提升2倍"
     }
   }
 };

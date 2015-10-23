@@ -2,7 +2,7 @@ module.exports = {
   "no": 232,
   "name": {
     "jp": "黒檻のヒナ",
-    "tw": null
+    "tw": "黑檻的希娜"
   },
   "type": "速",
   "classes": [
@@ -30,8 +30,8 @@ module.exports = {
       "content": "一味全員のスロットを1ターン固定する"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "袷羽檻",
+      "content": "將海賊團全體成員的技能格固定1回合"
     }
   },
   "captain": {
@@ -40,8 +40,8 @@ module.exports = {
       "content": "速属性キャラの攻撃を2倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "黑矛之陣",
+      "content": "將速度屬性角色的攻擊力提升2倍"
     }
   }
 };

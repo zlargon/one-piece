@@ -2,7 +2,7 @@ module.exports = {
   "no": 250,
   "name": {
     "jp": "マルコ",
-    "tw": null
+    "tw": "馬可"
   },
   "type": "心",
   "classes": [
@@ -30,8 +30,8 @@ module.exports = {
       "content": "体力を全回復する"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "轉生的蒼炎",
+      "content": "回復所有體力"
     }
   },
   "captain": {
@@ -40,8 +40,8 @@ module.exports = {
       "content": "攻撃開始前体力満タンで、心属性キャラの攻撃を3倍"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "不死鳥的霸氣",
+      "content": "在攻擊開始前體力全滿時，將心靈屬性角色的攻擊力提升3倍"
     }
   }
 };

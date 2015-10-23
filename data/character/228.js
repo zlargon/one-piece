@@ -2,7 +2,7 @@ module.exports = {
   "no": 228,
   "name": {
     "jp": "脱獄モーガン",
-    "tw": null
+    "tw": "逃獄的蒙卡"
   },
   "type": "力",
   "classes": [
@@ -29,8 +29,8 @@ module.exports = {
       "content": "「封じ」状態を2ターン回復する"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "逃獄的斧手",
+      "content": "解除2回合「封鎖」狀態"
     }
   },
   "captain": {
@@ -39,8 +39,8 @@ module.exports = {
       "content": "斬撃タイプキャラの体力を1.5倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "對權力的執著",
+      "content": "將斬擊型角色的體力提升1.5倍"
     }
   }
 };

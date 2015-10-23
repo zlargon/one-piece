@@ -2,7 +2,7 @@ module.exports = {
   "no": 211,
   "name": {
     "jp": "Mr.9",
-    "tw": null
+    "tw": "Mr.9"
   },
   "type": "速",
   "classes": [
@@ -39,8 +39,8 @@ module.exports = {
       "content": "打突タイプキャラの攻撃を1.2倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "特技表演者",
+      "content": "將打擊型角色的攻擊力提升1.2倍"
     }
   }
 };

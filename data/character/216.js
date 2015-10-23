@@ -2,7 +2,7 @@ module.exports = {
   "no": 216,
   "name": {
     "jp": "モンキー・D・ルフィ（ゴムゴムの風船）",
-    "tw": null
+    "tw": "蒙其・D・魯夫  伸縮自如的橡膠氣球"
   },
   "type": "力",
   "classes": [
@@ -30,8 +30,8 @@ module.exports = {
       "content": "受けるダメージを3ターンの間、50％減らす"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "伸縮自如的橡膠氣球",
+      "content": "於3回合內，將所受傷害值減少50％"
     }
   },
   "captain": {
@@ -40,8 +40,8 @@ module.exports = {
       "content": "受けるダメージを20％減らす"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "氣球身體",
+      "content": "將所受傷害值減少20％"
     }
   }
 };

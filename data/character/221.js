@@ -2,7 +2,7 @@ module.exports = {
   "no": 221,
   "name": {
     "jp": "ナミ（幸せパンチ）",
-    "tw": null
+    "tw": "娜美 幸福的一擊"
   },
   "type": "知",
   "classes": [
@@ -30,8 +30,8 @@ module.exports = {
       "content": "[心]スロットを[知]スロットに変換する"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "幸福的一擊",
+      "content": "將[心]技能格變換為[知]"
     }
   },
   "captain": {
@@ -40,8 +40,8 @@ module.exports = {
       "content": "知属性キャラの攻撃を2.5倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "不知羞恥的航海士",
+      "content": "將知識屬性角色的攻擊力提升2.5倍"
     }
   }
 };

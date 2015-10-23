@@ -2,7 +2,7 @@ module.exports = {
   "no": 229,
   "name": {
     "jp": "寝返りのジャンゴ",
-    "tw": null
+    "tw": "叛徒傑克斯"
   },
   "type": "心",
   "classes": [
@@ -30,8 +30,8 @@ module.exports = {
       "content": "[知]スロットを[心]に変換する"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "叛徒之舞",
+      "content": "將[知]技能格變換為[心]"
     }
   },
   "captain": {
@@ -40,8 +40,8 @@ module.exports = {
       "content": "受けるダメージを10％減らす"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "催眠術師海軍兵士",
+      "content": "將所受傷害值減少10％"
     }
   }
 };

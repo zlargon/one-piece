@@ -2,7 +2,7 @@ module.exports = {
   "no": 215,
   "name": {
     "jp": "大王イカ",
-    "tw": null
+    "tw": "大王烏賊"
   },
   "type": "技",
   "classes": [
@@ -29,8 +29,8 @@ module.exports = {
       "content": "敵全体を毒にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "劇毒墨水",
+      "content": "讓敵人全體中毒"
     }
   },
   "captain": {
@@ -39,8 +39,8 @@ module.exports = {
       "content": "打突タイプキャラの体力を1.5倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "軟體動物",
+      "content": "將打擊型角色的體力提升1.5倍"
     }
   }
 };

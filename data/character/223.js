@@ -2,7 +2,7 @@ module.exports = {
   "no": 223,
   "name": {
     "jp": "ウソップ（衝撃（インパクト））",
-    "tw": null
+    "tw": "騙人布 衝撃"
   },
   "type": "心",
   "classes": [
@@ -29,8 +29,8 @@ module.exports = {
       "content": "1ターンの間、心属性の攻撃が2倍になる"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "衝撃",
+      "content": "於1回合內，將心靈屬性的攻擊力提升2倍"
     }
   },
   "captain": {
@@ -39,8 +39,8 @@ module.exports = {
       "content": "心属性キャラの攻撃を1.5倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "勇敢的海上狙擊手",
+      "content": "將心靈屬性角色的攻擊力提升1.5倍"
     }
   }
 };

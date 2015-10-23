@@ -2,7 +2,7 @@ module.exports = {
   "no": 218,
   "name": {
     "jp": "ゾロ_刀狼流し（とうろうながし）",
-    "tw": null
+    "tw": "索隆 刀狼流"
   },
   "type": "技",
   "classes": [
@@ -29,8 +29,8 @@ module.exports = {
       "content": "力属性の攻撃を1ターン無効化する"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "刀狼流",
+      "content": "於1回合內，將力量屬性的攻擊無效化"
     }
   },
   "captain": {
@@ -39,8 +39,8 @@ module.exports = {
       "content": "体力満タンの時、受けるダメージを大幅に減らす"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "躲過攻擊的劍客",
+      "content": "體力全滿時，可大幅減少所受到的傷害值"
     }
   }
 };

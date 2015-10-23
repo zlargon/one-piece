@@ -2,7 +2,7 @@ module.exports = {
   "no": 219,
   "name": {
     "jp": "ロロノア・ゾロ_獅子歌歌（ししソンソン）",
-    "tw": null
+    "tw": "羅羅亞・索隆 獅子歌歌"
   },
   "type": "技",
   "classes": [
@@ -29,8 +29,8 @@ module.exports = {
       "content": "敵1体にキャラの攻撃×25倍の技属性ダメージ"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "獅子歌歌",
+      "content": "對單一敵人造成角色攻擊力×25倍的技能屬性傷害"
     }
   },
   "captain": {
@@ -39,8 +39,8 @@ module.exports = {
       "content": "体力満タンの時、受けるダメージを大幅に減らす"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "什麼都不斬的劍士",
+      "content": "體力全滿時，可大幅減少所受到的傷害值"
     }
   }
 };

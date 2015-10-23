@@ -2,7 +2,7 @@ var path = require("path");
 
 module.exports = {
     maxCharacterNumber: {
-        jp: 743,
+        jp: 781,
         tw: 267
     },
     path: {

@@ -2,7 +2,7 @@ module.exports = {
   "no": 222,
   "name": {
     "jp": "ウソップ（ウソップハンマー）",
-    "tw": null
+    "tw": "騙人布 騙人布反擊"
   },
   "type": "心",
   "classes": [
@@ -29,8 +29,8 @@ module.exports = {
       "content": "1ターンの間、心属性の攻撃が1.5倍になる"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "騙人布反擊",
+      "content": "於1回合內，將心靈屬性的攻擊力提升1.5倍"
     }
   },
   "captain": {
@@ -39,8 +39,8 @@ module.exports = {
       "content": "心属性キャラの攻撃を1.2倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "擁有覺悟的海上狙擊手",
+      "content": "將心靈屬性角色的攻擊力提升1.2倍"
     }
   }
 };

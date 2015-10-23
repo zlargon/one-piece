@@ -2,7 +2,7 @@ module.exports = {
   "no": 212,
   "name": {
     "jp": "Mr.9 （熱血ナイン根性バット）",
-    "tw": null
+    "tw": "Mr.9  熱血九號毅力球棒"
   },
   "type": "速",
   "classes": [
@@ -29,8 +29,8 @@ module.exports = {
       "content": "敵1体にキャラの攻撃×5倍の速属性ダメージ"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "熱血9號後空翻",
+      "content": "對單一敵人造成角色攻擊力×5倍的速度屬性傷害"
     }
   },
   "captain": {
@@ -39,8 +39,8 @@ module.exports = {
       "content": "打突タイプキャラの攻撃を1.5倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "2刀流特技表演者",
+      "content": "將打擊型角色的攻擊力提升1.5倍"
     }
   }
 };

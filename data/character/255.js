@@ -2,7 +2,7 @@ module.exports = {
   "no": 255,
   "name": {
     "jp": "花剣のビスタ",
-    "tw": null
+    "tw": "花劍比斯塔"
   },
   "type": "知",
   "classes": [
@@ -30,8 +30,8 @@ module.exports = {
       "content": "敵全体に5000の固定ダメージ"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "薔薇圓舞曲",
+      "content": "對所有敵人造成5000點固定傷害"
     }
   },
   "captain": {
@@ -40,8 +40,8 @@ module.exports = {
       "content": "知属性キャラの攻撃と体力を2倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "花劍的霸氣",
+      "content": "將知識屬性角色的攻擊力及體力提升2倍"
     }
   }
 };

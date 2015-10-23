@@ -2,7 +2,7 @@ module.exports = {
   "no": 225,
   "name": {
     "jp": "Mr.プリンス（仔牛肉（ヴォー）ショット）",
-    "tw": null
+    "tw": "Mr.王子 小牛肉SHOT"
   },
   "type": "速",
   "classes": [
@@ -30,8 +30,8 @@ module.exports = {
       "content": "敵1体にキャラの攻撃×20倍の速属性ダメージ"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "小牛肉SHOT",
+      "content": "對單一敵人造成角色攻擊力×20倍的速度屬性傷害"
     }
   },
   "captain": {
@@ -40,8 +40,8 @@ module.exports = {
       "content": "PERFECT2連続で以降キャラの攻撃力が2.5倍になる"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "紳士廚師",
+      "content": "連續擊出2次以上PERFECT，之後的角色攻擊力將會提升2.5倍"
     }
   }
 };

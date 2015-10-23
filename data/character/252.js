@@ -2,7 +2,7 @@ module.exports = {
   "no": 252,
   "name": {
     "jp": "ジョズ",
-    "tw": null
+    "tw": "裘斯"
   },
   "type": "速",
   "classes": [
@@ -30,8 +30,8 @@ module.exports = {
       "content": "技属性の攻撃を1ターン無効化する"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "明亮龐克",
+      "content": "於1回合內將技能屬性攻擊無效化"
     }
   },
   "captain": {
@@ -40,8 +40,8 @@ module.exports = {
       "content": "速属性キャラの攻撃と体力を2倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "鑽石雙腕",
+      "content": "將速度屬性角色的攻擊力及體力提升2倍"
     }
   }
 };

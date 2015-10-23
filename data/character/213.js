@@ -2,7 +2,7 @@ module.exports = {
   "no": 213,
   "name": {
     "jp": "ラブーン",
-    "tw": null
+    "tw": "拉布"
   },
   "type": "力",
   "classes": [
@@ -30,8 +30,8 @@ module.exports = {
       "content": "敵全体にキャラの攻撃×20倍の力属性ダメージ"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "嘆息的頭槌",
+      "content": "對所有敵人造成角色攻擊力×20倍的力量屬性傷害"
     }
   },
   "captain": {
@@ -40,8 +40,8 @@ module.exports = {
       "content": "体力が一定以上の場合、攻撃を受けても倒れない"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "相信夥伴活著的信念",
+      "content": "在維持一定以上體力時，即使受到致命攻擊，體力也會維持在1"
     }
   }
 };
