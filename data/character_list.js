@@ -1,15 +1,12 @@
-var fs     = require("fs");
-var path   = require("path");
 var config = require("../config.js");
 
 var characterList = [];
 for (var i = 1; i <= config.maxCharacterNumber.jp; i++) {
-    var file = path.resolve(config.path.characterFolder, i + ".js");
     try {
-        fs.statSync(file);
-        characterList[i] = require(file);
+        characterList[i] = require(`../data/character/${i}.js`);
+        characterList[i].captain.magnification = require(`../data/captain/${i}.js`)
     } catch (e) {
-        console.log("character file " + i + ".js is not exist");
+        // console.log("character file " + i + ".js is not exist");
     }
 }
 
