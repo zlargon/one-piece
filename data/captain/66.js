@@ -1,14 +1,14 @@
 /*
- * 主廚哲普
+ * 抓狂的惡龍　鯊魚齒輪
  *
- * 義肢飛踢
- * 將格鬥型角色的攻擊力提升2.5倍
+ * 抓狂力量
+ * 將斬擊型角色的攻擊力提升2倍
  *
  */
 module.exports = function(param) {
     var classes = param.character.classes;
     for (var i = 0; i < classes.length; i++) {
-        if (classes[i] === "格鬥") return 2.5;
+        if (classes[i] === "斬擊") return 2;
     }
     return 1;
 }
