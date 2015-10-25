@@ -1,9 +1,4 @@
-var attackAnalysis = require("../lib/attackAnalysis.js");
-var characterList  = require("../data/character_list.js");
+var OnePiece = require("one-piece");
 
-if (typeof window === "object") {
-    window.onePiece = {
-        attackAnalysis: attackAnalysis,
-        characterList: characterList
-    }
-}
+// set OnePiece as Global variable
+window.OnePiece = OnePiece;
