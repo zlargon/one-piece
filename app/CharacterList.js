@@ -9,7 +9,9 @@ export default class CharacterList extends React.Component {
 
     constructor (props) {
         super(props);
+
         this.reorderCharacters = this.reorderCharacters.bind(this);
+        this.updateCharacterData = this.updateCharacterData.bind(this);
 
         this.state = {
             characters: [
@@ -37,6 +39,12 @@ export default class CharacterList extends React.Component {
         this.setState(this.state);
     }
 
+    updateCharacterData(index, character) {
+        const { characters } = this.state;
+        characters[index] = character;
+        this.setState(this.state);
+    }
+
     render () {
         const characters = this.state.characters.map((character, index) => {
             return (
@@ -45,6 +53,7 @@ export default class CharacterList extends React.Component {
                     index={index}
                     character={character}
                     onMove={this.reorderCharacters}
+                    onChange={this.updateCharacterData}
                 />
             );
         });
