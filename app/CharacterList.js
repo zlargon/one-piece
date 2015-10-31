@@ -1,5 +1,6 @@
-import React   from 'react';
-import ShortId from 'shortid';
+import React     from 'react';
+import ShortId   from 'shortid';
+import Character from './Character';
 
 export default class CharacterList extends React.Component {
 
@@ -21,20 +22,15 @@ export default class CharacterList extends React.Component {
     }
 
     render () {
-        const list = this.state.characters.map(character => {
+        const characters = this.state.characters.map(character => {
             return (
-                <div key={character.id}>
-                    <hr />
-                    <p>No.{character.no}</p>
-                    <p>攻擊力 {character.attack}</p>
-                    <p>珠子加成：{character.bead}倍</p>
-                    <p>Timing：{character.timing}</p>
-                    <p>船長效果：{character.captainEffect ? 'enable' : 'disable'}</p>
-                    <p>必殺技：{character.specialAbility ? 'enable' : 'disable'}</p>
-                </div>
+                <Character
+                    key={character.id}
+                    character={character}
+                />
             );
         });
 
-        return <div>{list}</div>;
+        return <div>{characters}</div>;
     }
 }
