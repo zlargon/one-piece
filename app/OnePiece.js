@@ -1,4 +1,5 @@
 import React         from 'react';
+import ShortId       from 'shortid';
 import CharacterList from './CharacterList';
 import Enemy         from './Enemy';
 
@@ -8,26 +9,46 @@ export default class OnePiece extends React.Component {
         super(props);
 
         this.updateEnemy = this.updateEnemy.bind(this);
+        this.updateCharacters= this.updateCharacters.bind(this);
 
         this.state = {
             enemy: { type: '心', defense: 100 }, // 卡普
             boat: 1.5,
-            list: []
+            characters: [
+                { no: 8,   attack: 1250, bead: 1, timing: 'perfect' },                       // 索隆 Lv.87
+                { no: 227, attack: 1285, bead: 1, timing: 'perfect', captainEffect: true },  // 鷹眼 Lv.99
+                { no: 227, attack: 1285, bead: 1, timing: 'perfect', captainEffect: true },  // 鷹眼 Lv.99
+                { no: 39,  attack: 702,  bead: 1, timing: 'perfect' },                       // 巴其 Lv.61
+                { no: 66,  attack: 1491, bead: 1, timing: 'perfect' },                       // 惡龍 Lv.99
+                { no: 255, attack: 1155, bead: 1, timing: 'perfect' },                       // 花劍 Lv.71
+            ]
         };
+
+        // generate unique id for each character
+        this.state.characters.forEach(character => { character.id = ShortId.generate() });
     }
 
     updateEnemy (enemy) {
         this.setState({ enemy });
     }
 
+    updateCharacters (characters) {
+        this.setState({ characters });
+    }
+
     render () {
         return (
             <div>
                 <p>船加成：{this.state.boat}</p>
+
                 <Enemy enemy={this.state.enemy}
                     onChange={this.updateEnemy}
                 />
-                <CharacterList />
+
+                <CharacterList
+                    characters={this.state.characters}
+                    onChange={this.updateCharacters}
+                />
             </div>
         );
     }
