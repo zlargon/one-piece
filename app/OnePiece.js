@@ -1,5 +1,6 @@
 import React         from 'react';
 import ShortId       from 'shortid';
+import Boat          from './Boat';
 import CharacterList from './CharacterList';
 import Enemy         from './Enemy';
 
@@ -8,6 +9,7 @@ export default class OnePiece extends React.Component {
     constructor (props) {
         super(props);
 
+        this.updateBoat = this.updateBoat.bind(this);
         this.updateEnemy = this.updateEnemy.bind(this);
         this.updateCharacters= this.updateCharacters.bind(this);
 
@@ -28,6 +30,10 @@ export default class OnePiece extends React.Component {
         this.state.characters.forEach(character => { character.id = ShortId.generate() });
     }
 
+    updateBoat(boat) {
+        this.setState({ boat });
+    }
+
     updateEnemy (enemy) {
         this.setState({ enemy });
     }
@@ -39,12 +45,17 @@ export default class OnePiece extends React.Component {
     render () {
         return (
             <div>
-                <p>船加成：{this.state.boat}</p>
+                <h2>梅莉號</h2>
+                <Boat boat={this.state.boat}
+                    onChange={this.updateBoat}
+                />
 
+                <h2>敵人</h2>
                 <Enemy enemy={this.state.enemy}
                     onChange={this.updateEnemy}
                 />
 
+                <h2>隊員</h2>
                 <CharacterList
                     characters={this.state.characters}
                     onChange={this.updateCharacters}

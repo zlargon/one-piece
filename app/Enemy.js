@@ -66,11 +66,11 @@ export default class Enemy extends React.Component {
         return (
             <div style={style}>
                 <div onClick={this.switchType}>
-                    敵人屬性：{enemy.type}
+                    屬性：{enemy.type}
                 </div>
 
                 <div>
-                    敵人防禦：
+                    防禦：
                     <input type='number'
                         value={enemy.defense}
                         onChange={this.changeDefense}
