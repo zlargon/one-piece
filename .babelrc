@@ -1,0 +1,4 @@
+// http://babeljs.io/blog/2015/03/31/5.0.0/#babelrc
+{
+  "stage": 0   // support ES7
+}

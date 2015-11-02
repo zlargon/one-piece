@@ -9,8 +9,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-        exclude: /node_modules/,
-        query: { stage: 0 }   // support ES7
+        exclude: /node_modules/
       }
     ]
   }
