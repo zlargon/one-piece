@@ -5,13 +5,13 @@ cd $DIR
 VERSION=$(git log -1 --pretty="%h")
 DATE=$(date)
 
-# build bundle.js
-webpack
+# build production bundle.js
+webpack -p
 
-# copy folder 'build' to 'delopy'
+# copy folder 'bundle.js' and 'index.html' to 'delopy'
 rm -rf deploy
 mkdir deploy
-cp -rf build/* deploy
+cp index.html bundle.js deploy
 
 # modify index.html
 cd deploy
