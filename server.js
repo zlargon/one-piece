@@ -32,6 +32,10 @@ var config = {
         test: /\.js$/,
         loaders: ['react-hot', 'babel'],
         exclude: /node_modules/
+      },
+      {
+        test: /\.less$/,
+        loaders: ['style', 'css', 'less']
       }
     ]
   }
