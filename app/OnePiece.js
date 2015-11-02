@@ -13,7 +13,6 @@ export default class OnePiece extends React.Component {
         this.updateBoat = this.updateBoat.bind(this);
         this.updateEnemy = this.updateEnemy.bind(this);
         this.updateCharacters = this.updateCharacters.bind(this);
-        this.analysis = this.analysis.bind(this);
 
         this.state = {
             enemy: { type: '心', defense: 100 }, // 卡普
@@ -34,22 +33,18 @@ export default class OnePiece extends React.Component {
 
     updateBoat(boat) {
         this.setState({ boat });
-        this.analysis();
     }
 
     updateEnemy (enemy) {
         this.setState({ enemy });
-        this.analysis();
     }
 
     updateCharacters (characters) {
         this.setState({ characters });
-        this.analysis();
     }
 
-    analysis() {
-        const { enemy, boat, characters } = this.state;
-
+    componentWillUpdate(nextProps, nextState) {
+        const { enemy, boat, characters } = nextState;
         const team = characters.map(character => {
             return {
                 no: character.no,
