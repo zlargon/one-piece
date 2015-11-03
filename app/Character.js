@@ -1,7 +1,8 @@
 import React                        from 'react';
 import { DragSource, DropTarget }   from 'react-dnd';
 import CharacterDnD                 from './CharacterDnD';
-
+import OnePiece                     from 'one-piece'
+import './Character.less'
 
 @DropTarget('CharacterItem', CharacterDnD.target, connect => ({
   connectDropTarget: connect.dropTarget()
@@ -141,14 +142,9 @@ export default class Character extends React.Component {
 
     render() {
         const { character, isDragging, connectDragSource, connectDropTarget } = this.props;
-
-        const style = {
-            border: '1px dashed gray',
-            padding: '0.5rem 1rem',
-            marginBottom: '.5rem',
-            backgroundColor: 'white',
-            opacity: isDragging ? 0 : 1
-        };
+        const characterInfo = OnePiece.characterList[character.no];
+        const captainEffectText = characterInfo.captain.tw.content || characterInfo.captain.jp.content;
+        const specialAbility = characterInfo.skill.tw.content || characterInfo.skill.jp.content;
 
         function beadText (bead) {
             if (bead === 0.5) return '暗珠';
@@ -156,33 +152,52 @@ export default class Character extends React.Component {
             if (bead === 2)   return '亮珠';
         }
 
+        function imageUrl(no) {
+            const number = (no + 10000).toString().substring(1);
+            return `http://onepiece-treasurecruise.com/wp-content/uploads/f${number}.png`;
+        }
+
         return connectDragSource(connectDropTarget(
-            <div style={style}>
-                <div>
-                    No. <input type='number' value={character.no} onChange={this.changeNo} />
+            <div className='op-character' style={{ opacity: isDragging ? 0 : 1 }}>
+
+                <div className='group1'>
+                    <img className='icon' src={imageUrl(character.no)}/>
                 </div>
 
-                <div>
-                    攻擊力 <input type='number' value={character.attack} onChange={this.changeAttack} />
+                <div className='group2'>
+                    <div className='no'>
+                        <span>No. </span>
+                        <input type='number' value={character.no} onChange={this.changeNo} />
+                    </div>
+
+                    <div className='attack'>
+                        <span>攻擊：</span>
+                        <input type='number' value={character.attack} onChange={this.changeAttack} />
+                    </div>
+
+                    <div>屬性：{characterInfo.type}</div>
+                    <div>連擊：{characterInfo.combo}</div>
                 </div>
 
-                <div onClick={this.switchBead}>
-                    珠子：{beadText(character.bead)}
+                <div className='group3'>
+                    <div onClick={this.switchBead}>
+                        珠子：{beadText(character.bead)}
+                    </div>
+
+                    <div onClick={this.switchTiming}>
+                        Timing：
+                        <span style={{ textTransform: 'capitalize' }}>{character.timing}</span>
+                    </div>
                 </div>
 
-                <div onClick={this.switchTiming}>
-                    Timing：
-                    <span style={{ textTransform: 'capitalize' }}>
-                        {character.timing}
-                    </span>
-                </div>
+                <div className='group4'>
+                    <div onClick={this.toggleCaptainEffect}>
+                        船長效果：{character.captainEffect ? captainEffectText : 'disable'}
+                    </div>
 
-                <div onClick={this.toggleCaptainEffect}>
-                    船長效果：{character.captainEffect ? 'enable' : 'disable'}
-                </div>
-
-                <div onClick={this.toggleSpecialAbility}>
-                    必殺技：{character.specialAbility ? 'enable' : 'disable'}
+                    <div onClick={this.toggleSpecialAbility}>
+                        必殺技：{character.specialAbility ? specialAbility : 'disable'}
+                    </div>
                 </div>
             </div>
         ));

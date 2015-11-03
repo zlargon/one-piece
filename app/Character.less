@@ -1,0 +1,69 @@
+.op-character {
+    border: 1px dashed gray;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: white;
+
+    * {
+        font-size: 16px;
+    }
+
+    /* Flex Box */
+    display: flex;
+    & > * {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .group1 { flex-basis: 125px; }
+    .group2 { flex-basis: 130px; }
+    .group3 { flex-basis: 150px; }
+    .group4 { flex: 1; }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .group2 {
+        & > * {
+            height: 20px;
+        }
+
+        input {
+            width: 50px;
+            border-width: 0;
+            &[type="number"] {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .no, .attack {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .group3 > *, .group4 > * {
+        padding: 1rem 0.5rem;
+    }
+
+@media all and (max-width: 500px) {
+    flex-wrap: wrap;
+
+    .group2 {
+        flex: 1 1 auto;
+    }
+
+    .group3, .group4 {
+        flex-basis: 100%;
+        padding-top: 5px;
+
+        & > * {
+            padding: 0.2rem 0.5rem;
+        }
+    }
+}
+
+}
