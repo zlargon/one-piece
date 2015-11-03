@@ -1,4 +1,5 @@
 import React from 'react';
+import './Enemy.less'
 
 export default class Enemy extends React.Component {
     static propTypes = {
@@ -56,17 +57,10 @@ export default class Enemy extends React.Component {
     render () {
         const { enemy } = this.props;
 
-        const style = {
-            border: '1px dashed gray',
-            padding: '0.5rem 1rem',
-            marginBottom: '.5rem',
-            backgroundColor: 'white'
-        };
-
         return (
-            <div style={style}>
+            <div className='op-enemy'>
                 <div onClick={this.switchType}>
-                    屬性：{enemy.type}
+                    屬性：{enemy.type} ,
                 </div>
 
                 <div>

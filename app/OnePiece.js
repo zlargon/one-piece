@@ -4,6 +4,7 @@ import { attackAnalysis } from 'one-piece';
 import Boat               from './Boat';
 import CharacterList      from './CharacterList';
 import Enemy              from './Enemy';
+import './OnePiece.less'
 
 export default class OnePiece extends React.Component {
 
