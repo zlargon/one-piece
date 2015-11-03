@@ -42,7 +42,23 @@ export default class CharacterList extends React.Component {
 
     updateCharacterData(index, character) {
         const { characters } = this.props;
+        const old = characters[index];
+
         characters[index] = character;
+
+        // check the mount of captain
+        // It might not have more than two captains
+        const captains = characters.reduce(function (sum, character, index) {
+            return character.captainEffect === true ? sum + 1 : sum;
+        }, 0);
+
+        if (captains > 2) {
+            console.warn('Your team might not have more than 2 captains');
+            console.warn('Please disable the other captain at first');
+            characters[index] = old;   // set back to original character
+            return;
+        }
+
         this.props.onChange(characters);
     }
 
