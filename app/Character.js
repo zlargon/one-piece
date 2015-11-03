@@ -1,8 +1,8 @@
 import React                        from 'react';
 import { DragSource, DropTarget }   from 'react-dnd';
 import CharacterDnD                 from './CharacterDnD';
-import OnePiece                     from 'one-piece'
-import './Character.less'
+import OnePiece                     from 'one-piece';
+import './Character.less';
 
 @DropTarget('CharacterItem', CharacterDnD.target, connect => ({
   connectDropTarget: connect.dropTarget()
@@ -42,8 +42,8 @@ export default class Character extends React.Component {
         this.changeAttack = this.changeAttack.bind(this);
         this.switchBead = this.switchBead.bind(this);
         this.switchTiming = this.switchTiming.bind(this);
-        this.toggleCaptainEffect = this.toggleCaptainEffect.bind(this);
-        this.toggleSpecialAbility = this.toggleSpecialAbility.bind(this);
+        this.checkCaptainEffect = this.checkCaptainEffect.bind(this);
+        this.checkSpecialAbility = this.checkSpecialAbility.bind(this);
     }
 
     // return new no to parent
@@ -122,29 +122,27 @@ export default class Character extends React.Component {
         ));
     }
 
-    toggleCaptainEffect() {
-        const { captainEffect } = this.props.character;
-
+    checkCaptainEffect(event) {
+        const { checked } = event.target;
         this.props.onChange(
             this.props.index,
-            Object.assign({}, this.props.character, { captainEffect: !captainEffect }
+            Object.assign({}, this.props.character, { captainEffect: checked }
         ));
     }
 
-    toggleSpecialAbility() {
-        const { specialAbility } = this.props.character;
-
+    checkSpecialAbility(event) {
+        const { checked } = event.target;
         this.props.onChange(
             this.props.index,
-            Object.assign({}, this.props.character, { specialAbility: !specialAbility }
+            Object.assign({}, this.props.character, { specialAbility: checked }
         ));
     }
 
     render() {
         const { character, isDragging, connectDragSource, connectDropTarget } = this.props;
-        const characterInfo = OnePiece.characterList[character.no];
-        const captainEffectText = characterInfo.captain.tw.content || characterInfo.captain.jp.content;
-        const specialAbility = characterInfo.skill.tw.content || characterInfo.skill.jp.content;
+        const invisible = {
+            visibility: 'hidden'
+        };
 
         function beadText (bead) {
             if (bead === 0.5) return '暗珠';
@@ -160,43 +158,44 @@ export default class Character extends React.Component {
         return connectDragSource(connectDropTarget(
             <div className='op-character' style={{ opacity: isDragging ? 0 : 1 }}>
 
-                <div className='group1'>
-                    <img className='icon' src={imageUrl(character.no)}/>
+                <div>
+                    <div className='baseline'>
+                        <span>船</span>
+                        <input type='checkbox'
+                            checked={character.captainEffect}
+                            onChange={this.checkCaptainEffect} />
+                    </div>
+                    <div className='baseline' style={invisible}>
+                        <span>必</span>
+                        <input type='checkbox'
+                            checked={character.specialAbility}
+                            onChange={this.checkSpecialAbility} />
+                    </div>
                 </div>
 
-                <div className='group2'>
-                    <div className='no'>
-                        <span>No. </span>
+                <div>
+                    <img className='icon' src={imageUrl(character.no)} />
+                </div>
+
+                <div className='basis'>
+                    <div className='baseline'>
+                        <span>No.</span>
                         <input type='number' value={character.no} onChange={this.changeNo} />
                     </div>
 
-                    <div className='attack'>
-                        <span>攻擊：</span>
+                    <div className='baseline'>
+                        <span>攻&nbsp;</span>
                         <input type='number' value={character.attack} onChange={this.changeAttack} />
                     </div>
-
-                    <div>屬性：{characterInfo.type}</div>
-                    <div>連擊：{characterInfo.combo}</div>
                 </div>
 
-                <div className='group3'>
-                    <div onClick={this.switchBead}>
+                <div className='basis'>
+                    <div className='point-cursor'
+                        onClick={this.switchBead}>
                         珠子：{beadText(character.bead)}
                     </div>
-
-                    <div onClick={this.switchTiming}>
-                        Timing：
-                        <span style={{ textTransform: 'capitalize' }}>{character.timing}</span>
-                    </div>
-                </div>
-
-                <div className='group4'>
-                    <div onClick={this.toggleCaptainEffect}>
-                        船長效果：{character.captainEffect ? captainEffectText : 'disable'}
-                    </div>
-
-                    <div onClick={this.toggleSpecialAbility}>
-                        必殺技：{character.specialAbility ? specialAbility : 'disable'}
+                    <div className='bead point-cursor' onClick={this.switchTiming}>
+                        {character.timing}
                     </div>
                 </div>
             </div>
