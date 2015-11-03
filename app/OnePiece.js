@@ -27,6 +27,12 @@ export default class OnePiece extends React.Component {
             ]
         };
 
+        // get the data from local storage
+        const data = window.localStorage.getItem('data');
+        if (data !== null) {
+            this.state = JSON.parse(data);
+        }
+
         // generate unique id for each character
         this.state.characters.forEach(character => { character.id = ShortId.generate() });
     }
@@ -54,6 +60,9 @@ export default class OnePiece extends React.Component {
                 captain: character.captainEffect
             };
         });
+
+        // save the data to local storage
+        window.localStorage.setItem('data', JSON.stringify(nextState));
 
         attackAnalysis({ enemy, boat, team });
     }
