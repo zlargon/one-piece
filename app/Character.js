@@ -139,7 +139,7 @@ export default class Character extends React.Component {
     }
 
     render() {
-        const { character, isDragging, connectDragSource, connectDropTarget } = this.props;
+        const { character, isCaptainFull, isDragging, connectDragSource, connectDropTarget } = this.props;
         const invisible = {
             visibility: 'hidden'
         };
@@ -159,7 +159,8 @@ export default class Character extends React.Component {
             <div className='op-character' style={{ opacity: isDragging ? 0 : 1 }}>
 
                 <div>
-                    <div className='baseline'>
+                    <div className='baseline'
+                        style={isCaptainFull && !character.captainEffect ? invisible : {}}>
                         <span>船</span>
                         <input type='checkbox'
                             checked={character.captainEffect}
