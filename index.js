@@ -1,5 +1,5 @@
 var attackAnalysis = require("./lib/attackAnalysis.js");
-var characterList  = require("./data/character_list.js");
+var characterList  = require("./data/characterList.js");
 
 module.exports = {
     attackAnalysis: attackAnalysis,

@@ -23,5 +23,5 @@ git init
 git add -A
 git commit -m "deploy ${VERSION} on ${DATE}"
 git checkout -b gh-pages
-git remote add github git@github.com:zlargon/optc-game-tools.git
+git remote add github git@github.com:zlargon/one-piece.git
 git push -f github gh-pages
