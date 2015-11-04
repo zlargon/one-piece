@@ -24,7 +24,7 @@ module.exports = {
     "atk": 382,
     "rcv": 438
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ベルメールから託された絆",
       "content": "船長のスロットを[心]に変換し、キャラの回復×9倍体力を回復"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ナミを見守る気持ち",
       "content": "心属性キャラの体力と回復を1.5倍にする"

@@ -7,7 +7,7 @@ module.exports = {
   "type": "心",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 30,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 722,
     "rcv": 131
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "拳骨流星群",
       "content": "スロット全てを[心][肉]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "海軍の英雄",
       "content": "心属性キャラの攻撃と体力を1.5倍にする"

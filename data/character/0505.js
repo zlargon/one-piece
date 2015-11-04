@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 9,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 427,
     "rcv": 142
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "飛爪",
       "content": "3ターンの間、速属性の攻撃が1.25倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "飛行能力を持つ戦士",
       "content": "体力が一定以上の場合、攻撃を受けても倒れない"

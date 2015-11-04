@@ -23,7 +23,7 @@ module.exports = {
     "atk": 851,
     "rcv": 0
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "暴走",
       "content": "敵一体にランダムの力属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "暴走の兆候",
       "content": "力属性キャラの体力を大幅に減らし、攻撃を2.5倍"

@@ -2,7 +2,7 @@ module.exports = {
   "no": 265,
   "name": {
     "jp": "軍曹ヘルメッポ",
-    "tw": null
+    "tw": "貝魯梅柏中士"
   },
   "type": "知",
   "classes": [
@@ -23,24 +23,24 @@ module.exports = {
     "atk": 1060,
     "rcv": 260
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鍛煉のククリ刀",
       "content": "「封じ」状態を3ターン回復する"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "鍛鍊的廓爾喀彎刀\n",
+      "content": "解除3回合「封鎖」狀態"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "将校への野心",
       "content": "斬撃タイプキャラの攻撃と体力を1.5倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "成為將校的野心",
+      "content": "將斬擊型角色的攻擊力及體力提升1.5倍\n"
     }
   }
 };

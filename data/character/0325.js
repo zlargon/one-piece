@@ -23,7 +23,7 @@ module.exports = {
     "atk": 682,
     "rcv": 223
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "灼熱の職人魂",
       "content": "[連]スロットを[肉]に、[肉]スロットを[速]に変換"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

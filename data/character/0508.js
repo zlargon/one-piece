@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 15,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 923,
     "rcv": 180
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鳴牙",
       "content": "敵1体にキャラの攻撃×25倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "王国を導く統率力",
       "content": "力属性キャラの攻撃と体力を1.5倍にする"

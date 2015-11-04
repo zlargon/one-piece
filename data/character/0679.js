@@ -24,7 +24,7 @@ module.exports = {
     "atk": 857,
     "rcv": 390
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "百花繚乱　蜘蛛の華",
       "content": "受けるダメージを1ターンの間半減し、スロットを1ターン固定する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "真の歴史を知る女",
       "content": "心属性キャラの攻撃と回復を1.5倍にし、心スロット出現率を少し上昇させる"

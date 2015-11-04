@@ -23,7 +23,7 @@ module.exports = {
     "atk": 144,
     "rcv": 120
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "元気のエール",
       "content": "隣接するキャラのスロットを[肉]に変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將鄰接角色的技能格變換為[肉]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "青っ鼻ドクター",
       "content": "心属性キャラの回復を1.2倍にする"

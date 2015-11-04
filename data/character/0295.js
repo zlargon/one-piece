@@ -23,7 +23,7 @@ module.exports = {
     "atk": 755,
     "rcv": 50
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "シールドクラッシャー",
       "content": "敵全体の防御力を1ターンの間、半減させる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "太古の島の草食竜",
       "content": "技属性キャラの体力を2倍にする"

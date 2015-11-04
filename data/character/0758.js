@@ -6,7 +6,7 @@ module.exports = {
   },
   "type": "心",
   "classes": [
-    "強靱",
+    "強韌",
     "格鬥"
   ],
   "star": 5,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1051,
     "rcv": 353
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "「獣厳」奥義　梟叩き",
       "content": "[技][速]スロットを[心]スロットに変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "梟のように音も無く完璧な暗殺を実行するのだ",
       "content": "心属性キャラの攻撃を2倍にし、ターン終了時にキャラの回復×3倍の体力を回復する"

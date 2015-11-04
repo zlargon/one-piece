@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1418,
     "rcv": 83
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "闇穴道",
       "content": "敵全体に、前のターンに受けたダメージ×10倍の無属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "無限の引力",
       "content": "受けるダメージが2倍になるが、力属性キャラの攻撃を2.5倍、体力を2.25倍にする"

@@ -7,7 +7,7 @@ module.exports = {
   "type": "技",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 9,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 408,
     "rcv": 184
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "毛皮強化",
       "content": "受けるダメージを3ターンの間、50％減らす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "在3回合內將受到的傷害降低為一半"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "万能薬になるんだ　[技]",
       "content": "技属性キャラの回復を1.5倍にする"

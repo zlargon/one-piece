@@ -23,7 +23,7 @@ module.exports = {
     "atk": 800,
     "rcv": 100
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "シールドクラッシャー",
       "content": "敵全体の防御力を1ターンの間、半減させる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "於1回合內，降低所有敵人一半的防禦力"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "番竜の力",
       "content": "一味の攻撃力を1.5倍にする"

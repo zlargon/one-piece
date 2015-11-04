@@ -24,7 +24,7 @@ module.exports = {
     "atk": 795,
     "rcv": 270
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムの銃乱打",
       "content": "敵全体にキャラの攻撃×10倍の技属性ダメージを与え、1ターンの間防御力を半減させる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "仲間を想う信念",
       "content": "冒険開始時の必殺ターンを2短縮し、自由タイプキャラと格闘タイプキャラの攻撃を1.75倍"

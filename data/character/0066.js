@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 15,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1491,
     "rcv": 154
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鮫・ＯＮ･歯車",
       "content": "敵1体にキャラの攻撃×15倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對單一敵人造成角色攻擊力×15倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ブチ切れた力",
       "content": "斬撃タイプキャラの攻撃を2倍にする"

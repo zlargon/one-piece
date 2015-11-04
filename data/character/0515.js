@@ -24,7 +24,7 @@ module.exports = {
     "atk": 569,
     "rcv": 160
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ポップグリーン",
       "content": "スロットを左上から[知][心][肉]右上から[力][技][速]の順に変換、3回スロットを動かすのだん"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ヘラクレスン先生だん！",
       "content": "射撃タイプキャラのステータスを1.5倍にするのだん"

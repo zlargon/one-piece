@@ -23,7 +23,7 @@ module.exports = {
     "atk": 543,
     "rcv": 83
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "嵐脚「線」",
       "content": "敵全体にキャラの攻撃×10倍の速属性ダメージを与え、2ターンの間防御力アップ中の敵に与えるダメージが1.3倍になる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "新人の正義の殺し屋",
       "content": "冒険開始時の必殺ターンを2短縮する"

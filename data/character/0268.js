@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1282,
     "rcv": 338
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ホワイト・アウト",
       "content": "受けるダメージを3ターンの間、50％減らす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スモークボディ",
       "content": "受けるダメージを25％減らす"

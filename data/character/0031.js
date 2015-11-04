@@ -23,7 +23,7 @@ module.exports = {
     "atk": 70,
     "rcv": 120
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "勇気ある決意",
       "content": "ターン終了後にキャラの回復×2倍の体力を回復する"

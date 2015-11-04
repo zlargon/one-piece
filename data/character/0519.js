@@ -24,7 +24,7 @@ module.exports = {
     "atk": 744,
     "rcv": 106
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムの巨人の雷斧",
       "content": "体力を大幅に減らして敵全体固定大ダメージ+1ターンの間力属性の攻撃を2倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "早くあいつら探さねェと",
       "content": "力属性キャラの攻撃を2倍にする"

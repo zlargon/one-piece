@@ -7,7 +7,7 @@ module.exports = {
   "type": "心",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 25,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 783,
     "rcv": 153
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "[肉]スロットストーム",
       "content": "隣接するキャラのスロットを[肉]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "青鬼の巨人",
       "content": "知属性キャラから受けるダメージを50％減らす"

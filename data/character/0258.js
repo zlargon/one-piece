@@ -24,7 +24,7 @@ module.exports = {
     "atk": 775,
     "rcv": 150
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ポケットの大槌",
       "content": "[技]、[速]スロットを[力]スロットに変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "將[技][速]技能格變換為[力]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "奇妙な巨体",
       "content": "力属性キャラの攻撃と回復を2倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 833,
     "rcv": 117
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ハイパーバースト",
       "content": "敵全体に攻撃×13倍のキャラの属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "正義の防衛",
       "content": "射撃タイプキャラの攻撃を+500、受けるダメージを10%減らす"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 485,
     "rcv": 130
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "逆恨みのわら人形",
       "content": "敵全体の防御力を1ターンの間、０にさせる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "在1回合內將敵人全體的防禦力降為0"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "親父を超える決意",
       "content": "知属性キャラから受けるダメージを30％減らす"

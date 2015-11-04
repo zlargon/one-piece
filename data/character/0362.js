@@ -24,7 +24,7 @@ module.exports = {
     "atk": 440,
     "rcv": 220
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "大喰らい",
       "content": "2ターンの間[肉]を獲得すると、回復量が1つめで1.5倍、2つ連続で2倍、3つ連続以降2.5倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "大食漢レディー",
       "content": "心属性キャラの攻撃と回復を2倍にする"

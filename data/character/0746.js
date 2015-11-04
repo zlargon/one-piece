@@ -23,7 +23,7 @@ module.exports = {
     "atk": 600,
     "rcv": 241
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "メガロ突撃！",
       "content": "敵全体にキャラの攻撃×10倍の速属性ダメージを与え、1ターンの間体力が一定以上の時に攻撃を受けても倒れない"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "姫の愛鮫",
       "content": "体力が少なくても一定以上の場合、攻撃を受けても倒れない"

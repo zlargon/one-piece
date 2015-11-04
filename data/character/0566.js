@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 10,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 603,
     "rcv": 98
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "お掃除タックル",
       "content": "お邪魔スロットを[空]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

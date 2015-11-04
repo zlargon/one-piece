@@ -23,7 +23,7 @@ module.exports = {
     "atk": 314,
     "rcv": 170
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "食あたり砲弾",
       "content": "敵1体にキャラの攻撃×5倍の力属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人單體腳色攻擊力×5倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "戦うコックさん",
       "content": "ターン終了後にキャラの回復×3倍の体力を回復する"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 750,
     "rcv": 127
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "降魔の相",
       "content": "敵全体のHPを10%減らし、防御力を3ターン半減する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "カード使いの魔術師",
       "content": "一味の回復力を大幅ダウンし受けるダメージを40%減"

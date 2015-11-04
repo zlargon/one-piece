@@ -6,7 +6,7 @@ module.exports = {
   },
   "type": "知",
   "classes": [
-    "強靱",
+    "強韌",
     "自由"
   ],
   "star": 5,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1045,
     "rcv": 168
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "「鉄塊」輪",
       "content": "1ターンの間受けるダメージを半減し、強靱タイプキャラの攻撃を1.75倍にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "隔てる物全てドアに変える",
       "content": "知属性キャラの攻撃を2倍にし、心属性キャラから受けるダメージを約3割減"

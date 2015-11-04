@@ -23,7 +23,7 @@ module.exports = {
     "atk": 271,
     "rcv": 139
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "催眠術　ワン･ツー･ジャンゴ",
       "content": "[肉]スロットを[技]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將[肉]技能格變換為[技]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "うっかり催眠術",
       "content": "受けるダメージを10％減らす"

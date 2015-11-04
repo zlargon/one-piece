@@ -23,7 +23,7 @@ module.exports = {
     "atk": 428,
     "rcv": 169
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "海のコックさん",
       "content": "ターン終了後にキャラの回復×3倍の体力を回復する"

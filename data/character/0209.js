@@ -24,7 +24,7 @@ module.exports = {
     "atk": 478,
     "rcv": 252
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "十六輪咲き",
       "content": "1ターンの間、知属性の攻撃が1.5倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "於1回合內，將知識屬性的攻擊力提升1.5倍"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "謎の考古学者",
       "content": "知属性キャラの回復を1.5倍にする"

@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 15,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 660,
     "rcv": 118
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "海流一本背負い",
       "content": "自分のスロットを[速]に変換し、敵単体に攻撃×13倍の速ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "魚人空手黒帯",
       "content": "格闘タイプキャラの攻撃を2倍にする"

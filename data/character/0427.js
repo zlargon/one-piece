@@ -23,7 +23,7 @@ module.exports = {
     "atk": 401,
     "rcv": 144
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "音波“破壊の雄叫び”",
       "content": "「封じ」状態、船長効果無効状態を2ターン回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "海底探索王の声力",
       "content": "技属性キャラの体力を2倍にする"

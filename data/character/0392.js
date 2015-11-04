@@ -23,7 +23,7 @@ module.exports = {
     "atk": 791,
     "rcv": 430
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ネガティブホロウ",
       "content": "1ターンの間、受けるダメージを90%減らし、敵防御激減+精神的毒ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ペローナの不思議なスピリット",
       "content": "技属性キャラの回復を2倍にする"

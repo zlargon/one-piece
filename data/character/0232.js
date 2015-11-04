@@ -24,7 +24,7 @@ module.exports = {
     "atk": 905,
     "rcv": 300
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "袷羽檻",
       "content": "一味全員のスロットを1ターン固定する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "將海賊團全體成員的技能格固定1回合"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "黒ヤリの陣",
       "content": "速属性キャラの攻撃を2倍にする"

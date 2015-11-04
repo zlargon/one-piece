@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 10,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 900,
     "rcv": 217
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "整形ショット“嵐”",
       "content": "敵全体の防御力を2ターンの間半減し、スロットをランダムで入れ替える"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "和服の料理人",
       "content": "速属性キャラの攻撃を2倍にする"

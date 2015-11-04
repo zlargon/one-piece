@@ -23,7 +23,7 @@ module.exports = {
     "atk": 505,
     "rcv": 214
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ヒトデなしのバラード",
       "content": "3ターンの間、自身が封じ状態になるが受けるダメージを半減しターン終了時体力を中量回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ヒトデは足～り～て～る～よ～～♪",
       "content": "コスト2以下のキャラの攻撃を3倍にする"

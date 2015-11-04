@@ -24,7 +24,7 @@ module.exports = {
     "atk": 200,
     "rcv": 510
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ドクターストップ",
       "content": "体力をランダム量回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "マスターオブ医者",
       "content": "心と知属性キャラの攻撃と回復を1.5倍にする"

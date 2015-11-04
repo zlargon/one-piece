@@ -23,7 +23,7 @@ module.exports = {
     "atk": 500,
     "rcv": 150
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "[連]スロットチェンジ・[力]",
       "content": "[連]スロットを[力]に変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將[聯]技能格變換為[力]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "海王類の力",
       "content": "力属性キャラの攻撃を1.5倍にする"

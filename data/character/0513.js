@@ -24,7 +24,7 @@ module.exports = {
     "atk": 460,
     "rcv": 450
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ヤケクソな悪ガキブロー",
       "content": "3ターンの間、心スロットの出現率を大きく上げ、知スロットの出現率を下げる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "おれ達の弟だ　よろしく頼む",
       "content": "体力が一定以上の場合、心属性キャラの攻撃を1.5倍にし、攻撃を受けても倒れない"

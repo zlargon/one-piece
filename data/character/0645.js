@@ -23,7 +23,7 @@ module.exports = {
     "atk": 993,
     "rcv": 399
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "魔女の砕氷船",
       "content": "封じ、船長効果無効状態を2ターン回復し、3ターンの間遅延状態の敵に与えるダメージが1.2倍になる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "どこでも進めるよあたしの船は",
       "content": "知属性キャラの攻撃を2.5倍にする"

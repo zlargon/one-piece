@@ -7,7 +7,7 @@ module.exports = {
   "type": "心",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 455,
     "rcv": 101
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "空の主の咆哮",
       "content": "1ターンの間、回復力を2倍にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "黄金郷の守り神",
       "content": "一味の体力を1.5倍にする"

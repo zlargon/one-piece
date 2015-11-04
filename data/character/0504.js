@@ -23,7 +23,7 @@ module.exports = {
     "atk": 601,
     "rcv": 151
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "びっくり貝イリュージョン",
       "content": "敵全体に知ダメージを与え、1ターンの間様々な効果が発動する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スカイピア副神兵長のトリック",
       "content": "知属性キャラの体力を2倍にする"

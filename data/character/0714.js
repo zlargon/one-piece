@@ -23,7 +23,7 @@ module.exports = {
     "atk": 480,
     "rcv": 182
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ペガサスの嘶き",
       "content": "[技]スロット以外を各属性スロットにランダムで入れ替える"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

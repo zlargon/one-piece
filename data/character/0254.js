@@ -7,7 +7,7 @@ module.exports = {
   "type": "知",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 18,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 806,
     "rcv": 100
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "薔薇輪舞曲",
       "content": "敵全体に5000の固定ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對所有敵人造成5000點固定傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "花剣の覇気",
       "content": "知属性キャラの攻撃と体力を2倍にする"

@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "射擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 734,
     "rcv": 3
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "進攻の軍艦落とし",
       "content": "敵全体に力大ダメージを与え、3ターンの間[力]スロット出現率が大きく上昇する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "友を慕う心",
       "content": "残り体力が少ない時、射撃タイプキャラの攻撃が2.5倍"

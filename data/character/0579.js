@@ -23,7 +23,7 @@ module.exports = {
     "atk": 651,
     "rcv": 132
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "龍巻き",
       "content": "お邪魔スロットを[速]か[技]に変換し、敵全体にキャラの攻撃×15倍速属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "東の海の海賊狩り",
       "content": "速属性と技属性キャラの攻撃を1.5倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 515,
     "rcv": 120
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "三刀流奥義　三・千・世・界",
       "content": "敵全体にキャラの攻撃×10倍の技属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人全體角色攻擊力×10倍的技能屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "背中を見せない剣士",
       "content": "技属性キャラの攻撃を1.5倍にする"

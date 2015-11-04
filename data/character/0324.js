@@ -24,7 +24,7 @@ module.exports = {
     "atk": 988,
     "rcv": 213
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "山風",
       "content": "2ターンの間一味全員のスロットの影響を大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "俊敏な船大工",
       "content": "速属性キャラの攻撃と回復を1.5倍にする"

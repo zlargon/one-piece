@@ -24,7 +24,7 @@ module.exports = {
     "atk": 763,
     "rcv": 358
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "診断“マジック”",
       "content": "船長効果無効状態を3ターン回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "トリック オア キャンディー",
       "content": "ターン終了時にキャラの回復×2倍の体力を回復する"

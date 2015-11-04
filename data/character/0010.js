@@ -24,7 +24,7 @@ module.exports = {
     "atk": 453,
     "rcv": 160
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "トルネード=テンポ",
       "content": "敵1体にキャラの攻撃×15倍の知属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "給予敵人單體角色攻擊力×15倍的知識屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ずる賢い航海士",
       "content": "知属性の攻撃を1.5倍にする"

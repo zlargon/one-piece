@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1149,
     "rcv": 130
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "風来噴射",
       "content": "封じ状態を5ターン回復し、スロットをランダムで入れ替えるぜ　スーパー！"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "夢に生きる船大工",
       "content": "今週のおれは自由タイプキャラの攻撃を2倍にするぜ　アゥッ！"

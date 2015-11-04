@@ -23,7 +23,7 @@ module.exports = {
     "atk": 503,
     "rcv": 121
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ミルキーパワーアックス",
       "content": "敵単体にキャラの攻撃×20倍の力属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

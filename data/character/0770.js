@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1275,
     "rcv": 189
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "一点集中『指銃』",
       "content": "敵1体にキャラの攻撃×15倍力属性ダメージを与え、2ターンの間遅延状態中の敵に与えるダメージが1.3倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "屈強な正義",
       "content": "冒険開始時の必殺ターンを2短縮し、力属性キャラの攻撃を2倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 943,
     "rcv": 180
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "そよ風息爆弾",
       "content": "敵1体にキャラの攻撃×20倍の力属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "對單一敵人造成角色攻擊力×20倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "全身起爆人間",
       "content": "力属性キャラの攻撃を2倍にする"

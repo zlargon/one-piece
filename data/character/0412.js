@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "射擊",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 30,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1205,
     "rcv": 262
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "熊の衝撃",
       "content": "隣接スロットを[力]に変換し、敵全体に1000の固定ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "試作型の人間兵器",
       "content": "力属性キャラの攻撃と体力を2倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 673,
     "rcv": 400
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "衝撃“ビースト”",
       "content": "1ターンの間、心属性キャラの攻撃を1.75倍にする"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "トリック オア ライ",
       "content": "心属性キャラの攻撃と回復を1.5倍にする"

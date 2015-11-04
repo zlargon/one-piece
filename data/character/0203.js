@@ -24,7 +24,7 @@ module.exports = {
     "atk": 515,
     "rcv": 120
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "造形美術家",
       "content": "知属性キャラから受けるダメージを10％減らす"

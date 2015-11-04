@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1400,
     "rcv": 418
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "覇王色の覇気・皇",
       "content": "敵全体にキャラの攻撃×35倍の心属性ダメージを与えた後、2ターンの間防御力を0にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "四皇の覇気・赤髪",
       "content": "心スロット出現率上昇、攻撃開始前体力が多いほど心属性の攻撃が大きくなる"

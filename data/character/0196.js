@@ -23,7 +23,7 @@ module.exports = {
     "atk": 442,
     "rcv": 120
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "[力]スロットチェンジ・[速]",
       "content": "[力]スロットを[速]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將[力]技能格變換為[速]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "正義の速力",
       "content": "速属性キャラの攻撃を1.5倍にする"

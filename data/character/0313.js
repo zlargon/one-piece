@@ -7,7 +7,7 @@ module.exports = {
   "type": "心",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 18,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 798,
     "rcv": 108
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "因果晒し",
       "content": "打突キャラの攻撃を1ターン1.5倍＋単体心ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "巨体の破戒僧",
       "content": "打突タイプキャラの攻撃を2倍、体力を1.5倍にする"

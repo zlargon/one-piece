@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1200,
     "rcv": 114
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "猛竹林",
       "content": "敵全体にキャラの攻撃×20倍ダメージを与え、[速]スロットを[力]スロットに変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "野生の四刀流剣術",
       "content": "攻撃開始前体力半分以上で斬撃タイプキャラの攻撃を2.5倍にする"

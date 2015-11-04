@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1032,
     "rcv": 198
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "変体フランキーケンタウロス",
       "content": "スロットを2回自由にスーパー動かすぜ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スーパー変態な改造人間",
       "content": "体力半分以上で被ダメージ減、攻撃開始前体力半分以上で心攻撃2.5倍、他属性攻撃微減"

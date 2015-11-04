@@ -23,7 +23,7 @@ module.exports = {
     "atk": 240,
     "rcv": 257
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "タバスコ星",
       "content": "敵全体の攻撃を2ターン遅延させる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "推延敵人全體2回合行動"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "勇敢なる海の狙撃手",
       "content": "心属性キャラの攻撃を1.5倍にする"

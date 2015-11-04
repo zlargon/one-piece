@@ -24,7 +24,7 @@ module.exports = {
     "atk": 969,
     "rcv": 150
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "サビサビの実",
       "content": "1ターンの間、3000を超える部分のダメージを大幅に軽減する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "刀剣殺しの業",
       "content": "受けるダメ―ジを20%減らす"

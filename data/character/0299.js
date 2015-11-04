@@ -23,7 +23,7 @@ module.exports = {
     "atk": 920,
     "rcv": 131
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "八刀流の鬼蜘蛛",
       "content": "敵全体のHPを10%減らす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "迷いなき正義",
       "content": "技属性キャラの攻撃を2倍にする"

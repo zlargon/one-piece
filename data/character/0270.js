@@ -23,7 +23,7 @@ module.exports = {
     "atk": 750,
     "rcv": 36
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "アイアンシールド",
       "content": "受けるダメージを1ターンの間、20％減らす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

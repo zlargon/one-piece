@@ -24,7 +24,7 @@ module.exports = {
     "atk": 842,
     "rcv": 361
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鏡花水月の癒し",
       "content": "体力を一定量回復し、2ターンの間受けるダメージを半減する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "夏を満喫する考古学者",
       "content": "格闘タイプキャラの攻撃と回復を1.5倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1243,
     "rcv": 234
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鼻唄三丁　矢筈斬り",
       "content": "敵全体にランダムの心属性ダメージを与え、ランダムでスロットを入れ替える"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "パンツ見せてもらってもよろしいですか？",
       "content": "心属性キャラの攻撃を2倍にし、知属性キャラから受けるダメージを約3割減"

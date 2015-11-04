@@ -24,7 +24,7 @@ module.exports = {
     "atk": 818,
     "rcv": 176
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "特大キャンドルサービスセット",
       "content": "敵全体の攻撃を1ターン遅延させる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "拖延敵人全體1回合行動"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "造形美術家",
       "content": "知属性キャラから受けるダメージを10％減らす"

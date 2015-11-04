@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1057,
     "rcv": 172
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "猛毒ガス弾「Ｍ・Ｈ・５」",
       "content": "敵全体を毒にする"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "敵全体を毒にする"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ウーツ鉱の鎧と盾",
       "content": "受けるダメージを20％減らす"

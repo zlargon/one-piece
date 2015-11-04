@@ -24,7 +24,7 @@ module.exports = {
     "atk": 963,
     "rcv": 378
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "美人秘書のオシゴト",
       "content": "全スロットを[技][力]にし全体ランダム技ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "カリスマ秘書",
       "content": "ターン終了後体力1000回復、受けるダメージ15%減"

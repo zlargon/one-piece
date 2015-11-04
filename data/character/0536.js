@@ -24,7 +24,7 @@ module.exports = {
     "atk": 670,
     "rcv": 445
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "蜃気楼＝テンポ　幻想妖精　桜",
       "content": "2ターンの間、受けるダメージを半減し回復力を2倍にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "桜舞い踊る気象予報士",
       "content": "技属性キャラの回復を2倍にする"

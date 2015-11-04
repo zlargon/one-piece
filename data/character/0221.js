@@ -24,7 +24,7 @@ module.exports = {
     "atk": 949,
     "rcv": 168
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "幸せパンチ",
       "content": "[心]スロットを[知]スロットに変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "將[心]技能格變換為[知]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ハレンチな航海士",
       "content": "知属性キャラの攻撃を2.5倍にする"

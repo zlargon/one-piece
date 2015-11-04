@@ -24,7 +24,7 @@ module.exports = {
     "atk": 390,
     "rcv": 530
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "カラーズトラップ なごみの緑",
       "content": "敵全体の防御力を2ターンの間、半減させる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "於2回合內，降低所有敵人一半的防禦力"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "写実画家",
       "content": "技属性キャラの体力と回復を1.2倍にする"

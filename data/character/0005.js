@@ -23,7 +23,7 @@ module.exports = {
     "atk": 239,
     "rcv": 56
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鬼斬り",
       "content": "敵1体にキャラの攻撃×7倍の技属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人單體角色攻擊力×7倍的技能屬性攻擊"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "三刀流の剣士",
       "content": "技属性キャラの攻撃を1.5倍にする"

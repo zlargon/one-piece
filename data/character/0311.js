@@ -24,7 +24,7 @@ module.exports = {
     "atk": 895,
     "rcv": -50
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "殺戮武人",
       "content": "HPが1になるが、敵単体に超ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "華麗な仮面武人",
       "content": "GOODより前3連続で、以降のキャラの攻撃力が3.5倍"

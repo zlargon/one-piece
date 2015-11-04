@@ -7,7 +7,7 @@ module.exports = {
   "type": "知",
   "classes": [
     "射擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 9,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 492,
     "rcv": 256
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "水大砲",
       "content": "敵全体にキャラの攻撃×5倍の知属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對所有敵人造成角色攻擊力×5倍的知識屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "水鉄砲の達人",
       "content": "射撃タイプキャラの体力を1.5倍にする"

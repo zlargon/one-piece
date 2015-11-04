@@ -23,7 +23,7 @@ module.exports = {
     "atk": 109,
     "rcv": 475
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "心綱",
       "content": "心属性の攻撃を1ターン無効化する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "シャンディアの少女",
       "content": "冒険開始時の必殺ターンを3短縮し、一味のステータスを超激減"

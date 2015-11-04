@@ -23,7 +23,7 @@ module.exports = {
     "atk": 505,
     "rcv": 77
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "心臓破りのツノ",
       "content": "敵全体のHPを20%減らし、1ターンの間受けるダメージを半減"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "人生を狂わせた男への怒り",
       "content": "冒険開始時の必殺ターンを1短縮し、技属性キャラの攻撃をスロット一致時2倍にする"

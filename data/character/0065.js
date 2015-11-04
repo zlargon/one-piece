@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 10,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 930,
     "rcv": 82
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鮫・ＯＮ･ＤＡＲＴＳ",
       "content": "敵1体にキャラの攻撃×7倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對單一敵人造成角色攻擊力×7倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "魚人族の力",
       "content": "斬撃タイプキャラの攻撃を2倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1320,
     "rcv": 515
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "メロメロ甘風",
       "content": "キャラの回復×15倍の体力を回復し、敵全体の攻撃を1ターン遅延させる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "妖艶な女帝",
       "content": "攻撃開始前体力一定以上で速と心属性キャラの攻撃を2.75倍、回復を1.5倍にする"

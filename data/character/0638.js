@@ -23,7 +23,7 @@ module.exports = {
     "atk": 733,
     "rcv": 187
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "遊撃の逆手剣",
       "content": "[心]、[知]スロットを[速]に変換し、封じ状態を1ターン回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "かく乱の猿まわし",
       "content": "冒険開始時の必殺ターンを1短縮し、斬撃タイプキャラの攻撃を2倍"

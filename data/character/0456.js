@@ -23,7 +23,7 @@ module.exports = {
     "atk": 818,
     "rcv": 134
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ダブルキャノン",
       "content": "スロットの中段を[力][技]下段を[心][知]のランダム変換後、1回自由に動かす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "忠誠を尽くす砲撃手",
       "content": "射撃タイプキャラの攻撃を2倍、回復を1.5倍にする"

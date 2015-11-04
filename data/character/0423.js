@@ -24,7 +24,7 @@ module.exports = {
     "atk": 430,
     "rcv": 208
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "眠り歌・フラン",
       "content": "体力を4343回復し、敵全体の防御力を2ターンの間半減させる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "約束の岬への誓い",
       "content": "体力が多く残っている場合、攻撃を受けても倒れない"

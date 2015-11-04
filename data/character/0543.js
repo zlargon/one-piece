@@ -24,7 +24,7 @@ module.exports = {
     "atk": 567,
     "rcv": 99
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "排撃",
       "content": "体力が残り半分になるが、敵単体に超ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "シャンディアを束ねる者",
       "content": "射撃タイプキャラの攻撃と体力を1.5倍、回復を0にする"

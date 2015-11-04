@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 12,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 589,
     "rcv": 186
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "刻蹄 桜吹雪",
       "content": "敵単体に、キャラの攻撃×20倍力ダメージを与え防御力を3ターン半減する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "世界を見てみたいんだ",
       "content": "力属性キャラの攻撃を1.5倍にし、ターン終了時に体力を500回復する"

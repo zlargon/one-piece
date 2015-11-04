@@ -24,7 +24,7 @@ module.exports = {
     "atk": 449,
     "rcv": 232
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "KEEP OUT",
       "content": "3ターンの間、敵各々に対し5000を超える部分のダメージを超激減する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "Bicolor Hearts　～双色の心～",
       "content": "斬撃タイプキャラの攻撃を1.5倍にし、ターン終了時に攻撃×3倍の追加ダメージ"

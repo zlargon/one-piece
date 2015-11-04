@@ -23,7 +23,7 @@ module.exports = {
     "atk": 412,
     "rcv": 231
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ネガティブホロウ“スイート”",
       "content": "体力を少し回復し、1ターンの間受けるダメージを80%減+敵全体に精神的毒ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ペローナの不思議なゴースト・デレデレ",
       "content": "残り体力が少ない時、技属性キャラの回復を3倍にする"

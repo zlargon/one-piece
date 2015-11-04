@@ -23,7 +23,7 @@ module.exports = {
     "atk": 196,
     "rcv": 89
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "象牙突進",
       "content": "敵単体にキャラの攻撃×200倍の知属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "犠牲を伴う正義",
       "content": "コスト21以上のキャラの攻撃を2倍にする"

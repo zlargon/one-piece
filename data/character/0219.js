@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1038,
     "rcv": 32
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "獅子歌歌",
       "content": "敵1体にキャラの攻撃×25倍の技属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "對單一敵人造成角色攻擊力×25倍的技能屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "何も斬らない剣士",
       "content": "体力満タンの時、受けるダメージを大幅に減らす"

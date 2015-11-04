@@ -6,7 +6,7 @@ module.exports = {
   },
   "type": "速",
   "classes": [
-    "強靱",
+    "強韌",
     "自由"
   ],
   "star": 4,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 702,
     "rcv": 89
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "月光十指銃",
       "content": "敵1体にキャラの攻撃×15倍の速属性ダメージを与え、1ターンの間スロットの影響をかなり大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "おれァ“狼”!!!油断させて…食い殺す",
       "content": "強靱タイプキャラの攻撃を2倍にする"

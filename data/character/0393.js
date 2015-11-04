@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 11,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 904,
     "rcv": 0
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "クマシーナックル",
       "content": "敵1体にキャラの攻撃×35倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

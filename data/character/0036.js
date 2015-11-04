@@ -23,7 +23,7 @@ module.exports = {
     "atk": 559,
     "rcv": 55
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "激烈咬みつき",
       "content": "敵1体にキャラの攻撃×5倍の心属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人單體角色攻擊力×5倍的心靈屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "猛獣ショー",
       "content": "心属性キャラの攻撃を1.5倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 744,
     "rcv": 0
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゾンビ流　三十六煩悩鳳",
       "content": "スロットをランダムで入れ替え、敵全体にキャラの攻撃×7倍の技属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 500,
     "rcv": 255
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ヒーリングアップ",
       "content": "3ターンの間、一味全員の回復力を+100する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

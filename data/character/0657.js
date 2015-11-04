@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 10,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 744,
     "rcv": 70
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "イトマキ組手",
       "content": "[知][心]スロットを[力][空]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "魚人空手のあらくれ者",
       "content": "格闘タイプキャラの攻撃を1.5倍にする"

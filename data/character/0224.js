@@ -24,7 +24,7 @@ module.exports = {
     "atk": 457,
     "rcv": 107
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "羊肉ショット",
       "content": "敵1体にキャラの攻撃×15倍の速属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對單一敵人造成角色攻擊力×15倍的速度屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "策士な料理人",
       "content": "PERFECT2連続で以降キャラの攻撃力が2倍になる"

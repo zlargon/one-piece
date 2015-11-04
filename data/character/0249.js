@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 50,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1500,
     "rcv": -900
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "暴走",
       "content": "敵一体にランダムの力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "暴走する力",
       "content": "力属性キャラの体力を大幅に減らし、攻撃を3倍"

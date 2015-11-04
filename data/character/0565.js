@@ -7,7 +7,7 @@ module.exports = {
   "type": "技",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 10,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 620,
     "rcv": 122
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ハンバーガーハンマー",
       "content": "敵単体に5000の固定ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

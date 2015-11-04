@@ -23,7 +23,7 @@ module.exports = {
     "atk": 802,
     "rcv": 156
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "[技]スロットチェンジ・[知]",
       "content": "[技]スロットを[知]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スカイピアの英知",
       "content": "打突タイプキャラの攻撃を1.5倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 668,
     "rcv": 109
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "クリスタルシールド[技]",
       "content": "技属性の攻撃を1ターン半減する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "斬撃のアタッカー巨人",
       "content": "斬撃タイプキャラの攻撃を1.5倍にする"

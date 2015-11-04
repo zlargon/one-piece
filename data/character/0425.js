@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1088,
     "rcv": 162
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "名刀「秋水」鼻唄三丁矢筈斬り",
       "content": "敵全体にランダムの心属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "紳士なガイコツの影の剣士",
       "content": "斬撃タイプキャラの攻撃と体力を1.5倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1500,
     "rcv": 255
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "超過鞭糸",
       "content": "スロットを2回自由に動かし、1ターンの間スロットの影響を倍にする"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "悪のカリスマ",
       "content": "斬撃タイプキャラの攻撃と体力を2倍にする"

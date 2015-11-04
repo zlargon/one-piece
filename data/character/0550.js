@@ -24,7 +24,7 @@ module.exports = {
     "atk": 997,
     "rcv": 388
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "興奮の檄「赤魔鞭」",
       "content": "3ターンの間、防御力ダウン中の敵に与えるダメージが1.3倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "拷問大好きサディちゃん・ご乱心",
       "content": "PERFECT3連続で以降キャラの攻撃力が2.5倍になる"

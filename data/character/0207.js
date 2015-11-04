@@ -24,7 +24,7 @@ module.exports = {
     "atk": 403,
     "rcv": 201
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "オカマ拳法の使い手",
       "content": "心属性キャラから受けるダメージを10％減らす"

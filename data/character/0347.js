@@ -23,7 +23,7 @@ module.exports = {
     "atk": 97,
     "rcv": 22
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

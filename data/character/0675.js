@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1212,
     "rcv": 241
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "エンポリオ・治癒ホルモン",
       "content": "毒・猛毒状態を回復し2ターンの間、受けるダメージを半減+ターン終了時体力を中量回復"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "革命を起こすホルモン",
       "content": "自由タイプキャラの攻撃を2.5倍にしチャッブルわよっ！！！"

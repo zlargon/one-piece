@@ -23,7 +23,7 @@ module.exports = {
     "atk": 606,
     "rcv": 168
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "アタックブースト[技]",
       "content": "1ターンの間、技属性の攻撃が1.2倍になる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "シャンディアの術",
       "content": "技属性キャラの攻撃を1.5倍にする"

@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 12,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 700,
     "rcv": 89
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "歯ガム",
       "content": "[空][連]スロットを[力]に変換し、単体力属性ダメージ、2ターンの間スロットの影響を少し大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "魚人族の怒り",
       "content": "力属性キャラの攻撃を1.5倍にする"

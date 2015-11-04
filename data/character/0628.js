@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "射擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 12,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 800,
     "rcv": 101
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "竜骨折り",
       "content": "敵1体に15000の固定ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

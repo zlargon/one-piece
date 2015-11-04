@@ -24,7 +24,7 @@ module.exports = {
     "atk": 711,
     "rcv": 54
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "大口径バズーカ",
       "content": "敵全体のHPを7%減らす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "シャンディアの怪力の戦士",
       "content": "力属性キャラの攻撃を1.5倍にする"

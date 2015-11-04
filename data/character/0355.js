@@ -24,7 +24,7 @@ module.exports = {
     "atk": 679,
     "rcv": 285
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "双剣乱舞",
       "content": "「封じ」状態、船長効果無効状態を3ターン回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

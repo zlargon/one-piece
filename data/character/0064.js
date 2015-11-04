@@ -7,7 +7,7 @@ module.exports = {
   "type": "技",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 11,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 638,
     "rcv": 288
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "新春たこあげ",
       "content": "敵全体にキャラの攻撃×10倍の技属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對所有敵人造成角色攻擊力×10倍的技能屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "六刀流の剣豪",
       "content": "技属性から受けるダメージを50％減らす"

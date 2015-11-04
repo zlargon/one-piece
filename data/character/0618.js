@@ -23,7 +23,7 @@ module.exports = {
     "atk": 790,
     "rcv": 90
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "マッハパンチ",
       "content": "敵1体に攻撃×20倍のキャラの属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 920,
     "rcv": 354
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "抜刀一閃",
       "content": "敵1体に攻撃×15倍の心属性ダメージを与え、2ターンの間心属性キャラの攻撃1.3倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "夢を語る赤髪の海賊",
       "content": "心属性キャラの攻撃を2倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 218,
     "rcv": 60
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "特製チャーハン",
       "content": "キャラの回復×10倍の体力を回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "回復角色回復力×10倍的體力"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "女好きの料理人",
       "content": "速属性キャラの攻撃を1.5倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1388,
     "rcv": 228
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "漢の火炎刀",
       "content": "力属性キャラの攻撃を1ターン1.5倍+全体力ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "いぶし銀の剣術士",
       "content": "力属性キャラの攻撃を2倍にし、必殺技で与える力属性ダメージを2倍にする"

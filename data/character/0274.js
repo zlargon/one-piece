@@ -23,7 +23,7 @@ module.exports = {
     "atk": 658,
     "rcv": 99
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ハイパースラッシュ",
       "content": "敵1体に攻撃×10倍のキャラの属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

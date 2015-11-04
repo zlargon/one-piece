@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 15,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 850,
     "rcv": 3
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ドジョウコースター",
       "content": "「封じ」・船長効果無効状態を1ターン回復、敵全体力ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1220,
     "rcv": 208
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "毒針",
       "content": "敵1体を猛毒にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "砂漠の王",
       "content": "受けるダメージを20%減らし、知属性キャラの攻撃を2倍にする"

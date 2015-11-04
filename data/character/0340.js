@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 12,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 685,
     "rcv": 133
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "クラーケン・テンタクル・ラッシュ",
       "content": "全スロットを[力][速]にし敵全体ランダム力ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "深海の悪魔",
       "content": "打突タイプキャラの攻撃を2倍にする"

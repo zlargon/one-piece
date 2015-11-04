@@ -24,7 +24,7 @@ module.exports = {
     "atk": 104,
     "rcv": 225
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ビビの大切なガードマン",
       "content": "残り体力が少ないほど敵単体に大ダメージを与え、5ターンの間ターン終了後体力を中量回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "なによっ　泣き虫！！",
       "content": "ターン終了後にキャラの回復×2倍の体力を回復する"

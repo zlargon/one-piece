@@ -24,7 +24,7 @@ module.exports = {
     "atk": 433,
     "rcv": 230
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "イガラッパッパ",
       "content": "敵全体にキャラの攻撃×5倍の心属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "護衛隊長の心",
       "content": "心属性キャラの体力を2倍にする"

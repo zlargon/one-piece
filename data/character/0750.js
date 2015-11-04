@@ -7,7 +7,7 @@ module.exports = {
   "type": "技",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 27,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1325,
     "rcv": 272
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "「嵐脚」周断",
       "content": "敵全体にランダム技属性ダメージを与え、ランダムでスロットを入れ替える"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "四角なのに死角無し",
       "content": "技属性キャラの攻撃を2倍にし、必殺技で与える技属性ダメージを2倍にする"

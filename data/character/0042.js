@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 2,
   "cost": 9,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 530,
     "rcv": 98
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "キャット・ザ・フンジャッタ",
       "content": "敵全体にキャラの攻撃×3倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "給予敵人全體角色攻擊力×3倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "怪力ネコ",
       "content": "力属性キャラの攻撃を1.2倍にする"

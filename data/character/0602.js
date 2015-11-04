@@ -23,7 +23,7 @@ module.exports = {
     "atk": 724,
     "rcv": 128
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "２億Ｖ　雷神",
       "content": "体力を大幅に減らして敵全体に20000の固定ダメージ+1ターンの間速属性キャラの攻撃を2倍"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "フェアリーヴァースへの還幸",
       "content": "速属性キャラの攻撃を2倍にする"

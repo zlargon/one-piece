@@ -23,7 +23,7 @@ module.exports = {
     "atk": 268,
     "rcv": 94
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "アタックブースト[速]",
       "content": "1ターンの間、速属性の攻撃が1.2倍になる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

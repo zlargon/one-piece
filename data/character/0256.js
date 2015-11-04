@@ -24,7 +24,7 @@ module.exports = {
     "atk": 634,
     "rcv": 172
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "華麗なる二丁短筒",
       "content": "[力]、[速]スロットを[技]スロットに変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "將[力][速]技能格變換為[技]<col=1>"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "毅然たる若女形",
       "content": "技属性キャラの攻撃と回復を2倍にする"

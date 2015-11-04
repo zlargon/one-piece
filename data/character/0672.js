@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 18,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 721,
     "rcv": 151
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "四千枚瓦正拳",
       "content": "敵全体のHPを20%減らし、自分のスロットを[力]にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "百段の空手家",
       "content": "格闘タイプキャラの攻撃を2倍にする"

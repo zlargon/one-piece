@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1332,
     "rcv": 144
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鬼気　九刀流　阿修羅弌霧銀",
       "content": "敵全体にキャラの攻撃×15倍の技属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人全體角色攻擊力×15倍的技能屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "三面六手の剣士",
       "content": "技属性キャラの攻撃と体力を2倍にする"

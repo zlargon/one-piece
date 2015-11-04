@@ -7,7 +7,7 @@ module.exports = {
   "type": "心",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 28,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1100,
     "rcv": 390
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "転生の蒼炎",
       "content": "体力を全回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "回復所有體力"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "不死鳥の覇気",
       "content": "攻撃開始前体力満タンで、心属性キャラの攻撃を3倍"

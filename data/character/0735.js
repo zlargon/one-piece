@@ -7,7 +7,7 @@ module.exports = {
   "type": "心",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 15,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 755,
     "rcv": 165
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "生命帰還　消化・吸収",
       "content": "1ターンの間[肉]を獲得すると1つめで1.5倍、2つ連続で2倍、3つ連続以降2.5倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "人界を越えた生命帰還",
       "content": "心属性キャラの攻撃と回復を1.5倍にする"

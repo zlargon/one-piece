@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1020,
     "rcv": 279
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鏡火炎",
       "content": "敵全体にキャラの攻撃×15倍の速属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對所有敵人造成角色攻擊力×15倍的速度屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "メラメラボディ",
       "content": "速属性キャラの攻撃を2.5倍にする"

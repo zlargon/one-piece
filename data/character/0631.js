@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1000,
     "rcv": 196
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "嵐脚「乱」",
       "content": "全スロットを[速][技]にし全体ランダム速ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "人界を越えた四刀流剣術士",
       "content": "斬撃タイプキャラの攻撃を2倍にする"

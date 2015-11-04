@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1121,
     "rcv": 170
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "変体フランキーケンタウロス“フランケン” ",
       "content": "自分のスロットを[力]に変換し、スロットを１回スーパー自由に動かすぜ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "トリック オア コーラ",
       "content": "力属性キャラの攻撃を2倍にする"

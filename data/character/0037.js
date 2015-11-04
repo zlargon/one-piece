@@ -23,7 +23,7 @@ module.exports = {
     "atk": 458,
     "rcv": 130
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "曲技　カミカゼ百コマ劇場",
       "content": "敵1体にキャラの攻撃×5倍の技属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人單體角色攻擊力×5倍的技能屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "曲芸ショー",
       "content": "技属性キャラの攻撃を1.5倍にする"

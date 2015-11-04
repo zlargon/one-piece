@@ -24,7 +24,7 @@ module.exports = {
     "atk": 703,
     "rcv": 103
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ベリベリの実",
       "content": "[連][肉][空][お邪魔][爆弾]スロットを各属性スロットにランダム変換し、スロットを3回自由に動かす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "セパレートボディ",
       "content": "自由タイプキャラの攻撃を2倍にする"

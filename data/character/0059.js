@@ -24,7 +24,7 @@ module.exports = {
     "atk": 130,
     "rcv": 204
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "[心]スロットチェンジ・[知]",
       "content": "[心]スロットを[知]スロットに変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "將[心]技能格變換為[知]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "世渡り上手",
       "content": "知属性キャラの攻撃を1.2倍にする"

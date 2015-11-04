@@ -23,7 +23,7 @@ module.exports = {
     "atk": 513,
     "rcv": 235
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "アトラス彗星",
       "content": "2ターンの間、敵全体の攻撃を遅延＋防御力を半減"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ホラで勇気づける男",
       "content": "射撃タイプキャラの攻撃を2倍にする"

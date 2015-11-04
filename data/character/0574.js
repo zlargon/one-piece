@@ -24,7 +24,7 @@ module.exports = {
     "atk": 712,
     "rcv": 157
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "アイス塊 暴雉嘴",
       "content": "2ターンの間、一味のスロットを固定し打突タイプキャラの攻撃が1.75倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "縛られない信念",
       "content": "打突タイプキャラの攻撃を2倍にする"

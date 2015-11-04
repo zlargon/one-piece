@@ -23,7 +23,7 @@ module.exports = {
     "atk": 388,
     "rcv": 191
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ウソップハンマー",
       "content": "1ターンの間、心属性の攻撃が1.5倍になる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "於1回合內，將心靈屬性的攻擊力提升1.5倍"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "覚悟ある海の狙撃手",
       "content": "心属性キャラの攻撃を1.2倍にする"

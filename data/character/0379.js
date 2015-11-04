@@ -23,7 +23,7 @@ module.exports = {
     "atk": 355,
     "rcv": 95
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ジュゴン演武　癒しの正拳突き",
       "content": "一味の毒・猛毒状態を回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

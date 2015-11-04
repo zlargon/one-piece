@@ -23,7 +23,7 @@ module.exports = {
     "atk": 590,
     "rcv": 240
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "熱血ナイン根性バット",
       "content": "敵1体にキャラの攻撃×5倍の速属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "對單一敵人造成角色攻擊力×5倍的速度屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "2刀流アクロバッター",
       "content": "打突タイプキャラの攻撃を1.5倍にする"

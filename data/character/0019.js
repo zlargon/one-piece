@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 9,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 500,
     "rcv": 209
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "焼き石シチュー",
       "content": "キャラの回復×10倍の体力を回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "回復角色回復力×10倍的體力"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "足技の料理人",
       "content": "速属性キャラの攻撃を1.5倍にする"

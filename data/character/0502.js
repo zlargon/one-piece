@@ -24,7 +24,7 @@ module.exports = {
     "atk": 250,
     "rcv": 550
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "医学勉強中",
       "content": "4ターンの間、ターン終了時に体力をキャラの回復×5倍回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "勇気を胸に歩み始めた少女",
       "content": "心属性キャラのステータスを1.5倍にする"

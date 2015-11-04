@@ -24,7 +24,7 @@ module.exports = {
     "atk": 990,
     "rcv": 417
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "覇王色の覇気",
       "content": "敵全体にキャラの攻撃×15倍の心属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對所有敵人造成角色攻擊力×15倍的心靈屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "四皇の覇気",
       "content": "心属性キャラの攻撃を2.5倍にする"

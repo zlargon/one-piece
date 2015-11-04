@@ -23,7 +23,7 @@ module.exports = {
     "atk": 388,
     "rcv": 387
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "天使のハープ ～癒し～",
       "content": "2ターンの間自由タイプキャラの攻撃と回復を1.5倍にし、自身は3ターン「封じ」状態になる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "神への祈り",
       "content": "体力が少ない時、一味の回復が5倍になる"

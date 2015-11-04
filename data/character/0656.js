@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1389,
     "rcv": 171
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "歯ガム",
       "content": "[空][連]スロットを[力]に変換し、単体力属性ダメージ、2ターンの間スロットの影響を少し大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "人間への恨み",
       "content": "冒険開始時の必殺ターンを1短縮し、力属性キャラの攻撃を2倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 921,
     "rcv": 434
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "居合抜き",
       "content": "敵1体にキャラの攻撃×25倍の速属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對單一敵人造成角色攻擊力×25倍的速度屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "刀剣フリークス",
       "content": "斬撃タイプキャラの回復を2倍にする"

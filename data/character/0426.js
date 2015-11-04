@@ -23,7 +23,7 @@ module.exports = {
     "atk": 655,
     "rcv": 95
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "船体ハンター・ブレス",
       "content": "5ターンの間、力属性の攻撃を5%上げる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "サルベージ王の呼吸力",
       "content": "力属性キャラの体力を2倍にする"

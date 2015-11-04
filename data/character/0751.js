@@ -24,7 +24,7 @@ module.exports = {
     "atk": 545,
     "rcv": 270
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "石鹸羊　羊雲大津波",
       "content": "1ターンの間、発動時の体力が50%以上でダメージを半減、50%未満10%以上で8割減、10%未満で無効にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "あらゆる物をそぎ落とす泡",
       "content": "博識タイプキャラの攻撃と回復を1.5倍にする"

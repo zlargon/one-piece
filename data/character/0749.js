@@ -7,7 +7,7 @@ module.exports = {
   "type": "技",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 17,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 713,
     "rcv": 178
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "「嵐脚」周断",
       "content": "敵全体にランダム技属性ダメージを与え、ランダムでスロットを入れ替える"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "篤と見よ　キリンの力…",
       "content": "技属性キャラの攻撃を1.5倍にし、必殺技で与える技属性ダメージを1.5倍にする"

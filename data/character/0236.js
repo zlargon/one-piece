@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 13,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1005,
     "rcv": 186
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "カ・イ・リ・キ メリケン",
       "content": "敵1体にキャラの攻撃×20倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "友達を守る怪力",
       "content": "格闘タイプキャラの攻撃を1.5倍にする"

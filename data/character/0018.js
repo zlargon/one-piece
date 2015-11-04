@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 7,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 496,
     "rcv": 125
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "整形ショット",
       "content": "敵全体の防御力を2ターンの間、半減させる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "在2回合內將敵人全體的防禦力降低為一半"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "足技の料理人",
       "content": "速属性キャラの体力を1.5倍にする"

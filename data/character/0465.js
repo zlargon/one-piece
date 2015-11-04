@@ -23,7 +23,7 @@ module.exports = {
     "atk": 703,
     "rcv": 108
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ジェットパンチ",
       "content": "敵1体にキャラの攻撃×20倍の速属性ダメージを与え、2ターンの間スロットの影響が少し大きくなる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "沼の試練",
       "content": "GOODより前4連続で、以降のキャラの攻撃力が3倍"

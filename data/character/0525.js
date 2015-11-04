@@ -24,7 +24,7 @@ module.exports = {
     "atk": 684,
     "rcv": 133
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鼻唄三丁　矢筈斬り",
       "content": "敵全体にランダムの心属性ダメージを与え、ランダムでスロットを入れ替える"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "力仕事は骨が折れます",
       "content": "心属性キャラの攻撃を2倍にする"

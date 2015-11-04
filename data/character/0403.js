@@ -23,7 +23,7 @@ module.exports = {
     "atk": 707,
     "rcv": 345
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "背水の剣舞",
       "content": "敵全体に味方の体力が少ないほど大きい速属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "人を斬らない剣闘士の心",
       "content": "残り体力が少ない時受けるダメージを半減し、一味の回復力を3倍にする"

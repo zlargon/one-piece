@@ -23,7 +23,7 @@ module.exports = {
     "atk": 555,
     "rcv": 228
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ダンス天国",
       "content": "[肉]スロットを[技]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將[肉]技能格變換為[技]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ダンシングヒーロー",
       "content": "受けるダメージを10％減らす"

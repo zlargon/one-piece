@@ -23,7 +23,7 @@ module.exports = {
     "atk": 480,
     "rcv": 180
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ポイズンインク",
       "content": "敵全体を毒にする"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "讓敵人全體中毒"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "軟体ボディ",
       "content": "打突タイプキャラの体力を1.5倍にする"

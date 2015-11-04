@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1080,
     "rcv": 185
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムの銃“モンスター”",
       "content": "敵1体にキャラの攻撃×15倍の技属性ダメージを与え、1ターンの間全属性キャラの攻撃を1.2倍にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "トリック オア ミート",
       "content": "格闘タイプキャラの攻撃を2倍にする"

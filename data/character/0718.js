@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1490,
     "rcv": 120
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "黒刀・紫電一閃",
       "content": "前のターンに敵に与えた通常攻撃によるTOTALダメージの50%を無属性ダメージとして敵全体に与える"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "黒刀の一太刀・真",
       "content": "前のキャラの攻撃タイミングごとに次の斬撃タイプキャラの攻撃が最小で2倍、最大で2.75倍になる"

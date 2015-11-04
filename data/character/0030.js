@@ -24,7 +24,7 @@ module.exports = {
     "atk": 999,
     "rcv": 369
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "スベスベシュプール",
       "content": "受けるダメージを1ターンの間、80％減らす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "在1回合內降低80%的傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スベスベボディ",
       "content": "力属性キャラから受けるダメージを50％減らす"

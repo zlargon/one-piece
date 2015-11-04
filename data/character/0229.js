@@ -24,7 +24,7 @@ module.exports = {
     "atk": 665,
     "rcv": 230
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "寝返りのダンス",
       "content": "[知]スロットを[心]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "將[知]技能格變換為[心]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "催眠術師海兵",
       "content": "受けるダメージを10％減らす"

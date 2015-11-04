@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 28,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1200,
     "rcv": 405
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "アイアイキャプテン",
       "content": "スロット[心][知]を[力]に、[技][速]を[空]に変換"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "機敏な武闘家グマ",
       "content": "格闘タイプキャラのステータスを1.5倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 380,
     "rcv": 104
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "スクリュードロップキック",
       "content": "全スロットをランダムで入れ替える（お邪魔スロットも変換可能）"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "カラテのさかんな島のボクサー",
       "content": "攻撃開始前体力満タンで、格闘タイプキャラの攻撃を1.5倍にする"

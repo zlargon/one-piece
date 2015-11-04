@@ -23,7 +23,7 @@ module.exports = {
     "atk": 605,
     "rcv": 0
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "古の戦士達の闘技",
       "content": "体力が1になるが、敵全体に1000の固定ダメージ+1ターンの間一味の攻撃1.2倍"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

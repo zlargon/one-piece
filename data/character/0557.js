@@ -24,7 +24,7 @@ module.exports = {
     "atk": 626,
     "rcv": 216
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "八十輪咲き 四本樹 ショック",
       "content": "3ターンの間、知スロットの出現率が大きく上昇する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "郷に入っては郷に従うべきよ",
       "content": "知属性キャラの攻撃と回復を1.5倍にする"

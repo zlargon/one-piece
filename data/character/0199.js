@@ -23,7 +23,7 @@ module.exports = {
     "atk": 602,
     "rcv": 124
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鼻空想砲",
       "content": "敵1体にキャラの攻撃×15倍の力属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "對單一敵人造成角色攻擊力×15倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "爆弾人間",
       "content": "力属性キャラの攻撃を1.5倍にする"

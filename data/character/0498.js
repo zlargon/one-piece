@@ -24,7 +24,7 @@ module.exports = {
     "atk": 559,
     "rcv": 385
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ガムシャラな悪ガキキック",
       "content": "「封じ」状態を4ターン回復し、敵1体にキャラの攻撃×3倍の速属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "おれは　死なねェ！！！",
       "content": "速属性キャラの攻撃と体力を1.5倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 777,
     "rcv": 474
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "孔雀一連スラッシャー",
       "content": "[連]スロットを[速]スロットに変換し、スロットを2回自由に動かす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "信頼の「仲間の印」",
       "content": "ターン終了時に体力を2000回復する"

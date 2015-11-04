@@ -23,7 +23,7 @@ module.exports = {
     "atk": 890,
     "rcv": 107
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "スロットレートアップライト[知]",
       "content": "3ターンの間、[知]スロット出現率を少し上げる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

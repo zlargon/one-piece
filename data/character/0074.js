@@ -24,7 +24,7 @@ module.exports = {
     "atk": 545,
     "rcv": 199
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "火拳",
       "content": "敵1体にキャラの攻撃×25倍の速属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對單一敵人造成角色攻擊力×25倍的速度屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "メラメラボディ",
       "content": "速属性キャラの攻撃を2倍にする"

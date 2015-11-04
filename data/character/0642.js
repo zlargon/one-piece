@@ -7,7 +7,7 @@ module.exports = {
   "type": "心",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 18,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 810,
     "rcv": 0
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "猛者の大太刀",
       "content": "一味の体力を30%減らし敵1体に固定ダメージ、1ターンの間スロットの影響をかなり大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "背水の忠義心",
       "content": "残り体力が少ない時、心属性キャラの攻撃を2.5倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 525,
     "rcv": 155
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "最終園長・ロマンの探求ダイブ",
       "content": "受けるダメージを2ターンの間、50%減らす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "モンブラン一族の決意",
       "content": "心属性キャラの攻撃を2倍にする"

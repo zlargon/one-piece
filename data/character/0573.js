@@ -24,7 +24,7 @@ module.exports = {
     "atk": 483,
     "rcv": 280
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "男気あるサポート",
       "content": "船長効果無効状態を2ターン回復し、体力をキャラの回復×10倍回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "仲間への信頼「みﾞんﾞなﾞ～！」",
       "content": "一味の回復を1.2倍にする"

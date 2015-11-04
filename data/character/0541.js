@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1050,
     "rcv": -600
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "白荊デスマッチ",
       "content": "5ターンの間、[心][知][連][肉]スロットがほとんど出なくなる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "鉄の試練",
       "content": "体力一定以下の時、力属性キャラの攻撃を2.5倍にする"

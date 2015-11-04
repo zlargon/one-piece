@@ -23,7 +23,7 @@ module.exports = {
     "atk": 201,
     "rcv": 89
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "泥棒猫",
       "content": "体力を1000回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "回復1000點體力"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "泥棒航海士",
       "content": "知属性キャラから受けるダメージを20％減らす"

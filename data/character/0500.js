@@ -23,7 +23,7 @@ module.exports = {
     "atk": 483,
     "rcv": 400
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "女は度胸！",
       "content": "敵全体の攻撃を1ターン遅延させる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ナミとノジコが大好きなみかん",
       "content": "射撃タイプキャラの回復を2倍にする"

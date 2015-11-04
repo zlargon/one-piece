@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 921,
     "rcv": 221
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "空気開扉",
       "content": "自分と船長のスロットを[力]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "人界を越えた鉄の肉体",
       "content": "力属性キャラの攻撃と体力を1.5倍にする"

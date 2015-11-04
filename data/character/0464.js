@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1002,
     "rcv": 175
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "三丈鳥フザの火群",
       "content": "敵全体にキャラの攻撃×20倍の知属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "紐の試練",
       "content": "打突タイプキャラの攻撃と体力を1.5倍にする"

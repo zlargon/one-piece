@@ -23,7 +23,7 @@ module.exports = {
     "atk": 527,
     "rcv": 233
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ロマンティックゴースト",
       "content": "体力を回復×3倍回復し、1ターンの間受けるダメージを80%減らす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

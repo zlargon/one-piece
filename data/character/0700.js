@@ -23,7 +23,7 @@ module.exports = {
     "atk": 876,
     "rcv": 112
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ライトブレイク",
       "content": "敵1体のHPを5%減らす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "正義の闘争",
       "content": "格闘タイプキャラの攻撃を1.75倍にする"

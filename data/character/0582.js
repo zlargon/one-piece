@@ -24,7 +24,7 @@ module.exports = {
     "atk": 691,
     "rcv": 101
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "燃焼剣",
       "content": "敵単体に攻撃×10倍の速属性ダメージを与え、1ターンの間速属性キャラの攻撃1.5倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "シャンディアの槍の戦士",
       "content": "打突タイプキャラの攻撃と体力を1.5倍にする"

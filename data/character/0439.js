@@ -24,7 +24,7 @@ module.exports = {
     "atk": 358,
     "rcv": 256
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "突撃！　超カルガモ部隊！“ラブ”",
       "content": "隣接スロットを[肉]に変換し、他のスロットをランダムで入れ替える"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "王女の思い・義理",
       "content": "ターン終了後にキャラの回復x5倍の体力を回復する"

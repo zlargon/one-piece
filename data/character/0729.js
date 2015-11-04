@@ -24,7 +24,7 @@ module.exports = {
     "atk": 970,
     "rcv": 302
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "羊雲リラックス砲",
       "content": "ランダムでスロットを入れ替え、3ターンの間ターン終了時に体力を中量回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "人界を越えた脚力",
       "content": "技属性キャラの攻撃と回復を1.2倍にし、技スロット出現率が上昇"

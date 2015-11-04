@@ -23,7 +23,7 @@ module.exports = {
     "atk": 482,
     "rcv": 139
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "海面割り",
       "content": "「封じ」状態を2ターン回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

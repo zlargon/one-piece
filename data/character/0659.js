@@ -23,7 +23,7 @@ module.exports = {
     "atk": 933,
     "rcv": 242
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムの風船　スイム",
       "content": "封じ・船長効果無効状態を2ターン回復し、2ターンの間受けるダメージを半減する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "うきわで沈まないゴム人間",
       "content": "PERFECT3連続で以降キャラの攻撃力が2.5倍になる"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 687,
     "rcv": 233
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "姑息な大犯罪『特大キャンドルサービスセット』",
       "content": "ターン終了後体力を少し回復するようになり、敵全体の攻撃を1ターン遅延"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "脱出の造形美術家",
       "content": "受けるダメージを10％減らす"

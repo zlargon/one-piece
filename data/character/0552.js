@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 15,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 770,
     "rcv": 112
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "呪いのわめき声",
       "content": "敵全体の防御力を1ターンの間、０にさせる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

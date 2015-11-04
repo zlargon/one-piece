@@ -24,7 +24,7 @@ module.exports = {
     "atk": 576,
     "rcv": 272
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "びっくり玉蔓 玉ドラゴン",
       "content": "全スロットを空にし、敵1体に心属性大ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "玉の試練",
       "content": "心属性キャラの体力を2倍にする"

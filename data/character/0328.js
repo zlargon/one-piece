@@ -24,7 +24,7 @@ module.exports = {
     "atk": 390,
     "rcv": 140
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "フィドル 突撃",
       "content": "敵全体にキャラの攻撃×20倍の速属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "国を想う心",
       "content": "体力が少ない時、一味の回復が5倍になる"

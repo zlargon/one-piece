@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1055,
     "rcv": 338
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "百花繚乱",
       "content": "1ターンの間、知属性の攻撃が2倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "於1回合內，將知識屬性的攻擊力提升2倍"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "頭脳明晰な考古学者",
       "content": "知属性キャラの回復を2倍にする"

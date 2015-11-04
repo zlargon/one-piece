@@ -24,7 +24,7 @@ module.exports = {
     "atk": 951,
     "rcv": 357
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "可憐な乙女への開花",
       "content": "[肉][力][技]スロットを[力][速]にランダムに入れ替える"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "花嫁修業の料理人",
       "content": "属性知→心→速のキャラ順GOOD以上の攻撃で以降キャラの攻撃が2.25倍になる"

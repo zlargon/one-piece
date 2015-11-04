@@ -23,7 +23,7 @@ module.exports = {
     "atk": 694,
     "rcv": 106
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "三刀流　百八煩悩鳳",
       "content": "敵全体にキャラの攻撃×10倍の技属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人全體角色攻擊力×10倍的傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "背中を見せない剣士",
       "content": "技属性キャラの攻撃を1.5倍にする"

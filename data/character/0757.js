@@ -6,7 +6,7 @@ module.exports = {
   },
   "type": "心",
   "classes": [
-    "強靱",
+    "強韌",
     "格鬥"
   ],
   "star": 4,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 651,
     "rcv": 203
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "「獣厳」奥義　梟叩き",
       "content": "[技][速]スロットを[心]スロットに変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "暴くぞ暴くぞ!!お前達の強さ!!",
       "content": "心属性キャラの攻撃を2倍にする"

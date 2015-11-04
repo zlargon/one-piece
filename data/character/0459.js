@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1338,
     "rcv": 389
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "仏の衝撃波",
       "content": "敵全体にランダム心ダメージを与え、全属性キャラの攻撃を1ターン1.5倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "仁義という名の正義",
       "content": "冒険開始時の必殺ターンを2短縮し、コスト20以下のキャラの攻撃を3倍にする"

@@ -7,7 +7,7 @@ module.exports = {
   "type": "知",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 27,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1224,
     "rcv": 226
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "悪魔風脚　野獣肉シュート",
       "content": "敵全体に、味方の体力が少ないほど大きい知属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "イーストブルーの恋の道",
       "content": "体力満タン時、相手から受けるダメージを大幅に減らす"

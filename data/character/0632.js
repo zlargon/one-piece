@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 12,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 792,
     "rcv": 64
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "指銃「黄蓮」",
       "content": "全スロットを[力][心][知]にし全体ランダム力ダメージ、2ターンの間敵全体の防御力を半減"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "冷酷な殺戮兵器",
       "content": "格闘タイプキャラの攻撃を1.5倍にする"

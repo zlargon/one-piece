@@ -24,7 +24,7 @@ module.exports = {
     "atk": 541,
     "rcv": 397
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ムチャクチャな悪ガキパンチ",
       "content": "体力を減らして敵単体に小固定ダメージ、1ターンの間体力一定以上の時攻撃を受けても倒れない"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "もっと！！！　強くなりたい！！！",
       "content": "[肉]スロット出現率を少し上昇させ、一味の攻撃を1.2倍"

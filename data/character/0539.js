@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 30,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 815,
     "rcv": -250
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "内気な獄卒獣の金棒",
       "content": "自分のスロットを[力]に変換し、敵単体に攻撃×25倍の力ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

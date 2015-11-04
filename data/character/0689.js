@@ -24,7 +24,7 @@ module.exports = {
     "atk": 502,
     "rcv": 212
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "植物学者の大発見",
       "content": "2ターンの間一味全員のスロットの影響を大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "名のある探検家",
       "content": "斬撃タイプキャラの攻撃と回復を1.2倍にする"

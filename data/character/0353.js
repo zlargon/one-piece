@@ -7,7 +7,7 @@ module.exports = {
   "type": "知",
   "classes": [
     "射擊",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 50,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1252,
     "rcv": 88
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "スマッシュ・バスター",
       "content": "2ターンの間、射撃タイプキャラの攻撃が1.75倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "名立たる将兵の指導者",
       "content": "射撃タイプキャラの攻撃を2.5倍にする"

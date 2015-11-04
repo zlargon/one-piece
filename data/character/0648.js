@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 30,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 777,
     "rcv": 303
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "蒼炎の蹴撃",
       "content": "キャラの回復×100倍の体力を回復し、2ターンの間スロットの影響を大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "覇気の蒼翼",
       "content": "攻撃開始前体力一定以上で、速と心属性キャラの攻撃を2.75倍にし受けるダメージを30%減"

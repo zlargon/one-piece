@@ -23,7 +23,7 @@ module.exports = {
     "atk": 787,
     "rcv": 198
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "1万キロギロチン",
       "content": "[肉]スロットを[速]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將[肉]技能格變換為[速]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "1万キロボディ",
       "content": "格闘タイプキャラの体力を2倍にする"

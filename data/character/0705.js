@@ -23,7 +23,7 @@ module.exports = {
     "atk": 595,
     "rcv": 232
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "有罪判決「間をとって死刑」",
       "content": "[心][知][連][肉][空]スロットを[力][技][速]に変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "３つ首の厳粛な決断",
       "content": "力・技・速属性キャラの攻撃と体力を1.25倍にする"

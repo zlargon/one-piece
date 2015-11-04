@@ -23,7 +23,7 @@ module.exports = {
     "atk": 936,
     "rcv": 221
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "焼き石シチュー“パーティー”",
       "content": "キャラの回復×15倍体力を回復し、[連]スロットを[肉]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "トリック オア レディー",
       "content": "心属性キャラの攻撃を2倍にする"

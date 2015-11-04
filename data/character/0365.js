@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1323,
     "rcv": 313
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ギャングフォートレス",
       "content": "[力]、[技]スロットを[速]スロットに変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "海賊の頭目（ファーザー）",
       "content": "速属性キャラの攻撃と回復を2倍にする"

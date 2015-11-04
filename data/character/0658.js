@@ -7,7 +7,7 @@ module.exports = {
   "type": "知",
   "classes": [
     "射擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 10,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 552,
     "rcv": 178
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "百発水鉄砲",
       "content": "全スロットを[知][心]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "水鉄砲の名人",
       "content": "射撃タイプキャラの攻撃を1.5倍にする"

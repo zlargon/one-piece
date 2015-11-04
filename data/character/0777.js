@@ -24,7 +24,7 @@ module.exports = {
     "atk": 789,
     "rcv": 188
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "豪遊のラッキー・ショット！！",
       "content": "体力を5000回復し、敵1体に攻撃×15倍の心属性ダメージを与え、自身が3ターン封じ状態になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "天真爛漫なビッグイーター",
       "content": "心属性キャラの攻撃と回復を1.75倍にする"

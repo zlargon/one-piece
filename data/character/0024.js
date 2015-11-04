@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 9,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 820,
     "rcv": 122
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "刻蹄　桜",
       "content": "敵全体の防御力を2ターンの間、半減させる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "在2回合內降低敵人全體一半的防禦力"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "万能薬になるんだ　[力]",
       "content": "力属性キャラの回復を1.5倍にする"

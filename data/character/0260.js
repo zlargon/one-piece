@@ -2,12 +2,12 @@ module.exports = {
   "no": 260,
   "name": {
     "jp": "エドワード・ニューゲート",
-    "tw": null
+    "tw": "艾德華・紐蓋特"
   },
   "type": "力",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 40,
@@ -24,24 +24,24 @@ module.exports = {
     "atk": 1060,
     "rcv": 156
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "海震",
       "content": "敵全体のHPを30%減らす"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "海震",
+      "content": "將所有敵人的HP減少30％"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "世界を滅ぼす力",
       "content": "残り体力が少ない時、一味の攻撃を3倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "毀滅世界的力量",
+      "content": "當殘餘體力太少時，將海賊團的攻擊力提升3倍\n"
     }
   }
 };

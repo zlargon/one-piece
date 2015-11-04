@@ -24,7 +24,7 @@ module.exports = {
     "atk": 626,
     "rcv": 188
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "海賊王に導く剣",
       "content": "3ターンの間、速スロット出現率が大きく上昇する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "フランクなコック",
       "content": "攻撃開始前体力満タンで、速属性キャラの攻撃を3倍"

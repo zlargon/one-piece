@@ -23,7 +23,7 @@ module.exports = {
     "atk": 127,
     "rcv": 216
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "魅惑の香水ダンス",
       "content": "受けるダメージを1ターンの間、50％減らす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "於1回合內，將所受傷害值減少50％"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "王女の誓い",
       "content": "ターン終了後にキャラの回復x2倍の体力を回復する"

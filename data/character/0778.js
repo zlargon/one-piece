@@ -23,7 +23,7 @@ module.exports = {
     "atk": 503,
     "rcv": 201
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "無敗の剣技",
       "content": "敵1体に味方の体力が少ないほど大きい速属性ダメージを与え、自身のスロットを[速]に変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "みかわしの構え",
       "content": "受けるダメージを20％減らす"

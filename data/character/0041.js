@@ -23,7 +23,7 @@ module.exports = {
     "atk": 499,
     "rcv": 133
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ネコババ",
       "content": "[肉]スロットを[知]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將[肉]技能格變換為[知]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ネコかぶり",
       "content": "知属性キャラの回復を1.2倍にする"

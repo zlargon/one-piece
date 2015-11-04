@@ -24,7 +24,7 @@ module.exports = {
     "atk": 512,
     "rcv": 161
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ヘルウィンク",
       "content": "自分のスロットを[速]にし、他のスロットを[肉][力][技][速]のランダムに入れ替える　ヒーハー!!!"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "命ナメんじゃないよ!!!",
       "content": "属性技→知→速のキャラ順GOOD以上の攻撃で以降キャラの攻撃力が2.25倍になっちゃブル"

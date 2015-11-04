@@ -23,7 +23,7 @@ module.exports = {
     "atk": 620,
     "rcv": 143
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "クリスタルシールド[速]",
       "content": "速属性の攻撃を1ターン半減する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "打突のパワー巨人",
       "content": "打突タイプキャラの体力を1.5倍にする"

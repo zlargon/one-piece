@@ -23,7 +23,7 @@ module.exports = {
     "atk": 722,
     "rcv": 0
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "全てを吹き飛ばすハリケーン“恋”",
       "content": "敵全体に500の固定ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

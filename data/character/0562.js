@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1352,
     "rcv": 321
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "大炎戒　炎帝",
       "content": "一味の体力を40%減らし全体に減少値×15倍の無属性ダメージ、1ターンスロットを固定する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "人生に“くい”は残さない…！！！",
       "content": "射撃タイプキャラの体力を1.5倍にし、攻撃をスロット一致時3倍、通常時攻撃2倍"

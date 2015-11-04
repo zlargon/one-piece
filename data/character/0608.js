@@ -23,7 +23,7 @@ module.exports = {
     "atk": 648,
     "rcv": 132
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "極道の力",
       "content": "1ターンの間[肉]を獲得すると、回復量が1つめで1.5倍、2つ連続で2倍、3つ連続以降2.5倍になる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 2,
   "cost": 8,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 296,
     "rcv": 64
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "鉄壁の盾男",
       "content": "力属性から受けるダメージを30％減らす"

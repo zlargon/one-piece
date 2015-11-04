@@ -24,7 +24,7 @@ module.exports = {
     "atk": 603,
     "rcv": 168
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "歓喜の『４５度』",
       "content": "1ターンの間、一味の攻撃と回復を+45、受けるダメージを45%減らす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "この骨にかけても私は負けませんよ！",
       "content": "斬撃タイプキャラの攻撃を1.5倍にする"

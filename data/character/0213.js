@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 18,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 500,
     "rcv": 200
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "嘆きの頭突き",
       "content": "敵全体にキャラの攻撃×20倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對所有敵人造成角色攻擊力×20倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "仲間の生還を信じる心",
       "content": "体力が一定以上の場合、攻撃を受けても倒れない"

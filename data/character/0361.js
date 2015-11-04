@@ -7,7 +7,7 @@ module.exports = {
   "type": "知",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 28,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1098,
     "rcv": 132
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "動物古代種の力",
       "content": "敵全体に攻撃×10倍知ダメージ、1ターンの間体力が一定以上の時に攻撃を受けても倒れない"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "赤旗を掲げる者",
       "content": "残り体力が少ない時、知属性キャラの攻撃を3倍にする"

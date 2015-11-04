@@ -23,7 +23,7 @@ module.exports = {
     "atk": 608,
     "rcv": 2
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "腹部満点",
       "content": "[肉]スロットを[力]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スカイピア神兵長の逆鱗",
       "content": "力属性キャラの攻撃と体力を1.5倍にする"

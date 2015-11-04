@@ -23,7 +23,7 @@ module.exports = {
     "atk": 645,
     "rcv": 170
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "[心]スロットチェンジ・[技]",
       "content": "[心]スロットを[技]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "正義の進攻",
       "content": "打突タイプキャラの攻撃を1.75倍にする"

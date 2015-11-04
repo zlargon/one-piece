@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1300,
     "rcv": 500
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "冥王の覇気",
       "content": "敵全体にキャラの攻撃×20倍の知属性ダメージ、封じ状態を5ターン回復"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "元伝説の海賊団副船長",
       "content": "チェイン係数の増加量を4倍にする"

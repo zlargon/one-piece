@@ -24,7 +24,7 @@ module.exports = {
     "atk": 889,
     "rcv": 320
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "目抜咲き“スリラー”",
       "content": "スロット上段を[技]スロットに変換し、擬音隠し状態を回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "トリック オア ヒストリー",
       "content": "技属性キャラの攻撃と回復を1.5倍にする"

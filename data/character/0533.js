@@ -24,7 +24,7 @@ module.exports = {
     "atk": 448,
     "rcv": 163
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "飛燕ボンナバン 桜",
       "content": "1ターンの間スロットの影響を大きくし、敵単体に20倍の速属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "桜音色奏でる音楽家",
       "content": "速属性キャラの攻撃を2倍にする"

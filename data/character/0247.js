@@ -23,7 +23,7 @@ module.exports = {
     "atk": 500,
     "rcv": 250
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "キューンスパーク",
       "content": "体力を1224回復し、とても可愛い"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "僕らのヒーロー",
       "content": "受けるダメージを10％減らす"

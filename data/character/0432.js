@@ -23,7 +23,7 @@ module.exports = {
     "atk": 424,
     "rcv": 68
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "大刃撃",
       "content": "敵単体にキャラの攻撃×20倍の速属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 692,
     "rcv": 89
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "スプリング跳人",
       "content": "1ターンの間一味全員のスロットの影響を大きくする"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "バネバネボディ",
       "content": "技属性キャラの攻撃を1.5倍にする"

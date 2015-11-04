@@ -23,7 +23,7 @@ module.exports = {
     "atk": 893,
     "rcv": 130
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ジャッジメント・ボム",
       "content": "敵1体にキャラの攻撃×25倍の知属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "恐怖の伝達係",
       "content": "射撃タイプキャラの攻撃を1.5倍にする"

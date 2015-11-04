@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 15,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 695,
     "rcv": 186
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "飛爪",
       "content": "3ターンの間、速属性の攻撃が1.25倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "アラバスタ王国最強の戦士",
       "content": "体力が少なくても一定以上の場合、攻撃を受けても倒れない"

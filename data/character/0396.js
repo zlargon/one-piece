@@ -23,7 +23,7 @@ module.exports = {
     "atk": 690,
     "rcv": 233
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "土竜平手撃ち",
       "content": "隣接スロットを[空]にし、1ターンの間一味全員のスロットの影響を少し大きくする"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "モグラ塚テリトリー",
       "content": "速属性キャラの攻撃と回復を1.5倍にする"

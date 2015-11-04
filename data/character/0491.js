@@ -23,7 +23,7 @@ module.exports = {
     "atk": 570,
     "rcv": 172
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "アタックブースト[速]",
       "content": "1ターンの間、速属性の攻撃が1.2倍になる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "シャンディアの足",
       "content": "打突タイプキャラの回復を1.5倍にする"

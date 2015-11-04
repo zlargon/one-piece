@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1300,
     "rcv": 370
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ROOMシャンブルズ",
       "content": "[技]以外のスロットを[技][肉][連]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "死の外科医",
       "content": "技属性キャラの攻撃を2.5倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1313,
     "rcv": 227
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムのツインJET銃",
       "content": "敵1体にキャラの攻撃×25倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "給予敵人單體角色攻擊力25倍的力量屬性攻擊"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ドーピングパワー",
       "content": "力属性キャラの攻撃を2倍にする"

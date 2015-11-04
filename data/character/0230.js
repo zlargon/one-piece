@@ -24,7 +24,7 @@ module.exports = {
     "atk": 809,
     "rcv": 187
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "Wハイパーストレート",
       "content": "敵単体に200の固定ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對單一敵人造成200點固定傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ノリ重視海兵",
       "content": "力属性キャラの攻撃を1.5倍にする"

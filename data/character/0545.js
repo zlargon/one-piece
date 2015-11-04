@@ -23,7 +23,7 @@ module.exports = {
     "atk": 615,
     "rcv": 185
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "6000万V 雷龍",
       "content": "敵全体に6000の固定ダメージを与え、1ターンの間心属性の攻撃を1.5倍"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "無敵たる神",
       "content": "心属性キャラの攻撃を2倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 831,
     "rcv": 85
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "マスターネイル",
       "content": "お邪魔スロットも含め全スロットを[空]にし、敵全体にランダム知ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スーパーな大戦力",
       "content": "☆3以下のキャラの攻撃を2倍にする"

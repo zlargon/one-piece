@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1000,
     "rcv": 455
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ビリーの放電「ビリビリビリ！」",
       "content": "スロットをランダムで入れ替え、1ターンの間体力が一定以上の時に攻撃を受けても倒れない"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "必ず助けにきて",
       "content": "打突タイプキャラの攻撃を2倍、回復を1.5倍にする"

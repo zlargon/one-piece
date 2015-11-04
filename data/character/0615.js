@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 900,
     "rcv": 35
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "デストロイアックス",
       "content": "敵1体にランダム力ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 423,
     "rcv": 158
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "反旗の鼓舞",
       "content": "1ターンの間、斬撃タイプキャラの攻撃が1.5倍になる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "一心不乱の一点突破",
       "content": "一味の攻撃を1.5倍にし体力と回復を激減する"

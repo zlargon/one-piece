@@ -6,7 +6,7 @@ module.exports = {
   },
   "type": "知",
   "classes": [
-    "強靱",
+    "強韌",
     "自由"
   ],
   "star": 4,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 644,
     "rcv": 91
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "「鉄塊」輪",
       "content": "1ターンの間受けるダメージを半減し、強靱タイプキャラの攻撃を1.75倍にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "全ては正義の為",
       "content": "知属性キャラの攻撃を1.5倍にし、心属性キャラから受けるダメージを約2割減"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 488,
     "rcv": 251
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "番犬のアームクロー",
       "content": "敵全体にキャラの攻撃×5倍の速属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

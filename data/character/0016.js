@@ -23,7 +23,7 @@ module.exports = {
     "atk": 690,
     "rcv": 479
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "火の鳥星",
       "content": "敵全体を3ターン遅延し攻撃×15倍の心属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "對所有敵人造成角色攻擊力×15倍的心靈屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "狙撃の王様",
       "content": "心属性キャラの攻撃と体力を1.5倍にする"

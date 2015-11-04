@@ -24,7 +24,7 @@ module.exports = {
     "atk": 815,
     "rcv": 255
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "月歩",
       "content": "敵単体にキャラの攻撃×25倍の心属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "油断なき正義",
       "content": "心属性キャラの体力を2倍にする"

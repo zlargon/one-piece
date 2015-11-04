@@ -24,7 +24,7 @@ module.exports = {
     "atk": 644,
     "rcv": 226
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "魚人空手！　革命の正拳突き",
       "content": "1ターンの間、格闘タイプキャラの攻撃が1.75倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "魚人への感謝",
       "content": "格闘タイプキャラの攻撃を2倍にする"

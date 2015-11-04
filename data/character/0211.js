@@ -23,7 +23,7 @@ module.exports = {
     "atk": 313,
     "rcv": 136
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "アクロバッター",
       "content": "打突タイプキャラの攻撃を1.2倍にする"

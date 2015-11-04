@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 15,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1030,
     "rcv": 249
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "悪魔風脚",
       "content": "敵全体に5000の固定ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "給予敵人全體5000點的固定傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "騎士道の料理人",
       "content": "速属性キャラの攻撃と体力を1.5倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 948,
     "rcv": 210
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "眠り歌・フラン“ホラー”",
       "content": "体力を4343回復し、敵全体を毒にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ジョーク オア トリート",
       "content": "知属性キャラの攻撃と回復を1.5倍にする"

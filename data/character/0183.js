@@ -23,7 +23,7 @@ module.exports = {
     "atk": 350,
     "rcv": 1
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "[肉]スロットチェンジ・[知]",
       "content": "[肉]スロットを[知]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將[肉]技能格變換為[知]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

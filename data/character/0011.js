@@ -24,7 +24,7 @@ module.exports = {
     "atk": 543,
     "rcv": 219
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "蜃気楼",
       "content": "知属性の攻撃を1ターン無効化する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "在1回合內將知識屬性的攻擊無效化"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ずる賢い航海士",
       "content": "知属性の攻撃を1.5倍にする"

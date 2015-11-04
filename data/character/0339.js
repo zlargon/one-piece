@@ -23,7 +23,7 @@ module.exports = {
     "atk": 555,
     "rcv": 265
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ストレート・スクウフエアー",
       "content": "[知]スロットを[連]スロットに変換するわいな"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

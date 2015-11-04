@@ -24,7 +24,7 @@ module.exports = {
     "atk": 622,
     "rcv": 207
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "重量ゴング",
       "content": "敵1体にキャラの攻撃×15倍の心属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "給予敵人單體角色攻擊力×15倍的心靈屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "万能薬になるんだ　[心]",
       "content": "心属性キャラの回復を1.5倍にする"

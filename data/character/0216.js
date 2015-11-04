@@ -24,7 +24,7 @@ module.exports = {
     "atk": 655,
     "rcv": 63
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムの風船",
       "content": "受けるダメージを3ターンの間、50％減らす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "於3回合內，將所受傷害值減少50％"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "風船ボディ",
       "content": "受けるダメージを20％減らす"

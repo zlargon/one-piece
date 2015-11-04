@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1100,
     "rcv": 258
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "炎上網",
       "content": "受けるダメージを3ターンの間、50％減らす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "この時代の名が!!!“白ひげ”だァ!!!",
       "content": "自由タイプキャラの攻撃を2.5倍にする"

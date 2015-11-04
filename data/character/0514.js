@@ -24,7 +24,7 @@ module.exports = {
     "atk": 715,
     "rcv": 292
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "常夏の百花繚乱",
       "content": "1ターンの間、敵全体の防御力を半減し知属性キャラの攻撃が1.5倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "バカンス中の考古学者",
       "content": "知属性キャラの攻撃を2倍にする"

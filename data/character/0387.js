@@ -23,7 +23,7 @@ module.exports = {
     "atk": 458,
     "rcv": 259
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "角皿刀",
       "content": "全スロットを[心][知]にし敵全体ランダム心ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "皿嫌いの使用人",
       "content": "心属性キャラの回復を1.5倍にする"

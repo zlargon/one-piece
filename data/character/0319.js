@@ -23,7 +23,7 @@ module.exports = {
     "atk": 705,
     "rcv": 166
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "オシオキ一本釣り",
       "content": "一味全員のスロットを1ターン固定する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "熱心の艤装工",
       "content": "打突タイプキャラの攻撃を1.5倍にする"

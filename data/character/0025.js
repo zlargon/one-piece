@@ -23,7 +23,7 @@ module.exports = {
     "atk": 856,
     "rcv": 95
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "角強化　桜並木",
       "content": "敵全体にキャラの攻撃×7倍の速属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人全體角色攻擊力×7倍的速度屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "万能薬になるんだ　[速]",
       "content": "速属性キャラの回復を1.5倍にする"

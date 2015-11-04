@@ -7,7 +7,7 @@ module.exports = {
   "type": "知",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 950,
     "rcv": 100
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ライトヒーリング",
       "content": "キャラの回復×5倍の体力を回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

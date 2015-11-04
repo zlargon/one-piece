@@ -2,7 +2,7 @@ module.exports = {
   "no": 262,
   "name": {
     "jp": "特訓コビー",
-    "tw": null
+    "tw": "特訓克比"
   },
   "type": "心",
   "classes": [
@@ -23,7 +23,7 @@ module.exports = {
     "atk": 514,
     "rcv": 218
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -33,14 +33,14 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "勇気ある決心",
       "content": "ターン終了後にキャラの回復×2倍の体力を回復する"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "充滿勇氣的決心",
+      "content": "回合結束後，以角色回復力×2倍的體力進行回復"
     }
   }
 };

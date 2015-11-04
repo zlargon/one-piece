@@ -7,7 +7,7 @@ module.exports = {
   "type": "知",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 25,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 798,
     "rcv": 87
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "カーシースイング",
       "content": "自身が5ターン封じ状態になるが、5ターンの間受けるダメージを30%減らす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "かしらを敬う巨人",
       "content": "知属性キャラの体力を2.25倍にする"

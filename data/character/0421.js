@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1188,
     "rcv": 132
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "三・千・世・界“斬”",
       "content": "封じ状態を2ターン回復し、敵全体にキャラの攻撃×10倍の技属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "和服の剣士",
       "content": "技属性キャラのステータスを1.5倍にする"

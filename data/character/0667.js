@@ -23,7 +23,7 @@ module.exports = {
     "atk": 571,
     "rcv": 211
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "キングチョップ",
       "content": "1ターンの間、体力が一定以上の時攻撃を受けても倒れない"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "陰から見守る親心",
       "content": "受けるダメージを10%減らし、一味の攻撃を1.5倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 400,
     "rcv": 100
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ハイパーストレート",
       "content": "敵1体に攻撃×10倍のキャラの属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人單體攻擊力×10倍的角色屬性攻擊"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "海王類のキバ",
       "content": "格闘タイプキャラの攻撃を1.2倍にする"

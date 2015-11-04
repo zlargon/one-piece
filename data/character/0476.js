@@ -23,7 +23,7 @@ module.exports = {
     "atk": 501,
     "rcv": 115
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ミルキーインテリジェンスアックス",
       "content": "敵単体に1000の固定ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

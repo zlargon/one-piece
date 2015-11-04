@@ -23,7 +23,7 @@ module.exports = {
     "atk": 464,
     "rcv": 128
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ミルキーテクニックアックス",
       "content": "敵全体にキャラの攻撃×5倍のキャラの技属性ダメージを与え、「封じ」状態を1ターン回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

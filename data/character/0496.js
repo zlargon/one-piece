@@ -23,7 +23,7 @@ module.exports = {
     "atk": 271,
     "rcv": 359
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ポイズンアタック",
       "content": "敵全体にキャラの攻撃×3倍の属性ダメージを与え、毒状態にする"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "シャンディアの魂",
       "content": "射撃タイプキャラの攻撃を1.5倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 840,
     "rcv": 185
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "雪割り草",
       "content": "[力]スロットを[肉]に、[肉]スロットを[技]に変換"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ドビックリパワー",
       "content": "打突タイプキャラのステータスを1.2倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 821,
     "rcv": 305
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "竜の鉤爪",
       "content": "1ターンの間自由タイプの攻撃を1.5倍にし、このターン内一味全員PERFECT攻撃成功で次のターン自由タイプの攻撃が2倍になる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "自由を求める元貴族",
       "content": "一味の体力と回復を少し上げ、攻撃開始前体力が多いほど自由タイプキャラの攻撃が大きくなる"

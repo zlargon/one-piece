@@ -6,7 +6,7 @@ module.exports = {
   },
   "type": "速",
   "classes": [
-    "強靱",
+    "強韌",
     "自由"
   ],
   "star": 5,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1299,
     "rcv": 166
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "月光十指銃",
       "content": "敵1体にキャラの攻撃×15倍の速属性ダメージを与え、1ターンの間スロットの影響をかなり大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": " 「鉄塊拳法」“狼牙の構え”!!!",
       "content": "強靱タイプキャラの攻撃を2.5倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1057,
     "rcv": 282
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "杓死",
       "content": "敵全体にキャラの攻撃×5倍の速属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "給予敵人全體角色攻擊力×5倍的速度屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "抜き足（百計のクロ）",
       "content": "速属性キャラの攻撃を1.5倍にする"

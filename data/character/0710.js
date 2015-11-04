@@ -24,7 +24,7 @@ module.exports = {
     "atk": 597,
     "rcv": 151
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "風来砲",
       "content": "お邪魔スロットを[空]に変換し、3ターンの間射撃タイプの攻撃を1.25倍+全体心ダメージだぜスーパー！"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "夢の船を造る男",
       "content": "射撃タイプの攻撃を1.5倍にするぜアゥッ！"

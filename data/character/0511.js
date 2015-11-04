@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1011,
     "rcv": 55
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "残虐な斬撃『斬人』",
       "content": "2ターンの間、受けるダメージを30%減＋斬撃タイプキャラの攻撃1.25倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "服役中の殺し屋",
       "content": "斬撃タイプキャラの攻撃を2倍にする"

@@ -7,7 +7,7 @@ module.exports = {
   "type": "技",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 28,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1303,
     "rcv": 262
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ナンバーエイトの一撃",
       "content": "格闘キャラの攻撃を1ターン1.5倍+単体技ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "クリミナルブランドのオシャレな魚人",
       "content": "格闘タイプキャラの攻撃を2倍、体力を1.5倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 352,
     "rcv": 273
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "導きのマーメイドボイス",
       "content": "3ターンの間、[速][心]スロットの出現率を上昇させ速属性と心属性キャラの攻撃力を1.2倍"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "デザイナーにあこがれる人魚",
       "content": "冒険開始時の必殺ターンを1短縮し、速と心属性キャラの攻撃と回復を1.25倍"

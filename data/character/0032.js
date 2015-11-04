@@ -23,7 +23,7 @@ module.exports = {
     "atk": 155,
     "rcv": 216
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "決死の乱射",
       "content": "[肉]スロットを[連]に変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將[肉]技能格變換為[聯]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "勇気ある決心",
       "content": "ターン終了後にキャラの回復×2倍の体力を回復する"

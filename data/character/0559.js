@@ -24,7 +24,7 @@ module.exports = {
     "atk": 738,
     "rcv": 95
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "爆走！　ザーリーダビットソン",
       "content": "自分のスロットを[力]に変換し、2ターンの間一味全員のスロットの影響を大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スーパー任せろっ！！！",
       "content": "力属性キャラの攻撃を2倍にし、ターン終了時に攻撃×2倍の追加ダメージ"

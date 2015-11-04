@@ -24,7 +24,7 @@ module.exports = {
     "atk": 494,
     "rcv": 209
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "百花繚乱　ウイング",
       "content": "「封じ」・船長効果無効状態を3ターン回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "希望をみつけた考古学者",
       "content": "心属性キャラの攻撃と回復を1.2倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1250,
     "rcv": 192
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムのバズーカ“覇”",
       "content": "船長効果無効状態を3ターン回復し、敵1体にキャラの攻撃×15倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "和服のゴム人間",
       "content": "力属性キャラのステータスを1.5倍にする"

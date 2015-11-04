@@ -23,7 +23,7 @@ module.exports = {
     "atk": 900,
     "rcv": 144
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "道連れの有罪",
       "content": "敵全体にキャラの攻撃×9倍の力属性ダメージを与え、1ターンの間防御力を半減させる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

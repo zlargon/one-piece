@@ -7,7 +7,7 @@ module.exports = {
   "type": "技",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 8,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 387,
     "rcv": 143
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "六刀流の使い手",
       "content": "技属性から受けるダメージを30％減らす"

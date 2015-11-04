@@ -23,7 +23,7 @@ module.exports = {
     "atk": 115,
     "rcv": 201
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ミドルヒーリング",
       "content": "キャラの回復×7倍の体力を回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

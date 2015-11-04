@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 800,
     "rcv": 38
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "デストロイスピア",
       "content": "船長のスロットを[力]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

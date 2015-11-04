@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1320,
     "rcv": 337
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ドレッドモーニングスター",
       "content": "船長と自分のスロットを[心]に変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "恐れ知らずのモーニングスター使い",
       "content": "冒険開始時の必殺ターンを3ターン短縮し、打突タイプキャラの攻撃を2倍にする"

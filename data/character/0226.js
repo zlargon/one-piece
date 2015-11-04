@@ -23,7 +23,7 @@ module.exports = {
     "atk": 814,
     "rcv": 7
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "黒刀・船斬り",
       "content": "敵全体のHPを30%減らす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將所有敵人的HP減少30％"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "小刀の一太刀",
       "content": "斬撃タイプキャラの攻撃を2倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 565,
     "rcv": 135
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "冷酷非道な策略『毒針』",
       "content": "敵全体を毒にし、打突タイプキャラの攻撃を1ターン1.5倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "監獄の砂漠の王",
       "content": "打突タイプキャラの攻撃を2倍にする"

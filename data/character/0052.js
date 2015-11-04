@@ -23,7 +23,7 @@ module.exports = {
     "atk": 698,
     "rcv": 164
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "料理長ドロップ",
       "content": "[力]スロットを[技]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將[力]技能格變換為[技]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "義足の蹴り足",
       "content": "格闘タイプキャラの攻撃を2.5倍にする"

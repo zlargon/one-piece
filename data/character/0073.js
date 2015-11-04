@@ -24,7 +24,7 @@ module.exports = {
     "atk": 747,
     "rcv": 477
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "突撃！　超カルガモ部隊！",
       "content": "ランダムでスロットを入れ替える"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "隨機變換技能格"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "王女の愛",
       "content": "ターン終了後にキャラの回復x5倍の体力を回復する"

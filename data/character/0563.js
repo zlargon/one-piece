@@ -23,7 +23,7 @@ module.exports = {
     "atk": 338,
     "rcv": 300
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "キューティバトン",
       "content": "敵単体に小ダメージを与え、[知]スロットを[肉]に変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

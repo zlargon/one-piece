@@ -24,7 +24,7 @@ module.exports = {
     "atk": 988,
     "rcv": 361
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "蜃気楼＝テンポ“天”",
       "content": "知属性の攻撃を1ターン無効化し、体力をランダム量回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "和服の航海士",
       "content": "知属性キャラのステータスを1.5倍にする"

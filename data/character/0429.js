@@ -23,7 +23,7 @@ module.exports = {
     "atk": 423,
     "rcv": 161
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "サウスバードの不敵な笑み",
       "content": "敵全体にキャラの攻撃×7倍の技属性ダメージを与え、1ターンの間防御力を半減"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

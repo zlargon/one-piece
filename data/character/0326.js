@@ -24,7 +24,7 @@ module.exports = {
     "atk": 488,
     "rcv": 98
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "バクバク食　『ベロ大砲』",
       "content": "全スロットを空にし、敵単体に力属性大ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "王様の特権",
       "content": "ターン終了後にキャラの回復×10倍の体力を回復"

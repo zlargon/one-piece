@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1380,
     "rcv": 150
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "浸食輪廻",
       "content": "自分のスロットを[知]、他のスロットをランダムに入れ替え、敵全体15倍知ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "砂漠の神",
       "content": "受けるダメージを20%減らし、斬撃タイプキャラの攻撃を2倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 571,
     "rcv": 162
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "極道の魂",
       "content": "船長のスロットを[肉]にし、他をランダムで入れ替える"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

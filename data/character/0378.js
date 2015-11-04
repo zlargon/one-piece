@@ -23,7 +23,7 @@ module.exports = {
     "atk": 77,
     "rcv": 333
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "クイックヒーリング",
       "content": "キャラの回復×3の体力を回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "神獣の加護",
       "content": "一味の回復を1.5倍にする"

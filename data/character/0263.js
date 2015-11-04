@@ -2,7 +2,7 @@ module.exports = {
   "no": 263,
   "name": {
     "jp": "曹長コビー",
-    "tw": null
+    "tw": "克比上士"
   },
   "type": "心",
   "classes": [
@@ -23,24 +23,24 @@ module.exports = {
     "atk": 984,
     "rcv": 340
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "剃",
       "content": "2ターンの間一味全員のスロットの影響を大きくする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "剃",
+      "content": "於2回合內將海賊團全體成員的技能格影響力大幅提升\n"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "勇気ある決断",
       "content": "格闘タイプキャラの攻撃を2倍にする"
     },
     "tw": {
-      "name": null,
-      "content": null
+      "name": "充滿勇氣的決斷",
+      "content": "將格鬥型角色的攻擊力提升2倍"
     }
   }
 };

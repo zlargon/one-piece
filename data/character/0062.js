@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 9,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 759,
     "rcv": 76
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "上段爆掌",
       "content": "敵1体にキャラの攻撃×7倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對單一敵人造成角色攻擊力×7倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "魚人空手40段",
       "content": "格闘タイプキャラの体力を1.5倍にする"

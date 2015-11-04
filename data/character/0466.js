@@ -24,7 +24,7 @@ module.exports = {
     "atk": 684,
     "rcv": 202
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "二丁拳銃の閃光銃",
       "content": "敵全体の攻撃を1ターン遅延させる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "シャンディア拳銃の戦士",
       "content": "射撃タイプキャラの攻撃と体力を1.5倍にする"

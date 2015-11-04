@@ -23,7 +23,7 @@ module.exports = {
     "atk": 323,
     "rcv": 99
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ハイパースラッシュ",
       "content": "敵1体に攻撃×10倍のキャラの属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人單體攻擊力×10倍的角色屬性攻擊"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "山賊棟梁の号令 ",
       "content": "速属性キャラの体力を1.2倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 363,
     "rcv": 98
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "下っ端の意地",
       "content": "速属性から受けるダメージを30％減らす"

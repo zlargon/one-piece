@@ -24,7 +24,7 @@ module.exports = {
     "atk": 709,
     "rcv": 302
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "爆撃白鳥アラベスク",
       "content": "[肉]スロットを[心]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "將[肉]技能格變換為[心]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "オカマ拳法の主役",
       "content": "心属性キャラから受けるダメージを20％減らす"

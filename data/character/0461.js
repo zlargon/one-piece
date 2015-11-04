@@ -24,7 +24,7 @@ module.exports = {
     "atk": 529,
     "rcv": 187
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "脱走の舞『白鳥アラベスク』",
       "content": "自分のスロットを[技]に他を“あやふや”に変換、2ターンの間格闘タイプキャラの攻撃を1.25倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "オカマ拳法の受刑者",
       "content": "格闘タイプキャラの攻撃を2倍にする"

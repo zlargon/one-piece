@@ -23,7 +23,7 @@ module.exports = {
     "atk": 446,
     "rcv": 85
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "バラバラフェスティバル",
       "content": "[肉]スロットを[知]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "將[肉]技能格變換為[知]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ハデに戦えェーっ！",
       "content": "知属性キャラの攻撃を1.5倍にする"

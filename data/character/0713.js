@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1202,
     "rcv": 300
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "空の騎士のジャベリン",
       "content": "敵1体にキャラの攻撃×15倍速ダメージを与え、2ターンの間上段のキャラの攻撃が1.5倍"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "民と共に生きる傭兵",
       "content": "体力が一定以上の時、打突タイプキャラの攻撃を2.5倍にする"

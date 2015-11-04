@@ -23,7 +23,7 @@ module.exports = {
     "atk": 488,
     "rcv": 144
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "1000キロボディ",
       "content": "格闘タイプキャラの体力を1.5倍にする"

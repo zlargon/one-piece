@@ -23,7 +23,7 @@ module.exports = {
     "atk": 792,
     "rcv": 209
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鬼人乱舞",
       "content": "敵1体にキャラの攻撃×7倍の速属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人單體角色攻擊力×7倍的速度屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "総隊長の意地",
       "content": "速属性から受けるダメージを50％減らす"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 840,
     "rcv": 290
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムのJET銃乱打",
       "content": "敵全体に無属性のランダム大ダメージ、自分のスロットを[力]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "東の海の海賊王になる男",
       "content": "GOOD→GREAT→PERFECTの順に攻撃で以降キャラの攻撃が4倍"

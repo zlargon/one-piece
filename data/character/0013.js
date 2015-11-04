@@ -23,7 +23,7 @@ module.exports = {
     "atk": 127,
     "rcv": 121
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ホラ吹き",
       "content": "敵全体の攻撃を1ターン遅延させる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "拖延敵人全體1回合行動"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ホラ吹き狙撃手",
       "content": "射撃タイプキャラの攻撃を1.2倍にする"

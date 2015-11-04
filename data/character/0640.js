@@ -23,7 +23,7 @@ module.exports = {
     "atk": 668,
     "rcv": 73
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "兄弟海賊・双連撃",
       "content": "自分のスロットを[技]に変換し、敵1体に味方の体力が少ないほど大きい技属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "双獅子コンビネーション",
       "content": "格闘タイプキャラの攻撃を2倍にし、ターン終了時に攻撃×2倍の追加ダメージ"

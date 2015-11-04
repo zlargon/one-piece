@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1063,
     "rcv": 131
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "三刀流　百八煩悩鳳“死神”",
       "content": "敵全体にキャラの攻撃×7倍の速属性ダメージを与え、1ターンの間敵全体の攻撃を遅延させる"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "トリック オア ビール",
       "content": "速属性キャラの攻撃を2倍にする"

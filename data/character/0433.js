@@ -24,7 +24,7 @@ module.exports = {
     "atk": 700,
     "rcv": 198
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ニューカマーの誘惑",
       "content": "「封じ」状態、船長効果無効状態を1ターン回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "毎日ミルクを飲んでるカラダ",
       "content": "属性速→力→技のキャラ順GOOD以上の攻撃で以降キャラの攻撃が2倍になる"

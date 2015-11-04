@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "射擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1000,
     "rcv": 32
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "デストロイキャノン",
       "content": "1ターンの間、射撃タイプキャラの攻撃が1.2倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

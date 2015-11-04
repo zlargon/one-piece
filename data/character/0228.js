@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1000,
     "rcv": 35
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "脱獄の斧手",
       "content": "「封じ」状態を2ターン回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "解除2回合「封鎖」狀態"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "権力への執念",
       "content": "斬撃タイプキャラの体力を1.5倍にする"

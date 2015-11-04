@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1303,
     "rcv": 105
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムの巨人の回転弾",
       "content": "敵全体にキャラの攻撃×15倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "對所有敵人造成角色攻擊力×15倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ギガントパワー",
       "content": "PERFECT3連続で以降キャラの攻撃力が3.5倍になる"

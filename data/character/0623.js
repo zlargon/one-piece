@@ -23,7 +23,7 @@ module.exports = {
     "atk": 467,
     "rcv": 274
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "オートリペア",
       "content": "5ターンの間、ターン終了時に体力をキャラの回復×3倍回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

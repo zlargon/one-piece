@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1120,
     "rcv": 118
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "影法師",
       "content": "[力]、[技]スロットを[知]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "影の支配者",
       "content": "攻撃開始前体力満タンで、知属性キャラの攻撃を3倍"

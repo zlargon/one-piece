@@ -24,7 +24,7 @@ module.exports = {
     "atk": 943,
     "rcv": 178
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "怒りのヘッドバット",
       "content": "敵1体に、味方の体力が少ないほど大きい心属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "冷酷な正義",
       "content": "博識タイプキャラの攻撃と体力を1.5倍にする"

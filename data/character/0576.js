@@ -24,7 +24,7 @@ module.exports = {
     "atk": 703,
     "rcv": 373
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ファイン=テンポ・ティータイムショー",
       "content": "[心]スロットを[知]スロットに変換し、1ターンの間一味の回復を1.5倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "お菓子そっちのけの航海士",
       "content": "一味の攻撃を1.5倍、回復を1.2倍にする"

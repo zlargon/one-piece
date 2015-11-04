@@ -24,7 +24,7 @@ module.exports = {
     "atk": 274,
     "rcv": 151
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "かかれ！砂砂団！！",
       "content": "自分のスロットを[速]にし、2ターンの間防御力ダウン中の敵に与えるダメージが1.3倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "お前なんかに負けるか！！",
       "content": "一味の攻撃を1.2倍にし、体力と回復を激減する"

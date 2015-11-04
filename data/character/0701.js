@@ -7,7 +7,7 @@ module.exports = {
   "type": "心",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 25,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 742,
     "rcv": 98
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "オイモプレス",
       "content": "敵全体にキャラの攻撃×15倍の心属性ダメージを与え、自分のスロットを[心]にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "かしらを慕う巨人",
       "content": "心属性キャラの体力を2.25倍にする"

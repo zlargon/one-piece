@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1088,
     "rcv": 387
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "サンダーボルト=テンポ",
       "content": "敵全体にキャラの攻撃×15倍の知属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "給予敵人全體角色攻擊力×15倍的知識屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "天候を操る航海士",
       "content": "知属性キャラの攻撃と体力を1.5倍にする"

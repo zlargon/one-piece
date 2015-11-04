@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 11,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 656,
     "rcv": 129
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ファイヤーパール大特典",
       "content": "[肉]スロットを[力]スロットに変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "將[肉]技能格變換為[力]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "炎の鉄壁の盾男",
       "content": "力属性から受けるダメージを50％減らす"

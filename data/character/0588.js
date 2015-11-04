@@ -24,7 +24,7 @@ module.exports = {
     "atk": 509,
     "rcv": 320
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "哀れみの鎮静剤",
       "content": "毒・猛毒状態を回復し、「封じ」・船長効果無効状態を2ターン回復"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "我々の待ち望んだ海賊達だろうか…",
       "content": "ターン終了後にキャラの回復×5倍の体力を回復する"

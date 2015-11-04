@@ -7,7 +7,7 @@ module.exports = {
   "type": "技",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1088,
     "rcv": 258
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "赫足の一蹴",
       "content": "敵単体にキャラの攻撃×20倍の技ダメージを与え、隣接スロットを[肉]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "オールブルーへの覚悟",
       "content": "体力が一定以上の時、格闘タイプキャラの攻撃を2.5倍にする"

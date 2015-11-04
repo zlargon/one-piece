@@ -24,7 +24,7 @@ module.exports = {
     "atk": 701,
     "rcv": 288
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "トゲトゲ針治療",
       "content": "1ターンの間、技属性の攻撃が1.5倍になる"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ドーピングボディ",
       "content": "打突タイプキャラの体力を2倍にする"

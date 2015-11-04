@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "斬擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 12,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 721,
     "rcv": 106
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "寡黙な連撃",
       "content": "敵1体にキャラの攻撃×25倍の速属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "寡黙な船大工",
       "content": "速属性キャラの攻撃を2倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 411,
     "rcv": 162
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "バラバラ砲",
       "content": "自分のスロットを[知]に変換し、スロットを1回自由に動かす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ハデにうまくいった！！",
       "content": "☆1と☆2キャラの攻撃を2.5倍にする"

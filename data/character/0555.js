@@ -23,7 +23,7 @@ module.exports = {
     "atk": 593,
     "rcv": 208
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "天竜星",
       "content": "敵全体を3ターン遅延し、敵全体のHPを10%減らす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "おめェらの弱点はわかってんだ！！",
       "content": "射撃タイプキャラの攻撃を2倍にする"

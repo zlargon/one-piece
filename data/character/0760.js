@@ -6,7 +6,7 @@ module.exports = {
   },
   "type": "力",
   "classes": [
-    "強靱",
+    "強韌",
     "打擊"
   ],
   "star": 5,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1018,
     "rcv": 355
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "「生・命・帰・還」獅子指銃",
       "content": "スロットを3回自由に動かし、一味のスロットを1ターン固定する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "獅子吼 雷 落として候ォ～!!!!",
       "content": "残り体力が少ない時、力属性キャラの攻撃を3倍にする"

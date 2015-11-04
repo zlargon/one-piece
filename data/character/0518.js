@@ -7,7 +7,7 @@ module.exports = {
   "type": "心",
   "classes": [
     "射擊",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 700,
     "rcv": -41
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "暴食！　エネルギーチャージ",
       "content": "[肉]スロットがあれば[空]に変換し、2ターンの間一味の攻撃力が微増"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "迷わず食べ過ぎた狙撃手",
       "content": "心属性キャラの体力を2倍にし、[肉]スロット出現率が微増"

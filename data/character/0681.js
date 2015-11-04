@@ -24,7 +24,7 @@ module.exports = {
     "atk": 768,
     "rcv": 402
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "真夏のリラックスタイム",
       "content": "体力を回復×5倍回復し、2ターンの間技属性キャラの攻撃と回復を1.25倍にする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "夏を楽しむ航海士",
       "content": "打突タイプキャラの攻撃と回復を1.5倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 396,
     "rcv": 170
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ミルキーマインドアックス",
       "content": "敵全体にキャラの攻撃×5倍のキャラの心属性ダメージを与え、体力を500回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

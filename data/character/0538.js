@@ -24,7 +24,7 @@ module.exports = {
     "atk": 694,
     "rcv": 449
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "海楼石の手錠",
       "content": "「封じ」・船長効果無効状態を1ターン回復、スロットを1ターン固定する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "副看守長の正義",
       "content": "チェイン係数増加量が2倍になり、ターン終了後体力を少し回復"

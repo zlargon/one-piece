@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1210,
     "rcv": 366
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "浄化する洗濯",
       "content": "体力を2000回復しランダムでスロットを入れ替える"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "海軍本部の大参謀",
       "content": "射撃タイプキャラの攻撃を2倍にする"

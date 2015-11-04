@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 28,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 987,
     "rcv": 231
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ブリリアント・パンク",
       "content": "技属性の攻撃を1ターン無効化する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "於1回合內將技能屬性攻擊無效化"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ダイヤモンドの両腕",
       "content": "速属性キャラの攻撃と体力を2倍にする"

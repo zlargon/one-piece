@@ -23,7 +23,7 @@ module.exports = {
     "atk": 404,
     "rcv": 64
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ハイパーバースト",
       "content": "敵全体に攻撃×13倍のキャラの属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

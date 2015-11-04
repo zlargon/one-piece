@@ -23,7 +23,7 @@ module.exports = {
     "atk": 648,
     "rcv": 144
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "暴食！　エネルギーチャージ",
       "content": "[肉]スロットがあれば[空]に変換し、2ターンの間一味の攻撃力が微増"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "迷い込んだ狙撃手",
       "content": "心属性キャラの体力を1.5倍にする"

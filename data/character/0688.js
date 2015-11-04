@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1300,
     "rcv": 90
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "大戦士の一番槍",
       "content": "敵全体にキャラの攻撃×13倍の力属性ダメージを与え、1ターンの間自由タイプキャラの攻撃が1.3倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "友との誓いを守る戦士",
       "content": "冒険開始時の必殺ターンを1短縮し、自由タイプキャラの攻撃を2倍にする"

@@ -6,7 +6,7 @@ module.exports = {
   },
   "type": "力",
   "classes": [
-    "強靱",
+    "強韌",
     "格鬥"
   ],
   "star": 5,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 800,
     "rcv": 245
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "六王銃",
       "content": "敵1体にキャラの攻撃×35倍の力属性ダメージを与え、3ターンの間一味の自属性スロット出現率が大きく上昇"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "闇の正義の名のもとに",
       "content": "強靱タイプキャラの攻撃をスロット一致時3倍、通常時2.5倍にし、一味の回復を0にする"

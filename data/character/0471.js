@@ -23,7 +23,7 @@ module.exports = {
     "atk": 498,
     "rcv": 177
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "クイックチェンジ",
       "content": "スロットを1回自由に動かす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スカイピアを支えし者",
       "content": "知属性キャラの攻撃と体力を1.2倍にする"

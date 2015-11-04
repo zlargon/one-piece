@@ -24,7 +24,7 @@ module.exports = {
     "atk": 900,
     "rcv": 380
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "雷光槍=テンポ",
       "content": "敵1体に5000の固定ダメージを与え、1ターンの間一味全員のスロットの影響を大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "世界の海図を描く女",
       "content": "知属性キャラの攻撃を2倍、回復を1.5倍にする"

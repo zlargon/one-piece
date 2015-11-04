@@ -23,7 +23,7 @@ module.exports = {
     "atk": 760,
     "rcv": 166
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "[連]スロットチェンジ・[心]",
       "content": "[連]スロットを[心]に変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スカイピアの博愛",
       "content": "心属性キャラの体力と回復を1.2倍にする"

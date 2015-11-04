@@ -7,7 +7,7 @@ module.exports = {
   "type": "技",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 5,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1052,
     "rcv": 208
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "悪魔風脚 最上級挽き肉",
       "content": "敵全体のHPを10%減らし、[速]スロットを[技]スロットに変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "伝説の海を見つける男",
       "content": "受けるダメージを20%減らし、格闘タイプキャラの攻撃を2倍にする"

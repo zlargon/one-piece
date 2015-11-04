@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1111,
     "rcv": 300
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "スクラッチボディ",
       "content": "[連][肉]スロットを[技]に変換し、敵全体にランダム技ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "轟音DJ（ディスクジョッキー）",
       "content": "攻撃開始前体力満タンで、技属性キャラの攻撃を3倍"

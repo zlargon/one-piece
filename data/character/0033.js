@@ -23,7 +23,7 @@ module.exports = {
     "atk": 242,
     "rcv": 39
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "親の七光り",
       "content": "知属性キャラから受けるダメージを30％減らす"

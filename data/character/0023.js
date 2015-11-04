@@ -24,7 +24,7 @@ module.exports = {
     "atk": 454,
     "rcv": 302
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "診断",
       "content": "隣接するキャラのスロットを[肉]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "將鄰接角色的技能格變換為[肉]"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "万能薬になるんだ　[知]",
       "content": "知属性キャラの回復を1.5倍にする"

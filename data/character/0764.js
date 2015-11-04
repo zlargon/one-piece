@@ -24,7 +24,7 @@ module.exports = {
     "atk": 699,
     "rcv": 416
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "泥棒猫“トリック”",
       "content": "体力を3000回復する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "トリック オア ベリー",
       "content": "打突タイプキャラの攻撃と回復を1.5倍にする"

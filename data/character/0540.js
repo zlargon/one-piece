@@ -7,7 +7,7 @@ module.exports = {
   "type": "技",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 12,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 644,
     "rcv": 128
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "死をもたらす睨み",
       "content": "2ターンの間、技スロットの出現率が上昇する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

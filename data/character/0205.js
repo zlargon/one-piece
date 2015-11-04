@@ -24,7 +24,7 @@ module.exports = {
     "atk": 301,
     "rcv": 305
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "写実画家",
       "content": "技属性キャラの体力と回復を1.2倍にする"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 702,
     "rcv": 461
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "応援！　超カルガモ部隊！",
       "content": "全スロットを[力][技][速][心][知]のランダムに入れ替え、スロットを3回自由に動かす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "王女ゆずりの勇気",
       "content": "体力一定以上のとき進化、強化タイプキャラの攻撃を2.5倍にする"

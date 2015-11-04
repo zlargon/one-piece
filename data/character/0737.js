@@ -7,7 +7,7 @@ module.exports = {
   "type": "速",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1302,
     "rcv": 140
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "指銃　「撥」",
       "content": "[肉]スロットを[速]に、隣接スロットを[速]に変換する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "六式を極めた者",
       "content": "残り体力が少ない時、格闘タイプキャラの攻撃を2.75倍にする"

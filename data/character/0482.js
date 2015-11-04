@@ -23,7 +23,7 @@ module.exports = {
     "atk": 804,
     "rcv": 157
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "[技]スロットチェンジ・[力]",
       "content": "[技]スロットを[力]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スカイピアの剛腕",
       "content": "打突タイプキャラの体力を1.5倍にする"

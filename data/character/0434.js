@@ -24,7 +24,7 @@ module.exports = {
     "atk": 915,
     "rcv": 300
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ニューカマー拳法「乙女の目覚め」",
       "content": "3ターンの間一味全員のスロットの影響を少し大きくする"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ニューカマー拳法師範代理のカラダ",
       "content": "属性心→知→知のキャラ順GOOD以上の攻撃で以降キャラの攻撃が2倍になる"

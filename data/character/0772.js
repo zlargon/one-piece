@@ -23,7 +23,7 @@ module.exports = {
     "atk": 1021,
     "rcv": 318
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "八刀流の猛将連撃",
       "content": "敵全体のHPを10%減らし、[心][知]スロットを[技]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "非情なる正義",
       "content": "斬撃タイプキャラの攻撃を2倍にし、速属性キャラから受けるダメージを20%減らす"

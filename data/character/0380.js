@@ -23,7 +23,7 @@ module.exports = {
     "atk": 825,
     "rcv": 225
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ジュゴン演武　癒しの正拳突き",
       "content": "一味の毒・猛毒状態を回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "クンフーの極意",
       "content": "力属性キャラの攻撃と回復を1.5倍にする"

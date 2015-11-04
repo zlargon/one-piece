@@ -23,7 +23,7 @@ module.exports = {
     "atk": 772,
     "rcv": 159
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "[心]スロットチェンジ・[速]",
       "content": "[心]スロットを[速]スロットに変換する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "スカイピアの速力",
       "content": "速属性キャラの攻撃と回復を1.2倍にする"

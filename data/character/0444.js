@@ -23,7 +23,7 @@ module.exports = {
     "atk": 155,
     "rcv": 100
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "王女ゆずりのつよがり",
       "content": "体力一定以上のとき進化、強化タイプキャラの攻撃を2倍にする"

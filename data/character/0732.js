@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 9,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 408,
     "rcv": 122
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "鉄塊玉",
       "content": "敵単体にキャラの攻撃×13倍の力属性ダメージを与え、1ターンの間受けるダメージを半減"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "鋭敏な六式遊技",
       "content": "力属性キャラの体力を1.5倍にし、受けるダメージを10%減らす"

@@ -23,7 +23,7 @@ module.exports = {
     "atk": 632,
     "rcv": 95
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "チェーンハンマー",
       "content": "敵1体にキャラの攻撃×7倍の知属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人單體角色攻擊力×7倍的知識屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ウーツ鉱の鎧",
       "content": "受けるダメージを10％減らす"

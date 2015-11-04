@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "打擊",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 10,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 755,
     "rcv": 61
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "うつくしき金棒",
       "content": "敵1体にキャラの攻撃×7倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": "給予敵人單體角色攻擊力×7倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "イカついボディ",
       "content": "力属性キャラから受けるダメージを30％減らす"

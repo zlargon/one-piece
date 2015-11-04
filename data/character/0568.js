@@ -24,7 +24,7 @@ module.exports = {
     "atk": 433,
     "rcv": 175
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ノロノロビーム",
       "content": "敵全体を2ターン遅延、防御半減、スロットを2回自由に動かす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "卑劣なお邪魔の戦術家",
       "content": "一味のステータスを1.25倍にする"

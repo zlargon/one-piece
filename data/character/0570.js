@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 12,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 585,
     "rcv": 110
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムの連接鎚矛",
       "content": "お邪魔スロットを[力]に変換し、敵1体に攻撃×20倍の力属性ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ブラザー魂（ソウル）",
       "content": "格闘タイプと力属性キャラの攻撃を各々1.5倍にする"

@@ -24,7 +24,7 @@ module.exports = {
     "atk": 248,
     "rcv": 151
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": null,
       "content": null
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "社員を束ねる心",
       "content": "心属性キャラの体力を1.5倍にする"

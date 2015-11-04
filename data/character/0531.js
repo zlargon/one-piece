@@ -24,7 +24,7 @@ module.exports = {
     "atk": 328,
     "rcv": 252
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "二十輪咲き　金盞花　桜",
       "content": "受けるダメージを4ターンの間、30%減らす"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "桜散る遺跡の考古学者",
       "content": "力・技・速属性キャラから受けるダメージを30%減らす"

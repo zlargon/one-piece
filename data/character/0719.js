@@ -24,7 +24,7 @@ module.exports = {
     "atk": 831,
     "rcv": 226
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "砂嵐　「重」　",
       "content": "1ターンの間博識タイプキャラの攻撃を1.5倍、必殺発動時一味の体力が少ない時は2倍にし、敵全体に技属性大ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "渇きのロギア",
       "content": "攻撃開始前体力が少ないほど博識タイプキャラの攻撃が上昇する"

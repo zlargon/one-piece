@@ -7,7 +7,7 @@ module.exports = {
   "type": "知",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 20,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1250,
     "rcv": -200
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "嵐脚　「群狼連星」",
       "content": "体力を大幅に減らし減少値×2倍の知属性ダメージを与え、1ターンの間知属性キャラの攻撃が1.5倍"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "人界を越えた鉄塊拳法",
       "content": "知属性キャラの攻撃と体力を1.5倍にし、ターン終了時に9の追加固定ダメージ"

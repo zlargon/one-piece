@@ -23,7 +23,7 @@ module.exports = {
     "atk": 550,
     "rcv": 53
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ライトヒーリング",
       "content": "キャラの回復×5倍の体力を回復する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

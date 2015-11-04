@@ -24,7 +24,7 @@ module.exports = {
     "atk": 624,
     "rcv": 212
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "献身のヒーリング「無事でよかった」",
       "content": "毒・猛毒状態を回復し、キャラの回復×15倍の体力を回復"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "無理しない方がいいぞ",
       "content": "技属性キャラの攻撃と回復を1.5倍にする"

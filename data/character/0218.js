@@ -23,7 +23,7 @@ module.exports = {
     "atk": 582,
     "rcv": 19
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "刀狼流し",
       "content": "力属性の攻撃を1ターン無効化する"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "於1回合內，將力量屬性的攻擊無效化"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "攻撃を受け流す剣士",
       "content": "体力満タンの時、受けるダメージを大幅に減らす"

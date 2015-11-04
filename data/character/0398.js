@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "射擊",
-    "強靱"
+    "強韌"
   ],
   "star": 4,
   "cost": 15,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 910,
     "rcv": 110
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "四百本猛打ノック",
       "content": "[空]スロットを50%の確率で[力]に変換、敵全体15倍力ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "４トン怪力・４番バッター",
       "content": "PERFECT5連続で以降キャラの攻撃力が4倍になる"

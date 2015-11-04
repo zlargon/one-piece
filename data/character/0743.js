@@ -23,7 +23,7 @@ module.exports = {
     "atk": 674,
     "rcv": 363
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "拉麺ビ～ム",
       "content": "2ターンの間、スロットの影響を少し大きくし、敵全体の防御力を激減させるよ――ん！！！"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "マッドなお料理武闘家",
       "content": "自由タイプキャラの攻撃と回復を1.5倍だよ―――ん！！！"

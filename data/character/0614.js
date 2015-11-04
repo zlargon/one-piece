@@ -23,7 +23,7 @@ module.exports = {
     "atk": 702,
     "rcv": 168
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "解体ぶった切り",
       "content": "1ターンの間敵全体の防御力を半減、敵全体に10倍心ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "アニキを慕う心",
       "content": "残り体力が少ない時、コスト20以下のキャラの攻撃が2.25倍"

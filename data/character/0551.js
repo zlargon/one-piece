@@ -7,7 +7,7 @@ module.exports = {
   "type": "力",
   "classes": [
     "格鬥",
-    "強靱"
+    "強韌"
   ],
   "star": 3,
   "cost": 30,
@@ -24,7 +24,7 @@ module.exports = {
     "atk": 812,
     "rcv": -100
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "武闘派の獄卒獣のナックルダスター",
       "content": "1ターンの間受けるダメージを半減し、単体15倍力ダメージ"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

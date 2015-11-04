@@ -23,7 +23,7 @@ module.exports = {
     "atk": 68,
     "rcv": 15
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ぐるぐるゴムパンチ",
       "content": "敵1体にキャラの攻撃×5倍の力属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給予敵人單體角色攻擊力×5倍的力量屬性傷害"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

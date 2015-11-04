@@ -24,7 +24,7 @@ module.exports = {
     "atk": 1099,
     "rcv": 400
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "八十輪咲き 四本樹 ショック",
       "content": "3ターンの間、知スロットの出現率が大きく上昇する"
@@ -34,7 +34,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "強さだけが物をいう世界",
       "content": "知属性キャラの攻撃と回復を2倍にする"

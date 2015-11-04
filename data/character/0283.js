@@ -23,7 +23,7 @@ module.exports = {
     "atk": 684,
     "rcv": 130
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ハイパースパイラル",
       "content": "敵1体に攻撃×10倍のキャラの属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": null,
       "content": null

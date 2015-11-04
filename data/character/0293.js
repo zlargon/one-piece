@@ -23,7 +23,7 @@ module.exports = {
     "atk": 700,
     "rcv": 50
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "アイアンシールド",
       "content": "受けるダメージを1ターンの間、20％減らす"
@@ -33,7 +33,7 @@ module.exports = {
       "content": null
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "太古の島の角竜",
       "content": "速属性キャラの体力を2倍にする"

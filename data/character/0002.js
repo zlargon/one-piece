@@ -23,7 +23,7 @@ module.exports = {
     "atk": 249,
     "rcv": 49
   },
-  "skill": {
+  "specialAbility": {
     "jp": {
       "name": "ゴムゴムの銃",
       "content": "敵1体にキャラの攻撃×7倍の力属性ダメージ"
@@ -33,7 +33,7 @@ module.exports = {
       "content": "給與敵人單體角色攻擊力×7倍的力量屬性攻擊"
     }
   },
-  "captain": {
+  "captainEffect": {
     "jp": {
       "name": "ゴムゴムパワー",
       "content": "力属性キャラの攻撃を1.5倍にする"
