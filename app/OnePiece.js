@@ -14,6 +14,7 @@ export default class OnePiece extends React.Component {
         this.updateBoat = this.updateBoat.bind(this);
         this.updateEnemy = this.updateEnemy.bind(this);
         this.updateCharacters = this.updateCharacters.bind(this);
+        this.updateDetailCheckbox = this.updateDetailCheckbox.bind(this);
 
         this.state = {
             enemy: { type: '心', defense: 100 }, // 卡普
@@ -25,7 +26,8 @@ export default class OnePiece extends React.Component {
                 { no: 39,  attack: 702,  bead: 1, timing: 'perfect' },                       // 巴其 Lv.61
                 { no: 66,  attack: 1491, bead: 1, timing: 'perfect' },                       // 惡龍 Lv.99
                 { no: 255, attack: 1155, bead: 1, timing: 'perfect' },                       // 花劍 Lv.71
-            ]
+            ],
+            showDetail: false
         };
 
         // get the data from local storage
@@ -50,6 +52,10 @@ export default class OnePiece extends React.Component {
         this.setState({ characters });
     }
 
+    updateDetailCheckbox (event) {
+        this.setState({ showDetail: event.target.checked });
+    }
+
     render () {
         // save the data to local storage
         window.localStorage.setItem('data', JSON.stringify(this.state));
@@ -71,8 +77,13 @@ export default class OnePiece extends React.Component {
                         onChange={this.updateCharacters} />
 
                     <div className='analysis'>
-                        {analysisToString(attackAnalysis(this.state))}
+                        {analysisToString(attackAnalysis(this.state), this.state.showDetail)}
                     </div>
+                </div>
+
+                <div className='config'>
+                    <input type='checkbox' checked={this.state.showDetail} onChange={this.updateDetailCheckbox}/>
+                    <span>&nbsp;顯示傷害分析</span>
                 </div>
             </div>
         );
@@ -88,7 +99,7 @@ function analysisToString(data, showDetail) {
 
   function detail(damage, showDetail) {
     if (showDetail === false) return '';
-    return `\n\n`
+    return `\n詳細傷害分析：\n${damage.history.join('\n')} => ${damage.total}\n`
   }
 
   // Captain Effect
@@ -109,10 +120,7 @@ function analysisToString(data, showDetail) {
 每單一擊傷害 = ${damage.singal}（共 ${attack.combo - 1} 擊）
 最後一擊傷害 = ${damage.final} (${attack.timing.toUpperCase()})
 造成總共傷害 = ${damage.total}
-
-詳細傷害分析：
-${damage.history.join('\n')} => ${damage.total}
-
+${detail(damage, showDetail)}
 Combo = ${total.combo}
 Total = ${total.attack}\n`
   }, '');
