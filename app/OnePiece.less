@@ -8,7 +8,37 @@ body {
 }
 }
 
-.op {
+.one-piece {
+  .info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+
+    & > * {
+      padding: 8px 0;
+    }
+
+    .pointer-cursor {
+      cursor: pointer;
+    }
+
+    .enemy {
+      display: flex;
+      flex-direction: row;
+
+      .defense {
+        display: flex;
+        align-items: baseline;
+        margin-left: 10px;
+
+        input {
+          border-width: 0;
+          width: 40px;
+        }
+      }
+    }
+  }
+
   .container {
     display: flex;
 
@@ -21,7 +51,10 @@ body {
       flex-basis: 350px;
     }
 
-    .analysis {
+    .report {
+      border: 1px solid lightgray;
+      margin-left: 10px;
+
       font-family: monospace;
       white-space: pre;
       word-wrap: break-word;
@@ -37,15 +70,15 @@ body {
       .character-list {
         flex-basis: auto;
       }
-      .analysis {
+      .report {
         width: auto;
         height: auto;
+        margin-left: 0;
       }
     }
   }
 
   .config {
-    // border: 1px solid red;
     display: flex;
     align-items: baseline;
     justify-content: flex-end;

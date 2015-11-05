@@ -156,7 +156,7 @@ export default class Character extends React.Component {
     }
 
     return connectDragSource(connectDropTarget(
-      <div className='op-character' style={{ opacity: isDragging ? 0 : 1 }}>
+      <div className='one-piece-character' style={{ opacity: isDragging ? 0 : 1 }}>
 
         <div>
           <div className='baseline'
