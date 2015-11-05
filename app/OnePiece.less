@@ -2,6 +2,20 @@ body {
   width: 800px;
   margin: 20px auto;
 
+  footer {
+    font-size: 0.9rem;
+    ul { padding-left: 22px; }
+    li { margin-bottom: 0.6rem; }
+    p { margin: 0.6rem 0; }
+    a {
+      color: #4183c4;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
 @media all and (max-width: 500px) {
   margin: 0 10px;
   width: calc(100% - 5px);
