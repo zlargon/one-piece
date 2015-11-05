@@ -50,39 +50,46 @@ export default class OnePiece extends React.Component {
         this.setState({ characters });
     }
 
-    componentWillUpdate(nextProps, nextState) {
-        const data = nextState;
-        console.log(analysisToString(attackAnalysis(data)));
-
-        // save the data to local storage
-        window.localStorage.setItem('data', JSON.stringify(data));
-    }
-
     render () {
+        // save the data to local storage
+        window.localStorage.setItem('data', JSON.stringify(this.state));
+
         return (
-            <div>
+            <div className='op'>
                 <h2>梅莉號</h2>
                 <Boat boat={this.state.boat}
-                    onChange={this.updateBoat}
-                />
+                    onChange={this.updateBoat} />
 
                 <h2>敵人</h2>
                 <Enemy enemy={this.state.enemy}
-                    onChange={this.updateEnemy}
-                />
+                    onChange={this.updateEnemy} />
 
                 <h2>隊員</h2>
-                <CharacterList
-                    characters={this.state.characters}
-                    onChange={this.updateCharacters}
-                />
+                <div className='container'>
+                    <CharacterList
+                        characters={this.state.characters}
+                        onChange={this.updateCharacters} />
+
+                    <div className='analysis'>
+                        {analysisToString(attackAnalysis(this.state))}
+                    </div>
+                </div>
             </div>
         );
     }
 }
 
-function analysisToString(data) {
+function analysisToString(data, showDetail) {
   const { captains, analysis } = data;
+
+  function proportion(attack) {
+    return Math.floor(attack / data.total.attack * 1000) / 10;
+  }
+
+  function detail(damage, showDetail) {
+    if (showDetail === false) return '';
+    return `\n\n`
+  }
 
   // Captain Effect
   const captainEffectContent = captains.reduce((text, character, index) => {
@@ -94,27 +101,23 @@ function analysisToString(data) {
   // Analysis
   const analysisContent = analysis.reduce((text, { character, magnification: magni, attack, damage, total }, index) => {
     return text +
-`\n第 ${index + 1} 位：${character.name.tw || character.name.jp}
+`\n---------------------------------------\n
+第 ${index + 1} 位：${character.name.tw || character.name.jp} (${proportion(damage.total)}%)
 
-原攻擊力 = ${attack.original}, 連擊 = ${character.combo}
-梅莉號：${magni.boat}, 船長：${magni.captain}, 屬珠：${magni.bead}, 剋屬：${magni.type}, Chain：${magni.chain}
+船長：${magni.captain}, 屬珠：${magni.bead}, 剋屬：${magni.type}, Chain：${magni.chain}
 加成後攻擊力 = ${attack.basic}
-單擊攻擊力   = ${attack.singal}
-
-前 ${attack.combo - 1} 擊傷害  = ${damage.singal}
+每單一擊傷害 = ${damage.singal}（共 ${attack.combo - 1} 擊）
 最後一擊傷害 = ${damage.final} (${attack.timing.toUpperCase()})
+造成總共傷害 = ${damage.total}
 
-累計傷害：
+詳細傷害分析：
 ${damage.history.join('\n')} => ${damage.total}
 
 Combo = ${total.combo}
-Total = ${total.attack}
-
---------------------------------------------------------\n`
+Total = ${total.attack}\n`
   }, '');
 
   return '船長效果：\n'
     + captainEffectContent
-    + '\n--------------------------------------------------------\n'
     + analysisContent;
 }

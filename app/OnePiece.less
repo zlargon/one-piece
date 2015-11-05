@@ -1,9 +1,46 @@
 body {
-    width: 800px;
-    margin: 20px auto;
+  width: 800px;
+  margin: 20px auto;
 
 @media all and (max-width: 500px) {
-    margin: 0 10px;
-    width: calc(100% - 5px);
+  margin: 0 10px;
+  width: calc(100% - 5px);
 }
+}
+
+.op {
+  .container {
+    display: flex;
+
+    & > * {
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .character-list {
+      flex-basis: 350px;
+    }
+
+    .analysis {
+      font-family: monospace;
+      white-space: pre;
+      word-wrap: break-word;
+
+      width: 400px;
+      height: 410px;
+      padding: 10px;
+      overflow: scroll;
+    }
+
+    @media all and (max-width: 500px) {
+      flex-direction: column;
+      .character-list {
+        flex-basis: auto;
+      }
+      .analysis {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
 }

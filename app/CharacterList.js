@@ -87,6 +87,6 @@ export default class CharacterList extends React.Component {
             );
         });
 
-        return <div>{characters}</div>;
+        return <div className='character-list'>{characters}</div>;
     }
 }
