@@ -1,47 +1,47 @@
 .op-character {
-    border: 1px dashed gray;
-    padding: 0.2rem 0;
-    margin-bottom: 0.3rem;
-    background-color: white;
-    font-size: 0.9rem;
+  border: 1px dashed gray;
+  padding: 0.2rem 0;
+  margin-bottom: 0.3rem;
+  background-color: white;
+  font-size: 0.9rem;
 
-    /* Flex Box */
+  /* Flex Box */
+  display: flex;
+  & > * {
+    /* Flex Items */
+    margin-left: 0.5rem;
     display: flex;
-    & > * {
-        /* Flex Items */
-        margin-left: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
+    flex-direction: column;
+    justify-content: space-around;
+  }
 
-    input[type="number"] {
-        width: 50px;
-        border-width: 0;
-        font-size: 0.9rem;
-    }
+  input[type="number"] {
+    width: 50px;
+    border-width: 0;
+    font-size: 0.9rem;
+  }
 
-    .icon {
-        width: 60px;
-        height: 60px;
-        cursor: move;
-    }
+  .icon {
+    width: 60px;
+    height: 60px;
+    cursor: move;
+  }
 
-    .basis {
-        flex-basis: 80px;
-    }
+  .basis {
+    flex-basis: 80px;
+  }
 
-    .baseline {
-        display: flex;
-        align-items: baseline;
-    }
+  .baseline {
+    display: flex;
+    align-items: baseline;
+  }
 
-    .bead {
-        text-transform: capitalize;
-        font-weight: bolder;
-    }
+  .bead {
+    text-transform: capitalize;
+    font-weight: bolder;
+  }
 
-    .point-cursor {
-        cursor: pointer;
-    }
+  .point-cursor {
+    cursor: pointer;
+  }
 }

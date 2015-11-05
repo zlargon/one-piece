@@ -2,75 +2,74 @@ import React from 'react';
 import './Enemy.less'
 
 export default class Enemy extends React.Component {
-    static propTypes = {
-        enemy: React.PropTypes.shape({
-            type: React.PropTypes.string.isRequired,
-            defense: React.PropTypes.number.isRequired
-        }),
+  static propTypes = {
+    enemy: React.PropTypes.shape({
+      type: React.PropTypes.string.isRequired,
+      defense: React.PropTypes.number.isRequired
+    }),
 
-        // callback
-        onChange: React.PropTypes.func.isRequired
-    };
+    // callback
+    onChange: React.PropTypes.func.isRequired
+  };
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.switchType = this.switchType.bind(this);
-        this.changeDefense = this.changeDefense.bind(this);
+    this.switchType = this.switchType.bind(this);
+    this.changeDefense = this.changeDefense.bind(this);
+  }
+
+  switchType() {
+    const { enemy } = this.props;
+
+    function next(type) {
+      const types = [ '力', '技', '速', '心', '知' ];
+      const index = types.indexOf(type);
+      const nextIndex = (index + 1) % types.length;
+      return types[nextIndex];
     }
 
-    switchType() {
-        const { enemy } = this.props;
+    this.props.onChange(
+      Object.assign({}, enemy, { type: next(enemy.type) })
+    );
+  }
 
-        function next(type) {
-            const types = [ '力', '技', '速', '心', '知' ];
-            const index = types.indexOf(type);
-            const nextIndex = (index + 1) % types.length;
-            return types[nextIndex];
-        }
+  changeDefense(event) {
+    const { value } = event.target;   // string
 
-        this.props.onChange(
-            Object.assign({}, enemy, { type: next(enemy.type) })
-        );
+    let defense = 0;
+    if (value.length !== 0) {
+      // parse into integer
+      defense = Number.parseInt(value, 10);
+
+      // don't change the input value
+      if (Number.isNaN(defense)) return;
+
+      // defense is positive
+      if (defense < 0) defense = 0;
     }
 
-    changeDefense(event) {
-        const { value } = event.target;   // string
+    this.props.onChange(
+      Object.assign({}, this.props.enemy, { defense }
+    ));
+  }
 
-        let defense = 0;
-        if (value.length !== 0) {
-            // parse into integer
-            defense = Number.parseInt(value, 10);
+  render () {
+    const { enemy } = this.props;
 
-            // don't change the input value
-            if (Number.isNaN(defense)) return;
+    return (
+      <div className='op-enemy'>
+        <div onClick={this.switchType}>
+          屬性：{enemy.type} ,
+        </div>
 
-            // defense is positive
-            if (defense < 0) defense = 0;
-        }
-
-        this.props.onChange(
-            Object.assign({}, this.props.enemy, { defense }
-        ));
-    }
-
-    render () {
-        const { enemy } = this.props;
-
-        return (
-            <div className='op-enemy'>
-                <div onClick={this.switchType}>
-                    屬性：{enemy.type} ,
-                </div>
-
-                <div>
-                    防禦：
-                    <input type='number'
-                        value={enemy.defense}
-                        onChange={this.changeDefense}
-                    />
-                </div>
-            </div>
-        );
-    }
+        <div>
+          防禦：
+          <input type='number'
+              value={enemy.defense}
+              onChange={this.changeDefense} />
+        </div>
+      </div>
+    );
+  }
 }
