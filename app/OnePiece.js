@@ -1,17 +1,16 @@
 import React              from 'react';
 import ShortId            from 'shortid';
 import { attackAnalysis } from 'one-piece';
-import Boat               from './Boat';
 import CharacterList      from './CharacterList';
-import Enemy              from './Enemy';
 import './OnePiece.less'
 
 export default class OnePiece extends React.Component {
   constructor (props) {
     super(props);
 
-    this.updateBoat = this.updateBoat.bind(this);
-    this.updateEnemy = this.updateEnemy.bind(this);
+    this.changeBoat = this.changeBoat.bind(this);
+    this.switchEnemyType = this.switchEnemyType.bind(this);
+    this.updateDefense = this.updateDefense.bind(this);
     this.updateCharacters = this.updateCharacters.bind(this);
     this.updateDetailCheckbox = this.updateDetailCheckbox.bind(this);
 
@@ -39,12 +38,56 @@ export default class OnePiece extends React.Component {
     this.state.characters.forEach(character => { character.id = ShortId.generate() });
   }
 
-  updateBoat(boat) {
-    this.setState({ boat });
+  changeBoat () {
+    function next(boat) {
+      const boats = [ 1, 1.2, 1.5 ];
+      const index = boats.indexOf(boat);
+      const nextIndex = (index + 1) % boats.length;
+      return boats[nextIndex];
+    }
+
+    this.setState({
+      boat: next(this.state.boat)
+    })
   }
 
-  updateEnemy (enemy) {
-    this.setState({ enemy });
+  switchEnemyType () {
+    function next(type) {
+      const types = [ '力', '技', '速', '心', '知' ];
+      const index = types.indexOf(type);
+      const nextIndex = (index + 1) % types.length;
+      return types[nextIndex];
+    }
+
+    this.setState({
+      enemy: {
+        type: next(this.state.enemy.type),
+        defense: this.state.enemy.defense
+      }
+    });
+  }
+
+  updateDefense (event) {
+    const { value } = event.target;
+
+    let defense = 0;
+    if (value.length !== 0) {
+      // parse into integer
+      defense = Number.parseInt(value, 10);
+
+      // don't change the input value
+      if (Number.isNaN(defense)) return;
+
+      // defense is positive
+      if (defense < 0) defense = 0;
+    }
+
+    this.setState({
+      enemy: {
+        type: this.state.enemy.type,
+        defense
+      }
+    });
   }
 
   updateCharacters (characters) {
@@ -61,13 +104,17 @@ export default class OnePiece extends React.Component {
 
     return (
       <div className='op'>
-        <h2>梅莉號</h2>
-        <Boat boat={this.state.boat} onChange={this.updateBoat} />
-
-        <h2>敵人</h2>
-        <Enemy enemy={this.state.enemy} onChange={this.updateEnemy} />
-
-        <h2>隊員</h2>
+        <div>
+          <div onClick={this.changeBoat}>
+            梅莉號：{this.state.boat} 倍
+          </div>
+          <div>
+            <div onClick={this.switchEnemyType}>
+              敵人屬性：{this.state.enemy.type}
+            </div>
+            <div>防禦：<input type='number' value={this.state.enemy.defense} onChange={this.updateDefense}/></div>
+          </div>
+        </div>
         <div className='container'>
           <CharacterList
             characters={this.state.characters}
