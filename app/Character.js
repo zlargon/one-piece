@@ -1,8 +1,8 @@
 import React                      from 'react';
 import { DragSource, DropTarget } from 'react-dnd';
 import config                     from '../config';
+import characterList              from '../data/characterList';
 import CharacterDnD               from './CharacterDnD';
-import OnePiece                   from 'one-piece';
 import './Character.less';
 
 @DropTarget('CharacterItem', CharacterDnD.target, connect => ({
@@ -155,7 +155,7 @@ export default class Character extends React.Component {
 
     function imageUrl(no) {
       const url = 'http://onepiece-treasurecruise.com/wp-content';
-      if (!OnePiece.characterList[no]) {
+      if (!characterList[no]) {
         return url + '/themes/onepiece-treasurecruise/images/noimage.png';
       }
 

@@ -1,7 +1,7 @@
-import React              from 'react';
-import ShortId            from 'shortid';
-import { attackAnalysis } from 'one-piece';
-import CharacterList      from './CharacterList';
+import React             from 'react';
+import ShortId           from 'shortid';
+import attackAnalysis    from '../lib/attackAnalysis';
+import CharacterList     from './CharacterList';
 import './OnePiece.less'
 
 export default class OnePiece extends React.Component {
