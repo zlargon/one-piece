@@ -1,7 +1,8 @@
-import React                        from 'react';
-import { DragSource, DropTarget }   from 'react-dnd';
-import CharacterDnD                 from './CharacterDnD';
-import OnePiece                     from 'one-piece';
+import React                      from 'react';
+import { DragSource, DropTarget } from 'react-dnd';
+import config                     from '../config';
+import CharacterDnD               from './CharacterDnD';
+import OnePiece                   from 'one-piece';
 import './Character.less';
 
 @DropTarget('CharacterItem', CharacterDnD.target, connect => ({
@@ -58,9 +59,11 @@ export default class Character extends React.Component {
         // don't change the input value
         if (Number.isNaN(no)) return;
 
-        // no.0 ~ 316
-        if (no < 0)   no = 0;
-        if (no > 316) no = 316;
+        // limit character no
+        if (no < 0) no = 0;
+        if (no > config.maxCharacterNumber.tw) {
+          no = config.maxCharacterNumber.tw;
+        }
       }
 
       this.props.onChange(

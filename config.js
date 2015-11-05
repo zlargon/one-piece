@@ -1,6 +1,6 @@
 module.exports = {
   maxCharacterNumber: {
-    jp: 781,
-    tw: 267
+    jp: 800,
+    tw: 316
   }
 };
