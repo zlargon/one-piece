@@ -151,8 +151,13 @@ export default class Character extends React.Component {
     }
 
     function imageUrl(no) {
+      const url = 'http://onepiece-treasurecruise.com/wp-content';
+      if (!OnePiece.characterList[no]) {
+        return url + '/themes/onepiece-treasurecruise/images/noimage.png';
+      }
+
       const number = (no + 10000).toString().substring(1);
-      return `http://onepiece-treasurecruise.com/wp-content/uploads/f${number}.png`;
+      return url + `/uploads/f${number}.png`;
     }
 
     return connectDragSource(connectDropTarget(
