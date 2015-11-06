@@ -174,6 +174,14 @@ export default class Character extends React.Component {
       return url + `/uploads/f${number}.png`;
     }
 
+    function hasSpecialAbility(no) {
+      if (typeof characterList[no] !== 'object' ||
+          typeof characterList[no].specialAbility.magnification !== 'function') {
+        return false;
+      }
+      return true;
+    }
+
     return connectDragPreview(connectDropTarget(
       <div className='one-piece-character' style={dragging}>
 
@@ -185,7 +193,7 @@ export default class Character extends React.Component {
                 checked={character.captainEffect}
                 onChange={this.checkCaptainEffect} />
           </div>
-          <div className='baseline' style={invisible}>
+          <div className='baseline' style={hasSpecialAbility(character.no) ? {} : invisible}>
             <span>必</span>
             <input type='checkbox'
                 checked={character.specialAbility}
