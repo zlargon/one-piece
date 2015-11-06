@@ -1,6 +1,7 @@
 import React                from 'react';
 import { DragDropContext }  from 'react-dnd';
 import HTML5Backend         from 'react-dnd-html5-backend';
+import TouchBackend         from 'react-dnd-touch-backend';
 import Character            from './Character';
 
 function captainCounter(characters) {
@@ -10,7 +11,14 @@ function captainCounter(characters) {
   return counter;
 }
 
-@DragDropContext(HTML5Backend)
+function isMobileDevice() {
+  const deviceRegex = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i];
+  return deviceRegex.reduce((bool, regex) => {
+    return window.navigator.userAgent.match(regex) ? true : bool;
+  }, false);
+}
+
+@DragDropContext(isMobileDevice() ? TouchBackend : HTML5Backend)
 export default class CharacterList extends React.Component {
   static propTypes = {
     characters: React.PropTypes.arrayOf(
@@ -36,7 +44,8 @@ export default class CharacterList extends React.Component {
     this.updateCharacterData = this.updateCharacterData.bind(this);
 
     this.state = {
-      isCaptainFull: captainCounter(props.characters)
+      isCaptainFull: captainCounter(props.characters) === 2,
+      isMobileDevice: isMobileDevice()
     }
   }
 
@@ -79,6 +88,7 @@ export default class CharacterList extends React.Component {
         <Character
           key={character.id}
           index={index}
+          isMobileDevice={this.state.isMobileDevice}
           isCaptainFull={this.state.isCaptainFull}
           character={character}
           onMove={this.reorderCharacters}

@@ -33,6 +33,9 @@ export default class Character extends React.Component {
         specialAbility: React.PropTypes.bool
       }),
 
+      isCaptainFull: React.PropTypes.bool.isRequired,
+      isMobileDevice: React.PropTypes.bool.isRequired,
+
       // callback
       onMove: React.PropTypes.func.isRequired,
       onChange: React.PropTypes.func.isRequired
@@ -144,9 +147,15 @@ export default class Character extends React.Component {
   }
 
   render() {
-    const { character, isCaptainFull, isDragging, connectDragSource, connectDragPreview, connectDropTarget } = this.props;
+    const { isDragging, connectDragSource, connectDragPreview, connectDropTarget } = this.props;
+    const { character, isCaptainFull, isMobileDevice } = this.props;
     const invisible = {
       visibility: 'hidden'
+    };
+
+    const dragging = {
+      opacity: isDragging && !isMobileDevice ? 0 : 1,
+      borderColor: isDragging && isMobileDevice ? 'blue' : 'lightgray'
     };
 
     function beadText (bead) {
@@ -166,7 +175,7 @@ export default class Character extends React.Component {
     }
 
     return connectDragPreview(connectDropTarget(
-      <div className='one-piece-character' style={{ opacity: isDragging ? 0 : 1 }}>
+      <div className='one-piece-character' style={dragging}>
 
         <div>
           <div className='baseline'

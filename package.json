@@ -21,6 +21,7 @@
     "react": "^0.14.1",
     "react-dnd": "^2.0.2",
     "react-dnd-html5-backend": "^2.0.0",
+    "react-dnd-touch-backend": "^0.2.0",
     "react-dom": "^0.14.1",
     "shortid": "^2.2.4"
   },
