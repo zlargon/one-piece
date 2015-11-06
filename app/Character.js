@@ -10,12 +10,14 @@ import './Character.less';
 }))
 @DragSource('CharacterItem', CharacterDnD.source, (connect, monitor) => ({
   connectDragSource: connect.dragSource(),
+  connectDragPreview: connect.dragPreview(),
   isDragging: monitor.isDragging()
 }))
 export default class Character extends React.Component {
     static propTypes = {
       // drag and drop pros
       connectDragSource: React.PropTypes.func.isRequired,
+      connectDragPreview: React.PropTypes.func.isRequired,
       connectDropTarget: React.PropTypes.func.isRequired,
       isDragging: React.PropTypes.bool.isRequired,
       index: React.PropTypes.number.isRequired,
@@ -142,7 +144,7 @@ export default class Character extends React.Component {
   }
 
   render() {
-    const { character, isCaptainFull, isDragging, connectDragSource, connectDropTarget } = this.props;
+    const { character, isCaptainFull, isDragging, connectDragSource, connectDragPreview, connectDropTarget } = this.props;
     const invisible = {
       visibility: 'hidden'
     };
@@ -163,7 +165,7 @@ export default class Character extends React.Component {
       return url + `/uploads/f${number}.png`;
     }
 
-    return connectDragSource(connectDropTarget(
+    return connectDragPreview(connectDropTarget(
       <div className='one-piece-character' style={{ opacity: isDragging ? 0 : 1 }}>
 
         <div>
@@ -182,9 +184,9 @@ export default class Character extends React.Component {
           </div>
         </div>
 
-        <div>
+        {connectDragSource(<div>
           <img className='icon' src={imageUrl(character.no)} />
-        </div>
+        </div>)}
 
         <div className='basis'>
           <div className='baseline'>
