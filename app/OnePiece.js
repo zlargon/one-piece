@@ -137,7 +137,7 @@ export default class OnePiece extends React.Component {
 }
 
 function generateReport(data, showDetail) {
-  const { captains, analysis } = data;
+  const { captains, specialAbilities, analysis } = data;
 
   function proportion(attack) {
     return Math.floor(attack / data.total.attack * 1000) / 10;
@@ -148,20 +148,30 @@ function generateReport(data, showDetail) {
     return `\n傷害分析：\n${damage.history.join('\n')} => ${damage.total}\n`
   }
 
-  // Captain Effect
+
+  // 1. Captain Effect
   const captainEffectContent = captains.reduce((text, character, index) => {
     const name = character.name.tw ? character.name.tw : character.name.jp;
     const content = character.captainEffect.tw.content ? character.captainEffect.tw.content : character.captainEffect.jp.content;
-    return text + `\n${index + 1}. ${name} No.${character.no}\n   ${content}\n`;
-  }, '');
+    return text + `${index + 1}. ${content}\n`;
+  }, captains.length === 0 ? '' : '船長效果：\n');
 
-  // Analysis
+
+  // 2. Special Ability
+  const specialAbilityContent = specialAbilities.reduce((text, character, index) => {
+    const name = character.name.tw ? character.name.tw : character.name.jp;
+    const content = character.specialAbility.tw.content ? character.specialAbility.tw.content : character.specialAbility.jp.content;
+    return text + `${index + 1}. ${content}\n`;
+  }, specialAbilities.length === 0 ? '' : '\n必殺技效果：\n');
+
+
+  // 3. Attack Analysis
   const analysisContent = analysis.reduce((text, { character, magnification: magni, attack, damage, total }, index) => {
     return text +
 `\n----------------------------------\n
 第 ${index + 1} 位：${character.name.tw || character.name.jp}
 
-船長：${magni.captain}, 屬珠：${magni.bead}, 剋屬：${magni.type}, Chain：${magni.chain}
+船長：${magni.captain}, 屬珠：${magni.bead}, 剋屬：${magni.type}, 特殊：${magni.special}, Chain：${magni.chain}
 加成後攻擊力 = ${attack.basic}
 每單一擊傷害 = ${damage.singal}（共 ${attack.combo - 1} 擊）
 最後一擊傷害 = ${damage.final} (${attack.timing.toUpperCase()})
@@ -171,7 +181,6 @@ Combo = ${total.combo}
 Total = ${total.attack}\n`
   }, '');
 
-  return '船長效果：\n'
-    + captainEffectContent
-    + analysisContent;
+
+  return captainEffectContent + specialAbilityContent + analysisContent;
 }
