@@ -4,7 +4,8 @@ const source = {
   beginDrag(props) {
     return {
       id: props.character.id,
-      index: props.index
+      index: props.index,
+      isMobileDevice: props.isMobileDevice
     };
   }
 };
@@ -13,6 +14,7 @@ const target = {
   hover(props, monitor, component) {
     const dragIndex = monitor.getItem().index;
     const hoverIndex = props.index;
+    const isMobileDevice = props.isMobileDevice;
 
     // Don't replace items with themselves
     if (dragIndex === hoverIndex) {
@@ -21,9 +23,11 @@ const target = {
 
     // Determine rectangle on screen
     const hoverBoundingRect = findDOMNode(component).getBoundingClientRect();
+    const itemHeight = hoverBoundingRect.bottom - hoverBoundingRect.top;
 
-    // Get vertical middle
-    const hoverMiddleY = (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+    // Determine hover distance
+    // The behavior between mobile and desktop devices is different
+    const hoverDistance = isMobileDevice ? 0 : itemHeight / 2;
 
     // Determine mouse position
     const clientOffset = monitor.getClientOffset();
@@ -32,16 +36,16 @@ const target = {
     const hoverClientY = clientOffset.y - hoverBoundingRect.top;
 
     // Only perform the move when the mouse has crossed half of the items height
-    // When dragging downwards, only move when the cursor is below 50%
-    // When dragging upwards, only move when the cursor is above 50%
+    // When dragging downwards, only move when the cursor is below 'hoverDistance'
+    // When dragging upwards, only move when the cursor is above 'hoverDistance'
 
     // Dragging downwards
-    if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
+    if (dragIndex < hoverIndex && hoverClientY < hoverDistance) {
       return;
     }
 
     // Dragging upwards
-    if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
+    if (dragIndex > hoverIndex && hoverClientY - itemHeight > hoverDistance) {
       return;
     }
 
