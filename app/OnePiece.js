@@ -169,10 +169,13 @@ function generateReport(data, showDetail) {
   const analysisContent = analysis.reduce((text, { character, magnification: magni, attack, damage, total }, index) => {
     return text +
 `\n----------------------------------\n
-第 ${index + 1} 位：${character.name.tw || character.name.jp}
+第 ${index + 1} 位：${character.name.tw || character.name.jp} (No.${character.no})
 
-船長：${magni.captain}, 屬珠：${magni.bead}, 剋屬：${magni.type}, 特殊：${magni.special}, Chain：${magni.chain}
+類型：${character.classes[0]}, 攻擊：${attack.original}, 連擊：${character.combo}
+梅莉號：${magni.boat}, 船長：${magni.captain}, 剋屬：${magni.type}
+特殊：${magni.special}, 屬珠：${magni.bead}, Chain：${magni.chain}
 加成後攻擊力 = ${attack.basic}
+
 每單一擊傷害 = ${damage.singal}（共 ${attack.combo - 1} 擊）
 最後一擊傷害 = ${damage.final} (${attack.timing.toUpperCase()})
 造成總共傷害 = ${damage.total} (${proportion(damage.total)}％)

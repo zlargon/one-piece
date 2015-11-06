@@ -155,7 +155,7 @@ export default class Character extends React.Component {
 
     const dragging = {
       opacity: isDragging && !isMobileDevice ? 0 : 1,
-      borderColor: isDragging && isMobileDevice ? 'blue' : 'lightgray'
+      backgroundColor: isDragging && isMobileDevice ? 'lightsteelblue' : 'white'
     };
 
     function beadText (bead) {
