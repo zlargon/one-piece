@@ -1,4 +1,5 @@
 import fs            from 'fs';
+import path          from 'path';
 import characterList from '../data/characterList.js';
 
 function fillZero(number) {
@@ -6,7 +7,7 @@ function fillZero(number) {
 }
 
 function addComment(n) {
-  const file = `../data/captain/${fillZero(n)}.js`
+  const file = path.resolve(__dirname, `../data/captain/${fillZero(n)}.js`)
 
   try {
     const content = fs.readFileSync(file, 'utf8');

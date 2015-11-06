@@ -30,7 +30,7 @@ module.exports = {
     },
     "tw": {
       "name": "剃",
-      "content": "於2回合內將海賊團全體成員的技能格影響力大幅提升\n"
+      "content": "於2回合內將海賊團全體成員的技能格影響力大幅提升"
     }
   },
   "captainEffect": {
