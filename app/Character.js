@@ -73,7 +73,10 @@ export default class Character extends React.Component {
 
       this.props.onChange(
         this.props.index,
-        Object.assign({}, this.props.character, { no }
+        Object.assign({}, this.props.character, {
+          no,
+          attack: CharacterInfo.get(no).max.atk
+        }
       ));
     }
 
