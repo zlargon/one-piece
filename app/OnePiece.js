@@ -13,6 +13,7 @@ export default class OnePiece extends React.Component {
     this.updateDefense = this.updateDefense.bind(this);
     this.updateCharacters = this.updateCharacters.bind(this);
     this.updateDetailCheckbox = this.updateDetailCheckbox.bind(this);
+    this.maxDamageOrder = this.maxDamageOrder.bind(this);
 
     this.state = {
       enemy: { type: '心', defense: 100 }, // 卡普
@@ -98,6 +99,30 @@ export default class OnePiece extends React.Component {
     this.setState({ showDetail: event.target.checked });
   }
 
+  maxDamageOrder () {
+    const max = enumerate(this.state.characters).reduce((result, characters) => {
+      let report = attackAnalysis({
+        enemy: this.state.enemy,
+        boat: this.state.boat,
+        characters
+      });
+
+      if (report.total.attack > result.total) {
+        return {
+          total: report.total.attack,
+          characters
+        }
+      }
+
+      return result;
+    }, {
+      total: 0,
+      characters: []
+    });
+
+    this.setState({ characters: max.characters });
+  }
+
   render () {
     // save the data to local storage
     window.localStorage.setItem('data', JSON.stringify(this.state));
@@ -127,9 +152,12 @@ export default class OnePiece extends React.Component {
           </div>
         </div>
 
-        <div className='config'>
-          <input type='checkbox' checked={this.state.showDetail} onChange={this.updateDetailCheckbox}/>
-          <span>&nbsp;顯示傷害分析</span>
+        <div className='option baseline'>
+          <button onClick={this.maxDamageOrder}>最大傷害排序</button>
+          <div className='baseline'>
+            <input type='checkbox' checked={this.state.showDetail} onChange={this.updateDetailCheckbox}/>
+            <span>&nbsp;顯示傷害分析</span>
+          </div>
         </div>
       </div>
     );
@@ -186,4 +214,24 @@ Total = ${total.attack}\n`
 
 
   return captainEffectContent + specialAbilityContent + analysisContent;
+}
+
+function enumerate (source) {
+  let sourceCopy = source.slice();
+  let target = [];
+  let arr = [];
+  function recursive(source) {
+    for (let i = 0; i < source.length; i++) {
+      arr.push(source[i]);
+      source.splice(i, 1);
+      if (source.length === 0) {
+        target.push(arr.slice());
+      } else {
+        recursive(source);
+      }
+      source.splice(i, 0, arr.pop());
+    }
+  }
+  recursive(sourceCopy);
+  return target;
 }
