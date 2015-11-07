@@ -1,7 +1,7 @@
 import React                      from 'react';
 import { DragSource, DropTarget } from 'react-dnd';
 import config                     from '../config';
-import characterList              from '../data/characterList';
+import CharacterInfo              from '../lib/CharacterClass';
 import CharacterDnD               from './CharacterDnD';
 import './Character.less';
 
@@ -166,7 +166,8 @@ export default class Character extends React.Component {
 
     function imageUrl(no) {
       const url = 'http://onepiece-treasurecruise.com/wp-content';
-      if (!characterList[no]) {
+      const character = CharacterInfo.get(no);
+      if (character.star === 0) {
         return url + '/themes/onepiece-treasurecruise/images/noimage.png';
       }
 
@@ -175,8 +176,8 @@ export default class Character extends React.Component {
     }
 
     function hasSpecialAbility(no) {
-      if (typeof characterList[no] !== 'object' ||
-          typeof characterList[no].specialAbility.magnification !== 'function') {
+      const character = CharacterInfo.get(no);
+      if (character.specialAbility.magnification === null) {
         return false;
       }
       return true;
