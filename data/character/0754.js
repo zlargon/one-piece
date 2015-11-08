@@ -36,7 +36,7 @@ module.exports = {
   },
   "captainEffect": {
     "jp": {
-      "name": " 「鉄塊拳法」“狼牙の構え”!!!",
+      "name": "「鉄塊拳法」“狼牙の構え”!!!",
       "content": "強靱タイプキャラの攻撃を2.5倍にする"
     },
     "tw": {

@@ -1,7 +1,7 @@
 module.exports = {
   "no": 207,
   "name": {
-    "jp": "Mr.2・ボン・クレー ",
+    "jp": "Mr.2・ボン・クレー",
     "tw": "Mr.2　馮・克雷"
   },
   "type": "心",

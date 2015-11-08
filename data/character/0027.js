@@ -35,11 +35,11 @@ module.exports = {
   },
   "captainEffect": {
     "jp": {
-      "name": "山賊棟梁の号令 ",
+      "name": "山賊棟梁の号令",
       "content": "速属性キャラの体力を1.2倍にする"
     },
     "tw": {
-      "name": "山賊棟樑的號令 ",
+      "name": "山賊棟樑的號令",
       "content": "將速度屬性角色的體力提升1.2倍"
     }
   }
