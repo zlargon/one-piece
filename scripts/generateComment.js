@@ -18,7 +18,6 @@ function addComment(n) {
  *
  * ${character.captainEffect.tw.name}
  * ${character.captainEffect.tw.content}
- *
  */
 `
     fs.writeFileSync(file, comment + content, 'utf8');
