@@ -1,7 +1,2 @@
-module.exports = function(param) {
-    var classes = param.character.classes;
-    for (var i = 0; i < classes.length; i++) {
-        if (classes[i] === "射擊") return 1.5;
-    }
-    return 1;
-}
+import { ClassEffect } from '../GeneralEffect';
+export default ClassEffect('射擊', 1.5);
