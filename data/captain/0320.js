@@ -1,3 +1,2 @@
-export default function({ character }) {
-  return character.classes.indexOf('打擊') >= 0 ? 2 : 1;
-}
+import { ClassEffect } from '../GeneralEffect';
+export default ClassEffect('打擊', 2);

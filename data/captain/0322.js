@@ -1,3 +1,2 @@
-export default function({ character }) {
-  return character.type === '速' ? 2 : 1;
-}
+import { TypeEffect } from '../GeneralEffect';
+export default TypeEffect('速', 2);
