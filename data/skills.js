@@ -713,6 +713,86 @@ captain[599] = function({ character }) {
 captain[600] = TypeEffect('心', 1.5);
 special[600] = TypeEffect('心', 1.3);
 
+captain[601] = TypeEffect('心', 2);
+special[601] = TypeEffect('心', 1.3);
+
+captain[602] = TypeEffect('速', 2);
+special[602] = TypeEffect('速', 2);
+
+captain[603] = TypeEffect('速', 2.25);
+special[603] = TypeEffect('速', 2);
+
+captain[604] = ClassEffect('格鬥', 2);
+captain[605] = ClassEffect('格鬥', 2);
+captain[606] = ClassEffect('格鬥', 2);
+captain[607] = ClassEffect('格鬥', 2.5);
+
+captain[612] = ClassEffect('斬擊', 1.5);
+// TODO: special[612] =
+
+captain[613] = ClassEffect('斬擊', 1.5);
+// TODO: special[613] =
+
+captain[614] = function ({ character }) {
+  return character.cost <= 20 ? 2.25 : 1;
+}
+
+special[617] = ClassEffect('射擊', 1.2);
+
+captain[629] = function ({ character }) {
+  return 0 < character.star && character.star <= 3 ? 2 : 1;
+}
+
+captain[630] = ClassEffect('斬擊', 1.5);
+captain[631] = ClassEffect('斬擊', 2);
+captain[632] = ClassEffect('格鬥', 1.5);
+captain[633] = ClassEffect('格鬥', 2);
+
+captain[634] = function({ character }) {
+  return character.type === '速' || character.type === '心' ? 1.25 : 1;
+}
+special[634] = function({ character }) {
+  return character.type === '速' || character.type === '心' ? 1.2 : 1;
+}
+captain[635] = function({ character }) {
+  return character.type === '速' || character.type === '心' ? 1.5 : 1;
+}
+special[635] = special[634];
+
+captain[636] = function ({ character }) {
+  return character.cost <= 2 ? 3 : 1;
+}
+
+captain[637] = ClassEffect('斬擊', 1.5);
+// special[637] = ??
+
+captain[638] = ClassEffect('斬擊', 2);
+captain[639] = captain[638];
+
+captain[640] = ClassEffect('格鬥', 2);
+captain[641] = ClassEffect('格鬥', 2.25);
+
+captain[642] = TypeEffect('心', 2.5);
+special[642] = BeadEffect;
+
+captain[643] = TypeEffect('心', 3);
+special[643] = BeadEffect;
+
+captain[644] = TypeEffect('知', 2);
+captain[645] = TypeEffect('知', 2.5);
+captain[646] = ClassEffect('射擊', 2.5);
+captain[647] = ClassEffect('射擊', 2.75);
+
+captain[648] = function({ character }) {
+  return character.type === '速' || character.type === '心' ? 2.75 : 1;
+}
+special[648] = BeadEffect;
+captain[649] = captain[648];
+special[649] = special[648];
+
+captain[650] = TypeEffect('知', 2);
+special[650] = BeadEffect;
+
 export default {
   CaptainEffect: captain,
   SpecialAbility: special
