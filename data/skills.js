@@ -1,6 +1,5 @@
 import config from '../config';
-import Character from '../lib/CharacterClass';
-import { TypeEffect, ClassEffect, BeadEffect } from './GeneralEffect';
+import { TypeEffect, ClassEffect, BeadEffect, OrderEffect } from './GeneralEffect';
 
 let captain = [];
 let special = [];
@@ -416,55 +415,8 @@ function isAboveGood(timing) {
   return timing === 'good' || timing === 'great' || timing === 'perfect';
 }
 
-captain[389] = function ({ characterList }) {
-  const TypeOrder = [ '技', '知', '速' ];
-  let index = 0;
-
-  for (let i = 0; i < characterList.length; i++) {
-    const character = characterList[i];
-    const characterType = Character.get(character.no).type;
-    const nextType = TypeOrder[index];
-
-    if (characterType !== nextType || !isAboveGood(character.timing)) {
-      index = 0;  // restart index
-      continue;
-    }
-
-    // is not the last type
-    if (index !== TypeOrder.length - 1) {
-      index++;
-      continue;
-    }
-
-    return 2.25;
-  }
-  return 1;
-}
-
-captain[390] = function ({ characterList }) {
-  const TypeOrder = [ '技', '知', '速' ];
-  let index = 0;
-
-  for (let i = 0; i < characterList.length; i++) {
-    const character = characterList[i];
-    const characterType = Character.get(character.no).type;
-    const nextType = TypeOrder[index];
-
-    if (characterType !== nextType || !isAboveGood(character.timing)) {
-      index = 0;  // restart index
-      continue;
-    }
-
-    // is not the last type
-    if (index !== TypeOrder.length - 1) {
-      index++;
-      continue;
-    }
-
-    return 2.75;
-  }
-  return 1;
-}
+captain[389] = OrderEffect(['技', '知', '速'], 2.25);
+captain[390] = OrderEffect(['技', '知', '速'], 2.75);
 
 captain[395] = TypeEffect('速', 1.2);
 special[395] = BeadEffect;
@@ -492,6 +444,78 @@ captain[398] = function ({ timingHistory }) {
 
 special[399] = TypeEffect('技', 1.5);
 special[400] = TypeEffect('技', 1.5);
+
+//
+captain[401] = function({ character }) {
+  return character.classes.indexOf('斬擊') >= 0 ? 1.5 : 0.8;   // FIXME
+}
+special[401] = ClassEffect('斬擊', 1.25);
+
+//
+captain[402] = function({ character }) {
+  return character.classes.indexOf('斬擊') >= 0 ? 2 : 0.8;   // FIXME
+}
+special[402] = special[401];
+
+captain[404] = ClassEffect('射擊', 1.5);
+captain[405] = ClassEffect('射擊', 2);
+special[406] = () => 1.2;
+
+captain[408] = ClassEffect('斬擊', 2);
+captain[409] = ClassEffect('格鬥', 2);
+captain[410] = ClassEffect('格鬥', 2.5);
+captain[411] = TypeEffect('力', 2);
+captain[412] = TypeEffect('力', 2);
+captain[413] = TypeEffect('知', 2.5);
+captain[414] = TypeEffect('知', 3);
+
+captain[415] = function ({ character }) {
+  return character.type === '速' || character.type === '心' ? 2.75 : 1;
+}
+captain[416] = captain[415];
+
+captain[417] = ClassEffect('斬擊', 2);
+special[417] = function BeadEffect({ bead }) {
+  if (bead === 2)   return 2;
+  if (bead === 0.5) return 0.5;
+  return 1;
+}
+captain[418] = captain[417];
+special[418] = special[417];
+
+captain[419] = TypeEffect('速', 2);
+captain[420] = TypeEffect('力', 1.5);
+captain[421] = TypeEffect('技', 1.5);
+captain[422] = TypeEffect('知', 1.5);
+captain[424] = () => 1.5;
+captain[425] = ClassEffect('斬擊', 1.5);
+special[426] = TypeEffect('力', 1.05);
+captain[428] = TypeEffect('心', 2);
+
+captain[430] = TypeEffect('技', 1.5);
+special[430] = BeadEffect;
+
+captain[431] = captain[430];
+special[431] = special[430];
+
+captain[433] = OrderEffect(['速', '力', '技'], 2);
+
+captain[434] = OrderEffect(['心', '知', '知'], 2);
+special[434] = BeadEffect;
+
+captain[435] = OrderEffect(['知', '心', '速'], 2);
+captain[436] = OrderEffect(['知', '心', '速'], 2.25);
+
+// TODO: captain[444] =
+// TODO: captain[445] =
+
+captain[446] = TypeEffect('力', 2);
+captain[447] = TypeEffect('力', 2.5);
+captain[448] = TypeEffect('速', 3);
+captain[449] = TypeEffect('速', 3);
+
+captain[450] = ClassEffect('格鬥', 2);
+special[450] = ClassEffect('格鬥', 1.5);
 
 export default {
   CaptainEffect: captain,
