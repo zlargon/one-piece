@@ -516,6 +516,69 @@ captain[449] = TypeEffect('速', 3);
 
 captain[450] = ClassEffect('格鬥', 2);
 special[450] = ClassEffect('格鬥', 1.5);
+captain[451] = captain[450];
+special[451] = special[450];
+
+captain[452] = ClassEffect('打擊', 2);
+captain[453] = captain[452];
+
+captain[454] = TypeEffect('力', 2);
+special[454] = TypeEffect('力', 1.5);
+captain[455] = captain[454];
+special[455] = special[454];
+
+captain[456] = ClassEffect('射擊', 2);
+captain[457] = ClassEffect('射擊', 2);
+
+captain[458] = function ({ character }) {
+  return character.cost <= 20 ? 3 : 1;
+}
+special[458] = () => 1.5;
+captain[459] = captain[458];
+special[459] = special[458];
+
+captain[461] = ClassEffect('格鬥', 2);
+special[461] = ClassEffect('格鬥', 1.25);
+captain[462] = captain[461];
+special[462] = special[461];
+
+captain[464] = ClassEffect('打擊', 1.5);
+
+captain[465] = function ({ timingHistory }) {
+  let sum = 0;
+  for (let i = 0; i < timingHistory.length; i++) {
+    sum = timingHistory[i] === 'bad' ? sum + 1 : 0;
+    if (sum >= 4) return 3;
+  }
+  return 1;
+}
+special[465] = function ({ bead }) {
+  if (bead === 2)   return 1.25;
+  if (bead === 0.5) return 0.8;
+  return 1;
+}
+
+captain[466] = ClassEffect('射擊', 1.5);
+captain[467] = TypeEffect('力', 1.5);
+captain[471] = TypeEffect('知', 1.2);
+captain[483] = TypeEffect('速', 1.2);
+captain[486] = ClassEffect('打擊', 1.5);
+
+special[487] = TypeEffect('力', 1.2);
+special[488] = TypeEffect('速', 1.2);
+special[489] = TypeEffect('技', 1.2);
+
+captain[490] = ClassEffect('打擊', 1.2);
+special[490] = TypeEffect('力', 1.2);
+
+special[491] = TypeEffect('速', 1.2);
+
+captain[492] = TypeEffect('技', 1.5);
+special[492] = TypeEffect('技', 1.2);
+
+captain[496] = ClassEffect('射擊', 1.5);
+captain[497] = TypeEffect('速', 1.5);
+captain[498] = TypeEffect('速', 1.5);
 
 export default {
   CaptainEffect: captain,
