@@ -792,6 +792,75 @@ special[649] = special[648];
 
 captain[650] = TypeEffect('知', 2);
 special[650] = BeadEffect;
+captain[651] = captain[650];
+special[651] = special[650];
+
+// captain[652] =
+// captain[653] =
+// captain[654] =
+
+captain[655] = TypeEffect('力', 1.5);
+special[655] = BeadEffect;
+captain[656] = TypeEffect('力', 2);
+special[656] = BeadEffect;
+
+captain[657] = ClassEffect('格鬥', 1.5);
+captain[658] = ClassEffect('射擊', 1.5);
+captain[659] = PerfectEffect(3, 2.5);
+captain[660] = ClassEffect('射擊', 2);
+captain[661] = ClassEffect('射擊', 2);
+captain[662] = TypeEffect('心', 2);
+captain[665] = () => 1.2;
+captain[666] = () => 1.75;
+captain[667] = () => 1.5;
+
+captain[668] = ClassEffect('自由', 2.75);   // TODO
+special[668] = ClassEffect('自由', 1.5);    // TODO
+captain[669] = captain[668];
+special[669] = special[668];
+
+captain[670] = ClassEffect('格鬥', 2);
+special[670] = ClassEffect('格鬥', 1.75);
+
+captain[671] = ClassEffect('格鬥', 2.25);
+special[671] = ClassEffect('格鬥', 1.75);
+
+captain[672] = ClassEffect('格鬥', 2);
+captain[673] = ClassEffect('格鬥', 2);
+
+captain[674] = ClassEffect('自由', 2);
+captain[675] = ClassEffect('自由', 2.5);
+
+captain[676] = ClassEffect('斬擊', 1.5);
+captain[677] = ClassEffect('斬擊', 1.5);
+captain[678] = TypeEffect('心', 1.2);
+captain[679] = TypeEffect('心', 1.5);
+special[680] = TypeEffect('技', 1.25);
+
+captain[681] = ClassEffect('打擊', 1.5);
+special[681] = TypeEffect('技', 1.25);
+
+captain[683] = ClassEffect('格鬥', 1.5);
+captain[685] = ClassEffect('射擊', 1.5);
+captain[686] = ClassEffect('斬擊', 1.5);
+
+captain[687] = ClassEffect('自由', 1.5);
+special[687] = ClassEffect('自由', 1.3);
+captain[688] = ClassEffect('自由', 2);
+special[688] = ClassEffect('自由', 1.3);
+
+captain[689] = ClassEffect('斬擊', 1.2);
+special[689] = BeadEffect;
+captain[690] = ClassEffect('斬擊', 1.5);
+special[690] = BeadEffect;
+
+captain[696] = ClassEffect('打擊', 1.75);
+captain[697] = ClassEffect('射擊', 1.75);
+captain[698] = ClassEffect('斬擊', 1.75);
+
+// TODO: captain[699] = +500
+
+captain[700] = ClassEffect('格鬥', 1.75);
 
 export default {
   CaptainEffect: captain,
