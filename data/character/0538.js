@@ -35,6 +35,7 @@ module.exports = {
     }
   },
   "captainEffect": {
+    "chainCoefficient": 2,
     "jp": {
       "name": "副看守長の正義",
       "content": "チェイン係数増加量が2倍になり、ターン終了後体力を少し回復"

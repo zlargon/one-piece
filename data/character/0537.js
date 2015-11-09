@@ -35,6 +35,7 @@ module.exports = {
     }
   },
   "captainEffect": {
+    "chainCoefficient": 2,
     "jp": {
       "name": "副看守長の誇り",
       "content": "チェイン係数増加量が2倍になる"

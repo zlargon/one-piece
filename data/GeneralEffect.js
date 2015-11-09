@@ -18,6 +18,17 @@ export function BeadEffect({ bead }) {
   return 1;
 }
 
+export function PerfectEffect(perfectTimes, magni) {
+  return function ({ timingHistory }) {
+    let sum = 0;
+    for (let i = 0; i < timingHistory.length; i++) {
+      sum = timingHistory[i] === 'perfect' ? sum + 1 : 0;
+      if (sum >= perfectTimes) return magni;
+    }
+    return 1;
+  }
+}
+
 export function OrderEffect(typeOrder, magni) {
   function isAboveGood(timing) {
     return timing === 'good' || timing === 'great' || timing === 'perfect';

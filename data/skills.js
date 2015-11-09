@@ -1,5 +1,5 @@
 import config from '../config';
-import { TypeEffect, ClassEffect, BeadEffect, OrderEffect } from './GeneralEffect';
+import { TypeEffect, ClassEffect, BeadEffect, PerfectEffect, OrderEffect } from './GeneralEffect';
 
 let captain = [];
 let special = [];
@@ -190,14 +190,7 @@ captain[212] = ClassEffect('打擊', 1.5);
 
 // 蒙其・D・魯夫 ３檔
 // 連續擊出3次以上PERFECT，之後的角色攻擊力將會提升3.5倍
-captain[217] = function ({ timingHistory }) {
-  let sum = 0;
-  for (let i = 0; i < timingHistory.length; i++) {
-    sum = timingHistory[i] === 'perfect' ? sum + 1 : 0;
-    if (sum >= 3) return 3.5;
-  }
-  return 1;
-}
+captain[217] = PerfectEffect(3, 3.5);
 
 // 娜美 風和日麗
 // 將知識屬性角色的攻擊力提升2倍
@@ -217,25 +210,11 @@ special[222] = TypeEffect('心', 2);    // 於1回合內，將心靈屬性的攻
 
 // Mr.王子 羊肉SHOT
 // 連續擊出2次以上PERFECT，之後的角色攻擊力將會提升2倍
-captain[224] = function ({ timingHistory }) {
-  let sum = 0;
-  for (let i = 0; i < timingHistory.length; i++) {
-    sum = timingHistory[i] === 'perfect' ? sum + 1 : 0;
-    if (sum >= 2) return 2;
-  }
-  return 1;
-}
+captain[224] = PerfectEffect(2, 2);
 
 // Mr.王子 小牛肉SHOT
 // 連續擊出2次以上PERFECT，之後的角色攻擊力將會提升2.5倍
-captain[225] = function ({ timingHistory }) {
-  let sum = 0;
-  for (let i = 0; i < timingHistory.length; i++) {
-    sum = timingHistory[i] === 'perfect' ? sum + 1 : 0;
-    if (sum >= 2) return 2.5;
-  }
-  return 1;
-}
+captain[225] = PerfectEffect(2, 2.5);
 
 // 喬拉可爾・密佛格
 // 將斬擊型角色的攻擊力提升2倍
@@ -410,11 +389,6 @@ special[385] = ClassEffect('格鬥', 1.25);
 captain[386] = TypeEffect('知', 2);
 special[386] = ClassEffect('格鬥', 1.25);
 
-
-function isAboveGood(timing) {
-  return timing === 'good' || timing === 'great' || timing === 'perfect';
-}
-
 captain[389] = OrderEffect(['技', '知', '速'], 2.25);
 captain[390] = OrderEffect(['技', '知', '速'], 2.75);
 
@@ -579,6 +553,72 @@ special[492] = TypeEffect('技', 1.2);
 captain[496] = ClassEffect('射擊', 1.5);
 captain[497] = TypeEffect('速', 1.5);
 captain[498] = TypeEffect('速', 1.5);
+captain[501] = TypeEffect('心', 1.2);
+captain[502] = TypeEffect('心', 1.5);
+
+special[505] = TypeEffect('速', 1.25);
+special[506] = special[505];
+
+captain[507] = TypeEffect('力', 1.2);
+captain[508] = TypeEffect('力', 1.5);
+
+captain[509] = ClassEffect('打擊', 2);
+special[509] = ClassEffect('打擊', 1.5);
+captain[510] = captain[509];
+special[510] = special[509];
+
+captain[511] = ClassEffect('斬擊', 2);
+special[511] = ClassEffect('斬擊', 1.25);
+
+captain[513] = TypeEffect('心', 1.5);
+
+captain[514] = TypeEffect('知', 2);
+special[514] = TypeEffect('知', 1.5);
+
+captain[515] = ClassEffect('斬擊', 1.5);
+captain[516] = captain[515];
+
+// TODO: special[517] = ?
+// TODO: special[518] = special[517]
+
+captain[519] = TypeEffect('力', 2);
+special[519] = TypeEffect('力', 2);
+
+captain[520] = TypeEffect('力', 2.5);
+special[520] = TypeEffect('力', 2);
+
+captain[523] = ClassEffect('打擊', 1.5);
+captain[524] = ClassEffect('打擊', 2);
+captain[525] = TypeEffect('心', 2);
+captain[526] = TypeEffect('心', 2);
+captain[527] = TypeEffect('技', 1.5);
+captain[528] = TypeEffect('技', 2);
+
+captain[529] = TypeEffect('心', 2.75);   // FIXME: 2 ~ 2.75
+captain[530] = TypeEffect('心', 2.75);   // FIXME: 2 ~ 2.75
+
+captain[533] = TypeEffect('速', 2);
+special[533] = BeadEffect;
+captain[534] = captain[533];
+special[534] = special[533];
+
+// 537, 538 特殊隊長技能，連擊係數另外處理
+
+captain[541] = TypeEffect('心', 2.5);
+captain[543] = ClassEffect('射擊', 1.5);
+captain[544] = ClassEffect('射擊', 2.25);
+
+captain[545] = TypeEffect('心', 2);
+special[545] = TypeEffect('心', 1.5);
+captain[546] = captain[545];
+special[546] = special[545];
+
+captain[548] = () => 1.5;
+
+captain[549] = PerfectEffect(3, 2);
+special[549] = () => 1.3;
+captain[550] = PerfectEffect(3, 2.5);
+special[550] = () => 1.3;
 
 export default {
   CaptainEffect: captain,
