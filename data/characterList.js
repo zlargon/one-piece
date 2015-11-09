@@ -13,6 +13,11 @@ for (let number = 1; number <= config.maxCharacterNumber.jp; number++) {
     characterList[number] = require('../data/character/' + file);
     characterList[number].captainEffect.magnification = () => 1;
     characterList[number].specialAbility.magnification = null;
+
+    // chain coefficient
+    if (typeof characterList[number].captainEffect.chainCoefficient !== 'number') {
+      characterList[number].captainEffect.chainCoefficient = 1;
+    }
   } catch (e) {
     // console.log(e.stack);
     continue;
