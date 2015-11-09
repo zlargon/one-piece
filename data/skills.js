@@ -620,6 +620,99 @@ special[549] = () => 1.3;
 captain[550] = PerfectEffect(3, 2.5);
 special[550] = () => 1.3;
 
+captain[553] = TypeEffect('技', 2.75);
+captain[554] = TypeEffect('技', 3);
+captain[555] = ClassEffect('射擊', 2);
+captain[556] = ClassEffect('射擊', 2);
+captain[557] = TypeEffect('知', 1.5);
+captain[558] = TypeEffect('知', 2);
+
+captain[559] = TypeEffect('力', 2);
+special[559] = BeadEffect;
+captain[560] = TypeEffect('力', 2.25);
+special[560] = BeadEffect;
+
+// TODO: captain[561] = ??
+// TODO: captain[562] = ??
+
+captain[568] = () => 1.25;
+captain[569] = () => 1.5;
+
+captain[570] = function ({ character }) {
+  return character.type === '力' || character.classes.indexOf('格鬥') >= 0 ? 1.5 : 1;
+}
+captain[571] = captain[570];
+
+captain[572] = ClassEffect('格鬥', 2.5);
+special[572] = ClassEffect('格鬥', 2);
+
+captain[574] = ClassEffect('打擊', 2);
+special[574] = ClassEffect('打擊', 1.75);
+captain[575] = captain[574];
+special[575] = special[574];
+
+captain[576] = () => 1.5;
+
+captain[577] = function ({ timingHistory }) {
+  const timingOrder = ['good', 'great', 'perfect'];
+  let index = 0;
+
+  for (let i = 0; i < timingHistory.length; i++) {
+    const timing = timingHistory[i];
+    const nextTiming = timingOrder[index];
+
+    if (timing !== nextTiming) {
+      index = 0;
+      continue;
+    }
+
+    // is not the last timing
+    if (index !== timingOrder.length - 1) {
+      index++;
+      continue;
+    }
+
+    return 4;
+  }
+  return 1;
+}
+captain[578] = captain[577];
+
+captain[579] = function ({ character }) {
+  return character.type === '速' || character.type === '技' ? 1.5 : 1;
+}
+
+captain[580] = function ({ character }) {
+  return character.type === '速' || character.type === '技' ? 2 : 1;
+}
+
+captain[581] = TypeEffect('力', 1.5);
+
+captain[582] = ClassEffect('打擊', 1.5);
+special[582] = TypeEffect('速', 1.5);
+
+captain[583] = ClassEffect('射擊', 1.5);
+captain[584] = () => 0.1;
+
+captain[589] = () => 1.5;
+special[589] = ClassEffect('斬擊', 1.5);
+
+captain[590] = () => 2;
+special[590] = ClassEffect('斬擊', 1.5);
+
+captain[596] = TypeEffect('力', 1.5);
+captain[597] = TypeEffect('力', 1.75);
+captain[598] = function({ character }) {
+  return character.star === 1 || character.star === 2 ? 2.5 : 1;
+}
+
+captain[599] = function({ character }) {
+  return character.star === 1 || character.star === 2 ? 3 : 1;
+}
+
+captain[600] = TypeEffect('心', 1.5);
+special[600] = TypeEffect('心', 1.3);
+
 export default {
   CaptainEffect: captain,
   SpecialAbility: special

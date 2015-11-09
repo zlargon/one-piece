@@ -174,6 +174,11 @@ export default class Character extends React.Component {
         return url + '/themes/onepiece-treasurecruise/images/noimage.png';
       }
 
+      // workaround for 574, 575
+      if (no === 574 || no === 575) {
+        return url + `/uploads/f00${no}.png`;
+      }
+
       const number = (no + 10000).toString().substring(1);
       return url + `/uploads/f${number}.png`;
     }
