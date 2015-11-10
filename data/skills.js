@@ -411,12 +411,12 @@ captain[398] = function ({ timingHistory }) {
 SpecialAbility[399] = TypeEffect('技', 1.5);
 SpecialAbility[400] = TypeEffect('技', 1.5);
 
-//
-captain[401] = ClassEffect('斬擊', 1.5, 0.8);   // FIXME
+// ISSUE: 待確認下降影響倍率
+captain[401] = ClassEffect('斬擊', 1.5, 0.8);
 SpecialAbility[401] = ClassEffect('斬擊', 1.25);
 
-//
-captain[402] = ClassEffect('斬擊', 2, 0.8);     // FIXME
+// ISSUE: 待確認下降影響倍率
+captain[402] = ClassEffect('斬擊', 2, 0.8);
 SpecialAbility[402] = SpecialAbility[401];
 
 captain[404] = ClassEffect('射擊', 1.5);
@@ -462,8 +462,9 @@ SpecialAbility[434] = BeadEffect(1.5);
 captain[435] = OrderEffect(['知', '心', '速'], 2);
 captain[436] = OrderEffect(['知', '心', '速'], 2.25);
 
-// TODO: captain[444] =
-// TODO: captain[445] =
+// ISSUE: 無法取得角色的進化資訊
+// captain[444] = 進化類型人物攻擊 * 2
+// captain[445] = 進化類型人物攻擊 * 2.5
 
 captain[446] = TypeEffect('力', 2);
 captain[447] = TypeEffect('力', 2.5);
@@ -556,8 +557,8 @@ SpecialAbility[514] = TypeEffect('知', 1.5);
 captain[515] = ClassEffect('斬擊', 1.5);
 captain[516] = captain[515];
 
-// TODO: SpecialAbility[517] = ?
-// TODO: SpecialAbility[518] = SpecialAbility[517]
+// ISSUE: 待確認倍率
+// SpecialAbility[517, 518] = 我方兩回合的攻擊力微增
 
 captain[519] = TypeEffect('力', 2);
 SpecialAbility[519] = TypeEffect('力', 2);
@@ -572,8 +573,9 @@ captain[526] = TypeEffect('心', 2);
 captain[527] = TypeEffect('技', 1.5);
 captain[528] = TypeEffect('技', 2);
 
-captain[529] = TypeEffect('心', 2.75);   // FIXME: 2 ~ 2.75
-captain[530] = TypeEffect('心', 2.75);   // FIXME: 2 ~ 2.75
+// ISSUE: 無法獲得 HP 的資訊
+// 心珠出現率比例3倍(約37.5%)，心屬性攻擊力[2+0.75*(剩餘HP/總HP)]倍(體力越高倍率越高，最高2.75倍，最低2倍)
+captain[530] = captain[529] = TypeEffect('心', 2.75);  // 暫時以 HP 100% 計算
 
 captain[533] = TypeEffect('速', 2);
 SpecialAbility[533] = BeadEffect(1.5);
@@ -702,10 +704,10 @@ captain[606] = ClassEffect('格鬥', 2);
 captain[607] = ClassEffect('格鬥', 2.5);
 
 captain[612] = ClassEffect('斬擊', 1.5);
-// TODO: SpecialAbility[612] =
-
 captain[613] = ClassEffect('斬擊', 1.5);
-// TODO: SpecialAbility[613] =
+
+// ISSUE: 現在無法支援攻擊力增加實際數值
+// SpecialAbility[612, 613] = 我方攻擊, 回復 + 45
 
 captain[614] = function ({ character }) {
   return character.cost <= 20 ? 2.25 : 1;
@@ -732,7 +734,10 @@ captain[636] = function ({ character }) {
 }
 
 captain[637] = ClassEffect('斬擊', 1.5);
-// SpecialAbility[637] = ??
+
+// ISSUE: 尚不支援
+// 給予一回合防禦力提高中的敵人傷害成為 1.3 倍
+SpecialAbility[637] = () => 1.3;
 
 captain[638] = ClassEffect('斬擊', 2);
 captain[639] = captain[638];
@@ -787,8 +792,14 @@ captain[665] = () => 1.2;
 captain[666] = () => 1.75;
 captain[667] = () => 1.5;
 
-captain[668] = ClassEffect('自由', 2.75);   // TODO
-SpecialAbility[668] = ClassEffect('自由', 1.5);    // TODO
+// ISSUE: 無法獲得 HP 的資訊
+// 全體回復力1.2倍，自由攻擊力[2+0.75*(剩餘HP/總HP)]倍(體力越高倍率越高，最高2.75倍，最低2倍)
+captain[668] = ClassEffect('自由', 2.75);   // 暫時以 HP 100% 計算
+
+// ISSUE: 無法選擇倍率
+// 1 回合自由 x1.5；若全體 Perfect 下回合自由 x2
+SpecialAbility[668] = ClassEffect('自由', 1.5);
+
 captain[669] = captain[668];
 SpecialAbility[669] = SpecialAbility[668];
 
@@ -831,7 +842,8 @@ captain[696] = ClassEffect('打擊', 1.75);
 captain[697] = ClassEffect('射擊', 1.75);
 captain[698] = ClassEffect('斬擊', 1.75);
 
-// TODO: captain[699] = +500
+// ISSUE: 現在無法支援攻擊力增加實際數值
+// captain[699] = 射擊人物攻擊力 +500
 
 captain[700] = ClassEffect('格鬥', 1.75);
 captain[705] = TypeEffect(['力', '技', '速'], 1.25);
@@ -848,10 +860,10 @@ captain[711] = ClassEffect('射擊', 2);
 SpecialAbility[711] = ClassEffect('射擊', 1.25);
 
 captain[712] = ClassEffect('打擊', 2);
-// TODO: SpecialAbility[712] = ?
-
 captain[713] = ClassEffect('打擊', 2.5);
-// TODO: SpecialAbility[713] = ?
+
+// ISSUE: 無法獲得角色位置
+// SpecialAbility[712, 713] = 兩回合上段人物攻擊力 x1.5
 
 SpecialAbility[715] = ClassEffect('自由', 1.5);
 SpecialAbility[716] = ClassEffect('自由', 1.5);
@@ -865,8 +877,14 @@ captain[717] = function({ timingHistory }) {
 }
 captain[718] = captain[717];
 
-captain[719] = ClassEffect('博識', 3.25); // TODO: 1.5 ~ 3.25
-SpecialAbility[719] = ClassEffect('博識', 1.5);  // TODO
+// ISSUE: 無法獲得 HP 得資訊
+// 搏識攻擊力[1.5+1.75*(1-剩餘HP)/總HP]倍(體力越少倍率越高，最大3.25倍，最小1.5倍)
+captain[719] = ClassEffect('博識', 3.25);   // 暫時以 HP 100% 計算
+
+// ISSUE: 無法獲得 HP 得資訊
+// 一回合間博識的攻擊力1.5倍，必殺技發動時體力30%以下2倍，敵全體攻擊力20倍技屬性傷害
+SpecialAbility[719] = ClassEffect('博識', 1.5);   // 暫時以 HP 100% 計算
+
 captain[720] = captain[719];
 SpecialAbility[720] = SpecialAbility[719];
 
@@ -964,10 +982,14 @@ captain[776] = TypeEffect('心', 1.25);
 captain[777] = TypeEffect('心', 1.75);
 
 captain[780] = () => 2;
-// SpecialAbility[780] = ?
+// ISSUE: 無法獲得 HP 的資訊
+// HP 50 ~ 100%, 攻 x 1.5
+// HP 20 ~  50%, 攻 x 1.75
+// HP  0 ~  20%, 攻 x 2
+SpecialAbility[780] = () => 1.5;  // 暫時以 HP 100% 計算
 
 captain[781] = () => 2.5;
-// SpecialAbility[781] = ?
+SpecialAbility[781] = SpecialAbility[780];
 
 captain[783] = ClassEffect('斬擊', 2);
 
