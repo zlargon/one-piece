@@ -947,6 +947,79 @@ captain[748] = ClassEffect('強韌', 3);    // TODO: 2.5 ~ 3
 captain[749] = TypeEffect('技', 1.5);
 captain[750] = TypeEffect('技', 2);
 
+captain[751] = ClassEffect('博識', 1.5);
+captain[752] = ClassEffect('博識', 2.25);
+
+captain[753] = ClassEffect('強韌', 2);
+special[753] = BeadEffect;
+
+captain[754] = ClassEffect('強韌', 2.5);
+special[754] = BeadEffect;
+
+captain[755] = TypeEffect('知', 1.5);
+special[755] = ClassEffect('強韌', 1.75);
+
+captain[756] = TypeEffect('知', 2);
+special[756] = ClassEffect('強韌', 1.75);
+
+captain[757] = TypeEffect('心', 2);
+captain[758] = TypeEffect('心', 2);
+
+captain[759] = TypeEffect('力', 2.5);
+captain[760] = TypeEffect('力', 3);
+
+captain[761] = ClassEffect('格鬥', 2);
+special[761] = () => 1.2;
+
+captain[762] = TypeEffect('心', 1.5);
+special[762] = TypeEffect('心', 1.75);
+
+captain[763] = TypeEffect('力', 2);
+captain[764] = ClassEffect('打擊', 1.5);
+captain[766] = TypeEffect('速', 2);
+captain[767] = TypeEffect('技', 1.5);
+captain[768] = TypeEffect('心', 2);
+captain[769] = TypeEffect('知', 1.5);
+captain[770] = TypeEffect('力', 2);
+
+captain[771] = ClassEffect('博識', 2.5);
+special[771] = ClassEffect('博識', 1.75);
+
+captain[772] = ClassEffect('斬擊', 2);
+captain[774] = ClassEffect('自由', 2);
+captain[775] = ClassEffect('博識', 1.5);
+captain[776] = TypeEffect('心', 1.25);
+captain[777] = TypeEffect('心', 1.75);
+
+captain[780] = () => 2;
+// special[780] = ?
+
+captain[781] = () => 2.5;
+// special[781] = ?
+
+captain[783] = ClassEffect('斬擊', 2);
+
+special[788] = ClassEffect('斬擊', 1.75);
+
+captain[789] = ClassEffect('斬擊', 1.5);
+special[789] = ClassEffect('斬擊', 1.75);
+
+special[790] = TypeEffect(['力', '技', '速'], 1.2);
+
+captain[791] = TypeEffect(['力', '技', '速'], 1.25);
+special[791] = special[790];
+
+captain[793] = ClassEffect('博識', 1.5);
+captain[794] = ClassEffect('強韌', 3);
+captain[795] = ClassEffect('強韌', 3.5);
+
+captain[796] = ClassEffect('博識', 2);
+
+captain[797] = ClassEffect(['博識', '強韌'], 2);
+
+captain[798] = PerfectEffect(3, 2.5);
+special[798] = ClassEffect('格鬥', 1.75);
+
 export default {
   CaptainEffect: captain,
   SpecialAbility: special

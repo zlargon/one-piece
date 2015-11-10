@@ -1,14 +1,40 @@
 import Character from '../lib/CharacterClass';
 
 export function TypeEffect(type, magni) {
+  const types = Array.isArray(type) ? type : [ type ];
+
+  // check types
+  const validTypes = ['力', '技', '速', '心', '知'];
+  types.forEach(type => {
+    if (validTypes.indexOf(type) === -1) {
+      throw new Error('invalid type ' + type);
+    }
+  });
+
   return function ({ character }) {
-    return character.type === type ? magni : 1;
+    return types.indexOf(character.type) >= 0 ? magni : 1;
   }
 }
 
 export function ClassEffect(className, magni) {
+  const classes = Array.isArray(className) ? className : [ className ];
+
+  // check classes
+  const validClasses = ['格鬥', '斬擊', '打擊', '射擊', '自由', '博識', '強韌'];
+  classes.forEach(className => {
+    if (validClasses.indexOf(className) === -1) {
+      throw new Error('invalid class ' + className);
+    }
+  });
+
   return function ({ character }) {
-    return character.classes.indexOf(className) >= 0 ? magni : 1;
+    for (let i = 0; i < character.classes.length; i++) {
+      const className = character.classes[i];
+      if (classes.indexOf(className) >= 0) {
+        return magni;
+      }
+    }
+    return 1;
   }
 }
 
