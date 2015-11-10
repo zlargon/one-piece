@@ -199,7 +199,7 @@ function generateReport(data, showDetail) {
 `\n----------------------------------\n
 第 ${index + 1} 位：${character.name.tw || character.name.jp} (No.${character.no})
 
-類型：${character.classes[0]}, 攻擊：${attack.original}, 連擊：${character.combo}
+類型：${character.classes.join('/')}, 攻擊：${attack.original}, 連擊：${character.combo}
 梅莉號：${magni.boat}, 船長：${magni.captain}, 剋屬：${magni.type}
 特殊：${magni.special}, 屬珠：${magni.bead}, Chain：${magni.chain}
 加成後攻擊力 = ${attack.basic}
