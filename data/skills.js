@@ -411,12 +411,10 @@ captain[398] = function ({ timingHistory }) {
 SpecialAbility[399] = TypeEffect('技', 1.5);
 SpecialAbility[400] = TypeEffect('技', 1.5);
 
-// ISSUE: 待確認下降影響倍率
-captain[401] = ClassEffect('斬擊', 1.5, 0.8);
+captain[401] = ClassEffect('斬擊', 1.5);
 SpecialAbility[401] = ClassEffect('斬擊', 1.25);
 
-// ISSUE: 待確認下降影響倍率
-captain[402] = ClassEffect('斬擊', 2, 0.8);
+captain[402] = ClassEffect('斬擊', 2);
 SpecialAbility[402] = SpecialAbility[401];
 
 captain[404] = ClassEffect('射擊', 1.5);
@@ -462,9 +460,8 @@ SpecialAbility[434] = BeadEffect(1.5);
 captain[435] = OrderEffect(['知', '心', '速'], 2);
 captain[436] = OrderEffect(['知', '心', '速'], 2.25);
 
-// ISSUE: 無法取得角色的進化資訊
-// captain[444] = 進化類型人物攻擊 * 2
-// captain[445] = 進化類型人物攻擊 * 2.5
+captain[444] = ClassEffect(['進化用', '強化用'], 2);
+captain[445] = ClassEffect(['進化用', '強化用'], 2.5);
 
 captain[446] = TypeEffect('力', 2);
 captain[447] = TypeEffect('力', 2.5);
