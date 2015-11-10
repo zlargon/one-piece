@@ -38,10 +38,16 @@ export function ClassEffect(className, magni, low = 1) {
   }
 }
 
-export function BeadEffect({ bead }) {
-  if (bead === 2)   return 1.5;
-  if (bead === 0.5) return (2/3);
-  return 1;
+export function BeadEffect(magni) {
+  if (magni < 1) {
+    throw new Error('invalid bead magnification = ' + magni);
+  }
+
+  return function ({ bead }) {
+    if (bead === 2)   return magni;
+    if (bead === 0.5) return 1 / magni;
+    return 1;
+  }
 }
 
 export function PerfectEffect(perfectTimes, magni) {
