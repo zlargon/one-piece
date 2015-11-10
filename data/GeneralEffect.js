@@ -1,6 +1,6 @@
 import Character from '../lib/CharacterClass';
 
-export function TypeEffect(type, magni) {
+export function TypeEffect(type, magni, low = 1) {
   const types = Array.isArray(type) ? type : [ type ];
 
   // check types
@@ -12,11 +12,11 @@ export function TypeEffect(type, magni) {
   });
 
   return function ({ character }) {
-    return types.indexOf(character.type) >= 0 ? magni : 1;
+    return types.indexOf(character.type) >= 0 ? magni : low;
   }
 }
 
-export function ClassEffect(className, magni) {
+export function ClassEffect(className, magni, low = 1) {
   const classes = Array.isArray(className) ? className : [ className ];
 
   // check classes
@@ -34,7 +34,7 @@ export function ClassEffect(className, magni) {
         return magni;
       }
     }
-    return 1;
+    return low;
   }
 }
 

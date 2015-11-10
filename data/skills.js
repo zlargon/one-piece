@@ -339,17 +339,10 @@ SpecialAbility[324] = BeadEffect;
 
 captain[332] = ClassEffect('打擊', 1.2);
 
-captain[333] = function({ character }) {
-  return character.type === '心' || character.type === '知' ? 1.5 : 1;
-}
+captain[333] = TypeEffect(['心', '知'], 1.5);
 
-captain[336] = function({ character }) {
-  return character.type === '心' ? 2 : 0.8;
-}
-
-captain[337] = function({ character }) {
-  return character.type === '心' ? 2.5 : 0.8;
-}
+captain[336] = TypeEffect('心', 2, 0.8);
+captain[337] = TypeEffect('心', 2.5, 0.8);
 
 captain[340] = ClassEffect('打擊', 2);
 captain[341] = ClassEffect('打擊', 2);
@@ -420,15 +413,11 @@ SpecialAbility[399] = TypeEffect('技', 1.5);
 SpecialAbility[400] = TypeEffect('技', 1.5);
 
 //
-captain[401] = function({ character }) {
-  return character.classes.indexOf('斬擊') >= 0 ? 1.5 : 0.8;   // FIXME
-}
+captain[401] = ClassEffect('斬擊', 1.5, 0.8);   // FIXME
 SpecialAbility[401] = ClassEffect('斬擊', 1.25);
 
 //
-captain[402] = function({ character }) {
-  return character.classes.indexOf('斬擊') >= 0 ? 2 : 0.8;   // FIXME
-}
+captain[402] = ClassEffect('斬擊', 2, 0.8);     // FIXME
 SpecialAbility[402] = SpecialAbility[401];
 
 captain[404] = ClassEffect('射擊', 1.5);
@@ -442,10 +431,7 @@ captain[411] = TypeEffect('力', 2);
 captain[412] = TypeEffect('力', 2);
 captain[413] = TypeEffect('知', 2.5);
 captain[414] = TypeEffect('知', 3);
-
-captain[415] = function ({ character }) {
-  return character.type === '速' || character.type === '心' ? 2.75 : 1;
-}
+captain[415] = TypeEffect(['速', '心'], 2.75);
 captain[416] = captain[415];
 
 captain[417] = ClassEffect('斬擊', 2);
@@ -678,14 +664,8 @@ captain[577] = function ({ timingHistory }) {
 }
 captain[578] = captain[577];
 
-captain[579] = function ({ character }) {
-  return character.type === '速' || character.type === '技' ? 1.5 : 1;
-}
-
-captain[580] = function ({ character }) {
-  return character.type === '速' || character.type === '技' ? 2 : 1;
-}
-
+captain[579] = TypeEffect(['速', '技'], 1.5);
+captain[580] = TypeEffect(['速', '技'], 2);
 captain[581] = TypeEffect('力', 1.5);
 
 captain[582] = ClassEffect('打擊', 1.5);
@@ -748,15 +728,9 @@ captain[631] = ClassEffect('斬擊', 2);
 captain[632] = ClassEffect('格鬥', 1.5);
 captain[633] = ClassEffect('格鬥', 2);
 
-captain[634] = function({ character }) {
-  return character.type === '速' || character.type === '心' ? 1.25 : 1;
-}
-SpecialAbility[634] = function({ character }) {
-  return character.type === '速' || character.type === '心' ? 1.2 : 1;
-}
-captain[635] = function({ character }) {
-  return character.type === '速' || character.type === '心' ? 1.5 : 1;
-}
+captain[634] = TypeEffect(['速', '心'], 1.25);
+SpecialAbility[634] = TypeEffect(['速', '心'], 1.2);
+captain[635] = TypeEffect(['速', '心'], 1.5);
 SpecialAbility[635] = SpecialAbility[634];
 
 captain[636] = function ({ character }) {
@@ -782,10 +756,7 @@ captain[644] = TypeEffect('知', 2);
 captain[645] = TypeEffect('知', 2.5);
 captain[646] = ClassEffect('射擊', 2.5);
 captain[647] = ClassEffect('射擊', 2.75);
-
-captain[648] = function({ character }) {
-  return character.type === '速' || character.type === '心' ? 2.75 : 1;
-}
+captain[648] = TypeEffect(['速', '心'], 2.75);
 SpecialAbility[648] = BeadEffect;
 captain[649] = captain[648];
 SpecialAbility[649] = SpecialAbility[648];
@@ -861,11 +832,7 @@ captain[698] = ClassEffect('斬擊', 1.75);
 // TODO: captain[699] = +500
 
 captain[700] = ClassEffect('格鬥', 1.75);
-
-captain[705] = function ({ character }) {
-  return character.type === '力' || character.type === '技' || character.type === '速' ? 1.25 : 1;
-}
-
+captain[705] = TypeEffect(['力', '技', '速'], 1.25);
 captain[706] = TypeEffect('力', 1.5);
 captain[707] = TypeEffect('力', 1.5);
 
@@ -905,10 +872,7 @@ captain[721] = ClassEffect('格鬥', 1.5);
 captain[722] = ClassEffect('格鬥', 2);
 captain[723] = ClassEffect('斬擊', 1.5);
 captain[724] = ClassEffect('斬擊', 1.75);
-captain[727] = function({ character }) {
-  return character.classes.indexOf('格鬥') >= 0 || character.classes.indexOf('博識') >= 0 ? 1.75 : 1;
-}
-
+captain[727] = ClassEffect(['格鬥', '博識'], 1.75);
 captain[728] = TypeEffect('技', 1.2);
 captain[729] = TypeEffect('技', 1.2);
 
