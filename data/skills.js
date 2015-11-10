@@ -3,7 +3,7 @@ import { TypeEffect, ClassEffect, BeadEffect, PerfectEffect, OrderEffect } from 
 
 let captain = [];
 let special = [];
-for (let i = 0; i < config.maxCharacterNumber.jp; i++) {
+for (let i = 0; i <= config.maxCharacterNumber.jp; i++) {
   captain[i] = () => 1;
   special[i] = null;
 }
