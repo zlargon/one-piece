@@ -610,8 +610,10 @@ SpecialAbility[559] = BeadEffect(1.5);
 captain[560] = TypeEffect('力', 2.25);
 SpecialAbility[560] = BeadEffect(1.5);
 
-// TODO: captain[561] = ??
-// TODO: captain[562] = ??
+captain[561] = function({ bead }) {
+  return bead === 2 ? 3 : 2;
+}
+captain[562] = captain[561];
 
 captain[568] = () => 1.25;
 captain[569] = () => 1.5;
@@ -758,9 +760,17 @@ SpecialAbility[650] = BeadEffect(1.5);
 captain[651] = captain[650];
 SpecialAbility[651] = SpecialAbility[650];
 
-// captain[652] =
-// captain[653] =
-// captain[654] =
+captain[652] = function({ bead }) {
+  return bead === 2 ? 2 : 1;
+}
+
+captain[653] = function({ bead }) {
+  return bead === 2 ? 2.25 : 1;
+}
+
+captain[654] = function({ bead }) {
+  return bead === 2 ? 2.75 : 1;
+}
 
 captain[655] = TypeEffect('力', 1.5);
 SpecialAbility[655] = BeadEffect(1.5);
@@ -898,8 +908,14 @@ SpecialAbility[743] = BeadEffect(1.5);
 captain[744] = ClassEffect('自由', 2);
 captain[745] = ClassEffect('自由', 2.5);
 
-captain[747] = ClassEffect('強韌', 3);    // TODO: 2.5 ~ 3
-captain[748] = ClassEffect('強韌', 3);    // TODO: 2.5 ~ 3
+captain[747] = function({ character, bead }) {
+  if (character.classes.indexOf('強韌') === -1) {
+    return 1;
+  }
+  return bead === 2 ? 3 : 2.5;
+}
+captain[748] = captain[747];
+
 captain[749] = TypeEffect('技', 1.5);
 captain[750] = TypeEffect('技', 2);
 
