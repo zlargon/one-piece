@@ -14,91 +14,91 @@ import './Character.less';
   isDragging: monitor.isDragging()
 }))
 export default class Character extends React.Component {
-    static propTypes = {
-      // drag and drop pros
-      connectDragSource: React.PropTypes.func.isRequired,
-      connectDragPreview: React.PropTypes.func.isRequired,
-      connectDropTarget: React.PropTypes.func.isRequired,
-      isDragging: React.PropTypes.bool.isRequired,
-      index: React.PropTypes.number.isRequired,
+  static propTypes = {
+    // drag and drop pros
+    connectDragSource: React.PropTypes.func.isRequired,
+    connectDragPreview: React.PropTypes.func.isRequired,
+    connectDropTarget: React.PropTypes.func.isRequired,
+    isDragging: React.PropTypes.bool.isRequired,
+    index: React.PropTypes.number.isRequired,
 
-      // character data
-      character: React.PropTypes.shape({
-        id: React.PropTypes.string.isRequired,
-        no: React.PropTypes.number.isRequired,
-        attack: React.PropTypes.number.isRequired,
-        bead: React.PropTypes.number.isRequired,
-        timing: React.PropTypes.string.isRequired,
-        captainEffect: React.PropTypes.bool,
-        specialAbility: React.PropTypes.bool
-      }),
+    // character data
+    character: React.PropTypes.shape({
+      id: React.PropTypes.string.isRequired,
+      no: React.PropTypes.number.isRequired,
+      attack: React.PropTypes.number.isRequired,
+      bead: React.PropTypes.number.isRequired,
+      timing: React.PropTypes.string.isRequired,
+      captainEffect: React.PropTypes.bool,
+      specialAbility: React.PropTypes.bool
+    }),
 
-      isCaptainFull: React.PropTypes.bool.isRequired,
-      isMobileDevice: React.PropTypes.bool.isRequired,
+    isCaptainFull: React.PropTypes.bool.isRequired,
+    isMobileDevice: React.PropTypes.bool.isRequired,
 
-      // callback
-      onMove: React.PropTypes.func.isRequired,
-      onChange: React.PropTypes.func.isRequired
-    };
+    // callback
+    onMove: React.PropTypes.func.isRequired,
+    onChange: React.PropTypes.func.isRequired
+  };
 
-    constructor(props) {
-      super(props);
+  constructor(props) {
+    super(props);
 
-      this.changeNo = this.changeNo.bind(this);
-      this.changeAttack = this.changeAttack.bind(this);
-      this.switchBead = this.switchBead.bind(this);
-      this.switchTiming = this.switchTiming.bind(this);
-      this.checkCaptainEffect = this.checkCaptainEffect.bind(this);
-      this.checkSpecialAbility = this.checkSpecialAbility.bind(this);
-    }
+    this.changeNo = this.changeNo.bind(this);
+    this.changeAttack = this.changeAttack.bind(this);
+    this.switchBead = this.switchBead.bind(this);
+    this.switchTiming = this.switchTiming.bind(this);
+    this.checkCaptainEffect = this.checkCaptainEffect.bind(this);
+    this.checkSpecialAbility = this.checkSpecialAbility.bind(this);
+  }
 
-    // return new no to parent
-    changeNo(event) {
-      const { value } = event.target;   // string
+  // return new no to parent
+  changeNo(event) {
+    const { value } = event.target;   // string
 
-      let no = 0;
-      if (value.length !== 0) {
-        // parse into integer
-        no = Number.parseInt(value, 10);
+    let no = 0;
+    if (value.length !== 0) {
+      // parse into integer
+      no = Number.parseInt(value, 10);
 
-        // don't change the input value
-        if (Number.isNaN(no)) return;
+      // don't change the input value
+      if (Number.isNaN(no)) return;
 
-        // limit character no
-        if (no < 0) no = 0;
-        if (no > config.maxCharacterNumber.tw) {
-          no = config.maxCharacterNumber.tw;
-        }
+      // limit character no
+      if (no < 0) no = 0;
+      if (no > config.maxCharacterNumber.tw) {
+        no = config.maxCharacterNumber.tw;
       }
-
-      this.props.onChange(
-        this.props.index,
-        Object.assign({}, this.props.character, {
-          no,
-          attack: CharacterInfo.get(no).max.atk
-        }
-      ));
     }
+
+    this.props.onChange(
+      this.props.index,
+      Object.assign({}, this.props.character, {
+        no,
+        attack: CharacterInfo.get(no).max.atk
+      }
+    ));
+  }
 
   changeAttack (event) {
-      const { value } = event.target;   // string
+    const { value } = event.target;   // string
 
-      let attack = 0;
-      if (value.length !== 0) {
-        // parse into integer
-        attack = Number.parseInt(value, 10);
+    let attack = 0;
+    if (value.length !== 0) {
+      // parse into integer
+      attack = Number.parseInt(value, 10);
 
-        // don't change the input value
-        if (Number.isNaN(attack)) return;
+      // don't change the input value
+      if (Number.isNaN(attack)) return;
 
-        // attack must be positive integer
-        if (attack < 0) attack = 0;
-      }
+      // attack must be positive integer
+      if (attack < 0) attack = 0;
+    }
 
-      this.props.onChange(
-        this.props.index,
-        Object.assign({}, this.props.character, { attack }
-      ));
+    this.props.onChange(
+      this.props.index,
+      Object.assign({}, this.props.character, { attack }
+    ));
   }
 
   switchBead() {
