@@ -18,15 +18,15 @@ export default class OnePiece extends React.Component {
     this.maxDamageOrder = this.maxDamageOrder.bind(this);
 
     this.state = {
-      enemy: { type: '心', defense: 100 }, // 卡普
+      enemy: { type: '知', defense: 699 }, // Z
       boat: 1.5,
       characters: [
-        { no: 8,   attack: 1250, bead: 1, timing: 'perfect', custom: '1' },                       // 索隆 Lv.87
-        { no: 227, attack: 1285, bead: 1, timing: 'perfect', custom: '1', captainEffect: true },  // 鷹眼 Lv.99
-        { no: 227, attack: 1285, bead: 1, timing: 'perfect', custom: '1', captainEffect: true },  // 鷹眼 Lv.99
-        { no: 39,  attack: 702,  bead: 1, timing: 'perfect', custom: '1' },                       // 巴其 Lv.61
-        { no: 66,  attack: 1491, bead: 1, timing: 'perfect', custom: '1' },                       // 惡龍 Lv.99
-        { no: 255, attack: 1155, bead: 1, timing: 'perfect', custom: '1' },                       // 花劍 Lv.71
+        { no: 223, attack: 669,  bead: 2, timing: 'perfect', custom: '1', specialAbility: true }, // 衝擊布
+        { no: 208, attack: 709,  bead: 2, timing: 'perfect', custom: '1' },                       // Mr.2
+        { no: 263, attack: 984,  bead: 2, timing: 'perfect', custom: '1', specialAbility: true }, // 克比
+        { no: 251, attack: 1100, bead: 2, timing: 'perfect', custom: '1', captainEffect: true  }, // 馬可
+        { no: 251, attack: 1100, bead: 2, timing: 'perfect', custom: '1', captainEffect: true  }, // 馬可
+        { no: 306, attack: 1220, bead: 2, timing: 'perfect', custom: '1' },                       // 卡普
       ],
       showDetail: false,
       showCustom: false
