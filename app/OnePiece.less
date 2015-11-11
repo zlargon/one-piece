@@ -1,6 +1,10 @@
 body {
   width: 800px;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 10px;
+  @media all and (max-width: 500px) {
+    width: calc(100% - 5px);
+  }
 
   footer {
     font-size: 0.9rem;
@@ -15,11 +19,6 @@ body {
       }
     }
   }
-
-@media all and (max-width: 500px) {
-  margin: 0 10px;
-  width: calc(100% - 5px);
-}
 }
 
 .one-piece {
@@ -46,8 +45,10 @@ body {
         margin-left: 10px;
 
         input {
+          font-size: 0.9rem;
+          padding: 0;
           border-width: 0;
-          width: 55px;
+          width: 50px;
         }
       }
     }

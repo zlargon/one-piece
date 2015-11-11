@@ -13,6 +13,7 @@ export default class OnePiece extends React.Component {
     this.updateDefense = this.updateDefense.bind(this);
     this.updateCharacters = this.updateCharacters.bind(this);
     this.updateDetailCheckbox = this.updateDetailCheckbox.bind(this);
+    this.updateCustomCheckbox = this.updateCustomCheckbox.bind(this);
     this.maxDamageOrder = this.maxDamageOrder.bind(this);
 
     this.state = {
@@ -26,7 +27,8 @@ export default class OnePiece extends React.Component {
         { no: 66,  attack: 1491, bead: 1, timing: 'perfect' },                       // 惡龍 Lv.99
         { no: 255, attack: 1155, bead: 1, timing: 'perfect' },                       // 花劍 Lv.71
       ],
-      showDetail: false
+      showDetail: false,
+      showCustom: false
     };
 
     // get the data from local storage
@@ -99,6 +101,11 @@ export default class OnePiece extends React.Component {
     this.setState({ showDetail: event.target.checked });
   }
 
+  updateCustomCheckbox (event) {
+    console.log(event.target.checked);
+    this.setState({ showCustom: event.target.checked });
+  }
+
   maxDamageOrder () {
     const max = enumerate(this.state.characters).reduce((result, characters) => {
       let report = attackAnalysis({
@@ -153,10 +160,18 @@ export default class OnePiece extends React.Component {
         </div>
 
         <div className='option baseline'>
-          <button onClick={this.maxDamageOrder}>最大傷害排序</button>
-          <div className='baseline'>
-            <input type='checkbox' checked={this.state.showDetail} onChange={this.updateDetailCheckbox}/>
-            <span>&nbsp;顯示傷害分析</span>
+          <div>
+            <button onClick={this.maxDamageOrder}>最大傷害排序</button>
+          </div>
+          <div>
+            <div className='baseline'>
+              <input type='checkbox' checked={this.state.showDetail} onChange={this.updateDetailCheckbox}/>
+              <span>&nbsp;顯示傷害分析</span>
+            </div>
+            <div className='baseline'>
+              <input type='checkbox' checked={this.state.showCustom} onChange={this.updateCustomCheckbox}/>
+              <span>&nbsp;顯示自訂倍率</span>
+            </div>
           </div>
         </div>
       </div>
