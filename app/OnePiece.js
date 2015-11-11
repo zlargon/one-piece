@@ -1,6 +1,6 @@
 import React             from 'react';
 import ShortId           from 'shortid';
-import attackAnalysis    from '../lib/attackAnalysis';
+import AttackAnalysis    from '../lib/AttackAnalysis';
 import CharacterList     from './CharacterList';
 import './OnePiece.less'
 
@@ -31,10 +31,10 @@ export default class OnePiece extends React.Component {
       showCustom: false
     };
 
-    // get the data from local storage
-    const data = window.localStorage.getItem('data');
-    if (data !== null) {
-      this.state = JSON.parse(data);
+    // get the state from local storage
+    const state = window.localStorage.getItem('state');
+    if (state !== null) {
+      this.state = JSON.parse(state);
     }
 
     // generate unique id for each character
@@ -96,7 +96,7 @@ export default class OnePiece extends React.Component {
 
   maxDamageOrder () {
     const max = enumerate(this.state.characters).reduce((result, characters) => {
-      let report = attackAnalysis({
+      let report = AttackAnalysis({
         enemy: this.state.enemy,
         boat: this.state.boat,
         characters
@@ -119,8 +119,8 @@ export default class OnePiece extends React.Component {
   }
 
   render () {
-    // save the data to local storage
-    window.localStorage.setItem('data', JSON.stringify(this.state));
+    // save the state to local storage
+    window.localStorage.setItem('state', JSON.stringify(this.state));
 
     return (
       <div className='one-piece'>
@@ -168,7 +168,7 @@ export default class OnePiece extends React.Component {
 
 function generateReport(state) {
   const { showDetail, showCustom } = state;
-  const { captains, specialAbilities, analysis, total: Total } = attackAnalysis(
+  const { captains, specialAbilities, analysis, total: Total } = AttackAnalysis(
     Object.assign({}, state, {
       characters: state.characters.slice().map(character => {
         const custom = state.showCustom ? Number.parseFloat(character.custom) : 1;
