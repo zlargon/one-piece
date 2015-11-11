@@ -20,12 +20,12 @@ export default class OnePiece extends React.Component {
       enemy: { type: '心', defense: 100 }, // 卡普
       boat: 1.5,
       characters: [
-        { no: 8,   attack: 1250, bead: 1, timing: 'perfect' },                       // 索隆 Lv.87
-        { no: 227, attack: 1285, bead: 1, timing: 'perfect', captainEffect: true },  // 鷹眼 Lv.99
-        { no: 227, attack: 1285, bead: 1, timing: 'perfect', captainEffect: true },  // 鷹眼 Lv.99
-        { no: 39,  attack: 702,  bead: 1, timing: 'perfect' },                       // 巴其 Lv.61
-        { no: 66,  attack: 1491, bead: 1, timing: 'perfect' },                       // 惡龍 Lv.99
-        { no: 255, attack: 1155, bead: 1, timing: 'perfect' },                       // 花劍 Lv.71
+        { no: 8,   attack: 1250, bead: 1, timing: 'perfect', custom: '1' },                       // 索隆 Lv.87
+        { no: 227, attack: 1285, bead: 1, timing: 'perfect', custom: '1', captainEffect: true },  // 鷹眼 Lv.99
+        { no: 227, attack: 1285, bead: 1, timing: 'perfect', custom: '1', captainEffect: true },  // 鷹眼 Lv.99
+        { no: 39,  attack: 702,  bead: 1, timing: 'perfect', custom: '1' },                       // 巴其 Lv.61
+        { no: 66,  attack: 1491, bead: 1, timing: 'perfect', custom: '1' },                       // 惡龍 Lv.99
+        { no: 255, attack: 1155, bead: 1, timing: 'perfect', custom: '1' },                       // 花劍 Lv.71
       ],
       showDetail: false,
       showCustom: false
@@ -72,18 +72,7 @@ export default class OnePiece extends React.Component {
 
   updateDefense (event) {
     const { value } = event.target;
-
-    let defense = 0;
-    if (value.length !== 0) {
-      // parse into integer
-      defense = Number.parseInt(value, 10);
-
-      // don't change the input value
-      if (Number.isNaN(defense)) return;
-
-      // defense is positive
-      if (defense < 0) defense = 0;
-    }
+    const defense = value.length === 0 ? 0 : Number.parseInt(value, 10);  // parse into integer
 
     this.setState({
       enemy: {
@@ -144,7 +133,7 @@ export default class OnePiece extends React.Component {
               敵屬性：{this.state.enemy.type} ,
             </div>
             <div className='defense'>
-              防禦：<input type='number' value={this.state.enemy.defense} onChange={this.updateDefense}/>
+              防禦：<input type='number' min='0' value={this.state.enemy.defense} onChange={this.updateDefense}/>
             </div>
           </div>
         </div>

@@ -28,6 +28,7 @@ export default class CharacterList extends React.Component {
         attack: React.PropTypes.number.isRequired,
         bead: React.PropTypes.number.isRequired,
         timing: React.PropTypes.string.isRequired,
+        custom: React.PropTypes.string.isRequired,
         captainEffect: React.PropTypes.bool,
         specialAbility: React.PropTypes.bool
       })

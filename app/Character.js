@@ -29,6 +29,7 @@ export default class Character extends React.Component {
       attack: React.PropTypes.number.isRequired,
       bead: React.PropTypes.number.isRequired,
       timing: React.PropTypes.string.isRequired,
+      custom: React.PropTypes.string.isRequired,
       captainEffect: React.PropTypes.bool,
       specialAbility: React.PropTypes.bool
     }),
@@ -51,6 +52,7 @@ export default class Character extends React.Component {
     this.switchTiming = this.switchTiming.bind(this);
     this.checkCaptainEffect = this.checkCaptainEffect.bind(this);
     this.checkSpecialAbility = this.checkSpecialAbility.bind(this);
+    this.changeCustom = this.changeCustom.bind(this);
   }
 
   // return new no to parent
@@ -62,11 +64,7 @@ export default class Character extends React.Component {
       // parse into integer
       no = Number.parseInt(value, 10);
 
-      // don't change the input value
-      if (Number.isNaN(no)) return;
-
       // limit character no
-      if (no < 0) no = 0;
       if (no > config.maxCharacterNumber.tw) {
         no = config.maxCharacterNumber.tw;
       }
@@ -83,18 +81,7 @@ export default class Character extends React.Component {
 
   changeAttack (event) {
     const { value } = event.target;   // string
-
-    let attack = 0;
-    if (value.length !== 0) {
-      // parse into integer
-      attack = Number.parseInt(value, 10);
-
-      // don't change the input value
-      if (Number.isNaN(attack)) return;
-
-      // attack must be positive integer
-      if (attack < 0) attack = 0;
-    }
+    const attack = value.length === 0 ? 0 : Number.parseInt(value, 10);  // parse into integer
 
     this.props.onChange(
       this.props.index,
@@ -147,6 +134,24 @@ export default class Character extends React.Component {
     this.props.onChange(
       this.props.index,
       Object.assign({}, this.props.character, { specialAbility: checked }
+    ));
+  }
+
+  changeCustom(event) {
+    let custom = event.target.value;  // string
+    const isValid = event.target.validity.valid;
+
+    if (custom.length === 0) {
+      custom = '0';
+    } else {
+      // remove leading zero
+      const [ integral, decimal ] = custom.split('.');
+      custom = Number.parseInt(integral, 10) + (custom.indexOf('.') >= 0 ? '.' : '') + (decimal ? decimal : '');
+    }
+
+    this.props.onChange(
+      this.props.index,
+      Object.assign({}, this.props.character, isValid ? { custom } : {}
     ));
   }
 
@@ -218,12 +223,12 @@ export default class Character extends React.Component {
         <div className='basis'>
           <div className='baseline'>
             <span className='space-right'>No.</span>
-            <input type='number' value={character.no} onChange={this.changeNo} />
+            <input type='number' min='0' value={character.no} onChange={this.changeNo} />
           </div>
 
           <div className='baseline'>
             <span className='space-right'>攻</span>
-            <input type='number' value={character.attack} onChange={this.changeAttack} />
+            <input type='number' min='0' value={character.attack} onChange={this.changeAttack} />
           </div>
         </div>
 
@@ -238,7 +243,9 @@ export default class Character extends React.Component {
 
         <div style={{ display: showCustom ? '' : 'none' }}>
           <div className='custom'>
-            <input type='number' step='0.01' />
+            <input type='number' step='0.01' min='0' pattern='[0-9]+([\.|,][0-9]+)?'
+              value={character.custom}
+              onChange={this.changeCustom} />
           </div>
           <div style={invisible}>
             empty
