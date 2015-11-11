@@ -143,9 +143,7 @@ export default class OnePiece extends React.Component {
             showCustom={this.state.showCustom}
             onChange={this.updateCharacters} />
 
-          <div className='report'>
-            {generateReport(attackAnalysis(this.state), this.state.showDetail)}
-          </div>
+          <div className='report'>{generateReport(this.state)}</div>
         </div>
 
         <div className='option baseline'>
@@ -168,11 +166,19 @@ export default class OnePiece extends React.Component {
   }
 }
 
-function generateReport(data, showDetail) {
-  const { captains, specialAbilities, analysis } = data;
+function generateReport(state) {
+  const { showDetail, showCustom } = state;
+  const { captains, specialAbilities, analysis, total: Total } = attackAnalysis(
+    Object.assign({}, state, {
+      characters: state.characters.slice().map(character => {
+        const custom = state.showCustom ? Number.parseFloat(character.custom) : 1;
+        return Object.assign({}, character, { custom });
+      })
+    }
+  ));
 
   function proportion(attack) {
-    return Math.floor(attack / data.total.attack * 1000) / 10;
+    return Math.floor(attack / Total.attack * 1000) / 10;
   }
 
   function detail(damage, showDetail) {
@@ -205,7 +211,7 @@ function generateReport(data, showDetail) {
 
 類型：${character.classes.join('/')}, 攻擊：${attack.original}, 連擊：${character.combo}
 梅莉號：${magni.boat}, 船長：${magni.captain}, 剋屬：${magni.type}
-特殊：${magni.special}, 屬珠：${magni.bead}, Chain：${magni.chain}
+特殊：${magni.special}, 屬珠：${magni.bead}, Chain：${magni.chain}${showCustom ? ', 自訂：' + magni.custom : ''}
 加成後攻擊力 = ${attack.basic}
 
 每單一擊傷害 = ${damage.singal}（共 ${attack.combo - 1} 擊）
