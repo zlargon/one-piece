@@ -9,32 +9,46 @@
   display: flex;
   & > * {
     /* Flex Items */
-    margin-left: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    /* Item Margin */
+    margin: 0 auto;
+    &:nth-child(1), &:nth-child(2) {
+      margin: 0;
+      margin-left: 0.5rem;
+    }
   }
 
   input[type="number"] {
-    width: 55px;
+    padding: 0;
+    width: 48px;
     border-width: 0;
     font-size: 0.9rem;
     background-color: transparent;
   }
 
   .icon {
-    width: 60px;
-    height: 60px;
-    cursor: move;
+    flex-direction: row;
+    img {
+      width: 60px;
+      height: 60px;
+      cursor: move;
+    }
   }
 
   .basis {
-    flex-basis: 80px;
+    flex-basis: 55px;
   }
 
   .baseline {
     display: flex;
     align-items: baseline;
+  }
+
+  .space-right {
+    margin-right: 5px;
   }
 
   .bead {
@@ -44,5 +58,15 @@
 
   .point-cursor {
     cursor: pointer;
+  }
+
+  .custom {
+    border: 1px solid steelblue;
+    border-radius: 3px;
+    input[type="number"] {
+      padding: 0;
+      padding-left: 5px;
+      width: 48px;
+    }
   }
 }

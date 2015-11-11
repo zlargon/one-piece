@@ -102,7 +102,6 @@ export default class OnePiece extends React.Component {
   }
 
   updateCustomCheckbox (event) {
-    console.log(event.target.checked);
     this.setState({ showCustom: event.target.checked });
   }
 
@@ -152,6 +151,7 @@ export default class OnePiece extends React.Component {
         <div className='container'>
           <CharacterList
             characters={this.state.characters}
+            showCustom={this.state.showCustom}
             onChange={this.updateCharacters} />
 
           <div className='report'>

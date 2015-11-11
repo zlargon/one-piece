@@ -32,6 +32,7 @@ export default class CharacterList extends React.Component {
         specialAbility: React.PropTypes.bool
       })
     ),
+    showCustom: React.PropTypes.bool.isRequired,
 
     // callback
     onChange: React.PropTypes.func.isRequired
@@ -90,6 +91,7 @@ export default class CharacterList extends React.Component {
           index={index}
           isMobileDevice={this.state.isMobileDevice}
           isCaptainFull={this.state.isCaptainFull}
+          showCustom={this.props.showCustom}
           character={character}
           onMove={this.reorderCharacters}
           onChange={this.updateCharacterData}

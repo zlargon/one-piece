@@ -35,6 +35,7 @@ export default class Character extends React.Component {
 
     isCaptainFull: React.PropTypes.bool.isRequired,
     isMobileDevice: React.PropTypes.bool.isRequired,
+    showCustom: React.PropTypes.bool.isRequired,
 
     // callback
     onMove: React.PropTypes.func.isRequired,
@@ -151,7 +152,7 @@ export default class Character extends React.Component {
 
   render() {
     const { isDragging, connectDragSource, connectDragPreview, connectDropTarget } = this.props;
-    const { character, isCaptainFull, isMobileDevice } = this.props;
+    const { character, isCaptainFull, isMobileDevice, showCustom } = this.props;
     const invisible = {
       visibility: 'hidden'
     };
@@ -210,29 +211,37 @@ export default class Character extends React.Component {
           </div>
         </div>
 
-        {connectDragSource(<div>
-          <img className='icon' src={imageUrl(character.no)} />
+        {connectDragSource(<div className='icon'>
+          <img src={imageUrl(character.no)} />
         </div>)}
 
         <div className='basis'>
           <div className='baseline'>
-            <span>No.</span>
+            <span className='space-right'>No.</span>
             <input type='number' value={character.no} onChange={this.changeNo} />
           </div>
 
           <div className='baseline'>
-            <span>攻&nbsp;</span>
+            <span className='space-right'>攻</span>
             <input type='number' value={character.attack} onChange={this.changeAttack} />
           </div>
         </div>
 
         <div className='basis'>
-          <div className='point-cursor'
-            onClick={this.switchBead}>
-            珠子：{beadText(character.bead)}
+          <div className='point-cursor' onClick={this.switchBead}>
+            {beadText(character.bead)}
           </div>
           <div className='bead point-cursor' onClick={this.switchTiming}>
             {character.timing}
+          </div>
+        </div>
+
+        <div style={{ display: showCustom ? '' : 'none' }}>
+          <div className='custom'>
+            <input type='number' step='0.01' />
+          </div>
+          <div style={invisible}>
+            empty
           </div>
         </div>
       </div>
