@@ -201,12 +201,12 @@ captain[220] = TypeEffect('知', 2);
 captain[221] = TypeEffect('知', 2.5);
 
 // 騙人布 騙人布反擊
-captain[222] = TypeEffect('心', 1.2);  // 將心靈屬性角色的攻擊力提升1.2倍
+captain[222] = TypeEffect('心', 1.2);         // 將心靈屬性角色的攻擊力提升1.2倍
 SpecialAbility[222] = TypeEffect('心', 1.5);  // 於1回合內，將心靈屬性的攻擊力提升1.5倍
 
 // 騙人布 衝撃
-captain[223] = TypeEffect('心', 1.5);  // 將心靈屬性角色的攻擊力提升1.5倍
-SpecialAbility[222] = TypeEffect('心', 2);    // 於1回合內，將心靈屬性的攻擊力提升2倍
+captain[223] = TypeEffect('心', 1.5);         // 將心靈屬性角色的攻擊力提升1.5倍
+SpecialAbility[223] = TypeEffect('心', 2);    // 於1回合內，將心靈屬性的攻擊力提升2倍
 
 // Mr.王子 羊肉SHOT
 // 連續擊出2次以上PERFECT，之後的角色攻擊力將會提升2倍
