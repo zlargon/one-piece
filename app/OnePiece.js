@@ -3,7 +3,7 @@ import ShortId        from 'shortid';
 import AttackAnalysis from '../lib/AttackAnalysis';
 import CharacterList  from './CharacterList';
 import config         from '../config';
-import './OnePiece.less'
+import './OnePiece.less';
 
 export default class OnePiece extends React.Component {
   constructor (props) {

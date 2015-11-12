@@ -12,6 +12,10 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.css$/,
+        loaders: ['style', 'css', 'autoprefixer']
+      },
+      {
         test: /\.less$/,
         loaders: ['style', 'css', 'autoprefixer', 'less']
       }
