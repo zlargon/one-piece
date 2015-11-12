@@ -171,14 +171,15 @@ export default class OnePiece extends React.Component {
 
 function generateReport(state) {
   const { showDetail, showCustom } = state;
-  const { captains, specialAbilities, analysis, total: Total } = AttackAnalysis(
-    Object.assign({}, state, {
-      characters: state.characters.slice().map(character => {
-        const custom = state.showCustom ? Number.parseFloat(character.custom) : 1;
-        return Object.assign({}, character, { custom });
-      })
-    }
-  ));
+  const { captains, specialAbilities, analysis, total: Total } = AttackAnalysis({
+    ...state,
+    characters: state.characters.map(character => {
+      return {
+        ...character,
+        custom: state.showCustom ? Number.parseFloat(character.custom) : 1
+      };
+    })
+  });
 
   function proportion(attack) {
     return Math.floor(attack / Total.attack * 1000) / 10;

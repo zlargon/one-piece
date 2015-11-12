@@ -57,6 +57,7 @@ export default class Character extends React.Component {
 
   // return new no to parent
   changeNo(event) {
+    const { character, index } = this.props;
     const { value } = event.target;   // string
 
     let no = 0;
@@ -70,27 +71,24 @@ export default class Character extends React.Component {
       }
     }
 
-    this.props.onChange(
-      this.props.index,
-      Object.assign({}, this.props.character, {
-        no,
-        attack: CharacterInfo.get(no).max.atk
-      }
-    ));
+    this.props.onChange(index, {
+      ...character, no,
+      attack: CharacterInfo.get(no).max.atk
+    });
   }
 
   changeAttack (event) {
+    const { character, index } = this.props;
     const { value } = event.target;   // string
-    const attack = value.length === 0 ? 0 : Number.parseInt(value, 10);  // parse into integer
 
-    this.props.onChange(
-      this.props.index,
-      Object.assign({}, this.props.character, { attack }
-    ));
+    this.props.onChange(index, {
+      ...character,
+      attack: value.length === 0 ? 0 : Number.parseInt(value, 10)
+    });
   }
 
   switchBead() {
-    const { character } = this.props;
+    const { character, index } = this.props;
 
     function next(bead) {
       const beads = [ 0.5, 1, 2];
@@ -99,14 +97,14 @@ export default class Character extends React.Component {
       return beads[nextIndex];
     }
 
-    this.props.onChange(
-      this.props.index,
-      Object.assign({}, character, { bead: next(character.bead) }
-    ));
+    this.props.onChange(index, {
+      ...character,
+      bead: next(character.bead)
+    });
   }
 
   switchTiming() {
-    const { character } = this.props;
+    const { character, index } = this.props;
 
     function next(timing) {
       const timings = [ 'bad', 'good', 'great', 'perfect', 'miss' ];
@@ -115,32 +113,35 @@ export default class Character extends React.Component {
       return timings[nextIndex];
     }
 
-    this.props.onChange(
-      this.props.index,
-      Object.assign({}, character, { timing: next(character.timing) }
-    ));
+    this.props.onChange(index, {
+      ...character,
+      timing: next(character.timing)
+    });
   }
 
   checkCaptainEffect(event) {
-    const { checked } = event.target;
-    this.props.onChange(
-      this.props.index,
-      Object.assign({}, this.props.character, { captainEffect: checked }
-    ));
+    const { character, index } = this.props;
+
+    this.props.onChange(index, {
+      ...character,
+      captainEffect: event.target.checked
+    });
   }
 
   checkSpecialAbility(event) {
-    const { checked } = event.target;
-    this.props.onChange(
-      this.props.index,
-      Object.assign({}, this.props.character, { specialAbility: checked }
-    ));
+    const { character, index } = this.props;
+
+    this.props.onChange(index, {
+      ...character,
+      specialAbility: event.target.checked
+    });
   }
 
   changeCustom(event) {
-    let custom = event.target.value;  // string
+    const { character, index } = this.props;
     const isValid = event.target.validity.valid;
 
+    let custom = event.target.value;  // string
     if (custom.length === 0) {
       custom = '0';
     } else {
@@ -149,10 +150,10 @@ export default class Character extends React.Component {
       custom = Number.parseInt(integral, 10) + (custom.indexOf('.') >= 0 ? '.' : '') + (decimal ? decimal : '');
     }
 
-    this.props.onChange(
-      this.props.index,
-      Object.assign({}, this.props.character, isValid ? { custom } : {}
-    ));
+    this.props.onChange(index, {
+      ...character,
+      custom: isValid ? custom : character.custom
+    });
   }
 
   render() {
