@@ -204,13 +204,13 @@ export default class Character extends React.Component {
         <div>
           <div className='baseline'
             style={isCaptainFull && !character.captainEffect ? invisible : {}}>
-            <span>船</span>
+            <span>船&nbsp;</span>
             <input type='checkbox'
                 checked={character.captainEffect}
                 onChange={this.checkCaptainEffect} />
           </div>
           <div className='baseline' style={hasSpecialAbility(character.no) ? {} : invisible}>
-            <span>必</span>
+            <span>必&nbsp;</span>
             <input type='checkbox'
                 checked={character.specialAbility}
                 onChange={this.checkSpecialAbility} />
@@ -221,7 +221,7 @@ export default class Character extends React.Component {
           <img src={imageUrl(character.no)} />
         </div>)}
 
-        <div className='basis'>
+        <div className='input-box'>
           <div className='baseline'>
             <span className='space-right'>No.</span>
             <input type='number' min='0' value={character.no} onChange={this.changeNo} />
