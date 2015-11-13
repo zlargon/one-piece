@@ -2,7 +2,8 @@ import fs             from 'fs';
 import path           from 'path';
 import coroutine      from 'co';
 import config         from '../config.js'
-import characterFetch from '../lib/CharacterFetch.js';
+import CharacterFetch from '../lib/CharacterFetch.js';
+import ShipFetch      from '../lib/ShipFetch.js';
 
 function getFileStat(filePath) {
   return new Promise((resolve, reject) => {
@@ -25,6 +26,14 @@ function fillZero(number) {
 }
 
 coroutine(function * () {
+  // 1. Fetch Ships
+  const Ships = yield ShipFetch();
+  const file = path.resolve(__dirname, '../data', 'ShipInfo.js');
+  const content = `let ShipInfo = ${JSON.stringify(Ships, null, 2)};\n\nexport default ShipInfo;`;
+  yield writeFile(file, content);
+  console.log('Save to ' + file);
+
+  // 2. Fetch Characters
   for (let number = 1; number <= config.maxCharacterNumber.jp; number++) {
     const file = path.resolve(__dirname, '../data/character',  fillZero(number) + '.js');
 
@@ -41,7 +50,7 @@ coroutine(function * () {
     let character = null;
     try {
       console.log(`Fetching no.${number} ...`);
-      character = yield characterFetch(number);
+      character = yield CharacterFetch(number);
     } catch (e) {
       console.log(e.stack);
       continue;
@@ -59,4 +68,7 @@ coroutine(function * () {
 })
 .then(function () {
   console.log('done');
+})
+.catch(e => {
+  console.log(e.stack);
 });
