@@ -318,7 +318,7 @@ captain[311] = function ({ timingHistory }) {
   }
   return 1;
 }
-captain[311] = captain[312];
+captain[312] = captain[311];
 
 captain[313] = ClassEffect('打擊', 2);
 SpecialAbility[313] = ClassEffect('打擊', 1.5);
