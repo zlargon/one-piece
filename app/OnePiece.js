@@ -9,9 +9,8 @@ import './OnePiece.less';
 export default class OnePiece extends React.Component {
   constructor (props) {
     super(props);
-
     this.changeShip = this.changeShip.bind(this);
-    this.switchEnemyType = this.switchEnemyType.bind(this);
+    this.selectEnemyType = this.selectEnemyType.bind(this);
     this.updateDefense = this.updateDefense.bind(this);
     this.updateCharacters = this.updateCharacters.bind(this);
     this.updateDetailCheckbox = this.updateDetailCheckbox.bind(this);
@@ -53,17 +52,11 @@ export default class OnePiece extends React.Component {
     this.setState({ ship });
   }
 
-  switchEnemyType () {
-    function next(type) {
-      const types = [ '力', '技', '速', '心', '知' ];
-      const index = types.indexOf(type);
-      const nextIndex = (index + 1) % types.length;
-      return types[nextIndex];
-    }
-
+  selectEnemyType(event) {
+    const type = event.target.value;
     this.setState({
       enemy: {
-        type: next(this.state.enemy.type),
+        type,
         defense: this.state.enemy.defense
       }
     });
@@ -127,13 +120,17 @@ export default class OnePiece extends React.Component {
     // save the state to local storage
     window.localStorage.setItem('state', JSON.stringify(this.state));
 
+    const types = ['力', '技', '速', '心', '知'];
     return (
       <div className='one-piece'>
         <div className='info'>
           <Ship ship={this.state.ship} onChange={this.changeShip}/>
           <div className='enemy' >
-            <div className='pointer-cursor' onClick={this.switchEnemyType}>
-              敵屬性：{this.state.enemy.type} ,
+            <div>
+              敵屬性：
+              <select className='pointer-cursor' onChange={this.selectEnemyType} value={this.state.enemy.type}>
+                {types.map(v => <option key={v} value={v}>{v}</option>)}
+              </select>
             </div>
             <div className='defense'>
               防禦：<input type='number' min='0' value={this.state.enemy.defense} onChange={this.updateDefense}/>
