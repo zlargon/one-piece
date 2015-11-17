@@ -97,7 +97,12 @@ export default class OnePiece extends React.Component {
     const max = enumerate(this.state.characters).reduce((result, characters) => {
       let report = AttackAnalysis({
         ...this.state,
-        characters
+        characters: characters.map(character => {
+          return {
+            ...character,
+            custom: this.state.showCustom ? Number.parseFloat(character.custom) : 1
+          };
+        })
       });
 
       if (report.total.attack > result.total) {
