@@ -1,6 +1,7 @@
 import React          from 'react';
 import ShortId        from 'shortid';
 import AttackAnalysis from '../lib/AttackAnalysis';
+import Ship           from './Ship';
 import CharacterList  from './CharacterList';
 import config         from '../config';
 import './OnePiece.less';
@@ -9,7 +10,7 @@ export default class OnePiece extends React.Component {
   constructor (props) {
     super(props);
 
-    this.changeBoat = this.changeBoat.bind(this);
+    this.changeShip = this.changeShip.bind(this);
     this.switchEnemyType = this.switchEnemyType.bind(this);
     this.updateDefense = this.updateDefense.bind(this);
     this.updateCharacters = this.updateCharacters.bind(this);
@@ -48,17 +49,8 @@ export default class OnePiece extends React.Component {
     this.state.characters.forEach(character => { character.id = ShortId.generate() });
   }
 
-  changeBoat () {
-    function next(boat) {
-      const boats = [ 1, 1.2, 1.5 ];
-      const index = boats.indexOf(boat);
-      const nextIndex = (index + 1) % boats.length;
-      return boats[nextIndex];
-    }
-
-    this.setState({
-      boat: next(this.state.boat)
-    })
+  changeShip(ship) {
+    this.setState({ ship });
   }
 
   switchEnemyType () {
@@ -133,9 +125,7 @@ export default class OnePiece extends React.Component {
     return (
       <div className='one-piece'>
         <div className='info'>
-          <div className='pointer-cursor' onClick={this.changeBoat}>
-            梅莉號：{this.state.boat} 倍
-          </div>
+          <Ship ship={this.state.ship} onChange={this.changeShip}/>
           <div className='enemy' >
             <div className='pointer-cursor' onClick={this.switchEnemyType}>
               敵屬性：{this.state.enemy.type} ,
