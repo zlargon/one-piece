@@ -45,11 +45,10 @@ export default class Character extends React.Component {
 
   constructor(props) {
     super(props);
-
     this.changeNo = this.changeNo.bind(this);
     this.changeAttack = this.changeAttack.bind(this);
     this.switchBead = this.switchBead.bind(this);
-    this.switchTiming = this.switchTiming.bind(this);
+    this.changeTiming = this.changeTiming.bind(this);
     this.checkCaptainEffect = this.checkCaptainEffect.bind(this);
     this.checkSpecialAbility = this.checkSpecialAbility.bind(this);
     this.changeCustom = this.changeCustom.bind(this);
@@ -103,19 +102,12 @@ export default class Character extends React.Component {
     });
   }
 
-  switchTiming() {
+  changeTiming(event) {
     const { character, index } = this.props;
-
-    function next(timing) {
-      const timings = [ 'bad', 'good', 'great', 'perfect', 'miss' ];
-      const index = timings.indexOf(timing);
-      const nextIndex = (index + 1) % timings.length;
-      return timings[nextIndex];
-    }
 
     this.props.onChange(index, {
       ...character,
-      timing: next(character.timing)
+      timing: event.target.value
     });
   }
 
@@ -167,6 +159,9 @@ export default class Character extends React.Component {
       opacity: isDragging && !isMobileDevice ? 0 : 1,
       backgroundColor: isDragging && isMobileDevice ? 'lightsteelblue' : 'white'
     };
+
+    const timings = [ 'bad', 'good', 'great', 'perfect', 'miss' ];
+    const timingOptions = timings.map(v => <option key={v} value={v}>{v}</option>);
 
     function beadText (bead) {
       if (bead === 0.5) return '暗珠';
@@ -237,9 +232,9 @@ export default class Character extends React.Component {
           <div className='point-cursor' onClick={this.switchBead}>
             {beadText(character.bead)}
           </div>
-          <div className='bead point-cursor' onClick={this.switchTiming}>
-            {character.timing}
-          </div>
+          <select value={character.timing} onChange={this.changeTiming}>
+            {timingOptions}
+          </select>
         </div>
 
         <div style={{ display: showCustom ? '' : 'none' }}>
