@@ -19,7 +19,7 @@ export default class OnePiece extends React.Component {
 
     this.state = {
       enemy: { type: '知', defense: 699 }, // Z
-      boat: 1.5,
+      ship: { no: 1, level: 10 },
       characters: [
         { no: 223, attack: 669,  bead: 2, timing: 'perfect', custom: '1', specialAbility: true }, // 衝擊布
         { no: 208, attack: 709,  bead: 2, timing: 'perfect', custom: '1' },                       // Mr.2
@@ -36,6 +36,12 @@ export default class OnePiece extends React.Component {
     const state = window.localStorage.getItem('state');
     if (state !== null) {
       this.state = JSON.parse(state);
+    }
+
+    // migration boat => ship
+    if (typeof this.state.boat === 'number') {
+      delete this.state.boat;
+      this.state.ship = { no: 1, level: 10 };
     }
 
     // generate unique id for each character
@@ -98,8 +104,7 @@ export default class OnePiece extends React.Component {
   maxDamageOrder () {
     const max = enumerate(this.state.characters).reduce((result, characters) => {
       let report = AttackAnalysis({
-        enemy: this.state.enemy,
-        boat: this.state.boat,
+        ...this.state,
         characters
       });
 
@@ -171,7 +176,7 @@ export default class OnePiece extends React.Component {
 
 function generateReport(state) {
   const { showDetail, showCustom } = state;
-  const { captains, specialAbilities, analysis, total: Total } = AttackAnalysis({
+  const { captains, shipInfo, specialAbilities, analysis, total: Total } = AttackAnalysis({
     ...state,
     characters: state.characters.map(character => {
       return {
@@ -190,8 +195,10 @@ function generateReport(state) {
     return `\n傷害分析：\n${damage.history.join('\n')} => ${damage.total}\n`
   }
 
+  // 1. Ship Effect
+  const shipEffectContent = `船隻效果：\n${shipInfo.text}\n\n`;
 
-  // 1. Captain Effect
+  // 2. Captain Effect
   const captainEffectContent = captains.reduce((text, character, index) => {
     const name = character.name.tw ? character.name.tw : character.name.jp;
     const content = character.captainEffect.tw.content ? character.captainEffect.tw.content : character.captainEffect.jp.content;
@@ -199,7 +206,7 @@ function generateReport(state) {
   }, captains.length === 0 ? '' : '船長效果：\n');
 
 
-  // 2. Special Ability
+  // 3. Special Ability
   const specialAbilityContent = specialAbilities.reduce((text, character, index) => {
     const name = character.name.tw ? character.name.tw : character.name.jp;
     const content = character.specialAbility.tw.content ? character.specialAbility.tw.content : character.specialAbility.jp.content;
@@ -207,14 +214,14 @@ function generateReport(state) {
   }, specialAbilities.length === 0 ? '' : '\n必殺技效果：\n');
 
 
-  // 3. Attack Analysis
+  // 4. Attack Analysis
   const analysisContent = analysis.reduce((text, { character, magnification: magni, attack, damage, total }, index) => {
     return text +
 `\n----------------------------------\n
 第 ${index + 1} 位：${character.name.tw || character.name.jp} (No.${character.no})
 
-類型：${character.classes.join('/')}, 攻擊：${attack.original}, 連擊：${character.combo}
-梅莉號：${magni.boat}, 船長：${magni.captain}, 剋屬：${magni.type}
+類型：${character.classes.join('/')}, 攻擊：${attack.original} (+${attack.add}), 連擊：${character.combo}
+船隻：${magni.ship}, 船長：${magni.captain}, 剋屬：${magni.type}
 特殊：${magni.special}, 屬珠：${magni.bead}, Chain：${magni.chain}${showCustom ? ', 自訂：' + magni.custom : ''}
 加成後攻擊力 = ${attack.basic}
 
@@ -226,8 +233,7 @@ Combo = ${total.combo}
 Total = ${total.attack}\n`
   }, '');
 
-
-  return captainEffectContent + specialAbilityContent + analysisContent;
+  return shipEffectContent + captainEffectContent + specialAbilityContent + analysisContent;
 }
 
 function enumerate (source) {
