@@ -1,76 +1,103 @@
 .one-piece-character {
-  border: 1px solid lightgray;
-  padding: 0.2rem 0;
-  margin-bottom: 0.3rem;
   background-color: white;
+  border: 1px solid lightgray;
+  height: 60px;
+
+  padding: 0.2rem 0.3rem;
+  margin-bottom: 0.3rem;
   font-size: 0.9rem;
 
-  /* Flex Box */
   display: flex;
-  & > * {
-    /* Flex Items */
+  .checkbox {
+    flex: 0 0 35px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     justify-content: space-around;
 
-    /* Item Margin */
-    margin: 0 auto;
-    &:nth-child(1), &:nth-child(2) {
-      margin: 0;
-      margin-left: 0.5rem;
+    input[type='checkbox'] {
+      cursor: pointer;
     }
   }
 
-  input[type="number"] {
-    padding: 0;
-    width: 48px;
-    border-width: 0;
-    font-size: 0.9rem;
-    background-color: transparent;
+  img {
+    flex: 0 0 60px;
+    height: 60px;
+    margin: 0 5px;
+    cursor: move;
   }
 
-  .icon {
-    flex-direction: row;
-    img {
-      width: 60px;
-      height: 60px;
-      cursor: move;
-    }
-  }
-
-  .input-box {
-    flex-basis: 70px;
-  }
-
-  .basis {
-    flex-basis: 50px;
-  }
-
-  .baseline {
+  .columns {
     display: flex;
-    align-items: baseline;
-  }
+    flex: 1;
+    justify-content: space-around;
 
-  .space-right {
-    margin-right: 5px;
-  }
+    .col-1 {
+      flex: 0 1 80px;
+      display: flex;
+      flex-flow: column;
+      & > * {
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
 
-  .bead {
-    text-transform: capitalize;
-    font-weight: bolder;
-  }
+      .input-box {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
 
-  .point-cursor {
-    cursor: pointer;
-  }
+        input[type='number'] {
+          margin: 0;
+          padding: 0;
+          width: 48px;
+          border-width: 0;
+          background-color: transparent;
+          cursor: pointer;
+        }
+      }
+    }
 
-  .custom {
-    border: 1px solid steelblue;
-    border-radius: 3px;
-    input[type="number"] {
-      padding: 0;
-      padding-left: 5px;
-      width: 48px;
+    .col-2 {
+      flex: 0 1 80px;
+
+      display: flex;
+      flex-flow: row wrap;
+
+      & > * {
+        height: 30px;
+
+        display: flex;
+        align-items: center;
+      }
+
+      .bead {
+        padding-left: 5px;
+        cursor: pointer;
+      }
+
+      select {
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+    }
+
+    .col-3 {
+      flex: 0 1 50px;
+      & > * {
+        height: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .custom {
+        border: 1px solid steelblue;
+        border-radius: 3px;
+        width: 48px;
+        text-align: center;
+        cursor: pointer;
+      }
     }
   }
 }

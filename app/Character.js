@@ -196,55 +196,57 @@ export default class Character extends React.Component {
     return connectDragPreview(connectDropTarget(
       <div className='one-piece-character' style={dragging}>
 
-        <div>
-          <div className='baseline'
-            style={isCaptainFull && !character.captainEffect ? invisible : {}}>
+        <div className='checkbox'>
+          <div style={isCaptainFull && !character.captainEffect ? invisible : {}}>
             <span>船&nbsp;</span>
-            <input type='checkbox'
-                checked={character.captainEffect}
-                onChange={this.checkCaptainEffect} />
+            <input type='checkbox' checked={character.captainEffect} onChange={this.checkCaptainEffect} />
           </div>
-          <div className='baseline' style={hasSpecialAbility(character.no) ? {} : invisible}>
+          <div style={hasSpecialAbility(character.no) ? {} : invisible}>
             <span>必&nbsp;</span>
-            <input type='checkbox'
-                checked={character.specialAbility}
-                onChange={this.checkSpecialAbility} />
+            <input type='checkbox' checked={character.specialAbility} onChange={this.checkSpecialAbility} />
           </div>
         </div>
 
-        {connectDragSource(<div className='icon'>
-          <img src={imageUrl(character.no)} />
-        </div>)}
+        {connectDragSource(<img src={imageUrl(character.no)} />)}
 
-        <div className='input-box'>
-          <div className='baseline'>
-            <span className='space-right'>No.</span>
-            <input type='number' min='0' value={character.no} onChange={this.changeNo} />
+        <div className='columns'>
+          <div className='col-1'>
+            <div>
+              <div className='input-box'>
+                <span>No.&nbsp;</span>
+                <input type='number' min='0' value={character.no} onChange={this.changeNo} />
+              </div>
+            </div>
+
+            <div>
+              <div className='input-box'>
+                <span>攻&nbsp;</span>
+                <input type='number' min='0' value={character.attack} onChange={this.changeAttack} />
+              </div>
+            </div>
           </div>
 
-          <div className='baseline'>
-            <span className='space-right'>攻</span>
-            <input type='number' min='0' value={character.attack} onChange={this.changeAttack} />
-          </div>
-        </div>
+          <div className='col-2'>
+            <div className='bead'>
+              <div onClick={this.switchBead}>
+                {beadText(character.bead)}
+              </div>
+            </div>
 
-        <div className='basis'>
-          <div className='point-cursor' onClick={this.switchBead}>
-            {beadText(character.bead)}
+            <div>
+              <select value={character.timing} onChange={this.changeTiming}>
+                {timingOptions}
+              </select>
+            </div>
           </div>
-          <select value={character.timing} onChange={this.changeTiming}>
-            {timingOptions}
-          </select>
-        </div>
 
-        <div style={{ display: showCustom ? '' : 'none' }}>
-          <div className='custom'>
-            <input type='number' step='0.01' min='0' pattern='[0-9]+([\.|,][0-9]+)?'
-              value={character.custom}
-              onChange={this.changeCustom} />
-          </div>
-          <div style={invisible}>
-            empty
+          <div className='col-3' style={{ display: showCustom ? '' : 'none' }}>
+            <div>{/* empty */}</div>
+            <div>
+              <input className='custom' type='number' step='0.01' min='0' pattern='[0-9]+([\.|,][0-9]+)?'
+                value={character.custom}
+                onChange={this.changeCustom} />
+            </div>
           </div>
         </div>
       </div>
