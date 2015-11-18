@@ -3,6 +3,7 @@ import ShipInfo from '../data/ShipInfo';
 
 export default class Ship extends React.Component {
   static propTypes = {
+    className: React.PropTypes.string,
     ship: React.PropTypes.shape({
       no: React.PropTypes.number.isRequired,
       level: React.PropTypes.number.isRequired
@@ -42,9 +43,15 @@ export default class Ship extends React.Component {
     });
 
     return (
-      <div>
-        <select value={no} onChange={this.changeShip}>{shipOptions}</select>
-        <select value={level} onChange={this.changeLevel}>{levelOptions}</select>
+      <div className={this.props.className}>
+        <div className='name'>
+          <span>船隻：</span>
+          <select value={no} onChange={this.changeShip}>{shipOptions}</select>
+        </div>
+        <div className='level'>
+          <span>等級：</span>
+          <select value={level} onChange={this.changeLevel}>{levelOptions}</select>
+        </div>
       </div>
     );
   }

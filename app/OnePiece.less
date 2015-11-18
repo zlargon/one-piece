@@ -26,18 +26,33 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
+    margin-bottom: 3px;
 
     & > * {
-      padding: 8px 0;
+      padding: 3px 0;
+      display: flex;
+      align-items: baseline;
     }
 
-    .pointer-cursor {
-      cursor: pointer;
+    .ship {
+      .name {
+        margin-right: 10px;
+      }
+
+      select {
+        height: 24px;
+        max-width: 110px;
+      }
     }
 
     .enemy {
       display: flex;
       flex-direction: row;
+
+      select {
+        width: 50px;
+        height: 24px;
+      }
 
       .defense {
         display: flex;
@@ -48,9 +63,18 @@ body {
           font-size: 0.9rem;
           padding: 0;
           border-width: 0;
-          width: 50px;
+          width: 60px;
         }
       }
+    }
+
+    @media all and (max-width: 500px) {
+      flex-flow: column;
+      .ship { order: 1; }
+    }
+
+    .pointer-cursor {
+      cursor: pointer;
     }
   }
 

@@ -124,19 +124,24 @@ export default class OnePiece extends React.Component {
     return (
       <div className='one-piece'>
         <div className='info'>
-          <Ship ship={this.state.ship} onChange={this.changeShip}/>
+          <Ship className='ship'
+            ship={this.state.ship}
+            onChange={this.changeShip}/>
+
           <div className='enemy' >
             <div>
-              敵屬性：
+              <span>敵屬：</span>
               <select className='pointer-cursor' onChange={this.selectEnemyType} value={this.state.enemy.type}>
                 {types.map(v => <option key={v} value={v}>{v}</option>)}
               </select>
             </div>
             <div className='defense'>
-              防禦：<input type='number' min='0' value={this.state.enemy.defense} onChange={this.updateDefense}/>
+              <span>防禦：</span>
+              <input type='number' min='0' value={this.state.enemy.defense} onChange={this.updateDefense}/>
             </div>
           </div>
         </div>
+
         <div className='container'>
           <CharacterList
             characters={this.state.characters}
@@ -188,14 +193,14 @@ function generateReport(state) {
   }
 
   // 1. Ship Effect
-  const shipEffectContent = `船隻效果：\n${shipInfo.text}\n\n`;
+  const shipEffectContent = `船隻效果：\n${shipInfo.text}\n`;
 
   // 2. Captain Effect
   const captainEffectContent = captains.reduce((text, character, index) => {
     const name = character.name.tw ? character.name.tw : character.name.jp;
     const content = character.captainEffect.tw.content ? character.captainEffect.tw.content : character.captainEffect.jp.content;
     return text + `${index + 1}. ${content}\n`;
-  }, captains.length === 0 ? '' : '船長效果：\n');
+  }, captains.length === 0 ? '' : '\n船長效果：\n');
 
 
   // 3. Special Ability
