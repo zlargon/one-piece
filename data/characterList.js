@@ -1,5 +1,5 @@
 import config from '../config.js';
-import { CaptainEffect, SpecialAbility } from './skills';
+import { CaptainEffect, SpecialAbility } from './character/skills';
 
 function fillZero(number) {
   return (number + 10000).toString().substring(1);
