@@ -1,5 +1,5 @@
-import React    from 'react';
-import ShipInfo from '../data/ShipInfo';
+import React        from 'react';
+import { ShipInfo } from '../data/Store';
 
 export default class Ship extends React.Component {
   static propTypes = {

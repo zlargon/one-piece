@@ -1,7 +1,7 @@
 import React                      from 'react';
 import { DragSource, DropTarget } from 'react-dnd';
 import config                     from '../config';
-import CharacterInfo              from '../lib/CharacterClass';
+import { CharacterInfo }          from '../data/Store';
 import CharacterDnD               from './CharacterDnD';
 import './Character.less';
 
