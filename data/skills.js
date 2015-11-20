@@ -1,5 +1,5 @@
 import config from '../config';
-import { TypeEffect, ClassEffect, BeadEffect, PerfectEffect, OrderEffect } from './GeneralEffect';
+import { TypeEffect, ClassEffect, BeadEffect, PerfectEffect, OrderEffect } from '../lib/GeneralEffect';
 
 let captain = [];
 let SpecialAbility = [];

@@ -1,4 +1,4 @@
-import { TypeEffect, ClassEffect } from './GeneralEffect';
+import { TypeEffect, ClassEffect } from '../lib/GeneralEffect';
 
 let ShipInfo = [
   {
