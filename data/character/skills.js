@@ -1,9 +1,9 @@
-import config from '../../config';
+import { MAX_CHAR_JP } from '../../config';
 import { TypeEffect, ClassEffect, BeadEffect, PerfectEffect, OrderEffect } from '../../lib/GeneralEffect';
 
 let captain = [];
 let SpecialAbility = [];
-for (let i = 0; i <= config.maxCharacterNumber.jp; i++) {
+for (let i = 0; i <= MAX_CHAR_JP; i++) {
   captain[i] = () => 1;
   SpecialAbility[i] = null;
 }

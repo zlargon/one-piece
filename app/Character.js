@@ -1,6 +1,6 @@
+import { MAX_CHAR_TW }            from '../config';
 import React                      from 'react';
 import { DragSource, DropTarget } from 'react-dnd';
-import config                     from '../config';
 import { CharacterInfo }          from '../data/Store';
 import CharacterDnD               from './CharacterDnD';
 import './Character.less';
@@ -65,8 +65,8 @@ export default class Character extends React.Component {
       no = Number.parseInt(value, 10);
 
       // limit character no
-      if (no > config.maxCharacterNumber.tw) {
-        no = config.maxCharacterNumber.tw;
+      if (no > MAX_CHAR_TW) {
+        no = MAX_CHAR_TW;
       }
     }
 

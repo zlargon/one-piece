@@ -1,6 +1,2 @@
-module.exports = {
-  maxCharacterNumber: {
-    jp: 800,
-    tw: 316
-  }
-};
+export const MAX_CHAR_JP = 800;
+export const MAX_CHAR_TW = 316;

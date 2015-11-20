@@ -1,9 +1,9 @@
-import fs             from 'fs';
-import path           from 'path';
-import coroutine      from 'co';
-import config         from '../config.js'
-import CharacterFetch from '../lib/CharacterFetch.js';
-import ShipFetch      from '../lib/ShipFetch.js';
+import { MAX_CHAR_JP } from '../config.js'
+import fs              from 'fs';
+import path            from 'path';
+import coroutine       from 'co';
+import CharacterFetch  from '../lib/CharacterFetch.js';
+import ShipFetch       from '../lib/ShipFetch.js';
 
 function getFileStat(filePath) {
   return new Promise((resolve, reject) => {
@@ -37,7 +37,7 @@ coroutine(function * () {
   console.log('Save to ' + file);
 
   // 2. Fetch Characters
-  for (let number = 1; number <= config.maxCharacterNumber.jp; number++) {
+  for (let number = 1; number <= MAX_CHAR_JP; number++) {
     const file = path.resolve(__dirname, '../data/character',  fillZero(number) + '.js');
 
     // 1. check the file is exist or not

@@ -1,9 +1,9 @@
-import React          from 'react';
-import ShortId        from 'shortid';
-import AttackAnalysis from '../lib/AttackAnalysis';
-import Ship           from './Ship';
-import CharacterList  from './CharacterList';
-import config         from '../config';
+import { MAX_CHAR_TW } from '../config';
+import React           from 'react';
+import ShortId         from 'shortid';
+import AttackAnalysis  from '../lib/AttackAnalysis';
+import Ship            from './Ship';
+import CharacterList   from './CharacterList';
 import './OnePiece.less';
 
 export default class OnePiece extends React.Component {
@@ -160,7 +160,7 @@ export default class OnePiece extends React.Component {
               <input type='checkbox' checked={this.state.showDetail} onChange={this.updateDetailCheckbox}/>
               <span>&nbsp;顯示傷害分析</span>
             </div>
-            <div className='baseline' style={config.maxCharacterNumber.tw < 529 ? hide : {}}>
+            <div className='baseline' style={MAX_CHAR_TW < 529 ? hide : {}}>
               <input type='checkbox' checked={this.state.showCustom} onChange={this.updateCustomCheckbox}/>
               <span>&nbsp;顯示自訂倍率</span>
             </div>

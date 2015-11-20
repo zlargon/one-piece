@@ -1,4 +1,4 @@
-import config                            from '../config.js';
+import { MAX_CHAR_JP }                   from '../config.js';
 import ShipInfo                          from './ship/info';
 import ShipSkill                         from './ship/skills';
 import Character                         from '../lib/CharacterClass';
@@ -10,7 +10,7 @@ function fillZero(number) {
 
 // Character Info
 let CharacterInfo = [];
-for (let no = 1; no <= config.maxCharacterNumber.jp; no++) {
+for (let no = 1; no <= MAX_CHAR_JP; no++) {
   try {
     CharacterInfo[no] = require(`../data/character/${fillZero(no)}.js`);
     CharacterInfo[no].captainEffect.magnification = CaptainEffect[no];
