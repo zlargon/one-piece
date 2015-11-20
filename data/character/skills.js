@@ -8,169 +8,124 @@ for (let i = 0; i <= MAX_CHAR_JP; i++) {
   SpecialAbility[i] = null;
 }
 
-// 蒙其・D・魯夫 伸縮自如的橡膠槍
-// 將力量屬性角色的攻擊力提升為1.5倍
-captain[2] = TypeEffect('力', 1.5);
+const skill = (...numbers) => (captainEffect, specialAbility = null) => {
+  // set Captain Effect
+  if (captainEffect !== null) {
+    numbers.forEach(no => {
+      captain[no] = captainEffect;
+    });
+  }
 
+  // set Special Ability
+  if (specialAbility !== null) {
+    numbers.forEach(no => {
+      SpecialAbility[no] = specialAbility;
+    });
+  }
+}
+
+// 蒙其・D・魯夫 伸縮自如的橡膠槍
 // 蒙其・D・魯夫 伸縮自如的橡膠火箭砲
-// 將力量屬性角色的攻擊力提升為1.5倍
-captain[3] = TypeEffect('力', 1.5);
+skill(2, 3)(TypeEffect('力', 1.5));
 
 // 蒙其・D・魯夫 2檔
-// 將力量屬性角色的攻擊力提升2倍
-captain[4] = TypeEffect('力', 2);
+skill(4)(TypeEffect('力', 2));
 
 // 羅羅亞・索隆
-// 將技能屬性角色的攻擊力提升1.5倍
-captain[5] = TypeEffect('技', 1.5);
-
 // 羅羅亞・索隆 三・千・世・界
-// 將技能屬性角色的攻擊力提升1.5倍
-captain[6] = TypeEffect('技', 1.5);
-
 // 羅羅亞・索隆 煩惱鳳
-// 將技能屬性角色的攻擊力提升1.5倍
-captain[7] = TypeEffect('技', 1.5);
+skill(5, 6, 7)(TypeEffect('技', 1.5));
 
 // 羅羅亞・索隆 阿修羅壹霧銀
-// 將技能屬性角色的攻擊力提升2倍
-captain[8] = TypeEffect('技', 2);
+skill(8)(TypeEffect('技', 2));
 
 // 娜美 龍捲風天候
-// 將知識屬性角色的攻擊力提升1.5倍
-captain[10] = TypeEffect('知', 1.5);
-
 // 娜美 海市蜃樓天候
-// 將知識屬性角色的攻擊力提升1.5倍
-captain[11] = TypeEffect('知', 1.5);
-
 // 娜美 雷霆天候
-// 將知識屬性角色的攻擊力和體力提升1.5倍
-captain[12] = TypeEffect('知', 1.5);
+skill(10, 11, 12)(TypeEffect('知', 1.5));
 
 // 騙人布
-// 將射擊型角色的攻擊力提升1.2倍
-captain[13] = ClassEffect('射擊', 1.2);
+skill(13)(ClassEffect('射擊', 1.2));
 
 // 騙人布 墨西哥辣椒星
-// 將心靈屬性角色攻擊力提升1.5倍
-captain[14] = TypeEffect('心', 1.5);
-
 // 騙人布 黃金鐵鎚
-// 將心靈屬性角色的攻擊力提升1.5倍
-captain[15] = TypeEffect('心', 1.5);
-
 // 狙擊王
-// 將心靈屬性角色的攻擊力提升1.5倍
-captain[16] = TypeEffect('心', 1.5);
+skill(14, 15, 16)(TypeEffect('心', 1.5));
 
 // 香吉士
-// 將速度屬性角色的攻擊力提升1.5倍
-captain[17] = TypeEffect('速', 1.5);
-
 // 廚師香吉士 燒石燉菜
-// 將速度屬性角色的攻擊力提升1.5倍
-captain[19] = TypeEffect('速', 1.5);
-
 // 香吉士 惡魔風腳
-// 將速度屬性角色的攻擊力及體力提升1.5倍
-captain[20] = TypeEffect('速', 1.5);
+skill(17, 19, 20)(TypeEffect('速', 1.5));
 
 // 近海的王者
-// 將格鬥型角色的攻擊力提升1.2倍
-captain[28] = ClassEffect('格鬥', 1.2);
+skill(28)(ClassEffect('格鬥', 1.2));
 
 // 摩奇＆利基
-// 將心靈屬性角色的攻擊力提升1.5倍
-captain[36] = TypeEffect('心', 1.5);
+skill(36)(TypeEffect('心', 1.5));
 
 // 特技卡巴吉
-// 將技能屬性角色的攻擊力提升1.5倍
-captain[37] = TypeEffect('技', 1.5);
+skill(37)(TypeEffect('技', 1.5));
 
 // 巴其
-// 將知識屬性角色的攻擊力提升1.5倍
-captain[38] = TypeEffect('知', 1.5);
+skill(38)(TypeEffect('知', 1.5));
 
 // 小丑巴其
-// 將知識屬性角色的攻擊力提升2倍
-captain[39] = TypeEffect('知', 2);
+skill(39)(TypeEffect('知', 2));
 
 // 布奇
-// 將力量屬性角色的攻擊力提升1.2倍
-captain[42] = TypeEffect('力', 1.2);
+skill(42)(TypeEffect('力', 1.2));
 
 // 克洛船長
-// 將速度屬性角色的攻擊力提升1.2倍
-captain[45] = TypeEffect('速', 1.2);
+skill(45)(TypeEffect('速', 1.2));
 
 // 百計的克洛
-// 將速度屬性角色的攻擊力提升1.5倍
-captain[46] = TypeEffect('速', 1.5);
+skill(46)(TypeEffect('速', 1.5));
 
 // 鐵拳芬布迪
-// 將力量屬性角色的攻擊力提升1.5倍
-captain[49] = TypeEffect('力', 1.5);
+skill(49)(TypeEffect('力', 1.5));
 
 // 主廚哲普
-// 將格鬥型角色的攻擊力提升2.5倍
-captain[52] = ClassEffect('格鬥', 2.5);
+skill(52)(ClassEffect('格鬥', 2.5));
 
 // 老鼠
-// 將知識屬性角色的攻擊力提升1.2倍
-captain[59] = TypeEffect('知', 1.2);
+skill(59)(TypeEffect('知', 1.2));
 
 // 海牛呣
-// 將力量屬性角色的攻擊力提升1.5倍
-captain[60] = TypeEffect('力', 1.5);
+skill(60)(TypeEffect('力', 1.5));
 
 // 惡龍
-// 將斬擊型角色的攻擊力提升2倍
-captain[65] = ClassEffect('斬擊', 2);
-
 // 抓狂的惡龍　鯊魚齒輪
-// 將斬擊型角色的攻擊力提升2倍
-captain[66] = ClassEffect('斬擊', 2);
+skill(65, 66)(ClassEffect('斬擊', 2));
 
 // 波特卡斯・D・艾斯
-// 將速度屬性角色的攻擊力提升2倍
-captain[74] = TypeEffect('速', 2);
+skill(74)(TypeEffect('速', 2));
 
 // 波特卡斯・D・艾斯　鏡火炎
-// 將速度屬性角色的攻擊力提升2.5倍
-captain[75] = TypeEffect('速', 2.5);
+skill(75)(TypeEffect('速', 2.5));
 
 // 傑克
-// 將心靈屬性角色的攻擊力提升2倍
-captain[76] = TypeEffect('心', 2);
+skill(76)(TypeEffect('心', 2));
 
 // 紅髮傑克
-// 將心靈屬性角色的攻擊力提升2.5倍
-captain[77] = TypeEffect('心', 2.5);
+skill(77)(TypeEffect('心', 2.5));
 
 // 戴手指虎的少尉 海軍本部
-// 將力量屬性角色的攻擊力提升1.5倍
-captain[194] = TypeEffect('力', 1.5);
+skill(194)(TypeEffect('力', 1.5));
 
 // 佩劍的少尉 海軍本部
-// 將技能屬性角色的攻擊力提升1.5倍
-captain[195] = TypeEffect('技', 1.5);
+skill(195)(TypeEffect('技', 1.5));
 
 // 薙刀少尉 海軍本部
-// 將速度屬性角色的攻擊力提升1.5倍
-captain[196] = TypeEffect('速', 1.5);
+skill(196)(TypeEffect('速', 1.5));
 
 // 火箭砲少尉 海軍本部
-// 將射擊型角色的攻擊力提升1.5倍
-captain[198] = ClassEffect('射擊', 1.5);
+skill(198)(ClassEffect('射擊', 1.5));
 
 // Mr.5 鼻空想砲
-// 將力量屬性角色的攻擊力提升1.5倍
-captain[199] = TypeEffect('力', 1.5);
+skill(199)(TypeEffect('力', 1.5));
 
 // Mr.5 微風氣息炸彈
-// 將力量屬性角色的攻擊力提升2倍
-captain[200] = TypeEffect('力', 2);
+skill(200)(TypeEffect('力', 2));
 
 // Miss All Sunday
 // 於1回合內，將知識屬性的攻擊力提升1.5倍
