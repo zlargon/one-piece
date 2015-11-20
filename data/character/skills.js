@@ -786,167 +786,196 @@ skill(698)(ClassEffect('斬擊', 1.75));
 // captain[699] = 射擊人物攻擊力 +500
 
 skill(700)(ClassEffect('格鬥', 1.75));
+skill(705)(TypeEffect(['力', '技', '速'], 1.25));
+skill(706, 707)(TypeEffect('力', 1.5));
+skill(708)(TypeEffect('心', 1.2));
+skill(709)(TypeEffect('心', 1.5));
 
-captain[705] = TypeEffect(['力', '技', '速'], 1.25);
-captain[706] = TypeEffect('力', 1.5);
-captain[707] = TypeEffect('力', 1.5);
-captain[708] = TypeEffect('心', 1.2);
-captain[709] = TypeEffect('心', 1.5);
+skill(710)(
+  ClassEffect('射擊', 1.5),
+  ClassEffect('射擊', 1.25)
+);
 
-captain[710] = ClassEffect('射擊', 1.5);
-SpecialAbility[710] = ClassEffect('射擊', 1.25);
+skill(711)(
+  ClassEffect('射擊', 2),
+  ClassEffect('射擊', 1.25)
+);
 
-captain[711] = ClassEffect('射擊', 2);
-SpecialAbility[711] = ClassEffect('射擊', 1.25);
-
-captain[712] = ClassEffect('打擊', 2);
-captain[713] = ClassEffect('打擊', 2.5);
+skill(712)(ClassEffect('打擊', 2));
+skill(713)(ClassEffect('打擊', 2.5));
 
 // ISSUE: 無法獲得角色位置
 // SpecialAbility[712, 713] = 兩回合上段人物攻擊力 x1.5
 
-SpecialAbility[715] = ClassEffect('自由', 1.5);
-SpecialAbility[716] = ClassEffect('自由', 1.5);
+skill(715, 716)(null, ClassEffect('自由', 1.5));
 
-captain[717] = function({ timingHistory }) {
+skill(717, 718)(function({ timingHistory }) {
   const prevTiming = timingHistory[timingHistory.length - 1];
   if (prevTiming === 'good')    return 2.25;
   if (prevTiming === 'great')   return 2.5;
   if (prevTiming === 'perfect') return 2.75;
   return 2;
-}
-captain[718] = captain[717];
+});
 
-// ISSUE: 無法獲得 HP 得資訊
-// 搏識攻擊力[1.5+1.75*(1-剩餘HP)/總HP]倍(體力越少倍率越高，最大3.25倍，最小1.5倍)
-captain[719] = ClassEffect('博識', 3.25);   // 暫時以 HP 100% 計算
+skill(719, 720)(
+  // ISSUE: 無法獲得 HP 得資訊
+  // 搏識攻擊力[1.5+1.75*(1-剩餘HP)/總HP]倍(體力越少倍率越高，最大3.25倍，最小1.5倍)
+  ClassEffect('博識', 3.25),  // 暫時以 HP 100% 計算
 
-// ISSUE: 無法獲得 HP 得資訊
-// 一回合間博識的攻擊力1.5倍，必殺技發動時體力30%以下2倍，敵全體攻擊力20倍技屬性傷害
-SpecialAbility[719] = ClassEffect('博識', 1.5);   // 暫時以 HP 100% 計算
+  // ISSUE: 無法獲得 HP 得資訊
+  // 一回合間博識的攻擊力1.5倍，必殺技發動時體力30%以下2倍，敵全體攻擊力20倍技屬性傷害
+  ClassEffect('博識', 1.5)    // 暫時以 HP 100% 計算
+);
 
-captain[720] = captain[719];
-SpecialAbility[720] = SpecialAbility[719];
+skill(721)(ClassEffect('格鬥', 1.5));
+skill(722)(ClassEffect('格鬥', 2));
+skill(723)(ClassEffect('斬擊', 1.5));
+skill(724)(ClassEffect('斬擊', 1.75));
+skill(727)(ClassEffect(['格鬥', '自由'], 1.75));
+skill(728, 729)(TypeEffect('技', 1.2));
 
-captain[721] = ClassEffect('格鬥', 1.5);
-captain[722] = ClassEffect('格鬥', 2);
-captain[723] = ClassEffect('斬擊', 1.5);
-captain[724] = ClassEffect('斬擊', 1.75);
-captain[727] = ClassEffect(['格鬥', '博識'], 1.75);
-captain[728] = TypeEffect('技', 1.2);
-captain[729] = TypeEffect('技', 1.2);
+skill(730)(
+  TypeEffect('知', 1.2),
+  TypeEffect('知', 1.5)
+);
 
-captain[730] = TypeEffect('知', 1.2);
-SpecialAbility[730] = TypeEffect('知', 1.5);
+skill(731)(
+  TypeEffect('知', 1.5),
+  TypeEffect('知', 1.5)
+);
 
-captain[731] = TypeEffect('知', 1.5);
-SpecialAbility[731] = TypeEffect('知', 1.5);
+skill(734)(TypeEffect('心', 1.2));
+skill(735)(TypeEffect('心', 1.5));
+skill(736)(ClassEffect('斬擊', 2.5));
+skill(737)(ClassEffect('格鬥', 2.75));
+skill(738)(({ character }) => character.cost >= 21 ? 2 : 1);
+skill(739)(ClassEffect('自由', 2));
+skill(740, 741)(() => 1.3);
 
-captain[734] = TypeEffect('心', 1.2);
-captain[735] = TypeEffect('心', 1.5);
-captain[736] = ClassEffect('斬擊', 2.5);
-captain[737] = ClassEffect('格鬥', 2.75);
+skill(742)(
+  ClassEffect('自由', 1.2),
+  BeadEffect(1.5)
+);
 
-captain[738] = function ({ character }) {
-  return character.cost >= 21 ? 2 : 1;
-}
+skill(743)(
+  ClassEffect('自由', 1.5),
+  BeadEffect(1.5)
+);
 
-captain[739] = ClassEffect('自由', 2);
+skill(744)(ClassEffect('自由', 2));
+skill(745)(ClassEffect('自由', 2.5));
 
-SpecialAbility[740] = () => 1.3;
-SpecialAbility[741] = () => 1.3;
-
-captain[742] = ClassEffect('自由', 1.2);
-SpecialAbility[742] = BeadEffect(1.5);
-
-captain[743] = ClassEffect('自由', 1.5);
-SpecialAbility[743] = BeadEffect(1.5);
-
-captain[744] = ClassEffect('自由', 2);
-captain[745] = ClassEffect('自由', 2.5);
-
-captain[747] = function({ character, bead }) {
+skill(747, 748)(function({ character, bead }) {
   if (character.classes.indexOf('強韌') === -1) {
     return 1;
   }
   return bead === 2 ? 3 : 2.5;
-}
-captain[748] = captain[747];
-captain[749] = TypeEffect('技', 1.5);
-captain[750] = TypeEffect('技', 2);
-captain[751] = ClassEffect('博識', 1.5);
-captain[752] = ClassEffect('博識', 2.25);
+});
 
-captain[753] = ClassEffect('強韌', 2);
-SpecialAbility[753] = BeadEffect(1.5);
+skill(749)(TypeEffect('技', 1.5));
+skill(750)(TypeEffect('技', 2));
+skill(751)(ClassEffect('博識', 1.5));
+skill(752)(ClassEffect('博識', 2.25));
 
-captain[754] = ClassEffect('強韌', 2.5);
-SpecialAbility[754] = BeadEffect(1.5);
+skill(753)(
+  ClassEffect('強韌', 2),
+  BeadEffect(1.5)
+);
 
-captain[755] = TypeEffect('知', 1.5);
-SpecialAbility[755] = ClassEffect('強韌', 1.75);
+skill(754)(
+  ClassEffect('強韌', 2.5),
+  BeadEffect(1.5)
+);
 
-captain[756] = TypeEffect('知', 2);
-SpecialAbility[756] = ClassEffect('強韌', 1.75);
+skill(755)(
+  TypeEffect('知', 1.5),
+  ClassEffect('強韌', 1.75)
+);
 
-captain[757] = TypeEffect('心', 2);
-captain[758] = TypeEffect('心', 2);
+skill(756)(
+  TypeEffect('知', 2),
+  ClassEffect('強韌', 1.75)
+);
 
-captain[759] = TypeEffect('力', 2.5);
-captain[760] = TypeEffect('力', 3);
+skill(757, 758)(TypeEffect('心', 2));
+skill(759)(TypeEffect('力', 2.5));
+skill(760)(TypeEffect('力', 3));
 
-captain[761] = ClassEffect('格鬥', 2);
-SpecialAbility[761] = () => 1.2;
+skill(761)(
+  ClassEffect('格鬥', 2),
+  () => 1.2
+);
 
-captain[762] = TypeEffect('心', 1.5);
-SpecialAbility[762] = TypeEffect('心', 1.75);
+skill(762)(
+  TypeEffect('心', 1.5),
+  TypeEffect('心', 1.75)
+);
 
-captain[763] = TypeEffect('力', 2);
-captain[764] = ClassEffect('打擊', 1.5);
-captain[766] = TypeEffect('速', 2);
-captain[767] = TypeEffect('技', 1.5);
-captain[768] = TypeEffect('心', 2);
-captain[769] = TypeEffect('知', 1.5);
-captain[770] = TypeEffect('力', 2);
+skill(763)(TypeEffect('力', 2));
+skill(764)(ClassEffect('打擊', 1.5));
+skill(766)(TypeEffect('速', 2));
+skill(767)(TypeEffect('技', 1.5));
+skill(768)(TypeEffect('心', 2));
+skill(769)(TypeEffect('知', 1.5));
+skill(770)(TypeEffect('力', 2));
 
-captain[771] = ClassEffect('博識', 2.5);
-SpecialAbility[771] = ClassEffect('博識', 1.75);
+skill(771)(
+  ClassEffect('博識', 2.5),
+  ClassEffect('博識', 1.75)
+);
 
-captain[772] = ClassEffect('斬擊', 2);
-captain[774] = ClassEffect('自由', 2);
-captain[775] = ClassEffect('博識', 1.5);
-captain[776] = TypeEffect('心', 1.25);
-captain[777] = TypeEffect('心', 1.75);
+skill(772)(ClassEffect('斬擊', 2));
+skill(774)(ClassEffect('自由', 2));
+skill(775)(ClassEffect('博識', 1.5));
+skill(776)(TypeEffect('心', 1.25));
+skill(777)(TypeEffect('心', 1.75));
 
-captain[780] = () => 2;
-// ISSUE: 無法獲得 HP 的資訊
-// HP 50 ~ 100%, 攻 x 1.5
-// HP 20 ~  50%, 攻 x 1.75
-// HP  0 ~  20%, 攻 x 2
-SpecialAbility[780] = () => 1.5;  // 暫時以 HP 100% 計算
+skill(780)(
+  () => 2,
+  // ISSUE: 無法獲得 HP 的資訊
+  // HP 50 ~ 100%, 攻 x 1.5
+  // HP 20 ~  50%, 攻 x 1.75
+  // HP  0 ~  20%, 攻 x 2
+  () => 1.5  // 暫時以 HP 100% 計算
+);
 
-captain[781] = () => 2.5;
-SpecialAbility[781] = SpecialAbility[780];
+skill(781)(
+  () => 2.5,
+  () => 1.5  // 暫時以 HP 100% 計算
+);
 
-captain[783] = ClassEffect('斬擊', 2);
-SpecialAbility[788] = ClassEffect('斬擊', 1.75);
+skill(783)(ClassEffect('斬擊', 2));
 
-captain[789] = ClassEffect('斬擊', 1.5);
-SpecialAbility[789] = ClassEffect('斬擊', 1.75);
+skill(788)(
+  null,
+  ClassEffect('斬擊', 1.75)
+);
 
-SpecialAbility[790] = TypeEffect(['力', '技', '速'], 1.2);
+skill(789)(
+  ClassEffect('斬擊', 1.5),
+  ClassEffect('斬擊', 1.75)
+);
 
-captain[791] = TypeEffect(['力', '技', '速'], 1.25);
-SpecialAbility[791] = SpecialAbility[790];
+skill(790)(
+  null,
+  TypeEffect(['力', '技', '速'], 1.2)
+);
 
-captain[793] = ClassEffect('博識', 1.5);
-captain[794] = ClassEffect('強韌', 3);
-captain[795] = ClassEffect('強韌', 3.5);
-captain[796] = ClassEffect('博識', 2);
-captain[797] = ClassEffect(['博識', '強韌'], 2);
+skill(791)(
+  TypeEffect(['力', '技', '速'], 1.25),
+  TypeEffect(['力', '技', '速'], 1.2)
+);
 
-captain[798] = PerfectEffect(3, 2.5);
-SpecialAbility[798] = ClassEffect('格鬥', 1.75);
+skill(793)(ClassEffect('博識', 1.5));
+skill(794)(ClassEffect('強韌', 3));
+skill(795)(ClassEffect('強韌', 3.5));
+skill(796)(ClassEffect('博識', 2));
+skill(797)(ClassEffect(['博識', '強韌'], 2));
+
+skill(798)(
+  PerfectEffect(3, 2.5),
+  ClassEffect('格鬥', 1.75)
+);
 
 export default {
   CaptainEffect: captain,
