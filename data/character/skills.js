@@ -611,157 +611,182 @@ skill(601)(
   TypeEffect('心', 1.3)
 );
 
-captain[602] = TypeEffect('速', 2);
-SpecialAbility[602] = TypeEffect('速', 2);
+skill(602)(
+  TypeEffect('速', 2),
+  TypeEffect('速', 2)
+);
 
-captain[603] = TypeEffect('速', 2.25);
-SpecialAbility[603] = TypeEffect('速', 2);
+skill(603)(
+  TypeEffect('速', 2.25),
+  TypeEffect('速', 2)
+);
 
-captain[604] = ClassEffect('格鬥', 2);
-captain[605] = ClassEffect('格鬥', 2);
-captain[606] = ClassEffect('格鬥', 2);
-captain[607] = ClassEffect('格鬥', 2.5);
-captain[612] = ClassEffect('斬擊', 1.5);
-captain[613] = ClassEffect('斬擊', 1.5);
+skill(604, 605)(ClassEffect('格鬥', 2));
+skill(606)(ClassEffect('格鬥', 2));
+skill(607)(ClassEffect('格鬥', 2.5));
 
+skill(612, 613)(
+  ClassEffect('斬擊', 1.5)
+);
 // ISSUE: 現在無法支援攻擊力增加實際數值
 // SpecialAbility[612, 613] = 我方攻擊, 回復 + 45
 
-captain[614] = function ({ character }) {
+skill(614)(function ({ character }) {
   return character.cost <= 20 ? 2.25 : 1;
-}
+});
 
-SpecialAbility[617] = ClassEffect('射擊', 1.2);
+skill(617)(null, ClassEffect('射擊', 1.2));
 
-captain[629] = function ({ character }) {
+skill(629)(function ({ character }) {
   return 0 < character.star && character.star <= 3 ? 2 : 1;
-}
+});
 
-captain[630] = ClassEffect('斬擊', 1.5);
-captain[631] = ClassEffect('斬擊', 2);
-captain[632] = ClassEffect('格鬥', 1.5);
-captain[633] = ClassEffect('格鬥', 2);
+skill(630)(ClassEffect('斬擊', 1.5));
+skill(631)(ClassEffect('斬擊', 2));
+skill(632)(ClassEffect('格鬥', 1.5));
+skill(633)(ClassEffect('格鬥', 2));
 
-captain[634] = TypeEffect(['速', '心'], 1.25);
-SpecialAbility[634] = TypeEffect(['速', '心'], 1.2);
-captain[635] = TypeEffect(['速', '心'], 1.5);
-SpecialAbility[635] = SpecialAbility[634];
+skill(634)(
+  TypeEffect(['速', '心'], 1.25),
+  TypeEffect(['速', '心'], 1.2)
+);
 
-captain[636] = function ({ character }) {
+skill(635)(
+  TypeEffect(['速', '心'], 1.5),
+  TypeEffect(['速', '心'], 1.2)
+);
+
+skill(636)(function ({ character }) {
   return character.cost <= 2 ? 3 : 1;
-}
+});
 
-captain[637] = ClassEffect('斬擊', 1.5);
+skill(637)(
+  ClassEffect('斬擊', 1.5),
+  () => 1.3   // 給予一回合防禦力提高中的敵人傷害成為 1.3 倍
+);
 
-// ISSUE: 尚不支援
-// 給予一回合防禦力提高中的敵人傷害成為 1.3 倍
-SpecialAbility[637] = () => 1.3;
+skill(638, 639)(ClassEffect('斬擊', 2));
+skill(640)(ClassEffect('格鬥', 2));
+skill(641)(ClassEffect('格鬥', 2.25));
 
-captain[638] = ClassEffect('斬擊', 2);
-captain[639] = captain[638];
-captain[640] = ClassEffect('格鬥', 2);
-captain[641] = ClassEffect('格鬥', 2.25);
+skill(642)(
+  TypeEffect('心', 2.5),
+  BeadEffect(1.5)
+);
 
-captain[642] = TypeEffect('心', 2.5);
-SpecialAbility[642] = BeadEffect(1.5);
+skill(643)(
+  TypeEffect('心', 3),
+  BeadEffect(1.5)
+);
 
-captain[643] = TypeEffect('心', 3);
-SpecialAbility[643] = BeadEffect(1.5);
+skill(644)(TypeEffect('知', 2));
+skill(645)(TypeEffect('知', 2.5));
+skill(646)(ClassEffect('射擊', 2.5));
+skill(647)(ClassEffect('射擊', 2.75));
 
-captain[644] = TypeEffect('知', 2);
-captain[645] = TypeEffect('知', 2.5);
-captain[646] = ClassEffect('射擊', 2.5);
-captain[647] = ClassEffect('射擊', 2.75);
-captain[648] = TypeEffect(['速', '心'], 2.75);
-SpecialAbility[648] = BeadEffect(1.5);
-captain[649] = captain[648];
-SpecialAbility[649] = SpecialAbility[648];
+skill(648, 649)(
+  TypeEffect(['速', '心'], 2.75),
+  BeadEffect(1.5)
+);
 
-captain[650] = TypeEffect('知', 2);
-SpecialAbility[650] = BeadEffect(1.5);
-captain[651] = captain[650];
-SpecialAbility[651] = SpecialAbility[650];
+skill(650, 651)(
+  TypeEffect('知', 2),
+  BeadEffect(1.5)
+);
 
-captain[652] = function({ bead }) {
-  return bead === 2 ? 2 : 1;
-}
+skill(652)(({ bead }) => bead === 2 ? 2 : 1);
+skill(653)(({ bead }) => bead === 2 ? 2.25 : 1);
+skill(654)(({ bead }) => bead === 2 ? 2.75 : 1);
 
-captain[653] = function({ bead }) {
-  return bead === 2 ? 2.25 : 1;
-}
+skill(655)(
+  TypeEffect('力', 1.5),
+  BeadEffect(1.5)
+);
 
-captain[654] = function({ bead }) {
-  return bead === 2 ? 2.75 : 1;
-}
+skill(656)(
+  TypeEffect('力', 2),
+  BeadEffect(1.5)
+);
 
-captain[655] = TypeEffect('力', 1.5);
-SpecialAbility[655] = BeadEffect(1.5);
+skill(657)(ClassEffect('格鬥', 1.5));
+skill(658)(ClassEffect('射擊', 1.5));
+skill(659)(PerfectEffect(3, 2.5));
+skill(660, 661)(ClassEffect('射擊', 2));
+skill(662)(TypeEffect('心', 2));
+skill(665)(() => 1.2);
+skill(666)(() => 1.75);
+skill(667)(() => 1.5);
 
-captain[656] = TypeEffect('力', 2);
-SpecialAbility[656] = BeadEffect(1.5);
+skill(668, 669)(
+  // ISSUE: 無法獲得 HP 的資訊
+  // 全體回復力1.2倍，自由攻擊力[2+0.75*(剩餘HP/總HP)]倍(體力越高倍率越高，最高2.75倍，最低2倍)
+  ClassEffect('自由', 2.75),  // 暫時以 HP 100% 計算
 
-captain[657] = ClassEffect('格鬥', 1.5);
-captain[658] = ClassEffect('射擊', 1.5);
-captain[659] = PerfectEffect(3, 2.5);
-captain[660] = ClassEffect('射擊', 2);
-captain[661] = ClassEffect('射擊', 2);
-captain[662] = TypeEffect('心', 2);
-captain[665] = () => 1.2;
-captain[666] = () => 1.75;
-captain[667] = () => 1.5;
+  // ISSUE: 無法選擇倍率
+  // 1 回合自由 x1.5；若全體 Perfect 下回合自由 x2
+  ClassEffect('自由', 1.5)
+);
 
-// ISSUE: 無法獲得 HP 的資訊
-// 全體回復力1.2倍，自由攻擊力[2+0.75*(剩餘HP/總HP)]倍(體力越高倍率越高，最高2.75倍，最低2倍)
-captain[668] = ClassEffect('自由', 2.75);   // 暫時以 HP 100% 計算
+skill(670)(
+  ClassEffect('格鬥', 2),
+  ClassEffect('格鬥', 1.75)
+);
 
-// ISSUE: 無法選擇倍率
-// 1 回合自由 x1.5；若全體 Perfect 下回合自由 x2
-SpecialAbility[668] = ClassEffect('自由', 1.5);
+skill(671)(
+  ClassEffect('格鬥', 2.25),
+  ClassEffect('格鬥', 1.75)
+);
 
-captain[669] = captain[668];
-SpecialAbility[669] = SpecialAbility[668];
+skill(672, 673)(ClassEffect('格鬥', 2));
+skill(674)(ClassEffect('自由', 2));
+skill(675)(ClassEffect('自由', 2.5));
+skill(676, 677)(ClassEffect('斬擊', 1.5));
+skill(678)(TypeEffect('心', 1.2));
+skill(679)(TypeEffect('心', 1.5));
 
-captain[670] = ClassEffect('格鬥', 2);
-SpecialAbility[670] = ClassEffect('格鬥', 1.75);
+skill(680)(
+  null,
+  TypeEffect('技', 1.25)
+);
 
-captain[671] = ClassEffect('格鬥', 2.25);
-SpecialAbility[671] = ClassEffect('格鬥', 1.75);
+skill(681)(
+  ClassEffect('打擊', 1.5),
+  TypeEffect('技', 1.25)
+);
 
-captain[672] = ClassEffect('格鬥', 2);
-captain[673] = ClassEffect('格鬥', 2);
-captain[674] = ClassEffect('自由', 2);
-captain[675] = ClassEffect('自由', 2.5);
-captain[676] = ClassEffect('斬擊', 1.5);
-captain[677] = ClassEffect('斬擊', 1.5);
-captain[678] = TypeEffect('心', 1.2);
-captain[679] = TypeEffect('心', 1.5);
-SpecialAbility[680] = TypeEffect('技', 1.25);
+skill(683)(ClassEffect('格鬥', 1.5));
+skill(685)(ClassEffect('射擊', 1.5));
+skill(686)(ClassEffect('斬擊', 1.5));
 
-captain[681] = ClassEffect('打擊', 1.5);
-SpecialAbility[681] = TypeEffect('技', 1.25);
+skill(687)(
+  ClassEffect('自由', 1.5),
+  ClassEffect('自由', 1.3)
+);
 
-captain[683] = ClassEffect('格鬥', 1.5);
-captain[685] = ClassEffect('射擊', 1.5);
-captain[686] = ClassEffect('斬擊', 1.5);
+skill(688)(
+  ClassEffect('自由', 2),
+  ClassEffect('自由', 1.3)
+);
 
-captain[687] = ClassEffect('自由', 1.5);
-SpecialAbility[687] = ClassEffect('自由', 1.3);
-captain[688] = ClassEffect('自由', 2);
-SpecialAbility[688] = ClassEffect('自由', 1.3);
+skill(689)(
+  ClassEffect('斬擊', 1.2),
+  BeadEffect(1.5)
+);
 
-captain[689] = ClassEffect('斬擊', 1.2);
-SpecialAbility[689] = BeadEffect(1.5);
-captain[690] = ClassEffect('斬擊', 1.5);
-SpecialAbility[690] = BeadEffect(1.5);
+skill(690)(
+  ClassEffect('斬擊', 1.5),
+  BeadEffect(1.5)
+);
 
-captain[696] = ClassEffect('打擊', 1.75);
-captain[697] = ClassEffect('射擊', 1.75);
-captain[698] = ClassEffect('斬擊', 1.75);
+skill(696)(ClassEffect('打擊', 1.75));
+skill(697)(ClassEffect('射擊', 1.75));
+skill(698)(ClassEffect('斬擊', 1.75));
 
 // ISSUE: 現在無法支援攻擊力增加實際數值
 // captain[699] = 射擊人物攻擊力 +500
 
-captain[700] = ClassEffect('格鬥', 1.75);
+skill(700)(ClassEffect('格鬥', 1.75));
+
 captain[705] = TypeEffect(['力', '技', '速'], 1.25);
 captain[706] = TypeEffect('力', 1.5);
 captain[707] = TypeEffect('力', 1.5);
