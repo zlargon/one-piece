@@ -25,12 +25,15 @@ function fillZero(number) {
   return (number + 10000).toString().substring(1);
 }
 
+function exportModule(json) {
+  return `export default ${JSON.stringify(json, null, 2)};\n`;
+}
+
 coroutine(function * () {
   // 1. Fetch Ships
   const Ships = yield ShipFetch();
-  const file = path.resolve(__dirname, '../data', 'ShipInfo.js');
-  const content = `let ShipInfo = ${JSON.stringify(Ships, null, 2)};\n\nexport default ShipInfo;`;
-  yield writeFile(file, content);
+  const file = path.resolve(__dirname, '../data/ship', 'info.js');
+  yield writeFile(file, exportModule(Ships));
   console.log('Save to ' + file);
 
   // 2. Fetch Characters
@@ -58,8 +61,7 @@ coroutine(function * () {
 
     // 3. write file
     try {
-      const content = 'module.exports = ' + JSON.stringify(character, null, 2) + ';\n';
-      yield writeFile(file, content);
+      yield writeFile(file, exportModule(character));
       console.log(`Save to ${file}`);
     } catch (e) {
       console.log(e.stack);
