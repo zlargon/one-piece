@@ -129,137 +129,105 @@ skill(200)(TypeEffect('力', 2));
 
 // Miss All Sunday
 // 於1回合內，將知識屬性的攻擊力提升1.5倍
-SpecialAbility[209] = TypeEffect('知', 1.5);
+skill(209)(null, TypeEffect('知', 1.5));
 
 // 妮可・羅賓
 // 於1回合內，將知識屬性的攻擊力提升2倍
-SpecialAbility[210] = TypeEffect('知', 2);
+skill(210)(null, TypeEffect('知', 2));
 
 // Mr.9
-// 將打擊型角色的攻擊力提升1.2倍
-captain[211] = ClassEffect('打擊', 1.2);
+skill(211)(ClassEffect('打擊', 1.2));
 
 // Mr.9  熱血九號毅力球棒
-// 將打擊型角色的攻擊力提升1.5倍
-captain[212] = ClassEffect('打擊', 1.5);
+skill(212)(ClassEffect('打擊', 1.5));
 
 // 蒙其・D・魯夫 ３檔
-// 連續擊出3次以上PERFECT，之後的角色攻擊力將會提升3.5倍
-captain[217] = PerfectEffect(3, 3.5);
+skill(217)(PerfectEffect(3, 3.5));
 
 // 娜美 風和日麗
-// 將知識屬性角色的攻擊力提升2倍
-captain[220] = TypeEffect('知', 2);
+skill(220)(TypeEffect('知', 2));
 
 // 娜美 幸福的一擊
-// 將知識屬性角色的攻擊力提升2.5倍
-captain[221] = TypeEffect('知', 2.5);
+skill(221)(TypeEffect('知', 2.5));
 
 // 騙人布 騙人布反擊
-captain[222] = TypeEffect('心', 1.2);         // 將心靈屬性角色的攻擊力提升1.2倍
-SpecialAbility[222] = TypeEffect('心', 1.5);  // 於1回合內，將心靈屬性的攻擊力提升1.5倍
+skill(222)(
+  TypeEffect('心', 1.2), // 將心靈屬性角色的攻擊力提升1.2倍
+  TypeEffect('心', 1.5)  // 於1回合內，將心靈屬性的攻擊力提升1.5倍
+);
 
 // 騙人布 衝撃
-captain[223] = TypeEffect('心', 1.5);         // 將心靈屬性角色的攻擊力提升1.5倍
-SpecialAbility[223] = TypeEffect('心', 2);    // 於1回合內，將心靈屬性的攻擊力提升2倍
+skill(223)(
+  TypeEffect('心', 1.5), // 將心靈屬性角色的攻擊力提升1.5倍
+  TypeEffect('心', 2)    // 於1回合內，將心靈屬性的攻擊力提升2倍
+);
 
 // Mr.王子 羊肉SHOT
-// 連續擊出2次以上PERFECT，之後的角色攻擊力將會提升2倍
-captain[224] = PerfectEffect(2, 2);
+skill(224)(PerfectEffect(2, 2));
 
 // Mr.王子 小牛肉SHOT
-// 連續擊出2次以上PERFECT，之後的角色攻擊力將會提升2.5倍
-captain[225] = PerfectEffect(2, 2.5);
+skill(225)(PerfectEffect(2, 2.5));
 
 // 喬拉可爾・密佛格
-// 將斬擊型角色的攻擊力提升2倍
-captain[226] = ClassEffect('斬擊', 2);
+skill(226)(ClassEffect('斬擊', 2));
 
 // 鷹眼密佛格
-// 將斬擊型角色的攻擊力提升2.5倍
-captain[227] = ClassEffect('斬擊', 2.5);
+skill(227)(ClassEffect('斬擊', 2.5));
 
 // 雙鐵拳的芬布迪
-// 將力量屬性角色的攻擊力提升1.5倍
-captain[230] = TypeEffect('力', 1.5);
+skill(230)(TypeEffect('力', 1.5));
 
 // 希娜
-// 將速度屬性角色的攻擊力提升2倍
-captain[231] = TypeEffect('速', 2);
-
 // 黑檻的希娜
-// 將速度屬性角色的攻擊力提升2倍
-captain[232] = TypeEffect('速', 2);
+skill(231, 232)(TypeEffect('速', 2));
 
-captain[235] = ClassEffect('格鬥', 1.2);
-captain[236] = ClassEffect('格鬥', 1.5);
-captain[248] = TypeEffect('力', 2.5);
-captain[249] = TypeEffect('力', 3);
+skill(235)(ClassEffect('格鬥', 1.2));
+skill(236)(ClassEffect('格鬥', 1.5));
+skill(248)(TypeEffect('力', 2.5));
+skill(249)(TypeEffect('力', 3));
 
 // 馬可
-// 在攻擊開始前體力全滿時，將心靈屬性角色的攻擊力提升3倍
-captain[250] = TypeEffect('心', 3);
-
 // 不死鳥馬可
-// 在攻擊開始前體力全滿時，將心靈屬性角色的攻擊力提升3倍
-captain[251] = TypeEffect('心', 3);
+skill(250, 251)(TypeEffect('心', 3));
 
 // 裘斯
-// 將速度屬性角色的攻擊力及體力提升2倍
-captain[252] = TypeEffect('速', 2);
-
 // 鑽石裘斯
-// 將速度屬性角色的攻擊力及體力提升2倍
-captain[253] = TypeEffect('速', 2);
+skill(252, 253)(TypeEffect('速', 2));
 
 // 比斯塔
-// 將知識屬性角色的攻擊力及體力提升2倍
-captain[254] = TypeEffect('知', 2);
-
 // 花劍比斯塔
-// 將知識屬性角色的攻擊力及體力提升2倍
-captain[255] = TypeEffect('知', 2);
+skill(254, 255)(TypeEffect('知', 2));
 
 // 以藏
-// 將技能屬性角色的攻擊力及回復力提升2倍
-captain[256] = TypeEffect('技', 2);
-
 // 短槍以藏
-// 將技能屬性角色的攻擊力及回復力提升2倍
-captain[257] = TypeEffect('技', 2);
+skill(256, 257)(TypeEffect('技', 2));
 
 // 布朗明哥
-// 將力量屬性角色的攻擊力及回復力提升2倍
-captain[258] = TypeEffect('力', 2);
-
 // 大槌布朗明哥
-// 將力量屬性角色的攻擊力及回復力提升2倍
-captain[259] = TypeEffect('力', 2);
+skill(258, 259)(TypeEffect('力', 2));
 
 // 艾德華・紐蓋特
-// 當殘餘體力太少時，將海賊團的攻擊力提升3倍
-captain[260] = () => 3;
-
 // 白鬍子
 // 當殘餘體力太少時，將海賊團的攻擊力提升3倍
-captain[261] = () => 3;
+skill(260, 261)(() => 3);
 
 // 克比上士
-captain[263] = ClassEffect('格鬥', 2);  // 將格鬥型角色的攻擊力提升2倍
-SpecialAbility[263] = BeadEffect(1.5);  // 於2回合內將海賊團全體成員的技能格影響力大幅提升
+skill(263)(
+  ClassEffect('格鬥', 2),  // 將格鬥型角色的攻擊力提升2倍
+  BeadEffect(1.5)         // 於2回合內將海賊團全體成員的技能格影響力大幅提升
+);
 
 // 貝魯梅柏中士
-// 將斬擊型角色的攻擊力及體力提升1.5倍
-captain[265] = ClassEffect('斬擊', 1.5);
+skill(265)(ClassEffect('斬擊', 1.5));
 
 // 彩虹紋守護龍
 // 將海賊團的攻擊力提升1.5倍
-captain[267] = () => 1.5;
+skill(267)(() => 1.5);
 
-captain[290] = ClassEffect('射擊', 1.5);
-captain[296] = ClassEffect('射擊', 2);
-captain[297] = ClassEffect('射擊', 2);
-captain[299] = TypeEffect('技', 2);
+skill(290)(ClassEffect('射擊', 1.5));
+skill(296, 297)(ClassEffect('射擊', 2));
+skill(299)(TypeEffect('技', 2));
+
 captain[305] = TypeEffect('心', 1.5);
 captain[306] = TypeEffect('心', 2);
 captain[307] = TypeEffect('技', 2.5);
