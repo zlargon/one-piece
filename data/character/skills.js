@@ -312,124 +312,123 @@ skill(397)(PerfectEffect(5, 3));
 skill(398)(PerfectEffect(5, 4));
 skill(399, 400)(null, TypeEffect('技', 1.5));
 
-captain[401] = ClassEffect('斬擊', 1.5);
-SpecialAbility[401] = ClassEffect('斬擊', 1.25);
+skill(401)(
+  ClassEffect('斬擊', 1.5),
+  ClassEffect('斬擊', 1.25)
+);
 
-captain[402] = ClassEffect('斬擊', 2);
-SpecialAbility[402] = SpecialAbility[401];
+skill(402)(
+  ClassEffect('斬擊', 2),
+  ClassEffect('斬擊', 1.25)
+);
 
-captain[404] = ClassEffect('射擊', 1.5);
-captain[405] = ClassEffect('射擊', 2);
-SpecialAbility[406] = () => 1.2;
+skill(404)(ClassEffect('射擊', 1.5));
+skill(405)(ClassEffect('射擊', 2));
+skill(406)(null, () => 1.2);
+skill(408)(ClassEffect('斬擊', 2));
+skill(409)(ClassEffect('格鬥', 2));
+skill(410)(ClassEffect('格鬥', 2.5));
+skill(411, 412)(TypeEffect('力', 2));
+skill(413)(TypeEffect('知', 2.5));
+skill(414)(TypeEffect('知', 3));
+skill(415, 416)(TypeEffect(['速', '心'], 2.75));
 
-captain[408] = ClassEffect('斬擊', 2);
-captain[409] = ClassEffect('格鬥', 2);
-captain[410] = ClassEffect('格鬥', 2.5);
-captain[411] = TypeEffect('力', 2);
-captain[412] = TypeEffect('力', 2);
-captain[413] = TypeEffect('知', 2.5);
-captain[414] = TypeEffect('知', 3);
-captain[415] = TypeEffect(['速', '心'], 2.75);
-captain[416] = captain[415];
+skill(417, 418)(
+  ClassEffect('斬擊', 2),
+  BeadEffect(2)
+);
 
-captain[417] = ClassEffect('斬擊', 2);
-SpecialAbility[417] = BeadEffect(2);
+skill(419)(TypeEffect('速', 2));
+skill(420)(TypeEffect('力', 1.5));
+skill(421)(TypeEffect('技', 1.5));
+skill(422)(TypeEffect('知', 1.5));
+skill(424)(() => 1.5);
+skill(425)(ClassEffect('斬擊', 1.5));
+skill(426)(null, TypeEffect('力', 1.05));
+skill(428)(TypeEffect('心', 2));
 
-captain[418] = captain[417];
-SpecialAbility[418] = SpecialAbility[417];
+skill(430, 431)(
+  TypeEffect('技', 1.5),
+  BeadEffect(1.5)
+);
 
-captain[419] = TypeEffect('速', 2);
-captain[420] = TypeEffect('力', 1.5);
-captain[421] = TypeEffect('技', 1.5);
-captain[422] = TypeEffect('知', 1.5);
-captain[424] = () => 1.5;
-captain[425] = ClassEffect('斬擊', 1.5);
-SpecialAbility[426] = TypeEffect('力', 1.05);
-captain[428] = TypeEffect('心', 2);
+// FIXME: Crash Issue
+// captain[433] = OrderEffect(['速', '力', '技'], 2);
 
-captain[430] = TypeEffect('技', 1.5);
-SpecialAbility[430] = BeadEffect(1.5);
+// captain[434] = OrderEffect(['心', '知', '知'], 2);
+// SpecialAbility[434] = BeadEffect(1.5);
 
-captain[431] = captain[430];
-SpecialAbility[431] = SpecialAbility[430];
+// captain[435] = OrderEffect(['知', '心', '速'], 2);
+// captain[436] = OrderEffect(['知', '心', '速'], 2.25);
 
-captain[433] = OrderEffect(['速', '力', '技'], 2);
+skill(444)(ClassEffect(['進化用', '強化用'], 2));
+skill(445)(ClassEffect(['進化用', '強化用'], 2.5));
+skill(446)(TypeEffect('力', 2));
+skill(447)(TypeEffect('力', 2.5));
+skill(448, 449)(TypeEffect('速', 3));
 
-captain[434] = OrderEffect(['心', '知', '知'], 2);
-SpecialAbility[434] = BeadEffect(1.5);
+skill(450, 451)(
+  ClassEffect('格鬥', 2),
+  ClassEffect('格鬥', 1.5)
+);
 
-captain[435] = OrderEffect(['知', '心', '速'], 2);
-captain[436] = OrderEffect(['知', '心', '速'], 2.25);
+skill(452, 453)(ClassEffect('打擊', 2));
 
-captain[444] = ClassEffect(['進化用', '強化用'], 2);
-captain[445] = ClassEffect(['進化用', '強化用'], 2.5);
+skill(454, 455)(
+  TypeEffect('力', 2),
+  TypeEffect('力', 1.5)
+);
 
-captain[446] = TypeEffect('力', 2);
-captain[447] = TypeEffect('力', 2.5);
-captain[448] = TypeEffect('速', 3);
-captain[449] = TypeEffect('速', 3);
+skill(456, 457)(ClassEffect('射擊', 2));
 
-captain[450] = ClassEffect('格鬥', 2);
-SpecialAbility[450] = ClassEffect('格鬥', 1.5);
-captain[451] = captain[450];
-SpecialAbility[451] = SpecialAbility[450];
+skill(458, 459)(
+  ({ character }) => character.cost <= 20 ? 3 : 1,
+  () => 1.5
+);
 
-captain[452] = ClassEffect('打擊', 2);
-captain[453] = captain[452];
+skill(461, 462)(
+  ClassEffect('格鬥', 2),
+  ClassEffect('格鬥', 1.25)
+);
 
-captain[454] = TypeEffect('力', 2);
-SpecialAbility[454] = TypeEffect('力', 1.5);
-captain[455] = captain[454];
-SpecialAbility[455] = SpecialAbility[454];
+skill(464)(ClassEffect('打擊', 1.5));
 
-captain[456] = ClassEffect('射擊', 2);
-captain[457] = ClassEffect('射擊', 2);
+skill(465)(
+  function ({ timingHistory }) {
+    let sum = 0;
+    for (let i = 0; i < timingHistory.length; i++) {
+      sum = timingHistory[i] === 'bad' ? sum + 1 : 0;
+      if (sum >= 4) return 3;
+    }
+    return 1;
+  },
+  BeadEffect(1.25)
+);
 
-captain[458] = function ({ character }) {
-  return character.cost <= 20 ? 3 : 1;
-}
-SpecialAbility[458] = () => 1.5;
-captain[459] = captain[458];
-SpecialAbility[459] = SpecialAbility[458];
+skill(466)(ClassEffect('射擊', 1.5));
+skill(467)(TypeEffect('力', 1.5));
+skill(471)(TypeEffect('知', 1.2));
+skill(483)(TypeEffect('速', 1.2));
+skill(486)(ClassEffect('打擊', 1.5));
+skill(487)(null, TypeEffect('力', 1.2));
+skill(488)(null, TypeEffect('速', 1.2));
+skill(489)(null, TypeEffect('技', 1.2));
 
-captain[461] = ClassEffect('格鬥', 2);
-SpecialAbility[461] = ClassEffect('格鬥', 1.25);
-captain[462] = captain[461];
-SpecialAbility[462] = SpecialAbility[461];
+skill(490)(
+  ClassEffect('打擊', 1.2),
+  TypeEffect('力', 1.2)
+);
 
-captain[464] = ClassEffect('打擊', 1.5);
+skill(491)(null, TypeEffect('速', 1.2));
 
-captain[465] = function ({ timingHistory }) {
-  let sum = 0;
-  for (let i = 0; i < timingHistory.length; i++) {
-    sum = timingHistory[i] === 'bad' ? sum + 1 : 0;
-    if (sum >= 4) return 3;
-  }
-  return 1;
-}
-SpecialAbility[465] = BeadEffect(1.25);
+skill(492)(
+  TypeEffect('技', 1.5),
+  TypeEffect('技', 1.2)
+);
 
-captain[466] = ClassEffect('射擊', 1.5);
-captain[467] = TypeEffect('力', 1.5);
-captain[471] = TypeEffect('知', 1.2);
-captain[483] = TypeEffect('速', 1.2);
-captain[486] = ClassEffect('打擊', 1.5);
+skill(496)(ClassEffect('射擊', 1.5));
+skill(497, 498)(TypeEffect('速', 1.5));
 
-SpecialAbility[487] = TypeEffect('力', 1.2);
-SpecialAbility[488] = TypeEffect('速', 1.2);
-SpecialAbility[489] = TypeEffect('技', 1.2);
-
-captain[490] = ClassEffect('打擊', 1.2);
-SpecialAbility[490] = TypeEffect('力', 1.2);
-
-SpecialAbility[491] = TypeEffect('速', 1.2);
-
-captain[492] = TypeEffect('技', 1.5);
-SpecialAbility[492] = TypeEffect('技', 1.2);
-
-captain[496] = ClassEffect('射擊', 1.5);
-captain[497] = TypeEffect('速', 1.5);
-captain[498] = TypeEffect('速', 1.5);
 captain[501] = TypeEffect('心', 1.2);
 captain[502] = TypeEffect('心', 1.5);
 
