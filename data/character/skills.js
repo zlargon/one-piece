@@ -9,7 +9,8 @@ for (let i = 0; i <= MAX_CHAR_JP; i++) {
     chainCoefficient: () => 1
   };
   SpecialAbility[i] = {
-    magnification: null
+    hasSpecialAbility: false,
+    magnification: () => 1
   };
 }
 
@@ -31,7 +32,8 @@ const skill = (...numbers) => (captainEffect, specialAbility = null) => {
     numbers.forEach(no => {
       SpecialAbility[no] = {
         ...SpecialAbility[no],
-        ...effect
+        ...effect,
+        hasSpecialAbility: true
       };
     });
   }

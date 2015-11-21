@@ -187,10 +187,7 @@ export default class Character extends React.Component {
 
     function hasSpecialAbility(no) {
       const character = CharacterInfo.get(no);
-      if (character.specialAbility.magnification === null) {
-        return false;
-      }
-      return true;
+      return character.specialAbility.hasSpecialAbility;
     }
 
     return connectDragPreview(connectDropTarget(
