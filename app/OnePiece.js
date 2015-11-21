@@ -98,7 +98,7 @@ export default class OnePiece extends React.Component {
         })
       });
 
-      if (report.total.attack > result.total) {
+      if (report.total.attack >= result.total) {
         return {
           total: report.total.attack,
           characters
