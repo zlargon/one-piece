@@ -31,13 +31,11 @@ export default class Ship extends React.Component {
 
   render() {
     const { no, level } = this.props.ship;
-    const Ships = ShipInfo.slice(0, 4);
-
-    const shipOptions = Ships.map((ship, index) => {
+    const shipOptions = ShipInfo.map((ship, index) => {
       return <option key={index} value={index}>{ship.name}</option>;
     });
 
-    const levelOptions = Ships[no].level.map((ship, index) => {
+    const levelOptions = ShipInfo[no].level.map((ship, index) => {
       const level = index + 1;
       return <option key={level} value={level}>{'Lv' + level}</option>;
     });
