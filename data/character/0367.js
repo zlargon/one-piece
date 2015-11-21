@@ -35,7 +35,6 @@ module.exports = {
     }
   },
   "captainEffect": {
-    "chainCoefficient": 4,
     "jp": {
       "name": "元伝説の海賊団副船長",
       "content": "チェイン係数の増加量を4倍にする"

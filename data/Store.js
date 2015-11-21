@@ -25,11 +25,6 @@ for (let no = 1; no <= MAX_CHAR_JP; no++) {
       ...CharacterInfo[no].specialAbility,
       ...SpecialAbility[no]
     };
-
-    // chain coefficient
-    if (typeof CharacterInfo[no].captainEffect.chainCoefficient !== 'number') {
-      CharacterInfo[no].captainEffect.chainCoefficient = 1;
-    }
   } catch (e) {
     // console.log(e.stack);
     continue;

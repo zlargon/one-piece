@@ -5,7 +5,8 @@ let CaptainEffect = [];
 let SpecialAbility = [];
 for (let i = 0; i <= MAX_CHAR_JP; i++) {
   CaptainEffect[i] = {
-    magnification: () => 1
+    magnification: () => 1,
+    chainCoefficient: () => 1
   };
   SpecialAbility[i] = {
     magnification: null
@@ -17,7 +18,10 @@ const skill = (...numbers) => (captainEffect, specialAbility = null) => {
   if (captainEffect !== null) {
     const effect = typeof captainEffect === 'object' ? captainEffect : { magnification: captainEffect };
     numbers.forEach(no => {
-      CaptainEffect[no] = effect
+      CaptainEffect[no] = {
+        ...CaptainEffect[no],
+        ...effect
+      };
     });
   }
 
@@ -25,7 +29,10 @@ const skill = (...numbers) => (captainEffect, specialAbility = null) => {
   if (specialAbility !== null) {
     const effect = typeof specialAbility === 'object' ? specialAbility : { magnification: specialAbility };
     numbers.forEach(no => {
-      SpecialAbility[no] = effect
+      SpecialAbility[no] = {
+        ...SpecialAbility[no],
+        ...effect
+      };
     });
   }
 }
@@ -285,7 +292,9 @@ skill(360, 361)(TypeEffect('知', 3));
 skill(362, 363)(TypeEffect('心', 2));
 skill(364, 365)(TypeEffect('速', 2));
 
-// 366, 367 雷利特殊隊長技能，連擊係數另外處理
+skill(366, 367)({
+  chainCoefficient: () => 4
+});
 
 skill(373)(ClassEffect('斬擊', 1.5));
 skill(374)(ClassEffect('射擊', 1.5));
@@ -486,10 +495,11 @@ skill(533, 534)(
   BeadEffect(1.5)
 );
 
-// 537, 538 特殊隊長技能，連擊係數另外處理
+skill(537, 538)({
+  chainCoefficient: () => 2
+});
 
 skill(541)(TypeEffect('力', 2.5));
-
 skill(543)(ClassEffect('射擊', 1.5));
 skill(544)(ClassEffect('射擊', 2.25));
 
