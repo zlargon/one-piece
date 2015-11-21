@@ -1,7 +1,7 @@
 import { MAX_CHAR_TW }            from '../config';
 import React                      from 'react';
 import { DragSource, DropTarget } from 'react-dnd';
-import { CharacterInfo }          from '../lib/Store';
+import CharacterInfo              from '../lib/CharacterInfo';
 import CharacterDnD               from './CharacterDnD';
 import './Character.less';
 
