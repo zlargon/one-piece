@@ -6,5 +6,4 @@ deploy
 bundle.js
 
 # pure fetched data
-data/character/*.js
-data/ship/*.js
+data/

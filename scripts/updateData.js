@@ -31,19 +31,27 @@ function exportModule(json) {
 
 coroutine(function * () {
   // 1. Fetch Ships
-  const Ships = yield ShipFetch();
-  const file = path.resolve(__dirname, '../data/ship', 'info.js');
-  yield writeFile(file, exportModule(Ships));
-  console.log('Save to ' + file);
+  const file = path.resolve(__dirname, '../data', 'ships.js');
+  try {
+    // check the ship file is exist or not
+    yield getFileStat(file);
+
+  } catch (e) {
+    // ship file is not exist, start to fetch the ship data
+    const Ships = yield ShipFetch();
+
+    // write file
+    yield writeFile(file, exportModule(Ships));
+    console.log('Save to ' + file);
+  }
 
   // 2. Fetch Characters
   for (let number = 1; number <= MAX_CHAR_JP; number++) {
     const file = path.resolve(__dirname, '../data/character',  fillZero(number) + '.js');
 
     // 1. check the file is exist or not
-    let stat;
     try {
-      stat = yield getFileStat(file);
+      yield getFileStat(file);
       continue;
     } catch (e) {
       // console.log(`${file} is not exist`);
