@@ -5,11 +5,13 @@ let CaptainEffect = [];
 let SpecialAbility = [];
 for (let i = 0; i <= MAX_CHAR_JP; i++) {
   CaptainEffect[i] = {
+    add: () => 0,
     plus: () => 1,
     chainCoefficient: () => 1
   };
   SpecialAbility[i] = {
     hasSpecialAbility: false,
+    add: () => 0,
     plus: () => 1
   };
 }
@@ -643,10 +645,9 @@ skill(606)(ClassEffect('格鬥', 2));
 skill(607)(ClassEffect('格鬥', 2.5));
 
 skill(612, 613)(
-  ClassEffect('斬擊', 1.5)
+  ClassEffect('斬擊', 1.5),
+  { add: () => 45 }
 );
-// ISSUE: 現在無法支援攻擊力增加實際數值
-// SpecialAbility[612, 613] = 我方攻擊, 回復 + 45
 
 skill(614)(function ({ character }) {
   return character.cost <= 20 ? 2.25 : 1;
@@ -799,8 +800,11 @@ skill(696)(ClassEffect('打擊', 1.75));
 skill(697)(ClassEffect('射擊', 1.75));
 skill(698)(ClassEffect('斬擊', 1.75));
 
-// ISSUE: 現在無法支援攻擊力增加實際數值
-// captain[699] = 射擊人物攻擊力 +500
+skill(699)({
+  add: function({ character }) {
+    return character.classes.indexOf('射擊') >= 0 ? 500 : 0;
+  }
+});
 
 skill(700)(ClassEffect('格鬥', 1.75));
 skill(705)(TypeEffect(['力', '技', '速'], 1.25));
