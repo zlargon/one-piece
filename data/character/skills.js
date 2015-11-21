@@ -5,19 +5,19 @@ let CaptainEffect = [];
 let SpecialAbility = [];
 for (let i = 0; i <= MAX_CHAR_JP; i++) {
   CaptainEffect[i] = {
-    magnification: () => 1,
+    plus: () => 1,
     chainCoefficient: () => 1
   };
   SpecialAbility[i] = {
     hasSpecialAbility: false,
-    magnification: () => 1
+    plus: () => 1
   };
 }
 
 const skill = (...numbers) => (captainEffect, specialAbility = null) => {
   // set Captain Effect
   if (captainEffect !== null) {
-    const effect = typeof captainEffect === 'object' ? captainEffect : { magnification: captainEffect };
+    const effect = typeof captainEffect === 'object' ? captainEffect : { plus: captainEffect };
     numbers.forEach(no => {
       CaptainEffect[no] = {
         ...CaptainEffect[no],
@@ -28,7 +28,7 @@ const skill = (...numbers) => (captainEffect, specialAbility = null) => {
 
   // set Special Ability
   if (specialAbility !== null) {
-    const effect = typeof specialAbility === 'object' ? specialAbility : { magnification: specialAbility };
+    const effect = typeof specialAbility === 'object' ? specialAbility : { plus: specialAbility };
     numbers.forEach(no => {
       SpecialAbility[no] = {
         ...SpecialAbility[no],
