@@ -13,8 +13,18 @@ let CharacterInfo = [];
 for (let no = 1; no <= MAX_CHAR_JP; no++) {
   try {
     CharacterInfo[no] = require(`../data/character/${fillZero(no)}.js`);
-    CharacterInfo[no].captainEffect.magnification = CaptainEffect[no];
-    CharacterInfo[no].specialAbility.magnification = SpecialAbility[no];
+
+    // copy Captain Effect functions
+    CharacterInfo[no].captainEffect = {
+      ...CharacterInfo[no].captainEffect,
+      ...CaptainEffect[no]
+    };
+
+    // copy Special Ability functions
+    CharacterInfo[no].specialAbility = {
+      ...CharacterInfo[no].specialAbility,
+      ...SpecialAbility[no]
+    };
 
     // chain coefficient
     if (typeof CharacterInfo[no].captainEffect.chainCoefficient !== 'number') {
@@ -35,8 +45,14 @@ CharacterInfo.get = function (no) {
   // create empty character
   characterInfo = new Character();
   characterInfo.no = no;
-  characterInfo.captainEffect.magnification = function() { return 1 };
-  characterInfo.specialAbility.magnification = null;
+  characterInfo.captainEffect = {
+    ...characterInfo.captainEffect,
+    ...CaptainEffect[no]
+  };
+  characterInfo.specialAbility = {
+    ...characterInfo.specialAbility,
+    ...SpecialAbility[no]
+  };
   return characterInfo;
 }
 

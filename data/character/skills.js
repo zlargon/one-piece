@@ -1,25 +1,31 @@
 import { MAX_CHAR_JP } from '../../config';
 import { TypeEffect, ClassEffect, BeadEffect, PerfectEffect, OrderEffect } from '../../lib/GeneralEffect';
 
-let captain = [];
+let CaptainEffect = [];
 let SpecialAbility = [];
 for (let i = 0; i <= MAX_CHAR_JP; i++) {
-  captain[i] = () => 1;
-  SpecialAbility[i] = null;
+  CaptainEffect[i] = {
+    magnification: () => 1
+  };
+  SpecialAbility[i] = {
+    magnification: null
+  };
 }
 
 const skill = (...numbers) => (captainEffect, specialAbility = null) => {
   // set Captain Effect
   if (captainEffect !== null) {
+    const effect = typeof captainEffect === 'object' ? captainEffect : { magnification: captainEffect };
     numbers.forEach(no => {
-      captain[no] = captainEffect;
+      CaptainEffect[no] = effect
     });
   }
 
   // set Special Ability
   if (specialAbility !== null) {
+    const effect = typeof specialAbility === 'object' ? specialAbility : { magnification: specialAbility };
     numbers.forEach(no => {
-      SpecialAbility[no] = specialAbility;
+      SpecialAbility[no] = effect
     });
   }
 }
@@ -977,6 +983,6 @@ skill(798)(
 );
 
 export default {
-  CaptainEffect: captain,
+  CaptainEffect,
   SpecialAbility
 }
