@@ -294,9 +294,8 @@ skill(385, 386)(
   ClassEffect('格鬥', 1.25)
 );
 
-// FIXME: Crash
-// captain[389] = OrderEffect(['技', '知', '速'], 2.25);
-// captain[390] = OrderEffect(['技', '知', '速'], 2.75);
+skill(389)(OrderEffect(['技', '知', '速'], 2.25));
+skill(390)(OrderEffect(['技', '知', '速'], 2.75));
 
 skill(395)(
   TypeEffect('速', 1.2),
@@ -352,15 +351,15 @@ skill(430, 431)(
   BeadEffect(1.5)
 );
 
-// FIXME: Crash Issue
-// captain[433] = OrderEffect(['速', '力', '技'], 2);
+skill(433)(OrderEffect(['速', '力', '技'], 2));
 
-// captain[434] = OrderEffect(['心', '知', '知'], 2);
-// SpecialAbility[434] = BeadEffect(1.5);
+skill(434)(
+  OrderEffect(['心', '知', '知'], 2),
+  BeadEffect(1.5)
+);
 
-// captain[435] = OrderEffect(['知', '心', '速'], 2);
-// captain[436] = OrderEffect(['知', '心', '速'], 2.25);
-
+skill(435)(OrderEffect(['知', '心', '速'], 2));
+skill(436)(OrderEffect(['知', '心', '速'], 2.25));
 skill(444)(ClassEffect(['進化用', '強化用'], 2));
 skill(445)(ClassEffect(['進化用', '強化用'], 2.5));
 skill(446)(TypeEffect('力', 2));
