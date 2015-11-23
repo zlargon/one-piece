@@ -1,9 +1,8 @@
-node_modules/*
-!node_modules/one-piece
+node_modules
 deploy
 
 # build by webpack
 bundle.js
 
 # pure fetched data
-data/
+data
