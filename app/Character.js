@@ -151,43 +151,26 @@ export default class Character extends React.Component {
   render() {
     const { isDragging, connectDragSource, connectDragPreview, connectDropTarget } = this.props;
     const { character, isCaptainFull, isMobileDevice, showCustom } = this.props;
-    const invisible = {
-      visibility: 'hidden'
-    };
+    const characterInfo = CharacterInfo.get(character.no);
 
+    // Styles
+    const invisible = { visibility: 'hidden' };
     const dragging = {
       opacity: isDragging && !isMobileDevice ? 0 : 1,
       backgroundColor: isDragging && isMobileDevice ? 'lightsteelblue' : 'white'
     };
 
-    const timings = [ 'bad', 'good', 'great', 'perfect', 'miss' ];
-    const timingOptions = timings.map(v => <option key={v} value={v}>{v}</option>);
-
+    // Bead Text
     function beadText (bead) {
       if (bead === 0.5) return '暗珠';
       if (bead === 1)   return '正常';
       if (bead === 2)   return '亮珠';
     }
 
-    function imageUrl(no) {
-      const url = 'http://onepiece-treasurecruise.com/wp-content';
-      const character = CharacterInfo.get(no);
-      if (character.star === 0) {
-        return url + '/themes/onepiece-treasurecruise/images/noimage.png';
-      }
-
-      // workaround for 574, 575
-      if (no === 574 || no === 575) {
-        return url + `/uploads/f00${no}.png`;
-      }
-
-      const number = (no + 10000).toString().substring(1);
-      return url + `/uploads/f${number}.png`;
-    }
-
-    function hasSpecialAbility(no) {
-      const character = CharacterInfo.get(no);
-      return character.specialAbility.hasSpecialAbility;
+    // Timing Options
+    function timingOptions () {
+      const timings = ['bad', 'good', 'great', 'perfect', 'miss'];
+      return timings.map(v => <option key={v} value={v}>{v}</option>);
     }
 
     return connectDragPreview(connectDropTarget(
@@ -198,13 +181,13 @@ export default class Character extends React.Component {
             <span>船&nbsp;</span>
             <input type='checkbox' checked={character.captainEffect} onChange={this.checkCaptainEffect} />
           </div>
-          <div style={hasSpecialAbility(character.no) ? {} : invisible}>
+          <div style={characterInfo.specialAbility.hasSpecialAbility ? {} : invisible}>
             <span>必&nbsp;</span>
             <input type='checkbox' checked={character.specialAbility} onChange={this.checkSpecialAbility} />
           </div>
         </div>
 
-        {connectDragSource(<img src={imageUrl(character.no)} />)}
+        {connectDragSource(<img src={characterInfo.imgUrl} />)}
 
         <div className='columns'>
           <div className='col-1'>
@@ -232,7 +215,7 @@ export default class Character extends React.Component {
 
             <div>
               <select value={character.timing} onChange={this.changeTiming}>
-                {timingOptions}
+                {timingOptions()}
               </select>
             </div>
           </div>
