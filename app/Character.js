@@ -160,6 +160,19 @@ export default class Character extends React.Component {
       backgroundColor: isDragging && isMobileDevice ? 'lightsteelblue' : 'white'
     };
 
+    // Image Title
+    function imageTitle (info) {
+      return `${info.name.tw ? info.name.tw : info.name.jp}\n
+類型：${info.classes.join('/')}
+Combo：${info.combo}
+攻擊：${info.min.atk} - ${info.max.atk}
+體力：${info.min.hp} - ${info.max.hp}
+回復：${info.min.rcv} - ${info.max.rcv}
+Cost：${info.cost}
+\n船長技：\n${info.captainEffect.tw.content ? info.captainEffect.tw.content : info.captainEffect.jp.content}
+\n必殺技：\n${info.specialAbility.tw.content ? info.specialAbility.tw.content : info.specialAbility.jp.content}`;
+    }
+
     // Bead Text
     function beadText (bead) {
       if (bead === 0.5) return '暗珠';
@@ -187,7 +200,11 @@ export default class Character extends React.Component {
           </div>
         </div>
 
-        {connectDragSource(<img src={characterInfo.imgUrl} />)}
+        {connectDragSource(
+          <img src={characterInfo.imgUrl}
+            alt={imageTitle(characterInfo)}
+            title={imageTitle(characterInfo)} />
+        )}
 
         <div className='columns'>
           <div className='col-1'>
