@@ -21,10 +21,6 @@ function writeFile(filePath, data) {
   });
 }
 
-function fillZero(number) {
-  return (number + 10000).toString().substring(1);
-}
-
 function exportModule(json) {
   return `export default ${JSON.stringify(json, null, 2)};\n`;
 }
@@ -47,7 +43,7 @@ coroutine(function * () {
 
   // 2. Fetch Characters
   for (let number = 1; number <= MAX_CHAR_JP; number++) {
-    const file = path.resolve(__dirname, '../data/character',  fillZero(number) + '.js');
+    const file = path.resolve(__dirname, '../data/character', `${('0000' + number).slice(-4)}.js`);
 
     // 1. check the file is exist or not
     try {
