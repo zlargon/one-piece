@@ -1,3 +1,5 @@
+#!/usr/bin/env babel-node
+
 import { MAX_CHAR_JP } from '../config.js'
 import fs              from 'fs';
 import path            from 'path';
