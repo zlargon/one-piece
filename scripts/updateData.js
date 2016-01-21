@@ -1,11 +1,11 @@
 #!/usr/bin/env babel-node
 
-import { MAX_CHAR_JP } from '../config.js'
+import { MAX_CHAR_JP } from '../config'
 import fs              from 'fs';
 import path            from 'path';
 import coroutine       from 'co';
-import CharacterFetch  from '../lib/CharacterFetch.js';
-import ShipFetch       from '../lib/ShipFetch.js';
+import CharacterFetch  from '../lib/CharacterFetch';
+import ShipFetch       from '../lib/ShipFetch';
 
 function getFileStat(filePath) {
   return new Promise((resolve, reject) => {
