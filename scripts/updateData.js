@@ -23,13 +23,9 @@ function writeFile(filePath, data) {
   });
 }
 
-function exportModule(json) {
-  return `export default ${JSON.stringify(json, null, 2)};\n`;
-}
-
 coroutine(function * () {
   // 1. Fetch Ships
-  const file = path.resolve(__dirname, '../data', 'ships.js');
+  const file = path.resolve(__dirname, '../data', 'ships.json');
   try {
     // check the ship file is exist or not
     yield getFileStat(file);
@@ -39,13 +35,13 @@ coroutine(function * () {
     const Ships = yield ShipFetch();
 
     // write file
-    yield writeFile(file, exportModule(Ships));
+    yield writeFile(file, JSON.stringify(Ships, null, 2));
     console.log('Save to ' + file);
   }
 
   // 2. Fetch Characters
   for (let number = 1; number <= MAX_CHAR_JP; number++) {
-    const file = path.resolve(__dirname, '../data/character', `${('0000' + number).slice(-4)}.js`);
+    const file = path.resolve(__dirname, '../data/character', `${('0000' + number).slice(-4)}.json`);
 
     // 1. check the file is exist or not
     try {
@@ -67,7 +63,7 @@ coroutine(function * () {
 
     // 3. write file
     try {
-      yield writeFile(file, exportModule(character));
+      yield writeFile(file, JSON.stringify(character, null, 2));
       console.log(`Save to ${file}`);
     } catch (e) {
       console.log(e.stack);
