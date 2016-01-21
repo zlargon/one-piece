@@ -25,6 +25,10 @@ var config = {
   module: {
     loaders: [
       {
+        test: /\.json$/,
+        loader: 'json'
+      },
+      {
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/,
