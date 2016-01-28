@@ -64,7 +64,7 @@ coroutine(function * () {
     // 3. write file
     try {
       yield writeFile(file, JSON.stringify(character, null, 2));
-      console.log(`Save to ${file}`);
+      console.log(`Save to ${file} (JP${ character.name.tw ? ' + TW' : ''})`);
     } catch (e) {
       console.log(e.stack);
     }
