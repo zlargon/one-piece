@@ -1,11 +1,11 @@
 #!/usr/bin/env babel-node
 
-import { MAX_CHAR_JP } from '../config'
-import fs              from 'fs';
-import path            from 'path';
-import coroutine       from 'co';
-import CharacterFetch  from '../lib/CharacterFetch';
-import ShipFetch       from '../lib/ShipFetch';
+import { MAX_CHAR_JP, MAX_CHAR_TW } from '../config'
+import fs             from 'fs';
+import path           from 'path';
+import coroutine      from 'co';
+import CharacterFetch from '../lib/CharacterFetch';
+import ShipFetch      from '../lib/ShipFetch';
 
 function getFileStat(filePath) {
   return new Promise((resolve, reject) => {
@@ -46,7 +46,13 @@ coroutine(function * () {
     // 1. check the file is exist or not
     try {
       yield getFileStat(file);
-      continue;
+
+      // check whether chinese data is missing or not
+      let character = require(file);
+      if (number > MAX_CHAR_TW || character.name.tw !== null) {
+        // data is all complete
+        continue;
+      }
     } catch (e) {
       // console.log(`${file} is not exist`);
     }
