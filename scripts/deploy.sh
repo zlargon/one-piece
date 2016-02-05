@@ -5,6 +5,12 @@ cd $DIR
 VERSION=$(git log -1 --pretty="%h")
 DATE=$(date)
 
+# webpack checker
+if [ -z "$(which webpack)" ]; then
+  echo "webpack is not installed"
+  exit;
+fi
+
 # build production bundle.js
 webpack -p
 
