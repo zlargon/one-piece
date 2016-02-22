@@ -4,6 +4,7 @@ import { MAX_CHAR_JP, MAX_CHAR_TW } from '../config'
 import fs             from 'fs';
 import path           from 'path';
 import coroutine      from 'co';
+import Character      from '../lib/CharacterClass';
 import CharacterFetch from '../lib/CharacterFetch';
 import ShipFetch      from '../lib/ShipFetch';
 
@@ -25,7 +26,7 @@ function writeFile(filePath, data) {
 
 coroutine(function * () {
   // 1. Fetch Ships
-  const file = path.resolve(__dirname, '../data', 'ships.json');
+  let file = path.resolve(__dirname, '../data', 'ships.json');
   try {
     // check the ship file is exist or not
     yield getFileStat(file);
@@ -40,25 +41,23 @@ coroutine(function * () {
   }
 
   // 2. Fetch Characters
+  file = path.resolve(__dirname, '../data/characters.json');
+  let CharacterData = [];
+  try {
+    CharacterData = require(file);
+  } catch (e) {
+    // characters.json is not exist
+  }
+
   for (let number = 1; number <= MAX_CHAR_JP; number++) {
-    const file = path.resolve(__dirname, '../data/character', `${('0000' + number).slice(-4)}.json`);
 
-    // 1. check the file is exist or not
-    try {
-      yield getFileStat(file);
-
-      // check whether chinese data is missing or not
-      let character = require(file);
-      if (number > MAX_CHAR_TW || character.name.tw !== null) {
-        // data is all complete
-        continue;
-      }
-    } catch (e) {
-      // console.log(`${file} is not exist`);
+    // 1. check if character info is completed or not
+    let character = Character.parse(CharacterData[number - 1]);
+    if (character !== null && (number > MAX_CHAR_TW || character.name.tw !== null)) {
+      continue;
     }
 
     // 2. fetch character
-    let character = null;
     try {
       console.log(`Fetching no.${number} ...`);
       character = yield CharacterFetch(number);
@@ -67,13 +66,16 @@ coroutine(function * () {
       continue;
     }
 
-    // 3. write file
-    try {
-      yield writeFile(file, JSON.stringify(character, null, 2));
-      console.log(`Save to ${file} (JP${ character.name.tw ? ' + TW' : ''})`);
-    } catch (e) {
-      console.log(e.stack);
-    }
+    // 3. add to CharacterData
+    CharacterData[number - 1] = Character.compact(character);
+    console.log(`Add no.${number} (JP${ character.name.tw ? ' + TW' : ''})`);
+  }
+
+  // write file
+  try {
+    yield writeFile(file, JSON.stringify(CharacterData, null, 0));
+  } catch (e) {
+    console.log(e.stack);
   }
 })
 .then(function () {
