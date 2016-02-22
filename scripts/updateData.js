@@ -3,7 +3,6 @@
 import { MAX_CHAR_JP, MAX_CHAR_TW } from '../config'
 import fs             from 'fs';
 import path           from 'path';
-import coroutine      from 'co';
 import Character      from '../lib/CharacterClass';
 import CharacterFetch from '../lib/CharacterFetch';
 import ShipFetch      from '../lib/ShipFetch';
@@ -24,19 +23,19 @@ function writeFile(filePath, data) {
   });
 }
 
-coroutine(function * () {
+async function main () {
   // 1. Fetch Ships
   let file = path.resolve(__dirname, '../data', 'ships.json');
   try {
     // check the ship file is exist or not
-    yield getFileStat(file);
+    await getFileStat(file);
 
   } catch (e) {
     // ship file is not exist, start to fetch the ship data
-    const Ships = yield ShipFetch();
+    const Ships = await ShipFetch();
 
     // write file
-    yield writeFile(file, JSON.stringify(Ships, null, 2));
+    await writeFile(file, JSON.stringify(Ships, null, 2));
     console.log('Save to ' + file);
   }
 
@@ -60,7 +59,7 @@ coroutine(function * () {
     // 2. fetch character
     try {
       console.log(`Fetching no.${number} ...`);
-      character = yield CharacterFetch(number);
+      character = await CharacterFetch(number);
     } catch (e) {
       console.log(e.stack);
       continue;
@@ -73,12 +72,15 @@ coroutine(function * () {
 
   // write file
   try {
-    yield writeFile(file, JSON.stringify(CharacterData, null, 0));
+    await writeFile(file, JSON.stringify(CharacterData, null, 0));
   } catch (e) {
     console.log(e.stack);
   }
-})
-.then(function () {
+}
+
+// start
+main()
+.then(() => {
   console.log('done');
 })
 .catch(e => {
