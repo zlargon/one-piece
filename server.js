@@ -33,22 +33,7 @@ var config = {
         loader: 'babel',
         exclude: /node_modules/,
         query: {
-          plugins: ['react-transform'],
-          extra: {
-            'react-transform': {
-              transforms: [
-                {
-                  transform: 'react-transform-hmr',
-                  imports: ['react'],
-                  locals: ['module']
-                },
-                {
-                  transform: 'react-transform-catch-errors',
-                  imports: ['react', 'redbox-react']
-                }
-              ]
-            }
-          }
+          presets: ['react-hmre']
         }
       },
       {
