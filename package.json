@@ -6,8 +6,9 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "deploy": "sh scripts/deploy.sh",
-    "start": "node server.js"
+    "deploy": "./scripts/deploy.sh",
+    "update:data": "mkdir -p data/ && ./scripts/update_data.js",
+    "start": "./server.js"
   },
   "author": "zlargon",
   "license": "MIT",

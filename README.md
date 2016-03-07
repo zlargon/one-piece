@@ -15,7 +15,7 @@ http://zlargon.github.io/one-piece
 git clone https://github.com/zlargon/one-piece.git
 cd one-piece/
 npm install
-./script/updateData.js
+npm run update:data
 npm start
 open http://0.0.0.0:3000
 ```

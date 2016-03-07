@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Webpack Develop Server
 // https://github.com/gaearon/react-transform-boilerplate
 var path = require('path');

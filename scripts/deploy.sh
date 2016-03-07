@@ -3,7 +3,7 @@ DIR=$(dirname $0)/..
 cd $DIR
 
 VERSION=$(git log -1 --pretty="%h")
-DATE=$(date)
+DATE=$(date "+%Y-%m-%d %H:%M:%S")
 
 # webpack checker
 if [ -z "$(which webpack)" ]; then
