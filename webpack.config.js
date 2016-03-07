@@ -17,11 +17,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css', 'autoprefixer']
+        loaders: ['style', 'css', 'postcss']
       },
       {
         test: /\.less$/,
-        loaders: ['style', 'css', 'autoprefixer', 'less']
+        loaders: ['style', 'css', 'postcss', 'less']
       }
     ]
   }

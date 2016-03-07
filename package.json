@@ -26,7 +26,6 @@
     "shortid": "^2.2.4"
   },
   "devDependencies": {
-    "autoprefixer-loader": "^3.2.0",
     "babel": "^5.8.35",
     "babel-loader": "^5.4.0",
     "babel-plugin-react-transform": "^1.1.1",
@@ -35,6 +34,7 @@
     "json-loader": "^0.5.4",
     "less": "^2.6.1",
     "less-loader": "^2.2.2",
+    "postcss-loader": "^0.8.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.2",
