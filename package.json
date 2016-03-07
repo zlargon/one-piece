@@ -1,18 +1,24 @@
 {
   "name": "one-piece",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "deploy": "sh scripts/deploy.sh",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC",
+  "version": "1.0.1",
+  "description": "One Piece Treasure Cruise Damage Calculator",
   "engines": {
     "node": ">=4.0.0"
   },
+  "scripts": {
+    "deploy": "sh scripts/deploy.sh",
+    "start": "node server.js"
+  },
+  "author": "zlargon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zlargon/one-piece.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zlargon/one-piece/issues"
+  },
+  "homepage": "https://github.com/zlargon/one-piece#readme",
   "dependencies": {
     "cheerio": "^0.20.0",
     "core-decorators": "^0.11.0",
