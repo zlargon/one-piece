@@ -10,7 +10,7 @@ var host = '0.0.0.0';
 var port = 3000;
 
 var config = {
-  devtool: 'eval',
+  devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
     './app/index'
@@ -70,5 +70,5 @@ app.listen(port, host, function(err) {
     return;
   }
 
-  console.log('Listening at ' + [host, port].join(':'));
+  console.log('Listening at http://' + [host, port].join(':'));
 });
