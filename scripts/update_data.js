@@ -7,35 +7,19 @@ import Character      from '../lib/CharacterClass';
 import CharacterFetch from '../lib/CharacterFetch';
 import ShipFetch      from '../lib/ShipFetch';
 
-function getFileStat(filePath) {
-  return new Promise((resolve, reject) => {
-    fs.stat(filePath, (err, value) => {
-      return err ? reject(err) : resolve(value);
-    });
-  });
-}
-
-function writeFile(filePath, data) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile(filePath, data, err => {
-      return err ? reject(err) : resolve();
-    });
-  });
-}
-
 async function main () {
   // 1. Fetch Ships
   let file = path.resolve(__dirname, '../data', 'ships.json');
   try {
     // check the ship file is exist or not
-    await getFileStat(file);
+    fs.statSync(file);
 
   } catch (e) {
     // ship file is not exist, start to fetch the ship data
     const Ships = await ShipFetch();
 
     // write file
-    await writeFile(file, JSON.stringify(Ships, null, 2));
+    fs.writeFileSync(file, JSON.stringify(Ships, null, 2));
     console.log('Save to ' + file);
   }
 
@@ -72,7 +56,7 @@ async function main () {
 
   // write file
   try {
-    await writeFile(file, JSON.stringify(CharacterData, null, 0));
+    fs.writeFileSync(file, JSON.stringify(CharacterData));
   } catch (e) {
     console.log(e.stack);
   }
